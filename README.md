@@ -1,5 +1,5 @@
 # Climate_Obstruction
-A repository for a system to model concepts about Climate Obstructionism and organize relevant documents
+A repository for a system to model concepts about Climate Obstructionism and organize relevant documents. Uses AllegroGraph Community version, the Gist Upper Model ontology from Semantic Arts, and the Python client for AllegroGraph.
 ## License
 This project is licensed under the Apache 2.0 License. See the [LICENSE](https://github.com/mdebellis/Environmental_Obstruction/blob/main/LICENSE) file for details.
 
