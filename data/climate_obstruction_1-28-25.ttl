@@ -1,4 +1,5 @@
 @prefix : <https://www.michaeldebellis.com/climate_obstruction/> .
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -22,11 +23,11 @@
 #################################################################
 
 ###  http://purl.org/dc/terms/contributor
-<http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty .
+dct:contributor rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/created
-<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+dct:created rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/2004/02/skos/core#altLabel
@@ -96,106 +97,114 @@
 
 ###  https://www.michaeldebellis.com/climate_obstruction/expert_sources
 :expert_sources rdf:type owl:AnnotationProperty ;
-                <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-                <http://purl.org/dc/terms/created> "2025-01-23T21:34:53Z"^^xsd:dateTime ;
+                dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                dct:created "2025-01-23T21:34:53Z"^^xsd:dateTime ;
                 rdfs:subPropertyOf :influence .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/funding
 :funding rdf:type owl:AnnotationProperty ;
-         <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-         <http://purl.org/dc/terms/created> "2025-01-23T21:31:37Z"^^xsd:dateTime ;
+         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+         dct:created "2025-01-23T21:31:37Z"^^xsd:dateTime ;
          rdfs:subPropertyOf :influence .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/funding_and_political_service
 :funding_and_political_service rdf:type owl:AnnotationProperty ;
-                               <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-                               <http://purl.org/dc/terms/created> "2025-01-24T23:47:47Z"^^xsd:dateTime ;
+                               dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                               dct:created "2025-01-24T23:47:47Z"^^xsd:dateTime ;
                                rdfs:subPropertyOf :influence .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/funding_and_research_agendas
 :funding_and_research_agendas rdf:type owl:AnnotationProperty ;
-                              <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-                              <http://purl.org/dc/terms/created> "2025-01-23T21:38:34Z"^^xsd:dateTime ;
+                              dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                              dct:created "2025-01-23T21:38:34Z"^^xsd:dateTime ;
                               rdfs:subPropertyOf :influence .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/influence
 :influence rdf:type owl:AnnotationProperty ;
-           <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-           <http://purl.org/dc/terms/created> "2025-01-23T21:29:25Z"^^xsd:dateTime .
+           dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+           dct:created "2025-01-23T21:29:25Z"^^xsd:dateTime .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/information_stories
 :information_stories rdf:type owl:AnnotationProperty ;
-                     <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-                     <http://purl.org/dc/terms/created> "2025-01-23T21:35:47Z"^^xsd:dateTime ;
+                     dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                     dct:created "2025-01-23T21:35:47Z"^^xsd:dateTime ;
                      rdfs:subPropertyOf :influence .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/legitimacy_and_talent
 :legitimacy_and_talent rdf:type owl:AnnotationProperty ;
-                       <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-                       <http://purl.org/dc/terms/created> "2025-01-23T21:36:34Z"^^xsd:dateTime ;
+                       dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                       dct:created "2025-01-23T21:36:34Z"^^xsd:dateTime ;
                        rdfs:subPropertyOf :influence .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/lobby_for_policy_proposals
 :lobby_for_policy_proposals rdf:type owl:AnnotationProperty ;
-                            <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-                            <http://purl.org/dc/terms/created> "2025-01-23T21:37:37Z"^^xsd:dateTime ;
+                            dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                            dct:created "2025-01-23T21:37:37Z"^^xsd:dateTime ;
                             rdfs:subPropertyOf :influence .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/membership
 :membership rdf:type owl:AnnotationProperty ;
-            <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-            <http://purl.org/dc/terms/created> "2025-01-23T21:51:16Z"^^xsd:dateTime ;
+            dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+            dct:created "2025-01-23T21:51:16Z"^^xsd:dateTime ;
             rdfs:subPropertyOf :influence .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/money
 :money rdf:type owl:AnnotationProperty ;
-       <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-       <http://purl.org/dc/terms/created> "2025-01-23T21:34:08Z"^^xsd:dateTime ;
+       dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+       dct:created "2025-01-23T21:34:08Z"^^xsd:dateTime ;
        rdfs:subPropertyOf :influence .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/policy_proposals_at_hearings
 :policy_proposals_at_hearings rdf:type owl:AnnotationProperty ;
-                              <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-                              <http://purl.org/dc/terms/created> "2025-01-24T23:40:23Z"^^xsd:dateTime ;
+                              dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                              dct:created "2025-01-24T23:40:23Z"^^xsd:dateTime ;
                               rdfs:subPropertyOf :influence .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/political_mobilization
 :political_mobilization rdf:type owl:AnnotationProperty ;
-                        <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-                        <http://purl.org/dc/terms/created> "2025-01-23T21:33:30Z"^^xsd:dateTime ;
+                        dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                        dct:created "2025-01-23T21:33:30Z"^^xsd:dateTime ;
                         rdfs:subPropertyOf :influence .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/press_events
 :press_events rdf:type owl:AnnotationProperty ;
-              <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-              <http://purl.org/dc/terms/created> "2025-01-23T21:32:01Z"^^xsd:dateTime ;
+              dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+              dct:created "2025-01-23T21:32:01Z"^^xsd:dateTime ;
               rdfs:subPropertyOf :influence .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/support_political_policies
 :support_political_policies rdf:type owl:AnnotationProperty ;
-                            <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-                            <http://purl.org/dc/terms/created> "2025-01-23T21:35:25Z"^^xsd:dateTime ;
+                            dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                            dct:created "2025-01-23T21:35:25Z"^^xsd:dateTime ;
                             rdfs:subPropertyOf :influence .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/testimony_at_hearings
 :testimony_at_hearings rdf:type owl:AnnotationProperty ;
-                       <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-                       <http://purl.org/dc/terms/created> "2025-01-23T21:36:12Z"^^xsd:dateTime ;
+                       dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                       dct:created "2025-01-23T21:36:12Z"^^xsd:dateTime ;
                        rdfs:subPropertyOf :influence .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/url
+:url rdf:type owl:AnnotationProperty ;
+     dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+     dct:created "2025-01-29T18:28:19Z"^^xsd:dateTime ;
+     <http://www.w3.org/2004/02/skos/core#definition> "A url associated with the entity. E.g., for an organization, the organization's web site, for a Person, the Person's web site, academia.edu page, etc." ;
+     rdfs:range xsd:anyURI .
 
 
 #################################################################
@@ -803,33 +812,54 @@ Note that the unit of measure of the accuracy has to be compatible with the unit
             owl:inverseOf :is_Author_Of ;
             rdfs:domain <https://w3id.org/semanticarts/ns/ontology/gist/Content> ;
             rdfs:range :Agent ;
-            <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-            <http://purl.org/dc/terms/created> "2025-01-29T00:54:44Z"^^xsd:dateTime .
+            dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+            dct:created "2025-01-29T00:54:44Z"^^xsd:dateTime .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/has_Direct_Part
 :has_Direct_Part rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf :has_Part ;
-                 <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-                 <http://purl.org/dc/terms/created> "2025-01-29T01:00:03Z"^^xsd:dateTime .
+                 dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                 dct:created "2025-01-29T01:00:03Z"^^xsd:dateTime .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/has_Part
 :has_Part rdf:type owl:ObjectProperty ,
                    owl:TransitiveProperty ;
-          <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-          <http://purl.org/dc/terms/created> "2025-01-29T00:59:49Z"^^xsd:dateTime .
+          dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+          dct:created "2025-01-29T00:59:49Z"^^xsd:dateTime .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/has_employee
+:has_employee rdf:type owl:ObjectProperty ;
+              owl:inverseOf :is_employee_of ;
+              dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+              dct:created "2025-01-29T18:26:11Z"^^xsd:dateTime .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/is_Author_Of
 :is_Author_Of rdf:type owl:ObjectProperty ;
-              <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-              <http://purl.org/dc/terms/created> "2025-01-29T00:55:21Z"^^xsd:dateTime .
+              dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+              dct:created "2025-01-29T00:55:21Z"^^xsd:dateTime .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/is_employee_of
+:is_employee_of rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf <https://w3id.org/semanticarts/ns/ontology/gist/isMemberOf> ;
+                rdfs:domain <https://w3id.org/semanticarts/ns/ontology/gist/Person> ;
+                rdfs:range <https://w3id.org/semanticarts/ns/ontology/gist/Organization> ;
+                dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                dct:created "2025-01-29T18:24:35Z"^^xsd:dateTime .
 
 
 #################################################################
 #    Data properties
 #################################################################
+
+###  http://purl.org/dc/terms/abstract
+dct:abstract rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf <https://w3id.org/semanticarts/ns/ontology/gist/containedText> .
+
 
 ###  https://w3id.org/semanticarts/ns/ontology/gist/actualEndDate
 <https://w3id.org/semanticarts/ns/ontology/gist/actualEndDate> rdf:type owl:DatatypeProperty ;
@@ -1555,21 +1585,21 @@ The conventions for precision that are repeated in each property name are as fol
 
 ###  https://www.michaeldebellis.com/climate_obstruction/first_name
 :first_name rdf:type owl:DatatypeProperty ;
-            <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-            <http://purl.org/dc/terms/created> "2025-01-29T00:49:23Z"^^xsd:dateTime .
+            dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+            dct:created "2025-01-29T00:49:23Z"^^xsd:dateTime .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/last_name
 :last_name rdf:type owl:DatatypeProperty ;
-           <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-           <http://purl.org/dc/terms/created> "2025-01-29T00:49:13Z"^^xsd:dateTime ;
+           dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+           dct:created "2025-01-29T00:49:13Z"^^xsd:dateTime ;
            <http://www.w3.org/2004/02/skos/core#definition> "Last name for a Person. This is the only mandatory name property." .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/middle_name
 :middle_name rdf:type owl:DatatypeProperty ;
-             <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-             <http://purl.org/dc/terms/created> "2025-01-29T00:49:33Z"^^xsd:dateTime .
+             dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+             dct:created "2025-01-29T00:49:33Z"^^xsd:dateTime .
 
 
 #################################################################
@@ -3239,15 +3269,15 @@ The conventions for precision that are repeated in each property name are as fol
 ###  https://www.michaeldebellis.com/climate_obstruction/Advertizing_Agency
 :Advertizing_Agency rdf:type owl:Class ;
                     rdfs:subClassOf :Business_Organization ;
-                    <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-                    <http://purl.org/dc/terms/created> "2025-01-10T23:54:34Z"^^xsd:dateTime .
+                    dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                    dct:created "2025-01-10T23:54:34Z"^^xsd:dateTime .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Advocacy_Organization
 :Advocacy_Organization rdf:type owl:Class ;
                        rdfs:subClassOf :Non-Profit_Organization ;
-                       <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-                       <http://purl.org/dc/terms/created> "2025-01-10T23:55:51Z"^^xsd:dateTime ;
+                       dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                       dct:created "2025-01-10T23:55:51Z"^^xsd:dateTime ;
                        :membership <https://w3id.org/semanticarts/ns/ontology/gist/Person> ;
                        :political_mobilization :Public_Agenda ;
                        :press_events :Media_Agenda .
@@ -3256,22 +3286,22 @@ The conventions for precision that are repeated in each property name are as fol
 ###  https://www.michaeldebellis.com/climate_obstruction/Agenda
 :Agenda rdf:type owl:Class ;
         rdfs:subClassOf <https://w3id.org/semanticarts/ns/ontology/gist/Intention> ;
-        <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-        <http://purl.org/dc/terms/created> "2025-01-17T21:43:21Z"^^xsd:dateTime ;
+        dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+        dct:created "2025-01-17T21:43:21Z"^^xsd:dateTime ;
         rdfs:isDefinedBy "https://cssn.org/news-research/europe-volume/ p. 7" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Agent
 :Agent rdf:type owl:Class ;
-       <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-       <http://purl.org/dc/terms/created> "2025-01-10T22:48:04Z"^^xsd:dateTime .
+       dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+       dct:created "2025-01-10T22:48:04Z"^^xsd:dateTime .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Alignment
 :Alignment rdf:type owl:Class ;
            rdfs:subClassOf :Green_Washing ;
-           <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-           <http://purl.org/dc/terms/created> "2025-01-14T01:03:46Z"^^xsd:dateTime ;
+           dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+           dct:created "2025-01-14T01:03:46Z"^^xsd:dateTime ;
            <http://www.w3.org/2004/02/skos/core#definition> """Inconsistent organization in practice
 Claim does not reflect consistent organizational practice""" .
 
@@ -3279,29 +3309,29 @@ Claim does not reflect consistent organizational practice""" .
 ###  https://www.michaeldebellis.com/climate_obstruction/Book
 :Book rdf:type owl:Class ;
       rdfs:subClassOf <https://w3id.org/semanticarts/ns/ontology/gist/Content> ;
-      <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-      <http://purl.org/dc/terms/created> "2025-01-29T00:44:51Z"^^xsd:dateTime .
+      dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+      dct:created "2025-01-29T00:44:51Z"^^xsd:dateTime .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Book_Chapter
 :Book_Chapter rdf:type owl:Class ;
               rdfs:subClassOf <https://w3id.org/semanticarts/ns/ontology/gist/Content> ;
-              <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-              <http://purl.org/dc/terms/created> "2025-01-29T00:45:04Z"^^xsd:dateTime .
+              dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+              dct:created "2025-01-29T00:45:04Z"^^xsd:dateTime .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Business_Organization
 :Business_Organization rdf:type owl:Class ;
                        rdfs:subClassOf <https://w3id.org/semanticarts/ns/ontology/gist/Organization> ;
-                       <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-                       <http://purl.org/dc/terms/created> "2025-01-10T23:53:25Z"^^xsd:dateTime .
+                       dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                       dct:created "2025-01-10T23:53:25Z"^^xsd:dateTime .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/CAP_Code
 :CAP_Code rdf:type owl:Class ;
           rdfs:subClassOf :Industry_Code ;
-          <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-          <http://purl.org/dc/terms/created> "2025-01-22T02:24:30Z"^^xsd:dateTime ;
+          dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+          dct:created "2025-01-22T02:24:30Z"^^xsd:dateTime ;
           <http://www.w3.org/2004/02/skos/core#definition> """**Overview of the CAP Code**
 
 1. **What it is**  
@@ -3359,29 +3389,29 @@ Source: ChatGPT""" .
 ###  https://www.michaeldebellis.com/climate_obstruction/Campaign_Funding_PAC
 :Campaign_Funding_PAC rdf:type owl:Class ;
                       rdfs:subClassOf :Non-Profit_Organization ;
-                      <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-                      <http://purl.org/dc/terms/created> "2025-01-10T23:59:16Z"^^xsd:dateTime .
+                      dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                      dct:created "2025-01-10T23:59:16Z"^^xsd:dateTime .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Communication
 :Communication rdf:type owl:Class ;
                rdfs:subClassOf <https://w3id.org/semanticarts/ns/ontology/gist/Event> ;
-               <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-               <http://purl.org/dc/terms/created> "2025-01-14T00:55:26Z"^^xsd:dateTime .
+               dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+               dct:created "2025-01-14T00:55:26Z"^^xsd:dateTime .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Conservative_Media_Corporation
 :Conservative_Media_Corporation rdf:type owl:Class ;
                                 rdfs:subClassOf :Media_Corporation ;
-                                <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-                                <http://purl.org/dc/terms/created> "2025-01-11T00:00:33Z"^^xsd:dateTime .
+                                dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                                dct:created "2025-01-11T00:00:33Z"^^xsd:dateTime .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Corporation
 :Corporation rdf:type owl:Class ;
              rdfs:subClassOf :Business_Organization ;
-             <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-             <http://purl.org/dc/terms/created> "2025-01-10T23:57:09Z"^^xsd:dateTime ;
+             dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+             dct:created "2025-01-10T23:57:09Z"^^xsd:dateTime ;
              rdfs:comment "tem" ;
              :funding_and_political_service :Trade_Association ;
              :funding_and_research_agendas :University ;
@@ -3396,116 +3426,116 @@ Source: ChatGPT""" .
 ###  https://www.michaeldebellis.com/climate_obstruction/Empty_Claims
 :Empty_Claims rdf:type owl:Class ;
               rdfs:subClassOf :Impact ;
-              <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-              <http://purl.org/dc/terms/created> "2025-01-14T04:21:26Z"^^xsd:dateTime ;
+              dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+              dct:created "2025-01-14T04:21:26Z"^^xsd:dateTime ;
               <http://www.w3.org/2004/02/skos/core#definition> "Making claims/policies that either exaggerate achievements, or fail to live up to them" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/False_Communication
 :False_Communication rdf:type owl:Class ;
                      rdfs:subClassOf :Green_Washing ;
-                     <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-                     <http://purl.org/dc/terms/created> "2025-01-14T01:03:46Z"^^xsd:dateTime .
+                     dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                     dct:created "2025-01-14T01:03:46Z"^^xsd:dateTime .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Falsehoods
 :Falsehoods rdf:type owl:Class ;
             rdfs:subClassOf :Impact ;
-            <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-            <http://purl.org/dc/terms/created> "2025-01-14T04:21:26Z"^^xsd:dateTime .
+            dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+            dct:created "2025-01-14T04:21:26Z"^^xsd:dateTime .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Foundation
 :Foundation rdf:type owl:Class ;
             rdfs:subClassOf :Non-Profit_Organization ;
-            <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-            <http://purl.org/dc/terms/created> "2025-01-10T23:52:35Z"^^xsd:dateTime ;
+            dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+            dct:created "2025-01-10T23:52:35Z"^^xsd:dateTime ;
             :money :Think_Tank .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Green_Washing
 :Green_Washing rdf:type owl:Class ;
                rdfs:subClassOf :Communication ;
-               <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-               <http://purl.org/dc/terms/created> "2025-01-14T00:55:49Z"^^xsd:dateTime .
+               dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+               dct:created "2025-01-14T00:55:49Z"^^xsd:dateTime .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Impact
 :Impact rdf:type owl:Class ;
         rdfs:subClassOf :Green_Washing ;
-        <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-        <http://purl.org/dc/terms/created> "2025-01-14T01:03:46Z"^^xsd:dateTime .
+        dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+        dct:created "2025-01-14T01:03:46Z"^^xsd:dateTime .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Industry_Code
 :Industry_Code rdf:type owl:Class ;
                rdfs:subClassOf <https://w3id.org/semanticarts/ns/ontology/gist/Commitment> ;
-               <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-               <http://purl.org/dc/terms/created> "2025-01-22T02:19:41Z"^^xsd:dateTime ;
+               dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+               dct:created "2025-01-22T02:19:41Z"^^xsd:dateTime ;
                <http://www.w3.org/2004/02/skos/core#definition> "Guidelines and standards defined by an Industry group rather than a Government or an NGO such as the UN. The Cap Code that sets enforceable guidelines by Cap in the UK is an example." .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Industry_Regulatory_Body
 :Industry_Regulatory_Body rdf:type owl:Class ;
                           rdfs:subClassOf :Business_Organization ;
-                          <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-                          <http://purl.org/dc/terms/created> "2025-01-23T03:28:07Z"^^xsd:dateTime .
+                          dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                          dct:created "2025-01-23T03:28:07Z"^^xsd:dateTime .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Irrelevant
 :Irrelevant rdf:type owl:Class ;
             rdfs:subClassOf :Impact ;
-            <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-            <http://purl.org/dc/terms/created> "2025-01-14T04:21:26Z"^^xsd:dateTime ;
+            dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+            dct:created "2025-01-14T04:21:26Z"^^xsd:dateTime ;
             <http://www.w3.org/2004/02/skos/core#definition> "Proclaiming accomplishments that are irrelevant or already required by law/competitors" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Lobbying_Firm
 :Lobbying_Firm rdf:type owl:Class ;
                rdfs:subClassOf :Business_Organization ;
-               <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-               <http://purl.org/dc/terms/created> "2025-01-10T23:58:46Z"^^xsd:dateTime .
+               dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+               dct:created "2025-01-10T23:58:46Z"^^xsd:dateTime .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Media_Agenda
 :Media_Agenda rdf:type owl:Class ;
               rdfs:subClassOf :Agenda ;
-              <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-              <http://purl.org/dc/terms/created> "2025-01-17T21:44:35Z"^^xsd:dateTime .
+              dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+              dct:created "2025-01-17T21:44:35Z"^^xsd:dateTime .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Media_Corporation
 :Media_Corporation rdf:type owl:Class ;
                    rdfs:subClassOf :Corporation ;
-                   <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-                   <http://purl.org/dc/terms/created> "2025-01-10T23:59:46Z"^^xsd:dateTime .
+                   dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                   dct:created "2025-01-10T23:59:46Z"^^xsd:dateTime .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Non-Profit_Organization
 :Non-Profit_Organization rdf:type owl:Class ;
                          rdfs:subClassOf <https://w3id.org/semanticarts/ns/ontology/gist/Organization> ;
-                         <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-                         <http://purl.org/dc/terms/created> "2025-01-10T23:55:06Z"^^xsd:dateTime .
+                         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                         dct:created "2025-01-10T23:55:06Z"^^xsd:dateTime .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Not_Credible
 :Not_Credible rdf:type owl:Class ;
               rdfs:subClassOf :Impact ;
-              <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-              <http://purl.org/dc/terms/created> "2025-01-14T04:21:26Z"^^xsd:dateTime .
+              dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+              dct:created "2025-01-14T04:21:26Z"^^xsd:dateTime .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Political_Agenda
 :Political_Agenda rdf:type owl:Class ;
                   rdfs:subClassOf :Agenda ;
-                  <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-                  <http://purl.org/dc/terms/created> "2025-01-17T21:44:35Z"^^xsd:dateTime .
+                  dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                  dct:created "2025-01-17T21:44:35Z"^^xsd:dateTime .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Proposition
 :Proposition rdf:type owl:Class ;
-             <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-             <http://purl.org/dc/terms/created> "2025-01-24T00:17:47Z"^^xsd:dateTime ;
+             dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+             dct:created "2025-01-24T00:17:47Z"^^xsd:dateTime ;
              <http://www.w3.org/2004/02/skos/core#definition> """A proposition is a central concept in the philosophy of language, semantics, logic, and related fields, often characterized as the primary bearer of truth or falsity. Propositions are also often characterized as the type of object that declarative sentences denote. For instance, the sentence \"The sky is blue\" denotes the proposition that the sky is blue. However, crucially, propositions are not themselves linguistic expressions. For instance, the English sentence \"Snow is white\" denotes the same proposition as the German sentence \"Schnee ist weiß\" even though the two sentences are not the same. Similarly, propositions can also be characterized as the objects of belief and other propositional attitudes. For instance if someone believes that the sky is blue, the object of their belief is the proposition that the sky is blue.
 
 Source: https://en.wikipedia.org/wiki/Proposition""" .
@@ -3514,15 +3544,15 @@ Source: https://en.wikipedia.org/wiki/Proposition""" .
 ###  https://www.michaeldebellis.com/climate_obstruction/Public_Agenda
 :Public_Agenda rdf:type owl:Class ;
                rdfs:subClassOf :Agenda ;
-               <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-               <http://purl.org/dc/terms/created> "2025-01-17T21:44:35Z"^^xsd:dateTime .
+               dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+               dct:created "2025-01-17T21:44:35Z"^^xsd:dateTime .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Selective_Disclosure
 :Selective_Disclosure rdf:type owl:Class ;
                       rdfs:subClassOf :Impact ;
-                      <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-                      <http://purl.org/dc/terms/created> "2025-01-14T04:19:51Z"^^xsd:dateTime ;
+                      dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                      dct:created "2025-01-14T04:19:51Z"^^xsd:dateTime ;
                       rdfs:isDefinedBy <https://cssn.org/special-projects/greenwashing-tool/impact/> ;
                       <http://www.w3.org/2004/02/skos/core#definition> """1.1 Does the organization fail to disclose relevant information regarding the environmental claim being made, such as lifecycle or cumulative impacts?
 
@@ -3545,22 +3575,22 @@ Claiming biodiversity or carbon neutrality or a reduction of environmental harm 
 ###  https://www.michaeldebellis.com/climate_obstruction/Think_Tank
 :Think_Tank rdf:type owl:Class ;
             rdfs:subClassOf :Non-Profit_Organization ;
-            <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-            <http://purl.org/dc/terms/created> "2025-01-24T22:27:28Z"^^xsd:dateTime .
+            dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+            dct:created "2025-01-24T22:27:28Z"^^xsd:dateTime .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Trade_Association
 :Trade_Association rdf:type owl:Class ;
                    rdfs:subClassOf :Non-Profit_Organization ;
-                   <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-                   <http://purl.org/dc/terms/created> "2025-01-10T23:57:36Z"^^xsd:dateTime .
+                   dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                   dct:created "2025-01-10T23:57:36Z"^^xsd:dateTime .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/University
 :University rdf:type owl:Class ;
             rdfs:subClassOf :Non-Profit_Organization ;
-            <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-            <http://purl.org/dc/terms/created> "2025-01-10T23:58:21Z"^^xsd:dateTime ;
+            dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+            dct:created "2025-01-10T23:58:21Z"^^xsd:dateTime ;
             :expert_sources :Media_Agenda ;
             :testimony_at_hearings :Political_Agenda .
 
@@ -3693,18 +3723,59 @@ Repsol said that they will allocate more than €5 billion in organic investment
 
 Repsol explained that renewable fuels make up 10% of their fuel sales in Spain and they expect to grow this aggressively. They have existing pilot projects in three cities which involve 100% biofuel pumps for fleet vehicles and have also launched a recent initiative to pay customers for their used cooking oil for incorporation into the processing of fatty residues. Repsol said they are committed to acting ethically and would remove the ad immediately.""" ;
                          <https://w3id.org/semanticarts/ns/ontology/gist/isRecordedAt> "2023-06-07T00:00:00"^^xsd:dateTime ;
-                         <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-                         <http://purl.org/dc/terms/created> "2025-01-21T22:56:25Z"^^xsd:dateTime ;
+                         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                         dct:created "2025-01-21T22:56:25Z"^^xsd:dateTime ;
                          rdfs:isDefinedBy <https://www.asa.org.uk/rulings/repsol-sa-a23-1185942-repsol-sa.html> ;
                          rdfs:label "ASA Ruling on Repsol SA" .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/Brown_University
+:Brown_University rdf:type owl:NamedIndividual ,
+                           :University ;
+                  dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                  dct:created "2025-01-29T18:22:44Z"^^xsd:dateTime .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Climate_Obstruction_in_Europe
 :Climate_Obstruction_in_Europe rdf:type owl:NamedIndividual ,
                                         :Book ;
-                               <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-                               <http://purl.org/dc/terms/created> "2025-01-29T00:45:54Z"^^xsd:dateTime ;
-                               rdfs:label "Climate Obstruction in Europe" .
+                               dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                               dct:created "2025-01-29T00:45:54Z"^^xsd:dateTime ;
+                               rdfs:label "Climate Obstruction in Europe" ;
+                               :url <https://cssn.org/news-research/europe-volume/> .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/Climate_Obstruction_in_the_United_Kingdom
+:Climate_Obstruction_in_the_United_Kingdom rdf:type owl:NamedIndividual ,
+                                                    :Book_Chapter ;
+                                           :has_Author :FREDDIE_DALEY ,
+                                                       :JAMES_PAINTER ,
+                                                       :PETER_NEWELL ,
+                                                       :RUTH_MCKIE ;
+                                           dct:abstract """United Kingdom
+Despite widespread public backing for the UK’s legally binding goal of reaching net zero emissions by 2050 and the economic benefits it could bring, climate obstructionists deploy a variety of tactics and strategies to maintain dependence on volatile and dangerous fossil fuels.
+
+Key actors:
+Organised sceptic groups and think tanks (e.g. Global Warming Policy Foundation, Net Zero Watch), media (particularly right-leaning papers such as The Daily Telegraph and The Daily Mail), business and trade associations (e.g. CBI), government actors and institutions.
+
+Tactics:
+Media campaigns: Outlets such as The Daily Telegraph often publish editorials and opinion pieces promoting climate obstructionism.
+Lobbying and political influence: Fossil fuel companies directly lobby elected politicians to shape policy in their favour and fend off tighter regulation. This influence is enabled by donations to political parties and revolving doors and secondments to government.
+Key messages:
+Economic cost: Framing climate policies as ‘a risk to the economy’, ignoring the more significant financial costs to the public resulting from slow progress on climate action.
+Undermine renewables: Climate obstructionists cast doubt on the reliability and cost of renewable sources like solar and wind power, despite evidence that in the UK renewables are significantly cheaper than gas.""" ;
+                                           dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                                           dct:created "2025-01-29T18:33:01Z"^^xsd:dateTime ;
+                                           rdfs:label "Climate Obstruction in the United Kingdom" .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/FREDDIE_DALEY
+:FREDDIE_DALEY rdf:type owl:NamedIndividual ,
+                        <https://w3id.org/semanticarts/ns/ontology/gist/Person> ;
+               :first_name "FREDDIE" ;
+               :last_name "DALEY" ;
+               dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+               dct:created "2025-01-29T18:36:40Z"^^xsd:dateTime .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Introduction_The_First_Portrait_of_Climate_Obstruction_across_Europe
@@ -3713,19 +3784,43 @@ Repsol explained that renewable fuels make up 10% of their fuel sales in Spain a
                                                                       <https://w3id.org/semanticarts/ns/ontology/gist/isPartOf> :Climate_Obstruction_in_Europe ;
                                                                       :has_Author :J_TIMMONS_ROBERTS ,
                                                                                   :ROBERT_J_BRULLE ;
-                                                                      <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-                                                                      <http://purl.org/dc/terms/created> "2025-01-29T00:46:51Z"^^xsd:dateTime ;
-                                                                      rdfs:label "Introduction The First Portrait of Climate Obstruction across Europe" .
+                                                                      dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                                                                      dct:created "2025-01-29T00:46:51Z"^^xsd:dateTime ;
+                                                                      rdfs:label "Introduction The First Portrait of Climate Obstruction across Europe" ;
+                                                                      :url <https://cssn.org/news-research/europe-volume/> .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/JAMES_PAINTER
+:JAMES_PAINTER rdf:type owl:NamedIndividual ,
+                        <https://w3id.org/semanticarts/ns/ontology/gist/Person> ;
+               :first_name "JAMES" ;
+               :last_name "PAINTER" ;
+               dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+               dct:created "2025-01-29T18:41:19Z"^^xsd:dateTime .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/J_TIMMONS_ROBERTS
 :J_TIMMONS_ROBERTS rdf:type owl:NamedIndividual ,
                             <https://w3id.org/semanticarts/ns/ontology/gist/Person> ;
+                   :is_employee_of :Brown_University ;
                    :first_name "J." ;
                    :last_name "ROBERTS" ;
                    :middle_name "TIMMONS" ;
-                   <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-                   <http://purl.org/dc/terms/created> "2025-01-29T00:52:09Z"^^xsd:dateTime .
+                   dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                   dct:created "2025-01-29T00:52:09Z"^^xsd:dateTime ;
+                   <http://www.w3.org/2004/02/skos/core#definition> """J. Timmons Roberts is the Ittleson Professor of Environmental Studies
+and Sociology at Brown University and the executive director of the
+Climate Social Science Network (CSSN). His current research focuses
+on social drivers of action and inaction on climate change""" .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/PETER_NEWELL
+:PETER_NEWELL rdf:type owl:NamedIndividual ,
+                       <https://w3id.org/semanticarts/ns/ontology/gist/Person> ;
+              :first_name "PETER" ;
+              :last_name "NEWELL" ;
+              dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+              dct:created "2025-01-29T18:38:10Z"^^xsd:dateTime .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/RCC_Ruling_on_Chiquita_climate_neutral_bananas
@@ -3744,8 +3839,8 @@ Netherlands  Code for Environmental Advertising  Article 2""" ,
                                                                                                                """Summary:
 The contested advertising concerned a sticker on Chiquita's bananas which included the statement \"CO2 Neutral.\" The complaint alleged that Chiquita's \"CO2 Neutral\" claim was not true. Several statements were pointed out on Chiquita's website which referred to CO2 emission reduction by 30 percent by the end of 2030. The Commission found the sticker on the bananas with the claim \"CO2 Neutral\" to be misleading pursuant to article 2 of the Code for Environmental Advertising (MRC), as it did not contain any reference to information about the interpretation of this claim. Because any context was lacking, the meaning of this claim was unclear to the average consumer. The Committee noted that the meaning of the environmental claim had had to be made clear in the advertisement. The Committee found it insufficient that the meaning of \"CO2 Neutral\" was clarified on a separate website. It also noted that the mere mention of a website was insufficient to make the meaning of the claim clear. Because the claims were admissible on the basis of the foregoing, the Committee did not have to examine the question whether Chiquita was able to demonstrate the correctness of its absolute environmental claim pursuant to article 3 MRC. However, the Committee did refer to the strict standards set out in previous rulings.""" ;
                                                 <https://w3id.org/semanticarts/ns/ontology/gist/isRecordedAt> "2022-01-01T00:00:00"^^xsd:dateTime ;
-                                                <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-                                                <http://purl.org/dc/terms/created> "2025-01-22T04:30:29Z"^^xsd:dateTime ;
+                                                dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                                                dct:created "2025-01-22T04:30:29Z"^^xsd:dateTime ;
                                                 rdfs:label "RCC Ruling on Chiquita “climate neutral bananas”" .
 
 
@@ -3755,8 +3850,17 @@ The contested advertising concerned a sticker on Chiquita's bananas which includ
                  :first_name "ROBERT" ;
                  :last_name "BRULLE" ;
                  :middle_name "J." ;
-                 <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-                 <http://purl.org/dc/terms/created> "2025-01-29T00:48:16Z"^^xsd:dateTime .
+                 dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                 dct:created "2025-01-29T00:48:16Z"^^xsd:dateTime .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/RUTH_MCKIE
+:RUTH_MCKIE rdf:type owl:NamedIndividual ,
+                     <https://w3id.org/semanticarts/ns/ontology/gist/Person> ;
+            :first_name "RUTH" ;
+            :last_name "MCKIE" ;
+            dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+            dct:created "2025-01-29T18:40:04Z"^^xsd:dateTime .
 
 
 ###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

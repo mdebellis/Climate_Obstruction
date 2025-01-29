@@ -81,11 +81,16 @@ def find_instance(iri_name):
 # If no object with that label, returns None
 def find_object_from_label(label_string):
     statements = conn.getStatements(None, rdfs_label_property, label_string)
-    kg_object = None
     with statements:
         for statement in statements:
             kg_object = statement.getSubject()
-    return kg_object
+            return kg_object
+    statements = conn.getStatements(None, skos_pref_label_property, label_string)
+    with statements:
+        for statement in statements:
+            kg_object = statement.getSubject()
+            return kg_object
+    return None
 
 
 # Gets the value of a single valued property using the IRI name of the instance and the IRI name of the property
