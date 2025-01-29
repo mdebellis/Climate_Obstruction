@@ -3703,7 +3703,8 @@ Repsol explained that renewable fuels make up 10% of their fuel sales in Spain a
 :Climate_Obstruction_in_Europe rdf:type owl:NamedIndividual ,
                                         :Book ;
                                <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-                               <http://purl.org/dc/terms/created> "2025-01-29T00:45:54Z"^^xsd:dateTime .
+                               <http://purl.org/dc/terms/created> "2025-01-29T00:45:54Z"^^xsd:dateTime ;
+                               rdfs:label "Climate Obstruction in Europe" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Introduction_The_First_Portrait_of_Climate_Obstruction_across_Europe
@@ -3713,7 +3714,8 @@ Repsol explained that renewable fuels make up 10% of their fuel sales in Spain a
                                                                       :has_Author :J_TIMMONS_ROBERTS ,
                                                                                   :ROBERT_J_BRULLE ;
                                                                       <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-                                                                      <http://purl.org/dc/terms/created> "2025-01-29T00:46:51Z"^^xsd:dateTime .
+                                                                      <http://purl.org/dc/terms/created> "2025-01-29T00:46:51Z"^^xsd:dateTime ;
+                                                                      rdfs:label "Introduction The First Portrait of Climate Obstruction across Europe" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/J_TIMMONS_ROBERTS

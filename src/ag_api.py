@@ -114,9 +114,8 @@ def get_values(instance, owl_property):
     return values
 
 # Creates a new instance of a class and returns the new instance
-def make_instance (instance_name, class_name):
+def make_instance (instance_name, instance_class):
     instance_iri = conn.createURI(make_ontology_iri(instance_name))
-    instance_class = find_class(class_name)
     conn.add(instance_iri, RDF.TYPE, owl_named_individual)
     conn.add(instance_iri, RDF.TYPE, instance_class)
     return instance_iri
