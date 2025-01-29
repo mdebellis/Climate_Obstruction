@@ -1,7 +1,13 @@
 from franz.openrdf.connect import ag_connect
 from franz.openrdf.vocabulary import RDF
 
-conn = ag_connect('nasa', host='localhost', port=10035, user='user name', password='password')
+# Utilities to make and query AllegroGraph objects
+# Note that functions to retrieve values need to be sent a complete IRI
+# because we may be retrieving values from SKOS, Gist, or other properties
+# However functions to create objects and set values assume all new objects go in
+# the main ontology so only need to pass them the last part of the IRI and they complete the
+# iri in the function using make_ontology_iri
+conn = ag_connect('climate_obstruction', host='localhost', port=10035, user='xxxxxxx', password='xxxxxxx')
 
 owl_named_individual = conn.createURI("http://www.w3.org/2002/07/owl#NamedIndividual")
 owl_datatype_property = conn.createURI("http://www.w3.org/2002/07/owl#DatatypeProperty")
@@ -10,41 +16,44 @@ owl_object_property = conn.createURI("http://www.w3.org/2002/07/owl#ObjectProper
 owl_class = conn.createURI("http://www.w3.org/2002/07/owl#Class")
 rdfs_label_property = conn.createURI("http://www.w3.org/2000/01/rdf-schema#label")
 skos_pref_label_property = conn.createURI("http://www.w3.org/2004/02/skos/core#prefLabel")
-ontology_string = "http://www.semanticweb.org/ontologies/2022/1/CfHA_Ontology/"
+ontology_string = "https://www.michaeldebellis.com/climate_obstruction/"
+gist_string = "https://w3id.org/semanticarts/ns/ontology/gist/"
 
 # Given the last part of an IRI will return the full IRI string
-# E.g., given "Person" returns "http://www.semanticweb.org/ontologies/2022/1/CfHA_Ontology/Person"
-def make_iri_string (iri_name):
+# E.g., given "Green_Washing" returns "https://www.michaeldebellis.com/climate_obstruction/Green_Washing"
+def make_ontology_iri (iri_name):
     return ontology_string + iri_name
+
+# Same as make_ontology_iri but for Gist IRI
+def make_gist_iri (gist_name):
+    return gist_string + gist_name
 
 # Finds a class with the the IRI class_name
 # If no such class exists, returns None
 # Note: when we refer to "IRI name" we mean last part of the IRI after the ontology prefix
 # E.g., IRI name of "http://www.semanticweb.org/ontologies/2022/1/CfHA_Ontology/Person" is "Person"
-def find_class (class_name):
-    iri_str = make_iri_string(class_name)
+def find_class (iri_str):
     class_object = conn.createURI(iri_str)
     for _ in conn.getStatements(class_object, RDF.TYPE, owl_class):
         return class_object
-    print(f'Error {class_name} is not a class')
+    print(f'Error {iri_str} is not a class')
     return None
 
-# Returns a list with all the instances of the class where the class is specified by name
+# Returns a set with all the instances of the class where the class is specified by name
 # Note wherever it says X_name it means the IRI name of X If no class with that IRI name returns None
 # If the class has no instances returns an empty list.
 def find_instances_of_class(class_object):
-    class_list = []
+    class_set = set()
     statements = conn.getStatements(None, RDF.TYPE, class_object)
     with statements:
         for statement in statements:
-            class_list.append(statement.getSubject())
-    return class_list
+            class_set.add(statement.getSubject())
+    return class_set
 
 
 # Finds a property (annotation, object, or datatype) from the IRI name
 def find_property(prop_str):
-    iri_str = make_iri_string(prop_str)
-    prop = conn.createURI(iri_str)
+    prop = conn.createURI(prop_str)
     for _ in conn.getStatements(prop, RDF.TYPE, owl_datatype_property):
         return prop
     for _ in conn.getStatements(prop, RDF.TYPE, owl_annotation_property):
@@ -56,8 +65,7 @@ def find_property(prop_str):
 
 # Finds an instance from the IRI name
 def find_instance(iri_name):
-    iri_string = make_iri_string(iri_name)
-    instance_iri = conn.createURI(iri_string)
+    instance_iri = conn.createURI(iri_name)
     statements = conn.getStatements(instance_iri, RDF.TYPE, owl_named_individual)
     with statements:
         for statement in statements:
@@ -97,7 +105,7 @@ def get_value(instance, owl_property):
 
 # Returns the values of a the property of an instance in a set if no values returns an empty set
 def get_values(instance, owl_property):
-    values = {}
+    values = set()
     statements = conn.getStatements(instance, owl_property, None)
     with statements:
         for statement in statements:
@@ -107,7 +115,7 @@ def get_values(instance, owl_property):
 
 # Creates a new instance of a class and returns the new instance
 def make_instance (instance_name, class_name):
-    instance_iri = conn.createURI(make_iri_string(instance_name))
+    instance_iri = conn.createURI(make_ontology_iri(instance_name))
     instance_class = find_class(class_name)
     conn.add(instance_iri, RDF.TYPE, owl_named_individual)
     conn.add(instance_iri, RDF.TYPE, instance_class)
