@@ -558,6 +558,7 @@ Note that the unit of measure of the accuracy has to be compatible with the unit
 ###  https://w3id.org/semanticarts/ns/ontology/gist/isDirectPartOf
 <https://w3id.org/semanticarts/ns/ontology/gist/isDirectPartOf> rdf:type owl:ObjectProperty ;
                                                                 rdfs:subPropertyOf <https://w3id.org/semanticarts/ns/ontology/gist/isPartOf> ;
+                                                                owl:inverseOf :has_Direct_Part ;
                                                                 rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore> ;
                                                                 <http://www.w3.org/2004/02/skos/core#definition> "The relationship between a part and a whole where the part has independent existence and there are no other parts in between." ;
                                                                 <http://www.w3.org/2004/02/skos/core#prefLabel> "is direct part of" ;
@@ -630,8 +631,9 @@ Note that the unit of measure of the accuracy has to be compatible with the unit
 
 
 ###  https://w3id.org/semanticarts/ns/ontology/gist/isPartOf
-<https://w3id.org/semanticarts/ns/ontology/gist/isPartOf> rdf:type owl:ObjectProperty ,
-                                                                   owl:TransitiveProperty ;
+<https://w3id.org/semanticarts/ns/ontology/gist/isPartOf> rdf:type owl:ObjectProperty ;
+                                                          owl:inverseOf :has_Part ;
+                                                          rdf:type owl:TransitiveProperty ;
                                                           rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore> ;
                                                           <http://www.w3.org/2004/02/skos/core#definition> "The relationship between a part and a whole where the part has independent existence." ;
                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "is part of" ;
@@ -796,18 +798,33 @@ Note that the unit of measure of the accuracy has to be compatible with the unit
 	Implementations requiring a more specific meaning should define subproperties.""" .
 
 
-###  https://www.michaeldebellis.com/climate_obstruction/flows_from
-:flows_from rdf:type owl:ObjectProperty ;
+###  https://www.michaeldebellis.com/climate_obstruction/has_Author
+:has_Author rdf:type owl:ObjectProperty ;
+            owl:inverseOf :is_Author_Of ;
+            rdfs:domain <https://w3id.org/semanticarts/ns/ontology/gist/Content> ;
+            rdfs:range :Agent ;
             <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-            <http://purl.org/dc/terms/created> "2025-01-17T21:49:20Z"^^xsd:dateTime .
+            <http://purl.org/dc/terms/created> "2025-01-29T00:54:44Z"^^xsd:dateTime .
 
 
-###  https://www.michaeldebellis.com/climate_obstruction/flows_to
-:flows_to rdf:type owl:ObjectProperty ;
-          rdfs:range :Agent ;
+###  https://www.michaeldebellis.com/climate_obstruction/has_Direct_Part
+:has_Direct_Part rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :has_Part ;
+                 <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
+                 <http://purl.org/dc/terms/created> "2025-01-29T01:00:03Z"^^xsd:dateTime .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/has_Part
+:has_Part rdf:type owl:ObjectProperty ,
+                   owl:TransitiveProperty ;
           <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
-          <http://purl.org/dc/terms/created> "2025-01-17T21:49:20Z"^^xsd:dateTime ;
-          rdfs:comment "Note: at first I made flows_To and flows_From inverses but since we are reifying the flows relation this isn't correct." .
+          <http://purl.org/dc/terms/created> "2025-01-29T00:59:49Z"^^xsd:dateTime .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/is_Author_Of
+:is_Author_Of rdf:type owl:ObjectProperty ;
+              <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
+              <http://purl.org/dc/terms/created> "2025-01-29T00:55:21Z"^^xsd:dateTime .
 
 
 #################################################################
@@ -1534,6 +1551,25 @@ The conventions for precision that are repeated in each property name are as fol
                                                                                                                             <https://w3id.org/semanticarts/ns/ontology/gist/MediaType> ,
                                                                                                                             <https://w3id.org/semanticarts/ns/ontology/gist/Tag> ,
                                                                                                                             <https://w3id.org/semanticarts/ns/ontology/gist/Text> .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/first_name
+:first_name rdf:type owl:DatatypeProperty ;
+            <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
+            <http://purl.org/dc/terms/created> "2025-01-29T00:49:23Z"^^xsd:dateTime .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/last_name
+:last_name rdf:type owl:DatatypeProperty ;
+           <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
+           <http://purl.org/dc/terms/created> "2025-01-29T00:49:13Z"^^xsd:dateTime ;
+           <http://www.w3.org/2004/02/skos/core#definition> "Last name for a Person. This is the only mandatory name property." .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/middle_name
+:middle_name rdf:type owl:DatatypeProperty ;
+             <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
+             <http://purl.org/dc/terms/created> "2025-01-29T00:49:33Z"^^xsd:dateTime .
 
 
 #################################################################
@@ -3240,6 +3276,20 @@ The conventions for precision that are repeated in each property name are as fol
 Claim does not reflect consistent organizational practice""" .
 
 
+###  https://www.michaeldebellis.com/climate_obstruction/Book
+:Book rdf:type owl:Class ;
+      rdfs:subClassOf <https://w3id.org/semanticarts/ns/ontology/gist/Content> ;
+      <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
+      <http://purl.org/dc/terms/created> "2025-01-29T00:44:51Z"^^xsd:dateTime .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/Book_Chapter
+:Book_Chapter rdf:type owl:Class ;
+              rdfs:subClassOf <https://w3id.org/semanticarts/ns/ontology/gist/Content> ;
+              <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
+              <http://purl.org/dc/terms/created> "2025-01-29T00:45:04Z"^^xsd:dateTime .
+
+
 ###  https://www.michaeldebellis.com/climate_obstruction/Business_Organization
 :Business_Organization rdf:type owl:Class ;
                        rdfs:subClassOf <https://w3id.org/semanticarts/ns/ontology/gist/Organization> ;
@@ -3649,6 +3699,33 @@ Repsol explained that renewable fuels make up 10% of their fuel sales in Spain a
                          rdfs:label "ASA Ruling on Repsol SA" .
 
 
+###  https://www.michaeldebellis.com/climate_obstruction/Climate_Obstruction_in_Europe
+:Climate_Obstruction_in_Europe rdf:type owl:NamedIndividual ,
+                                        :Book ;
+                               <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
+                               <http://purl.org/dc/terms/created> "2025-01-29T00:45:54Z"^^xsd:dateTime .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/Introduction_The_First_Portrait_of_Climate_Obstruction_across_Europe
+:Introduction_The_First_Portrait_of_Climate_Obstruction_across_Europe rdf:type owl:NamedIndividual ,
+                                                                               :Book_Chapter ;
+                                                                      <https://w3id.org/semanticarts/ns/ontology/gist/isPartOf> :Climate_Obstruction_in_Europe ;
+                                                                      :has_Author :J_TIMMONS_ROBERTS ,
+                                                                                  :ROBERT_J_BRULLE ;
+                                                                      <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
+                                                                      <http://purl.org/dc/terms/created> "2025-01-29T00:46:51Z"^^xsd:dateTime .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/J_TIMMONS_ROBERTS
+:J_TIMMONS_ROBERTS rdf:type owl:NamedIndividual ,
+                            <https://w3id.org/semanticarts/ns/ontology/gist/Person> ;
+                   :first_name "J." ;
+                   :last_name "ROBERTS" ;
+                   :middle_name "TIMMONS" ;
+                   <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
+                   <http://purl.org/dc/terms/created> "2025-01-29T00:52:09Z"^^xsd:dateTime .
+
+
 ###  https://www.michaeldebellis.com/climate_obstruction/RCC_Ruling_on_Chiquita_climate_neutral_bananas
 :RCC_Ruling_on_Chiquita_climate_neutral_bananas rdf:type owl:NamedIndividual ,
                                                          :Selective_Disclosure ;
@@ -3670,5 +3747,14 @@ The contested advertising concerned a sticker on Chiquita's bananas which includ
                                                 rdfs:label "RCC Ruling on Chiquita “climate neutral bananas”" .
 
 
-###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
+###  https://www.michaeldebellis.com/climate_obstruction/ROBERT_J_BRULLE
+:ROBERT_J_BRULLE rdf:type owl:NamedIndividual ,
+                          <https://w3id.org/semanticarts/ns/ontology/gist/Person> ;
+                 :first_name "ROBERT" ;
+                 :last_name "BRULLE" ;
+                 :middle_name "J." ;
+                 <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-8824-9577> ;
+                 <http://purl.org/dc/terms/created> "2025-01-29T00:48:16Z"^^xsd:dateTime .
 
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
