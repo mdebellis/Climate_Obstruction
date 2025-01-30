@@ -807,15 +807,6 @@ Note that the unit of measure of the accuracy has to be compatible with the unit
 	Implementations requiring a more specific meaning should define subproperties.""" .
 
 
-###  https://www.michaeldebellis.com/climate_obstruction/has_Author
-:has_Author rdf:type owl:ObjectProperty ;
-            owl:inverseOf :is_Author_Of ;
-            rdfs:domain <https://w3id.org/semanticarts/ns/ontology/gist/Content> ;
-            rdfs:range :Agent ;
-            dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-            dct:created "2025-01-29T00:54:44Z"^^xsd:dateTime .
-
-
 ###  https://www.michaeldebellis.com/climate_obstruction/has_Direct_Part
 :has_Direct_Part rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf :has_Part ;
@@ -830,11 +821,27 @@ Note that the unit of measure of the accuracy has to be compatible with the unit
           dct:created "2025-01-29T00:59:49Z"^^xsd:dateTime .
 
 
+###  https://www.michaeldebellis.com/climate_obstruction/has_author
+:has_author rdf:type owl:ObjectProperty ;
+            owl:inverseOf :is_author_of ;
+            rdfs:domain <https://w3id.org/semanticarts/ns/ontology/gist/Content> ;
+            rdfs:range :Agent ;
+            dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+            dct:created "2025-01-29T00:54:44Z"^^xsd:dateTime .
+
+
 ###  https://www.michaeldebellis.com/climate_obstruction/has_employee
 :has_employee rdf:type owl:ObjectProperty ;
               owl:inverseOf :is_employee_of ;
               dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
               dct:created "2025-01-29T18:26:11Z"^^xsd:dateTime .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/has_jurisdiction
+:has_jurisdiction rdf:type owl:ObjectProperty ;
+                  owl:inverseOf :is_jurisdiction_for ;
+                  dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                  dct:created "2025-01-30T02:55:36Z"^^xsd:dateTime .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/has_status
@@ -844,8 +851,8 @@ Note that the unit of measure of the accuracy has to be compatible with the unit
             dct:created "2025-01-29T22:19:35Z"^^xsd:dateTime .
 
 
-###  https://www.michaeldebellis.com/climate_obstruction/is_Author_Of
-:is_Author_Of rdf:type owl:ObjectProperty ;
+###  https://www.michaeldebellis.com/climate_obstruction/is_author_of
+:is_author_of rdf:type owl:ObjectProperty ;
               dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
               dct:created "2025-01-29T00:55:21Z"^^xsd:dateTime .
 
@@ -859,13 +866,24 @@ Note that the unit of measure of the accuracy has to be compatible with the unit
                 dct:created "2025-01-29T18:24:35Z"^^xsd:dateTime .
 
 
+###  https://www.michaeldebellis.com/climate_obstruction/is_jurisdiction_for
+:is_jurisdiction_for rdf:type owl:ObjectProperty ;
+                     dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                     dct:created "2025-01-30T02:55:55Z"^^xsd:dateTime .
+
+
 #################################################################
 #    Data properties
 #################################################################
 
 ###  http://purl.org/dc/terms/abstract
 dct:abstract rdf:type owl:DatatypeProperty ;
-             rdfs:subPropertyOf <https://w3id.org/semanticarts/ns/ontology/gist/containedText> .
+             rdfs:subPropertyOf :content_metadata .
+
+
+###  http://purl.org/dc/terms/title
+dct:title rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf :content_metadata .
 
 
 ###  https://w3id.org/semanticarts/ns/ontology/gist/actualEndDate
@@ -1597,6 +1615,21 @@ The conventions for precision that are repeated in each property name are as fol
           dct:created "2025-01-29T22:09:03Z"^^xsd:dateTime .
 
 
+###  https://www.michaeldebellis.com/climate_obstruction/author_string
+:author_string rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf :content_metadata ;
+               dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+               dct:created "2025-01-30T04:43:25Z"^^xsd:dateTime ;
+               <http://www.w3.org/2004/02/skos/core#definition> "A string with the authors of a book, article, or other content. Often more than one author delimited by a semi-colon." .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/content_metadata
+:content_metadata rdf:type owl:DatatypeProperty ;
+                  dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                  dct:created "2025-01-30T04:45:57Z"^^xsd:dateTime ;
+                  <http://www.w3.org/2004/02/skos/core#definition> "Text strings that hold metadata for content such as books, journal articles, web pages, etc. These strings are for the initial metadata before post processing turns them into objects and object properties or datatypes such as xsd:dateTime" .
+
+
 ###  https://www.michaeldebellis.com/climate_obstruction/first_name
 :first_name rdf:type owl:DatatypeProperty ;
             dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
@@ -1616,11 +1649,26 @@ The conventions for precision that are repeated in each property name are as fol
              dct:created "2025-01-29T00:49:33Z"^^xsd:dateTime .
 
 
+###  https://www.michaeldebellis.com/climate_obstruction/publication_date
+:publication_date rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf :content_metadata ;
+                  dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                  dct:created "2025-01-30T04:48:54Z"^^xsd:dateTime ;
+                  <http://www.w3.org/2004/02/skos/core#definition> "The datatype here is a literal (string) rather than xsd:dateTime because this is for dates scraped from web sites or other metadata." .
+
+
 ###  https://www.michaeldebellis.com/climate_obstruction/summary
 :summary rdf:type owl:DatatypeProperty ;
          rdfs:subPropertyOf <https://w3id.org/semanticarts/ns/ontology/gist/containedText> ;
          dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
          dct:created "2025-01-29T22:07:46Z"^^xsd:dateTime .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/text
+:text rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf :content_metadata ;
+      dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+      dct:created "2025-01-30T05:14:56Z"^^xsd:dateTime .
 
 
 #################################################################
@@ -3414,6 +3462,13 @@ Source: ChatGPT""" .
                       dct:created "2025-01-10T23:59:16Z"^^xsd:dateTime .
 
 
+###  https://www.michaeldebellis.com/climate_obstruction/City
+:City rdf:type owl:Class ;
+      rdfs:subClassOf <https://w3id.org/semanticarts/ns/ontology/gist/CountryGeoRegion> ;
+      dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+      dct:created "2025-01-30T02:53:11Z"^^xsd:dateTime .
+
+
 ###  https://www.michaeldebellis.com/climate_obstruction/Communication
 :Communication rdf:type owl:Class ;
                rdfs:subClassOf <https://w3id.org/semanticarts/ns/ontology/gist/Event> ;
@@ -3442,6 +3497,27 @@ Source: ChatGPT""" .
                     :Lobbying_Firm ,
                     :Think_Tank ;
              :testimony_at_hearings :Political_Agenda .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/County
+:County rdf:type owl:Class ;
+        rdfs:subClassOf <https://w3id.org/semanticarts/ns/ontology/gist/CountryGeoRegion> ;
+        dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+        dct:created "2025-01-30T02:53:11Z"^^xsd:dateTime .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/Court
+:Court rdf:type owl:Class ;
+       rdfs:subClassOf <https://w3id.org/semanticarts/ns/ontology/gist/Organization> ;
+       dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+       dct:created "2025-01-30T02:58:05Z"^^xsd:dateTime .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/District
+:District rdf:type owl:Class ;
+          rdfs:subClassOf <https://w3id.org/semanticarts/ns/ontology/gist/CountryGeoRegion> ;
+          dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+          dct:created "2025-01-30T02:53:11Z"^^xsd:dateTime .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Empty_Claims
@@ -3539,6 +3615,13 @@ Source: ChatGPT""" .
                    dct:created "2025-01-10T23:59:46Z"^^xsd:dateTime .
 
 
+###  https://www.michaeldebellis.com/climate_obstruction/Nation
+:Nation rdf:type owl:Class ;
+        rdfs:subClassOf <https://w3id.org/semanticarts/ns/ontology/gist/CountryGeoRegion> ;
+        dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+        dct:created "2025-01-30T02:53:11Z"^^xsd:dateTime .
+
+
 ###  https://www.michaeldebellis.com/climate_obstruction/Non-Profit_Organization
 :Non-Profit_Organization rdf:type owl:Class ;
                          rdfs:subClassOf <https://w3id.org/semanticarts/ns/ontology/gist/Organization> ;
@@ -3567,6 +3650,13 @@ Source: ChatGPT""" .
              <http://www.w3.org/2004/02/skos/core#definition> """A proposition is a central concept in the philosophy of language, semantics, logic, and related fields, often characterized as the primary bearer of truth or falsity. Propositions are also often characterized as the type of object that declarative sentences denote. For instance, the sentence \"The sky is blue\" denotes the proposition that the sky is blue. However, crucially, propositions are not themselves linguistic expressions. For instance, the English sentence \"Snow is white\" denotes the same proposition as the German sentence \"Schnee ist weiß\" even though the two sentences are not the same. Similarly, propositions can also be characterized as the objects of belief and other propositional attitudes. For instance if someone believes that the sky is blue, the object of their belief is the proposition that the sky is blue.
 
 Source: https://en.wikipedia.org/wiki/Proposition""" .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/Province
+:Province rdf:type owl:Class ;
+          rdfs:subClassOf <https://w3id.org/semanticarts/ns/ontology/gist/CountryGeoRegion> ;
+          dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+          dct:created "2025-01-30T02:53:11Z"^^xsd:dateTime .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Public_Agenda
@@ -3600,6 +3690,13 @@ Claiming biodiversity or carbon neutrality or a reduction of environmental harm 
                                                                        "Claim is based on a narrow set of attributes and distracts consumers from the organization's greater environmental impact" .
 
 
+###  https://www.michaeldebellis.com/climate_obstruction/State
+:State rdf:type owl:Class ;
+       rdfs:subClassOf <https://w3id.org/semanticarts/ns/ontology/gist/CountryGeoRegion> ;
+       dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+       dct:created "2025-01-30T02:53:11Z"^^xsd:dateTime .
+
+
 ###  https://www.michaeldebellis.com/climate_obstruction/Status
 :Status rdf:type owl:Class ;
         owl:equivalentClass [ rdf:type owl:Class ;
@@ -3618,6 +3715,13 @@ Claiming biodiversity or carbon neutrality or a reduction of environmental harm 
             rdfs:subClassOf :Non-Profit_Organization ;
             dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
             dct:created "2025-01-24T22:27:28Z"^^xsd:dateTime .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/Town
+:Town rdf:type owl:Class ;
+      rdfs:subClassOf <https://w3id.org/semanticarts/ns/ontology/gist/CountryGeoRegion> ;
+      dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+      dct:created "2025-01-30T02:53:11Z"^^xsd:dateTime .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Trade_Association
@@ -3777,11 +3881,248 @@ Repsol explained that renewable fuels make up 10% of their fuel sales in Spain a
                          rdfs:label "ASA Ruling on Repsol SA" .
 
 
+###  https://www.michaeldebellis.com/climate_obstruction/Big_Oil_Goes_to_College
+:Big_Oil_Goes_to_College rdf:type owl:NamedIndividual ,
+                                  :Web_Page ;
+                         dct:abstract "Report from Jennifer Washburn analyzes 10 research collaboration contracts between leading energy companies and major U.S. universities." ;
+                         dct:title "Big Oil Goes to College An Analysis of 10 Research Collaboration Contracts Between Leading Energy Companies and Major U.S. Universities" ;
+                         :author_string "Jennifer Washburn" ;
+                         :publication_date "Oct 14, 2010" ;
+                         :text """BP’s total 10-year, $500 million investment in the Energy Biosciences Institute will amount to a mere 0.021 percent of BP’s total projected revenues, and just 0.26 percent of its total profits, during the period 2006-2015.
+This level of R&D spending is not inconsistent with energy industry totals, but it remains well below the average for U.S. industry as a whole. According to energy experts Gregory Nemet and Daniel Kammen, during the years 1988 to 2003, the U.S. energy industry (in its entirety) invested just 0.23 percent of its revenues in R&D, far below the average of 2.6 percent for U.S. industry as a whole.""" ,
+                               """Going green on campus: Big Oil’s media blitz
+Big Oil hasn’t been shy about exploiting its university-research connections to “green” its public image. In an eight-page magazine spread, Chevron proudly proclaims: “We’re partnering with major universities to develop the next generation of biofuels.” In another ad, BP declared: “It’s time to invest in our own backyard… we’re investing $500 million over the next 10 years to establish the Energy Biosciences Institute”—a reference to the alliance, headquartered at U.C. Berkeley, that DOE secretaries Chu and Koonin helped to negotiate.
+
+The boldest of these ads appeared on the influential opinion pages of the New York Times. The ad touted Stanford University’s research partnership with Exxon Mobil, among other companies, through the Global Climate and Energy Project—a deal signed in 2002 that is still ongoing today (and is reviewed in this report). The ad—bearing the official Stanford University seal side by side with the GCEP logo—deeply angered many faculty and students on campus because their perception of that ad strongly suggested that the scientific evidence regarding global climate change was still not conclusive. In addition to bearing the university’s official seal, the ad was signed by Stanford Professor Lynn Orr, then-director of the Exxon-funded GCEP alliance""" ,
+                               """Implications
+The 10 university-industry agreements reviewed for this report reveal a considerable amount about the goals and expectations of the big energy companies as well as the research conditions and constraints that academic researchers at U.S. universities are now operating under as a condition of their acceptance of this private industry financing.
+
+Our review found that the terms and conditions outlined in these 10 agreements do not always show parity between the two sets of research partners. Indeed, the report’s analysis supports the author’s view that, in fundamental respects, the vast majority of these contracts seriously challenge the historic research integrity and the independence of the universities involved.
+
+In the recent past, private industry (through Bell Labs and numerous other corporate research hubs) conducted a substantial amount of scientific research and technological development. Over the past 30 years, however, many private companies have vastly reduced their R&D investments, and downsized or outright eliminated their own inhouse scientific and technological expertise. What research these companies do continue to fund is increasingly contracted out to third parties, including private contract research labs and U.S. universities. This is not true of all firms, of course, but it is certainly true of most of the large, established energy companies, as this report demonstrates.
+
+On campus, meanwhile, the research climate is also rapidly changing. Thirty years ago, large-scale, multi-year strategic corporate research alliances on campus were far less common, and overt academic commercialism was largely taboo. Today the boundary between academic research and commercial research is far more blurry. So far, the long-term consequences of this subtle but important shift in the nation’s science-and-technology infrastructure have not been well explored. This shift is especially important to consider in the energy sector, where independent university scientists and experts are urgently needed to measure and interpret today’s complex global-warming problems, uncover path-breaking new technologies, and provide impartial advice and expertise to the public and government agencies regarding effective public policy.
+
+Because this independent university sector remains so vitally important, the Obama administration, Congress, federal agencies, and university leaders across the country would do well to carefully consider the findings of this report, which point to several intriguing new conclusions regarding the efficacy of developing new sources of alternative energy through joint university-industry research partnerships.
+
+First of all, the manner in which these industry contracts were negotiated and concluded points to numerous potential challenges for future U.S. university negotiators. Many of these agreements fail to make any clear distinctions between independent, academic research and commercial research for hire. If more U.S. universities begin to work with the energy industry through these types of contract-research arrangements then it will be far more difficult for them to continue producing credible, independent energy research in these critical academic fields. One has only to review the extensive science literature on pharmaceutical industry influence and conflicts of interest in academic medicine to see the potential hazards that can arise from tearing down the boundary walls that separate academic and commercial research.
+
+Second, preserving an independent research sector inside top-ranked U.S. universities remains vitally important for the advancement of clean energy research and the health of the U.S. science and innovation system more broadly. U.S. universities have traditionally performed many types of research (curiosity-driven science, fundamental inquiry, disinterested research) that private firms were unable, or unwilling, to finance adequately on their own, because of shorter-term commercial, strategic, and profit considerations. Many of this nation’s most path-breaking scientific discoveries—including those that launched the biotechnology, computing, and information-technology revolutions—were born out of publicly financed research, performed in academic labs.
+
+Of course, private industry has also made enormous contributions to U.S. science and innovation. But until recently, most major firms operated their own independent, commercial R&D labs. It remains highly uncertain what will happen to our nation’s unique academic sector if private industry continues to move its R&D operations onto U.S. campuses without showing adequate respect for the university’s highly distinctive academic research culture.
+
+Third, we need to preserve a research sphere that is committed to public-good research— research that has enormous social value, but which rarely generates commercial profits. In the area of energy research alone, this might include studies comparing the relative social, economic, energy, and environmental consequences of various competing alternativeenergy technologies, or advanced research to measure carbon and other greenhouse gases emitted from various sources, or the development of effective carbon caps, taxes, trading, and measuring systems. Without this type of public-good research—carried out independently of specific commercial- or special-interest groups—it is far more difficult for political leaders and the public to develop effective, enlightened public policies.
+
+Finally, public-private partnerships will certainly be necessary for bringing new cleanenergy research and technologies into the commercial marketplace, whether they originate in academic labs, government labs, or commercial labs. But these partnerships should not be pursued in a manner that compromises the long-term health of this nation’s public research sphere. When U.S. government agencies, including the Department of Energy, issue public-private R&D grants, they should clearly differentiate between the research objectives of American universities and the objectives of the individual private-sector partners. This can be done by crafting standard legal agreements between the federal funding agencies, U.S. universities, and private firms that vigorously protect the universities’ core academic- and public-knowledge missions, including their commitment to self-governance, free inquiry, and research independence. Commercial firms should be required to accept these terms in exchange for government research support.
+
+In the final section of the main report, we offer recommendations for avoiding what we see as the problems with the contracts at these 10 universities, through our “detailed contract reviews” featured in this report’s appendices. The purpose: so the problems will not be repeated at other universities. The goal of these recommendations is to ensure that corporations seeking to partner with U.S. universities to capitalize on academic expertise and resources are not granted excessive commercial influence over the academic research process and, in some instances, overly broad commercial advantages as well. We briefly detail these recommendations here.""" ,
+                               """In nine of the 10 energy-research agreements we analyzed, the university partners failed to retain majority academic control over the central governing body charged with directing the university-industry alliance. Four of the 10 alliances actually give the industry sponsors full governance control.
+Eight of the 10 agreements permit the corporate sponsor or sponsors to fully control both the evaluation and selection of faculty research proposals in each new grant cycle.
+None of the 10 agreements requires faculty research proposals to be evaluated and awarded funding based on independent expert peer review, the traditional method for awarding academic and scientific research grants fairly and impartially based on scientific merit.
+Eight of the 10 alliance agreements fail to specify transparently, in advance, how faculty may apply for alliance funding, and what the specific evaluation and selection criteria will be.
+Nine of the 10 agreements call for no specific management of financial conflicts of interest related to the alliance and its research functions. None of these agreements, for example, specifies that committee members charged with evaluating and selecting faculty research proposals must be impartial, and may not award corporate funding to themselves. (See summary of main findings for details, pages 52-59, and the Appendices beginning on page 75.)""" ,
+                               """It is clear, then, that industry spending on all forms of energy R&D (especially low-carbon energy R&D) remains chronically low. Nevertheless, the industry’s decision to shift more of its already limited R&D spending to U.S. universities is highly significant, and could have far-reaching consequences for the future direction of energy R&D efforts nationally. In large part, this is because the U.S. government commitment to energy R&D has remained persistently low for decades, so every dollar of private industry funding that comes into university labs is urgently needed. Consider that:
+
+From 1993 to 2006, U.S. government spending on all energy-related R&D (in real dollars) remained stuck at roughly $3 billion to $4 billion per year, averaging $3.6 billion per year over this period. This is 60 percent less than the $9 billion the U.S. government spent on energy R&D in 1979. (see graph)
+
+Over the same years, by contrast, real federal spending on defense R&D and health R&D averaged $58 billion and $22 billion per year, respectively. (see graph)
+
+Industry financing of university research is certainly legitimate. Academic-industry research collaborations have led to critical advancements in science and engineering and should be nurtured. Yet industry funding can also have a powerful distorting influence on the quality, topics, and credibility of academic research when it is not properly managed.
+
+Indeed, in recent years a large body of analytic and empirical research has shown that industry-funded studies in sectors ranging from pharmaceuticals to tobacco to food are associated with reported outcomes that strongly favor the corporate sponsor’s products and/or interests compared to studies funded by government and non-profit sources.""" ,
+                               """It’s clear that Big Oil and other large energy companies have ramped up their advertising budgets to project a pro-environmental business orientation. But if we crack open the industry’s annual reports, it is also clear that today’s climate and energy crises (and persistently high oil prices) haven’t had anywhere near the impact on energy industry R&D spending that the earlier oil price shocks of the 1970s once had. After rising sharply in the 1970s, energy industry spending (adjusted for inflation) on all types of R&D has plummeted, from an annual average of nearly $6.4 billion in the early 1980s to an annual average of roughly $1.7 billion at the start of the last decade (see graph).
+
+The annual reports of four of the largest oil companies— ExxonMobil, BP, Shell, and Chevron— between 2000 and 2007 (before the Great Recession began) do show some overall gains in R&D spending. But these R&D gains, which are overwhelmingly directed toward enhanced oil and gas recovery, not clean energy, remain truly marginal, particularly in light of the oil industry’s vast profit margins in recent years. In constant 2006 dollars, here’s what these company reports reveal:
+
+ExxonMobil’s total R&D spending has remained essentially flat since 1993, with barely any increase.
+Shell had the fastest growth in R&D expenditures over the past five years (out of the four companies); however, because Shell’s R&D outlays had dropped dramatically throughout the 1990s, actual gains were marginal.
+BP continues to spend less on energy R&D than either ExxonMobil or Shell. Despite dubbing itself BP or “Beyond Petroleum” in 2000, BP’s aggregate spending on all energy R&D is still roughly the same as it was a decade ago, although the company’s pledge of $50 million per year over 10 years for the Energy Biosciences Institute will lift this total slightly.
+Chevron’s aggregate spending on R&D remained extremely low and flat from 1999 through 2004. Since 2005, Chevron’s R&D outlays rose, but they still remain the lowest of the four. (see the graph for details).""" ,
+                               """Major findings—A brief synopsis
+This report’s analysis of the contracts underlying 10 large-scale university-industry alliances to finance energy research identifies eight major areas where serious limitations on academic freedom and academic research, and governing independence are permitted. What follows is a brief description of the eight areas where these agreements appear to fail to uphold the universities’ core academic and public-interest obligations:
+
+1. Do these agreements protect university independence and academic self-governance?
+In nine of the 10 agreements, the university partners failed to retain majority academic control over the central governing body charged with directing the university-industryresearch alliance. Four of the 10 alliances allow for full industry sponsor control over the alliance’s main governing body.
+
+In some cases the written agreement explicitly gives the industry sponsor or sponsors full control. In other cases, this is how the agreement is being interpreted and/or administered in practice. This finding is quite remarkable. “Academic independence” has been rooted, historically, in the university’s core belief that it must retain the ability to govern its own internal affairs. This is often referred to as “academic self-governance” or “academic autonomy.”
+
+Ever since the birth of the academic freedom movement in the early 1900s, U.S. universities and their faculties have worked strenuously to prevent outside donors (whether a wealthy benefactor, a commercial sponsor, or a federal grant-making agency) from exerting undue influence over faculty teaching, research, and other internal academic governance decisions. The rationale for this is quite straightforward: Without self-governance, research independence and free inquiry are meaningless.
+
+2. Do these agreements require faculty research proposals to be evaluated and awarded funding on the basis of impartial “peer review”?
+None of the 10 agreements requires faculty research proposals to be evaluated and awarded funding in each new grant cycle using academic methods of independent, impartial peer review. In the case of the Arizona State University-BP research alliance this question does not apply because all the research projects have been identified upfront so no other campus faculty are eligible to apply for funding.
+
+In interviews and written comments, several university officials told CAP that, even though their formal alliance agreements do not require peer review, they do frequently draw on the expertise of outside expert reviewers. Yet, in all the cases reviewed in this report, it is the view of the author and our legal experts that the use of peer review is variable, inconsistent, and/or does not rise to the level of genuine, impartial, expert peer review. And because peer review is not secured in the alliance’s legal contract, its weight in the research-selection process remains unclear, and its application can be altered or simply abandoned at any time. (For more discussion, please see the detailed contract reviews in Appendices 1-10.)
+
+Consider Stanford University’s Global Climate and Energy Project, which is funded by Exxon Mobil, General Electric, Toyota and Schlumberger. Neither of GCEP’s formal written alliance agreements (originally signed in 2002 and renewed in 2008) requires the use of expert peer review for the selection of faculty research proposals. Both agreements’ use of peer review is entirely optional and left to the discretion of the four industry sponsors. Stanford officials respond that GCEP uses an informal peer-review system even though it is not legally required, and that they posted written peer-review protocols on a public website to clarify how this peer review works in practice. But our outside legal experts say this informal peer review system is not legally binding and could be altered or abandoned at any time. (see Appendix 8 for details)
+
+Academic peer review has long been considered the gold standard when it comes to appropriately and fairly evaluating the quality and worthiness of scientific and academic research. When faculty research proposals are evaluated by independent experts using an impartial peer review process, it helps to ensure that corporate-research funding is awarded on the basis of both scientific and academic merit—not merely on the basis of one firm’s short-term business needs or the narrow strategic goals of one industrial sector.
+
+When Cornell University’s faculty senate issued final recommendations in 2005 on how best to structure large-scale, university-industry research alliances, it strongly emphasized the centrality of independent peer review: “The important point—vital to honoring the principal that we are engaged in academic, not corporate research—is that genuine, disinterested peer review occur.”
+
+3. Are these agreements fully transparent about how the faculty may apply for commercial funding, and what the methods and criteria for selection will be?
+Eight of the 10 alliance agreements fail to specify in adequate detail how faculty may apply for alliance research funding, or what evaluation and selection criteria will be used. Within the university and scientific communities it is widely understood that high standards cannot be maintained unless faculty research and scholarship is judged fairly and impartially based on academic merit and scientific excellence, not according to the narrow wishes or dictates of outside sponsors.
+
+The notable lack of clarity and transparency in a majority of these 10 university-industry agreements (combined with their failure to require peer review) suggests that funding awarded through these academic-industry alliances will strongly favor the business and strategic interests of the corporate sponsors. Given that nine of the 10 agreements also clearly state that the university side will be responsible for administering and overseeing the research-selection process (on behalf of the alliance as a whole), this could leave university leaders vulnerable to accusations that they are putting the sponsors’ commercial interests ahead of the universities’ core commitment to high-quality research, and the disinterested quest for knowledge and truth for the benefit of the public.
+
+4. Do these agreements adequately distinguish “academic research” from “corporate research for hire?”
+The answer to this question largely rests on which party to the agreement defines the alliance’s overarching research agenda, which party draws up the “request for faculty research proposals” in each new grant cycle, and which party retains majority control over the evaluation and final selection of academic research proposals. Let’s consider each of these in turn.
+
+In eight of the 10 agreements that we reviewed, the industry sponsor substantially defines the alliance’s “overarching research agenda.” (The exceptions were Arizona State University and Stanford University.) This is not unusual. No funding source is entirely neutral. Simply by defining what research questions will be asked, nearly every sponsor exerts some degree of influence over the academic research enterprise.
+
+It also is not unusual for the corporate sponsors to play a subsequent role in setting the research agenda during each new grant cycle. In five of the 10 agreements, the industry sponsors and the university partners share some responsibility for drawing up a list of research topics in each new grant cycle, and issuing the request for new faculty research proposals. In four cases, the contact allows the industry sponsors to fully set the agenda in each new grant cycle.
+
+But in eight out of 10 contracts we examined, the agreements broke significantly from longstanding university commitments to academic self-governance. This finding is the most significant one. Usually, when it comes to internal academic governance decisions—including the evaluation and selection of faculty research—the university insists on majority academic representation and the right to use independent, expert peer reviewers. In 2007, for example, a U.C. Berkeley faculty senate committee reviewing the Energy Biosciences Institute partnership stressed that all BP-EBI funded research “should not in any way be conceived of or seen as work made for hire for the benefit of the corporate sponsor.”
+
+Nonetheless, in eight of the 10 alliance agreements reviewed here, the university failed to retain majority control over the evaluation and final selection of faculty research proposals, or to require the use of impartial peer review, thus leaving the distinction between “academic research” and “corporate research for hire” quite unclear and uncertain.
+
+5. Is the university’s fundamental right to publish protected?
+Yes. Nine of the 10 agreements affirm the university’s right to publish, but in many instances this contractural right is curtailed by potentially lengthy corporate delays. The National Institutes of Health generally recommends no more than a 60-day delay on academic research publication, which it deems adequate time for the corporate sponsor to file a provisional patent application and remove any sensitive proprietary information. None of the 10 agreements analyzed abide by this maximum-60-day federally recommended publication delay; most far exceed it.
+
+One alliance agreement at the University of Colorado, Boulder and three other publicly funded research institutions in Colorado (known as the Colorado Center for Biorefining and Biofuels, or C2B2) permits the industry sponsors to delay publication for up to 210 days. Another alliance agreement at Stanford University, the Global Climate and Energy Project, gives the four sponsors a mandatory, 60-day review period to consider patent protection prior to release of any academic publications. After this, the agreement provides for no maximum delay on publications, leaving the potential, at least, for indefinite delays. A third alliance agreement with Chevron permits the sponsor to delay publication for up to one year, including student theses.
+
+The timely release of academic information is what makes the university research sphere so exceptionally vibrant, innovative, and dynamic. Rapid dissemination of new knowledge helps to insure that all scientific research is subject to independent review and replication to verify its accuracy. Research should never be quarantined; it needs to be released rapidly so others can react to it and build upon it, continually driving the pursuit of new knowledge forward.
+
+6. Does the corporate sponsor enjoy monopoly commercial rights to all the university’s sponsored-research results?
+We asked our outside legal examiners to rank each alliance agreement on a scale of 1 to 10, with 1 representing very weak contract language granting exclusive commercial rights to the industry sponsor, and 10 representing very strong language granting exclusive commercial rights. Seven of the 10 agreements ranked 8 or higher for their degree of exclusivity, thus giving the industry sponsors strong monopoly commercial control over the alliances’ sponsored research results.
+
+Seven of the 10 agreements left the university side with extremely limited power to license sponsored-research results nonexclusively to outside commercial users. But there are three notable exceptions. The first is the so-called “shared side” of the Colorado Center for Biorefining and Biofuels. The second is the alliance agreement between the University of Texas at Austin, Rice University, and ten companies. And the third is Stanford University’s Global Climate and Energy Project agreement. GCEP was originally launched in 2002, but the university and its four industry sponsors negotiated a new, revised contract in September 2008 that greatly facilitated non-exclusive licensing and open academic sharing of GCEP research results through the elimination of a 5-year, sponsor exclusivity provision. (see Appendix 8 for details)
+
+But the flip side is this: At least four of the 10 agreements (BP-Arizona State University, BP-Energy Biosciences Institute, Chevron-U.C. Davis, and Chevron-Texas A&M) explicitly permit the industry sponsors to extend the commercial rights to “background” academic research, which by definition was not funded by the industry sponsors but by public and other sources not party to the alliance agreement.
+
+Because U.S. taxpayers continue to subsidize higher education substantially through general overhead for state universities, federal and state subsidies for student tuition, graduate-student fellowships, educational tax breaks, and federal research grants, most U.S. universities pledge their commitment to patenting and licensing academic research in a manner “consistent with the public interest.” This is generally understood to mean that universities will work to maximize broad public use of their academic inventions and research tools, and prevent any one private or commercial entity from exerting excessive monopoly control, unless it is absolutely necessary to promote commercial development.
+
+Case in point: In one 2008 review of the BP-EBI alliance, a faculty senate Task Force on University-Industry Partnerships noted that “the use of exclusive licenses should be as limited as possible, given our public mission.” Such sentiments have also been affirmed by the National Institutes of Health, and by more than 50 universities that are signatories to a 2007 statement titled “Nine Points to Consider in University Licensing.”
+
+Yet in seven of the 10 contracts we examined for this report, industry sponsors are granted broad, upfront, exclusive commercial rights to alliance research—even, in some cases, when certain “background knowledge” was developed prior to the creation of the alliance and not funded by the sponsor.
+
+7. Are university faculty members free to share their sponsored-research results with other academic investigators?
+Using our 1-to-10 scale, with 1 representing very weak protections for academic use and sharing and 10 representing very strong protections, the 10 agreements earned an average ranking of just 5.5 for protecting academic use and sharing. Given how important academic sharing is to the whole university and national scientific enterprise, this is troubling.
+
+Since 2007, more than 50 U.S. research universities have endorsed a public statement listing nine core principles that all universities should be required to uphold in their licensing deals with industry. The first of these principles calls for all universities to include a provision in their industry contracts—often known as a “research exemption” —that permits professors and students to freely share their sponsored-research results (including data, tools, and methods) with outside researchers for non-commercial research purposes, including verification of published research findings.
+
+Nevertheless, only four of the 10 alliance agreements had strong academic-use and sharing provisions, receiving a rank of 7 or higher. Five of the 10 agreements ranked 5 or lower (moderate to poor) for protecting the academic investigators’ right to share sponsoredresearch with other academic scientists and scholars for purely research and non-commercial purposes, despite its centrality to the academic research enterprise.
+
+8. Are conflicts of interest adequately regulated in these university-industry alliance agreements?
+Nine of the 10 agreements fail to discuss the management of financial conflicts of interest related to the alliance and its research functions. The lone exception is Stanford University’s Global Climate and Energy Project, where the agreement mentions the need to manage conflicts of interest only with regard to optional peer review panels (convened at the discretion of the industry sponsors) and third-party university grant recipients. This latter reference, however, was dropped from GCEP’s, revised 2008 agreement.
+
+None of the 10 agreements prohibit members who sit on the alliances’ main governing body from having personal financial interests related to the research they are charged with overseeing and directing. At the BP-Arizona State University alliance there is no formal governing body so this question does not apply.
+
+Similarly, none of the 10 agreements prohibits committee members charged with evaluating and selecting faculty research proposals from having financial conflicts of interest related to the research they are reviewing. Again, the lone exception is Stanford’s Global Climate and Energy Project, where the agreement states that peer review panels must be free of conflicts, but these panels are optional, and used solely at the discretion of the management committee members, where the industry sponsors control all the votes.
+
+Furthermore, none of the 10 agreements specifies that these committee members may not award commercial research funding to themselves, or their own labs. This type of potential conflict has already surfaced as a widespread problem at the BP-funded Energy Biosciences Institute administered by U.C. Berkeley. Specifically, after the EBI deal was finalized at the end of 2007, U.C. Berkeley’s press office announced that the executive committee charged with evaluating faculty research projects for possible BP funding would have strong majority academic representation. And when the first formal executive committee convened in 2008 it had eight members, seven of whom were academics and one of whom was a representative from BP. But when this report’s author probed a bit deeper, she soon found that seven of these eight committee members had significant potential conflicts of interest, including all but one of the academics.
+
+Two of the eight executive committee members, including the EBI’s Academic Director and the lone BP representative, had financial ties to firms that could stand to profit from the EBI’s academic research. And five of the other committee members had a different potential conflict: All were listed on the EBI website, in the spring of 2008, as “primary investigators” on research projects funded by BP-EBI. What this strongly suggests is that all five could award BP research grant money to themselves and their labs. At the very least, the application and receipt of BP-EBI funding calls into question whether these faculty members were capable of fairly and impartially evaluating other faculty research proposals.
+
+More recently, these potential conflicts of interest on the EBI’s executive committee seem to have only worsened. As of September 2010, the EBI listed a total of 13 executive committee members: 11 academics and two representatives from BP. Yet 10 of these academics are also listed as primary EBI investigators or heads of projects supported with BP-EBI funding, and one, EBI Director Chris Somerville, continues to have personal financial interests in an outside firm partnering with BP on research that is similar to that of EBI. That means three of the executive committee’s 13 members have financial ties to firms that could profit from EBI research, and the other 10 are academic researchers who have vested research and financial interests with the EBI that could compromise their ability to evaluate incoming faculty research in an impartial and disinterested manner, based on scientific merit (for more details, see the box on conflicts of interest on page 64).""" ,
+                               """Methodology used for reviewing the 10 agreements
+To better understand the specific contractual requirements underlying each of these university-industry research alliances, we turned to Professor Sean O’Connor, a noted legal scholar at the University of Washington Law School with expertise in intellectual property law and university-industry contracting, and Jeremiah Miller, his former graduate assistant and now a practicing attorney in Seattle. O’Connor is Director of the Law, Technology and Arts Group at the University of Washington School of Law. He provides private legaland IP-consulting assistance to many universities, nonprofits and for-profit organizations. Miller performed the primary analysis and interpretation of the contracts. O’Connor then reviewed his analysis. Their services were provided in a personal capacity. They do not necessarily endorse the conclusions of this report.
+
+All the “academic benchmarks” used in our review of the 10 agreements were drawn from a set of detailed analyses of Strategic Corporate Alliances, or SCAs, on campus, developed by a prominent faculty-senate committee at Cornell University from 2004 to 2005.35 Most of the 10 agreements reviewed here broadly fit Cornell’s definition of a Strategic Corporate Alliance: “a comprehensive, formally managed company-university agreement centered around a major, multiyear, financial commitment involving research, programmatic interactions, intellectual property licensing, and other services.”36 Academic norms and public-interest commitments are not well codified in any single document, but they are frequently referred to and affirmed in university mission statements, faculty senate documents such as Cornell’s SCA review, and statements and reports issued by government funding agencies and prominent university associations, including the Association of American Universities, Association of American Medical Colleges, and American Association of University Professors.
+
+This report’s author used the Cornell SCA analyses and their SCA management recommendations as the basis for developing a list of 17 Review Questions to structure this report’s legal contract review. As such, the legal review is not from a purely business standpoint (since most legal contracts are assumed to involve two business entities) but rather from the standpoint of widely accepted academic norms and public-interest benchmarks, including the need to safeguard the university’s core academic mission, and its commitment to self-governance, independent research, and the dissemination of high-quality, reliable, public knowledge.
+
+With regard to the intellectual property provisions in these agreements, our outside legal experts were asked to rank each agreement on a scale of 1 to 10 to assess the amount of exclusive commercial control over academic research results that each agreement permits the industry sponsors, as well as the degree of flexibility afforded to the university partners (and faculty) to license discoveries nonexclusively and/or to share research with other academics. Knowledge sharing is widely seen as a fundamental duty of all academics, as detailed in “Nine Points to Consider in Licensing University Technology,” a 2007 statement signed by more than 50 universities, and other federal agency guidelines.37 It should be noted that our external legal reviewers’ scored rankings for several of the Contract Review Questions are necessarily subjective because interpretations of law and other intellectual property terms cannot be strictly quantified. Moreover, to the author’s knowledge, these contracts have not been tested in a court of law, so their “legal meaning” has not been definitively elaborated.
+
+The first round of legal reviews were completed in the summer of 2008. In July 2010, CAP invited the universities heading up these 10 alliances to provide written comments on the major contract findings, and any contract updates. Seven of the 10 universities provided feedback, two did not respond to our request, and one, Texas A&M University, requested permission from the state attorney general to deny our request for information relating to its Chevron alliance. To the best of our knowledge, the contract analyses in Appendices 1-10 beginning on page 75 are current.
+
+Many university administrators, in their comments and interviews, raised objections to this report’s reliance on written contracts, noting the existence of other academic customs, campus-wide policies, and procedures and practices developed outside of the written contracts. Many of these administrators also objected to the report’s predominant focus on academic and public-interest benchmarks to rate the contracts, arguing there also is an academic and public interest in drawing private-sector money and expertise into the research and development of alternative energy technologies. They felt this view was not sufficiently addressed in the analysis of their contracts as presented in our major contract findings at the time of their review. These comments from university administrators are presented in the individual appendices beginning on page 75 and are taken into account when germane in the appendices and the main body of the report.
+
+Still, these legal agreements constitute the primary, if not the only, legally binding authority between the parties. Anything that is left up to informal practices and generalized policy is subject to alteration and inconsistent application, and may not be legally binding. Written contacts also enhance accountability, and engender public trust. Thus the focus of this report on the contracts themselves as the basis of the report’s analysis.""" ,
+                               """Nevertheless, this redirection of industry R&D dollars to U.S. universities is significant. The reasons: A sizable portion of this university funding is now being directed to “alternative energy research” (especially biofuels), and this shift in the allocation of industry resources has the potential to significantly influence the academic research culture in this new energy arena.
+
+These investments in clean energy research by leading energy companies also appear to be part of the energy industry’s current campaign to project a more pro-environmental public image. Turn on the TV or open virtually any magazine and you’re likely to see an ad from a major oil, coal, gas, auto, agriculture, or other company touting its commitment to the research and development of clean-energy technologies: biofuels, “clean coal” technology, hydrogen fuel cells. Not infrequently, these “green ads” explicitly reference the industry’s multimillion-dollar alliances with U.S. universities, whose prestige and public trust are an added selling point (see box).""" ,
+                               """Recommendations for the U.S. government
+Launch an “Apollo Project” for clean-energy, climate, and efficiency R&D with strong academic and public-interest safeguards
+In 2009, for the first time in several decades, the U.S. Congress significantly boosted energy R&D spending. When both stimulus money and appropriations funding are included, the 2009 Department of Energy budget for R&D bounced 68 percent (over 2008 funding levels) to $16.3 billion, with the largest portions going to Basic Science ($6.1 billion) and Energy R&D ($6.4 billion), and the remainder ($3.8 billion) going to DOE defense-related research. Of this, roughly $3.95 billion is slated for Energy Efficiency and Renewables R&D specifically. Such investments must continue. It is time for the U.S. government to launch a major new initiative to finance cutting-edge research in clean energy and energy efficiency at U.S. universities on the scale of past federal science programs, such as the Apollo and Manhattan projects.
+
+Before the U.S. government invests in additional R&D, however, it should develop “standard contract language” attached to every federal research grant for universities that obligates the university to uphold certain core academic and public interest obligations—no matter whether this funding comes via the federal government alone, or in combination with corporate matching grants.
+
+Require all federal energy grants be issued using expert peer review
+Renewed U.S. investment in energy-related R&D should be accompanied by a standard federal contract that requires use of impartial expert peer review by all federal, university, and private industry research partners. Allocating federal science funding through an independent, scientific peer-review process is the only way to ensure that taxpayer grants are awarded on the basis of true scientific merit. Use of independent expert peer-review should also be stipulated in all academic-industry-government R&D alliance agreements.
+
+Allocate sufficient funds for fundamental, pre-commercial science and other vital public-good research
+The federal government likes the idea of using public-private partnerships to maximize the economic impact of public science spending. And certainly using government R&D funding to leverage (and also stimulate) industry R&D spending can be a “win-win” combination. But public-good research should involve more than the pursuit of technologies with the potential for near-term commercialization. As transportation expert John DeCicco at the University of Michigan explains: “Ultimately, public-good research needs to be directed toward achieving critical public-good outcomes such as lowering global greenhouse gas emissions in the near term, not just the development of new technologies.” Academic expertise is urgently needed to tackle a broad array of public interest problems, and also to advance public knowledge and understanding.""" ,
+                               """Recommendations to U.S. universities
+This report also offers recommendations on how to sustain America’s vibrant public research infrastructure, and our universities’ commitment to high-quality, disinterested, public-good energy research. Here, we briefly summarize these recommendations.
+
+Police commercial conflicts of interests
+U.S. universities must not allow their quest for research revenue or, increasingly, their quest for earnings from the transfer and commercialization of academic research, to distort their core academic and public-knowledge functions. Industry relationships and other commercial activities on campus should not compromise the universities’ fundamental commitment to the pursuit of truth, impartial inquiry, and public-good knowledge.
+
+This is not to say that U.S. universities and their faculties should disregard the potential commercial applications of their academic research and discoveries. Not at all. But universities need to make a far more vigorous effort to oversee and, whenever possible, eliminate financial conflicts of interest on campus (both at the faculty and at the institutional levels) to preserve their scientific and academic integrity, research independence, and public trust. This process, too, could be vastly aided by stronger federal conflict-ofinterest guidelines attached to federal research grants.
+
+Maximize faculty involvement in the design and oversight of large-scale corporate-research alliances
+University faculty, through their main governing body—the academic or faculty senate—should be fully involved in the planning, execution, and monitoring of any large-scale, academic-industry research alliances proposed on campus. These large, multi-year corporate-research alliances tend to have a broad impact on the whole academic institution, due to their size, duration, and potential influence on the public perception of the institution compared to more common, smaller industry-sponsored research agreements. As such, they warrant far greater faculty-senate involvement in their initial design, formation, and subsequent oversight. This will also engender greater campus support and public trust through enhanced transparency.
+
+Safeguard academic autonomy
+To protect the American university’s valuable traditions of self-governance and research independence, academic representatives (not industry representatives) should retain strong (preferably two-thirds) majority representation and voting power on any academic governance bodies that are charged with overseeing or administering university-industry research alliances on campus. Equal distribution of voting power is not sufficient, because it does not protect the university’s tradition of self-governance and research autonomy.
+
+Retain academic control over research selection and the use of independent expert peer review
+University representatives should retain majority representation (and voting power) on any academic body that is charged with evaluating faculty research proposals, and/or making final research awards, as part of any large-scale, multiyear, university-industry research alliance. Faculty research proposals should also always be evaluated using independent expert peer review so research excellence, not merely narrow commercial preferences or profit criteria, guide the academic selection process. And experts selected to judge faculty research proposals should never be in a position to derive any financial benefit from the alliance (or its corporate sponsors). They should remain free of personal financial interests that could in any way bias or prejudice their evaluations.
+
+Minimize delays on publication
+U.S. universities should not permit their industry sponsors to delay publication for longer than 60 days, which the National Institutes of Health and other federal agencies deem sufficient time for the commercial sponsor to file for provisional patent protection and remove any sensitive corporate proprietary information. Publication is an academic principle that helps ensure the rapid diffusion of public knowledge, which is independently scrutinized and verified for accuracy.
+
+Protect academic knowledge sharing
+Any university that enters into a large-scale industrial research alliance should include a legal clause—known as a “research exemption” or “academic-use exemption”—as part of its licensing agreement with the corporate sponsor. This “exemption” permits all university professors to freely share their sponsored-project results (related to any published academic research) with other scientists, both within their own academic institution and at other non-profit and governmental institutions, for purely non-commercial, research purposes. Too many schools continue to overlook this critical knowledge-sharing function even though it is the first principle enshrined in a 2007 academic statement titled “In the Public Interest: Nine Points to Consider in Licensing University Technology,” endorsed by more than 50 universities.
+
+Resist monopoly ownership of academic knowledge
+Researchers rely on the wellspring of shared academic knowledge to stimulate their own creativity, research, and scientific and technological discovery. Over the past several decades, in an effort to extract rents from campus-based research, U.S. universities have imposed proprietary restrictions on a growing share of this academic research. Because U.S. universities remain heavily reliant on U.S. taxpayer support for their research-anddevelopment funding, it is important for these academic institutions to resist the temptation to grant their corporate sponsors exclusive, monopolistic control over the universities’ academic research, most of which is heavily subsidized by public sources. To the greatest extent possible, U.S. universities should license the bulk of their research nonexclusively so it may be used by multiple parties in diverse research and commercial applications.
+
+Together, these sets of recommendations to the federal government and universities would help both private industry and the American public by preserving a vibrant, highquality, public research sector. The analysis of these 10 university-industry research contracts alongside our observations and recommendations can help the Obama administration and Congress as they consider new measures, such as national limits on carbon pollution, a Clean Energy Technology Fund, and other programs to stimulate sustainable energy and clean energy technologies. By ensuring that the balance in these collaborative research efforts tilts strongly in favor of academic independence, the administration and Congress have a rare opportunity to restore this vital balance between our public and private research sectors. Our energy security, global environment, and economic competitiveness all hang in the balance.""" ,
+                               """The answers to these three questions are critical to energy-related research and development in our country, given the current global-warming crisis and the role that academic experts have traditionally played in providing the public with impartial research, analysis, and advice. To unpack these questions and help find answers, this report provides a detailed examination of 10 university-industry agreements that together total $833 million in confirmed corporate funding (over 10 years) for energy research funding on campus. Copies of these contractual agreements were obtained largely through state-level public record act requests (see the table on pages 13 and 14 for a list of these 10 agreements, and see page 15 for the methodology used for obtaining and analyzing them). Each agreement spells out the precise legal terms, conditions, and intellectualproperty provisions that govern how this sponsored research is carried out by the faculty and students on campus. (See methodology on page 15 for a discussion of how practices that are not required in these conflicts fit into the analysis.)
+
+Independent, outside legal experts then performed a detailed analysis of each agreement. These experts’ detailed contract reviews may be found in Appendices 1 through 10 beginning on page 75 of this report, and include responses from a number of the universities that entered into these agreements. It should be noted that our external reviewers’ rankings for several of the “Contract Review Questions” are subjective because interpretations of law and other intellectual property terms cannot be strictly quantified. Also, the provisions in these contracts have not to our knowledge been tested in a court of law, so their “legal” meaning has not been definitively established.
+
+The results of this report’s analysis of these 10 large-scale university-industry contracts raise troubling questions about the ability of U.S. universities to adequately safeguard their core academic and public-interest functions when negotiating research contracts with large corporate funders. This report identifies eight major areas where these contracts leave the door open to serious limitations on academic freedom and research independence. Here are just a few brief highlights:""" ,
+                               """The world’s largest oil companies are showing surprising interest in financing alternative energy research at U.S. universities. Over the past decade, five of the world’s top 10 oil companies—ExxonMobil Corp., Chevron Corp., BP PLC, Royal Dutch Shell Group, and ConocoPhillips Co.—and other large traditional energy companies with a direct commercial stake in future energy markets have forged dozens of multi-year, multi-million-dollar alliances with top U.S. universities and scientists to carry out energy-related research. Much of this funding by “Big Oil” is being used for research into new sources of alternative energy and renewable energy, mostly biofuels.
+
+Why are highly profitable oil and other large corporations increasingly turning to U.S. universities to perform their commercial research and development instead of conducting this work in-house? Why, in turn, are U.S. universities opening their doors to Big Oil? And when they do, how well are U.S. universities balancing the needs of their commercial sponsors with their own academic missions and public-interest obligations, given their heavy reliance on government research funding and other forms of taxpayer support?""" ,
+                               """To our knowledge, this report represents the first time independent analysts have systematically examined a set of written university-industry agreements within a specific research area—in this case, the energy R&D sector—to evaluate how well they balance the goals of the corporate sponsors to produce commercial research that advances business profits with the missions of American universities to perform high-quality, disinterested academic research that advances public knowledge for the betterment of society.
+
+Before Congress releases billions of dollars in much-needed federal funding for more research and development of alternative and renewable energy and energy efficiency via direct grants and other public-private partnerships, it should give careful consideration to the findings and recommendations made in this report. Indeed, this analysis could not be more timely. As proposals to put a cap and price on carbon pollution circulated earlier this in Congress, most major oil companies, including their main lobby, the American Petroleum Institute, continue to vigorously oppose any such carbon caps by running millions of dollars’ worth of negative ads warning the public and politicians of the dire consequences of action. But whenever comprehensive energy legislation is finally implemented, then a significant portion of the funds generated through cap-and-trade legislation will likely be targeted toward efficiency and clean-energy R&D performed by academic experts at U.S. universities.
+
+What’s more, these funds will likely be disbursed through a variety of public-private research partnerships similar to the ones examined in this report. In recent years the U.S. Department of Energy and other federal agencies have shown a strong preference for disbursing federal research dollars through public-private cost-sharing arrangements. According to Doug Hooker, the director of renewable energy at the DOE’s Golden Field Office in Colorado (which handles grant making for DOE’s Office of Energy Efficiency and Renewable Energy), roughly 80 percent to 90 percent of the federal research money that now goes to finance renewable-energy and efficiency R&D is disbursed through some form of public-private cost-sharing arrangement.
+
+Usually, says Hooker, the corporate beneficiary of this DOE research funding is asked to provide a 20 percent to 50 percent matching grant, depending on the stage of the research project and its proximity to commercial application. “We are leveraging the available dollars that are out there in the private sector,” Hooker said in an interview. “We believe it helps with the success rate and the industry’s commitment to these technologies.”
+
+Yet the long-term effectiveness of this strategy remains unknown. John DeCicco, an expert on transportation and a senior lecturer in the School of Natural Resources and the Environment at the University of Michigan, remains skeptical. “The whole concept of using tax dollars in public-private arrangements needs much better scrutiny,” he argues. “This strategy inherently threatens the essence of public-good research, and can blur the boundary lines between independent invention and analysis on the one hand, and strictly commercial R&D on the other.”
+
+U.S. universities, of course, have long relied on a combination of federal government and industry grants to finance their research operations. U.S. academic institutions spent $52 billion on research and development in 2008, the last year for which complete data were available, with about 60 percent financed by U.S. taxpayers through a variety of federal grant-making agencies. Nationally, though, only about 6 percent of university research overall is funded by industry.
+
+Nevertheless, according to some estimates, because of the federal government’s growing preference for allocating federal R&D funds through corporate matching grants and other cost-sharing and cooperative-research arrangements, private industry now directly influences anywhere from 20 percent to 25 percent of university research funding overall. In this way, a significant share of U.S. taxpayer funding that starts out as “public” funding is effectively turned “private” by the time it reaches the university investigators in their academic labs.
+
+Top Obama administration officials, including Energy Secretary Steven Chu and Undersecretary for Science at the Department of Energy Steven E. Koonin, are strong supporters of using industry-university-government partnerships to advance clean-energy R&D. In 2007, prior to joining the administration, both Chu and Koonin were instrumental in brokering a $500 million research collaboration (discussed in detail in this report) between the British oil giant BP PLC and three major U.S. taxpayer-financed research institutions: the University of California at Berkeley, the University of Illinois at Urbana-Champaign, and Lawrence Berkeley National Laboratory, a federal research lab managed by U.C. Berkeley. At the time, Chu, a Nobel Prize-winning scientist, was director of Lawrence Berkeley, and Koonin was serving as BP’s chief scientist.
+
+By academic standards, these multiyear, multimillion-dollar industry investments on campus certainly look huge. Yet relative to the oil industry’s vast profit margins, this R&D spending remains infinitesimally small. Consider BP’s 10-year, $500 million investment in the Energy Biosciences Institute at U.C. Berkeley, which is primarily dedicated to researching biofuels. Relative to BP’s profit margins, this mega-size university deal represents little more than a drop in the proverbial bucket. Let’s begin by conservatively estimating that BP’s average business performance from 2006 to 2015 will remain roughly on a par with its 2003-2007 performance. During this time period, BP’s average revenues were $233 billion, and its average profits hit $19.2 billion. If such trends continue, and excluding any significant hit to BP’s bottom line due to the consequences of the 2010 oil catastrophe in the Gulf of Mexico, then:""" ,
+                               """What do the 10 contractual agreements tell us?
+Now let’s turn to the centerpiece of this report: the university-industry-research agreements themselves. The central analysis that underpins this report, and the questions it raises, is drawn from a comprehensive analysis and independent expert level review of 10 recent alliance agreements among as many as 43 companies (some contracts boast fluctuating membership), 13 leading universities, and two federal research labs, totaling $833 million in confirmed industry funding over ten years.
+
+Most of the copies of the 10 agreements were obtained through public record act requests filed with state-funded universities (although these often proved extremely time-consuming and difficult to obtain because many state-funded institutions stalled or outright refused our requests). Several were also obtained from academic administrators through personal phone requests, or had been previously made public. Private universities are not required to (and usually do not) publicly disclose their contract research agreements with industry. Stanford University made a rare exception when it chose to publicly disclose its contract with ExxonMobil and three other companies following campus pressure to do so (see table below for a complete list of the 10 agreements analyzed and the accompanying box on page 15 for an explanation of the methodology we employed).""" ;
+                         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                         dct:created "2025-01-30T04:41:59Z"^^xsd:dateTime ;
+                         rdfs:label "Big Oil Goes to College" ;
+                         :url <https://www.americanprogress.org/article/big-oil-goes-to-college/> .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/Brazil
+:Brazil rdf:type owl:NamedIndividual ,
+                 :Nation ;
+        dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+        dct:created "2025-01-30T02:53:31Z"^^xsd:dateTime .
+
+
 ###  https://www.michaeldebellis.com/climate_obstruction/Brown_University
 :Brown_University rdf:type owl:NamedIndividual ,
                            :University ;
                   dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
                   dct:created "2025-01-29T18:22:44Z"^^xsd:dateTime .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/Chile
+:Chile rdf:type owl:NamedIndividual ,
+                :Nation ;
+       dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+       dct:created "2025-01-30T02:53:39Z"^^xsd:dateTime .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Climate_Obstruction_in_Europe
@@ -3796,7 +4137,7 @@ Repsol explained that renewable fuels make up 10% of their fuel sales in Spain a
 ###  https://www.michaeldebellis.com/climate_obstruction/Climate_Obstruction_in_the_United_Kingdom
 :Climate_Obstruction_in_the_United_Kingdom rdf:type owl:NamedIndividual ,
                                                     :Book_Chapter ;
-                                           :has_Author :FREDDIE_DALEY ,
+                                           :has_author :FREDDIE_DALEY ,
                                                        :JAMES_PAINTER ,
                                                        :PETER_NEWELL ,
                                                        :RUTH_MCKIE ;
@@ -3821,6 +4162,8 @@ Undermine renewables: Climate obstructionists cast doubt on the reliability and 
 :Coolglass_Windfarm_Limited_v_An_Bord_Pleanala rdf:type owl:NamedIndividual ,
                                                         :Litigation ,
                                                         :Web_Page ;
+                                               :has_jurisdiction :High_Court_of_Ireland ,
+                                                                 :Ireland ;
                                                :has_status :Decided ;
                                                :at_issue "Whether public bodies had a duty under domestic climate legislation, EU law and European human rights law to give due consideration to climate objectives in determining whether to grant planning permission for renewable energy infrastructure projects that otherwise raised local visual concerns." ;
                                                :summary """The case concerned an application by a wind farm company for planning permission to construct a wind farm in Co. Laois. An Bord Pleanála (the national planning authority) rejected permission for the wind farm, citing visual impacts and local development plan designations for wind turbines. Under the local Laois County Development Plan, wind farms would not be constructed in the relevant area based on the alleged visual concerns. Still, as the national planning authority, An Bord Pleanála could grant permission for the wind farm regardless of any alleged material contravention of the County Development Plan. In this instance, however, the planning permission was refused in line with the visual concerns outlined in the original County Development Plan.
@@ -3836,6 +4179,7 @@ Taking the importance of climate action into account, the Court held that the au
 The Court, therefore, granted the appeal and ordered that the application be remitted to An Bord Pleanála for further consideration in accordance with the judgment.""" ;
                                                dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
                                                dct:created "2025-01-29T22:05:57Z"^^xsd:dateTime ;
+                                               rdfs:label "Coolglass Windfarm Limited v. An Bord Pleanala [2025] IEHC 1" ;
                                                :url <https://climatecasechart.com/non-us-case/coolglass-windfarm-limited-v-an-bord-pleanala-2025-iehc-1/> .
 
 
@@ -3855,16 +4199,31 @@ The Court, therefore, granted the appeal and ordered that the application be rem
                dct:created "2025-01-29T18:36:40Z"^^xsd:dateTime .
 
 
+###  https://www.michaeldebellis.com/climate_obstruction/High_Court_of_Ireland
+:High_Court_of_Ireland rdf:type owl:NamedIndividual ,
+                                :Court ;
+                       <https://w3id.org/semanticarts/ns/ontology/gist/hasPhysicalLocation> :Ireland ;
+                       dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                       dct:created "2025-01-30T02:58:58Z"^^xsd:dateTime .
+
+
 ###  https://www.michaeldebellis.com/climate_obstruction/Introduction_The_First_Portrait_of_Climate_Obstruction_across_Europe
 :Introduction_The_First_Portrait_of_Climate_Obstruction_across_Europe rdf:type owl:NamedIndividual ,
                                                                                :Book_Chapter ;
                                                                       <https://w3id.org/semanticarts/ns/ontology/gist/isPartOf> :Climate_Obstruction_in_Europe ;
-                                                                      :has_Author :J_TIMMONS_ROBERTS ,
+                                                                      :has_author :J_TIMMONS_ROBERTS ,
                                                                                   :ROBERT_J_BRULLE ;
                                                                       dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
                                                                       dct:created "2025-01-29T00:46:51Z"^^xsd:dateTime ;
                                                                       rdfs:label "Introduction The First Portrait of Climate Obstruction across Europe" ;
                                                                       :url <https://cssn.org/news-research/europe-volume/> .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/Ireland
+:Ireland rdf:type owl:NamedIndividual ,
+                  :Nation ;
+         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+         dct:created "2025-01-30T02:54:01Z"^^xsd:dateTime .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/JAMES_PAINTER
