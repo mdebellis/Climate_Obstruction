@@ -881,9 +881,24 @@ dct:abstract rdf:type owl:DatatypeProperty ;
              rdfs:subPropertyOf :content_metadata .
 
 
+###  http://purl.org/dc/terms/publisher
+dct:publisher rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :content_metadata .
+
+
 ###  http://purl.org/dc/terms/title
 dct:title rdf:type owl:DatatypeProperty ;
           rdfs:subPropertyOf :content_metadata .
+
+
+###  http://purl.org/ontology/bibo/issue
+<http://purl.org/ontology/bibo/issue> rdf:type owl:DatatypeProperty ;
+                                      rdfs:subPropertyOf :content_metadata .
+
+
+###  http://purl.org/ontology/bibo/volume
+<http://purl.org/ontology/bibo/volume> rdf:type owl:DatatypeProperty ;
+                                       rdfs:subPropertyOf :content_metadata .
 
 
 ###  https://w3id.org/semanticarts/ns/ontology/gist/actualEndDate
@@ -3587,6 +3602,13 @@ Source: ChatGPT""" .
             <http://www.w3.org/2004/02/skos/core#definition> "Proclaiming accomplishments that are irrelevant or already required by law/competitors" .
 
 
+###  https://www.michaeldebellis.com/climate_obstruction/Journal_Article
+:Journal_Article rdf:type owl:Class ;
+                 rdfs:subClassOf <https://w3id.org/semanticarts/ns/ontology/gist/Content> ;
+                 dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                 dct:created "2025-01-30T18:43:31Z"^^xsd:dateTime .
+
+
 ###  https://www.michaeldebellis.com/climate_obstruction/Litigation
 :Litigation rdf:type owl:Class ;
             rdfs:subClassOf <https://w3id.org/semanticarts/ns/ontology/gist/Commitment> ;
@@ -3879,6 +3901,19 @@ Repsol explained that renewable fuels make up 10% of their fuel sales in Spain a
                          dct:created "2025-01-21T22:56:25Z"^^xsd:dateTime ;
                          rdfs:isDefinedBy <https://www.asa.org.uk/rulings/repsol-sa-a23-1185942-repsol-sa.html> ;
                          rdfs:label "ASA Ruling on Repsol SA" .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/A_Sociological_View_of_Efforts_to_Obstruct_Climate_Action
+:A_Sociological_View_of_Efforts_to_Obstruct_Climate_Action rdf:type owl:NamedIndividual ,
+                                                                    :Journal_Article ;
+                                                           dct:publisher "Footnotes: A magazine of the American Socilogical Institute" ;
+                                                           <http://purl.org/ontology/bibo/issue> "3" ;
+                                                           <http://purl.org/ontology/bibo/volume> "40" ;
+                                                           :author_string "Robert J. Brulle; Riley E. Dunlap" ;
+                                                           dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                                                           dct:created "2025-01-30T18:43:46Z"^^xsd:dateTime ;
+                                                           rdfs:label "A Sociological View of Efforts to Obstruct Climate Action" ;
+                                                           :url <https://www.asanet.org/footnotes-article/sociological-view-effort-obstruct-action-climate-change/> .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Big_Oil_Goes_to_College
