@@ -837,6 +837,13 @@ Note that the unit of measure of the accuracy has to be compatible with the unit
               dct:created "2025-01-29T18:26:11Z"^^xsd:dateTime .
 
 
+###  https://www.michaeldebellis.com/climate_obstruction/has_status
+:has_status rdf:type owl:ObjectProperty ;
+            rdfs:range :Status ;
+            dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+            dct:created "2025-01-29T22:19:35Z"^^xsd:dateTime .
+
+
 ###  https://www.michaeldebellis.com/climate_obstruction/is_Author_Of
 :is_Author_Of rdf:type owl:ObjectProperty ;
               dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
@@ -1583,6 +1590,13 @@ The conventions for precision that are repeated in each property name are as fol
                                                                                                                             <https://w3id.org/semanticarts/ns/ontology/gist/Text> .
 
 
+###  https://www.michaeldebellis.com/climate_obstruction/at_issue
+:at_issue rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf <https://w3id.org/semanticarts/ns/ontology/gist/containedText> ;
+          dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+          dct:created "2025-01-29T22:09:03Z"^^xsd:dateTime .
+
+
 ###  https://www.michaeldebellis.com/climate_obstruction/first_name
 :first_name rdf:type owl:DatatypeProperty ;
             dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
@@ -1600,6 +1614,13 @@ The conventions for precision that are repeated in each property name are as fol
 :middle_name rdf:type owl:DatatypeProperty ;
              dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
              dct:created "2025-01-29T00:49:33Z"^^xsd:dateTime .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/summary
+:summary rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf <https://w3id.org/semanticarts/ns/ontology/gist/containedText> ;
+         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+         dct:created "2025-01-29T22:07:46Z"^^xsd:dateTime .
 
 
 #################################################################
@@ -3490,6 +3511,13 @@ Source: ChatGPT""" .
             <http://www.w3.org/2004/02/skos/core#definition> "Proclaiming accomplishments that are irrelevant or already required by law/competitors" .
 
 
+###  https://www.michaeldebellis.com/climate_obstruction/Litigation
+:Litigation rdf:type owl:Class ;
+            rdfs:subClassOf <https://w3id.org/semanticarts/ns/ontology/gist/Commitment> ;
+            dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+            dct:created "2025-01-29T23:54:00Z"^^xsd:dateTime .
+
+
 ###  https://www.michaeldebellis.com/climate_obstruction/Lobbying_Firm
 :Lobbying_Firm rdf:type owl:Class ;
                rdfs:subClassOf :Business_Organization ;
@@ -3572,6 +3600,19 @@ Claiming biodiversity or carbon neutrality or a reduction of environmental harm 
                                                                        "Claim is based on a narrow set of attributes and distracts consumers from the organization's greater environmental impact" .
 
 
+###  https://www.michaeldebellis.com/climate_obstruction/Status
+:Status rdf:type owl:Class ;
+        owl:equivalentClass [ rdf:type owl:Class ;
+                              owl:oneOf ( :Decided
+                                          :Pending
+                                        )
+                            ] ;
+        rdfs:subClassOf <https://w3id.org/semanticarts/ns/ontology/gist/Category> ;
+        dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+        dct:created "2025-01-29T22:17:06Z"^^xsd:dateTime ;
+        rdfs:comment "Will add more status values based on data" .
+
+
 ###  https://www.michaeldebellis.com/climate_obstruction/Think_Tank
 :Think_Tank rdf:type owl:Class ;
             rdfs:subClassOf :Non-Profit_Organization ;
@@ -3593,6 +3634,13 @@ Claiming biodiversity or carbon neutrality or a reduction of environmental harm 
             dct:created "2025-01-10T23:58:21Z"^^xsd:dateTime ;
             :expert_sources :Media_Agenda ;
             :testimony_at_hearings :Political_Agenda .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/Web_Page
+:Web_Page rdf:type owl:Class ;
+          rdfs:subClassOf <https://w3id.org/semanticarts/ns/ontology/gist/Content> ;
+          dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+          dct:created "2025-01-29T22:05:30Z"^^xsd:dateTime .
 
 
 #################################################################
@@ -3769,6 +3817,35 @@ Undermine renewables: Climate obstructionists cast doubt on the reliability and 
                                            rdfs:label "Climate Obstruction in the United Kingdom" .
 
 
+###  https://www.michaeldebellis.com/climate_obstruction/Coolglass_Windfarm_Limited_v_An_Bord_Pleanala
+:Coolglass_Windfarm_Limited_v_An_Bord_Pleanala rdf:type owl:NamedIndividual ,
+                                                        :Litigation ,
+                                                        :Web_Page ;
+                                               :has_status :Decided ;
+                                               :at_issue "Whether public bodies had a duty under domestic climate legislation, EU law and European human rights law to give due consideration to climate objectives in determining whether to grant planning permission for renewable energy infrastructure projects that otherwise raised local visual concerns." ;
+                                               :summary """The case concerned an application by a wind farm company for planning permission to construct a wind farm in Co. Laois. An Bord Pleanála (the national planning authority) rejected permission for the wind farm, citing visual impacts and local development plan designations for wind turbines. Under the local Laois County Development Plan, wind farms would not be constructed in the relevant area based on the alleged visual concerns. Still, as the national planning authority, An Bord Pleanála could grant permission for the wind farm regardless of any alleged material contravention of the County Development Plan. In this instance, however, the planning permission was refused in line with the visual concerns outlined in the original County Development Plan.
+
+The company sought to appeal the decision before the High Court, arguing inter alia that under S15(1) of the Climate Act, as well as in line with EU law and obligations under the European Convention on Human Rights, the planning authority had an obligation to interpret its planning decisions such that climate considerations would take priority over the visual concerns and that the authority had therefore taken inadequate account of S15(1) of the Climate Act. The planning authority argued in response that a narrow interpretation of this provision was appropriate, obliging the authority only to give regard to climate considerations and that the authority had, therefore, acted within its powers in refusing permission for the wind farm.
+
+The High Court, in a ruling by Humphreys J. upheld the appeal, finding that An Bord Pleanála had acted unlawfully by failing to exercise its powers in a manner compliant as far as practicable with the climate objectives and policies set out in the Climate Act, and had also breached its duties under EU law and European human rights law. The Court noted that \"if climate goals take precedence over visual impacts [as had been found in a previous case of Nagle View Turbine Aware Group v. An Bord Pleanála [2024] IEHC 603 (Unreported, High Court, 1st November 2024)] and the like, then logically they must take precedence over development plan provisions that are motivated by visual impacts.”
+
+The High Court further noted that the recent European Court of Human Rights (ECHR) decision in KlimaSeniorinnen v. Switzerland demonstrated that the requirement to read legislation in an ECHR-compliant manner supported an interpretation of S15 that went beyond the board’s approach and that the interpretation should ensure that ECHR obligations are complied with in practice, including compliance in practice with stated goals in relation to renewable energy infrastructure. The failure to properly consider the climate benefits of allowing the project, therefore, constituted a breach of Article 8 of the European Convention on Human Rights.
+
+Taking the importance of climate action into account, the Court held that the authority had not adequately considered S15(1) in its considerations of whether to grant permission in light of the need to consider climate objectives in contrast to the visual impacts and local planning concerns expressed by those opposed to the wind farms. It stated that \"the need for an imperative reading of S15(1) in line with what it says, namely that the board and any other relevant body is required to act in conformity with the climate plans and objectives set out in the subsection unless it is impracticable to do so.\" [117]
+
+The Court, therefore, granted the appeal and ordered that the application be remitted to An Bord Pleanála for further consideration in accordance with the judgment.""" ;
+                                               dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                                               dct:created "2025-01-29T22:05:57Z"^^xsd:dateTime ;
+                                               :url <https://climatecasechart.com/non-us-case/coolglass-windfarm-limited-v-an-bord-pleanala-2025-iehc-1/> .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/Decided
+:Decided rdf:type owl:NamedIndividual ,
+                  :Status ;
+         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+         dct:created "2025-01-29T22:17:33Z"^^xsd:dateTime .
+
+
 ###  https://www.michaeldebellis.com/climate_obstruction/FREDDIE_DALEY
 :FREDDIE_DALEY rdf:type owl:NamedIndividual ,
                         <https://w3id.org/semanticarts/ns/ontology/gist/Person> ;
@@ -3823,6 +3900,13 @@ on social drivers of action and inaction on climate change""" .
               dct:created "2025-01-29T18:38:10Z"^^xsd:dateTime .
 
 
+###  https://www.michaeldebellis.com/climate_obstruction/Pending
+:Pending rdf:type owl:NamedIndividual ,
+                  :Status ;
+         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+         dct:created "2025-01-29T23:52:21Z"^^xsd:dateTime .
+
+
 ###  https://www.michaeldebellis.com/climate_obstruction/RCC_Ruling_on_Chiquita_climate_neutral_bananas
 :RCC_Ruling_on_Chiquita_climate_neutral_bananas rdf:type owl:NamedIndividual ,
                                                          :Selective_Disclosure ;
@@ -3861,6 +3945,25 @@ The contested advertising concerned a sticker on Chiquita's bananas which includ
             :last_name "MCKIE" ;
             dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
             dct:created "2025-01-29T18:40:04Z"^^xsd:dateTime .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/Federal_Public_Prosecutor’s_Office_v_Érico_Batista_de_Souza
+<https://www.michaeldebellis.com/climate_obstruction/Federal_Public_Prosecutor’s_Office_v_Érico_Batista_de_Souza> rdf:type owl:NamedIndividual ,
+                                                                                                                           :Litigation ,
+                                                                                                                           :Web_Page ;
+                                                                                                                  :has_status :Pending ;
+                                                                                                                  :at_issue "Whether a Brazilian farmer can be held responsible for climate and environmental damages resulting from deforestation in the Amazon." ;
+                                                                                                                  :summary """In September 2021, the Federal Public Prosecutor's Office (MPF) filed a Public Civil Action (ACP) against Érico Batista de Souza for deforesting 809.56 hectares between 2014 and 2020 in Boca do Acre, Amazonas. The MPF alleges that the defendant unlawfully occupied land within an Agroextractivist Settlement Project (PAE), federal property managed by the National Institute for Colonization and Agrarian Reform (INCRA) and occupied by traditional extractivist communities. This ACP is one of 22 actions brought by the MPF following an investigation under Civil Inquiry No. 1.13.000.001719/2015-49 into illegal deforestation in the Antimary Agroextractivist Settlement Project, though involving different defendants.
+
+The MPF bases its legal arguments on Brazilian Environmental Law, emphasizing constitutional protections for the environment, civil liability propter rem for environmental damages (including climate-related damages), and collective moral damages. The MPF also highlights the environmental liability associated with unauthorized greenhouse gas (GHG) emissions from deforestation, estimated at 510,046.20 tons of carbon dioxide. These emissions allegedly contribute to Brazil’s deviation from its climate goals, violating the National Policy on Climate Change (Federal Law 12,187/2009) and the Paris Agreement.
+
+The ACP includes the following key requests: (i) reversal of the burden of proof from the outset; (ii) immediate cessation of activities causing ongoing damage; (iii) restoration of the environment to its original state or, alternatively, payment of compensation aimed at environmental restitution; (iv) compensation for interim and residual environmental material damages; (v) compensation for climate-related damages; and (vi) compensation for collective moral damages.
+
+In March 2022, the defendant submitted a defense, denying responsibility for the deforestation and disputing the existence of collective moral damages. The defendant requested the dismissal of the action.""" ;
+                                                                                                                  dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                                                                                                                  dct:created "2025-01-29T23:55:13Z"^^xsd:dateTime ;
+                                                                                                                  rdfs:label "Federal Public Prosecutor’s Office v. Érico Batista de Souza (Deforestation and climate damage in the PAE Antimary)" ;
+                                                                                                                  :url <https://climatecasechart.com/non-us-case/federal-public-prosecutors-office-v-erico-batista-de-souza-deforestation-and-climate-damage-in-the-pae-antimary/> .
 
 
 ###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
