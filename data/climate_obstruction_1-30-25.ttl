@@ -4405,6 +4405,7 @@ on social drivers of action and inaction on climate change""" .
                dct:created "2025-01-31T02:40:26Z"^^xsd:dateTime .
 
 
+
 ###  https://www.michaeldebellis.com/climate_obstruction/PETER_NEWELL
 :PETER_NEWELL rdf:type owl:NamedIndividual ,
                        <https://w3id.org/semanticarts/ns/ontology/gist/Person> ;
@@ -4419,6 +4420,7 @@ on social drivers of action and inaction on climate change""" .
                   :Status ;
          dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
          dct:created "2025-01-29T23:52:21Z"^^xsd:dateTime .
+
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/RCC_Ruling_on_Chiquita_climate_neutral_bananas
@@ -4468,6 +4470,7 @@ The contested advertising concerned a sticker on Chiquita's bananas which includ
                        dct:created "2025-01-31T04:37:25Z"^^xsd:dateTime ;
                        rdfs:label "Smoke, Mirrors & Hot Air: How ExxonMobil Uses Big Tobacco's Tactics to \"Manufacture Uncertainty\" on Climate Change" ;
                        :url <https://www.ucsusa.org/resources/smoke-mirrors-hot-air> .
+
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Sources_and_Amplifiers_of_Climate_Change_Denial
