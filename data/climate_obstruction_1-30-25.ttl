@@ -3702,6 +3702,13 @@ Source: https://en.wikipedia.org/wiki/Proposition""" .
                dct:created "2025-01-17T21:44:35Z"^^xsd:dateTime .
 
 
+###  https://www.michaeldebellis.com/climate_obstruction/Report
+:Report rdf:type owl:Class ;
+        rdfs:subClassOf :Document ;
+        dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+        dct:created "2025-01-31T04:39:00Z"^^xsd:dateTime .
+
+
 ###  https://www.michaeldebellis.com/climate_obstruction/Selective_Disclosure
 :Selective_Disclosure rdf:type owl:Class ;
                       rdfs:subClassOf :Impact ;
@@ -4206,6 +4213,15 @@ Most of the copies of the 10 agreements were obtained through public record act 
                   dct:created "2025-01-29T18:22:44Z"^^xsd:dateTime .
 
 
+###  https://www.michaeldebellis.com/climate_obstruction/Challenging_Climate_Change_The_Denial_Countermovement
+:Challenging_Climate_Change_The_Denial_Countermovement rdf:type owl:NamedIndividual ,
+                                                                :Journal_Article ;
+                                                       dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                                                       dct:created "2025-01-31T04:19:22Z"^^xsd:dateTime ;
+                                                       rdfs:label "Challenging Climate Change: The Denial Countermovement" ;
+                                                       :url <https://www.researchgate.net/publication/291353557_Challenging_Climate_Change_The_Denial_Countermovement#fullTextFileContent> .
+
+
 ###  https://www.michaeldebellis.com/climate_obstruction/Chile
 :Chile rdf:type owl:NamedIndividual ,
                 :Nation ;
@@ -4272,11 +4288,29 @@ The Court, therefore, granted the appeal and ordered that the application be rem
                                                :url <https://climatecasechart.com/non-us-case/coolglass-windfarm-limited-v-an-bord-pleanala-2025-iehc-1/> .
 
 
+###  https://www.michaeldebellis.com/climate_obstruction/Corporate_promotion_and_climate_change
+:Corporate_promotion_and_climate_change rdf:type owl:NamedIndividual ,
+                                                 :Journal_Article ;
+                                        dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                                        dct:created "2025-01-31T04:40:53Z"^^xsd:dateTime ;
+                                        rdfs:label "Corporate promotion and climate change: an analysis of key variables affecting advertising spending by major oil corporations, 1986–2015" ;
+                                        :url <https://link.springer.com/article/10.1007/s10584-019-02582-8> .
+
+
 ###  https://www.michaeldebellis.com/climate_obstruction/Decided
 :Decided rdf:type owl:NamedIndividual ,
                   :Status ;
          dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
          dct:created "2025-01-29T22:17:33Z"^^xsd:dateTime .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/Discourses_of_climate_delay
+:Discourses_of_climate_delay rdf:type owl:NamedIndividual ,
+                                      :Journal_Article ;
+                             dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                             dct:created "2025-01-31T04:35:28Z"^^xsd:dateTime ;
+                             rdfs:label "Discourses of climate delay" ;
+                             :url <https://www.cambridge.org/core/journals/global-sustainability/article/discourses-of-climate-delay/7B11B722E3E3454BB6212378E32985A7> .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Europe
@@ -4301,6 +4335,15 @@ The Court, therefore, granted the appeal and ordered that the application be rem
                        <https://w3id.org/semanticarts/ns/ontology/gist/hasPhysicalLocation> :Ireland ;
                        dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
                        dct:created "2025-01-30T02:58:58Z"^^xsd:dateTime .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/Institutionalizing_delay_foundation_funding_and_the_creation_of_US_climate_change_counter-movement_organizations
+:Institutionalizing_delay_foundation_funding_and_the_creation_of_US_climate_change_counter-movement_organizations rdf:type owl:NamedIndividual ,
+                                                                                                                           :Journal_Article ;
+                                                                                                                  dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                                                                                                                  dct:created "2025-01-31T04:26:25Z"^^xsd:dateTime ;
+                                                                                                                  rdfs:label "Institutionalizing delay: foundation funding and the creation of U.S. climate change counter-movement organizations" ;
+                                                                                                                  :url <https://link.springer.com/article/10.1007/s10584-013-1018-7> .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Introduction_The_First_Portrait_of_Climate_Obstruction_across_Europe
@@ -4344,6 +4387,15 @@ The Court, therefore, granted the appeal and ordered that the application be rem
 and Sociology at Brown University and the executive director of the
 Climate Social Science Network (CSSN). His current research focuses
 on social drivers of action and inaction on climate change""" .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/Network_structure_and_influence_of_the_climate_change_counter-movement
+:Network_structure_and_influence_of_the_climate_change_counter-movement rdf:type owl:NamedIndividual ,
+                                                                                 :Journal_Article ;
+                                                                        dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                                                                        dct:created "2025-01-31T04:42:34Z"^^xsd:dateTime ;
+                                                                        rdfs:label "Network structure and influence of the climate change counter-movement" ;
+                                                                        :url <https://www.nature.com/articles/nclimate2875> .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/North_America
@@ -4409,11 +4461,65 @@ The contested advertising concerned a sticker on Chiquita's bananas which includ
             dct:created "2025-01-29T18:40:04Z"^^xsd:dateTime .
 
 
+###  https://www.michaeldebellis.com/climate_obstruction/Smoke_Mirrors_Hot_Air
+:Smoke_Mirrors_Hot_Air rdf:type owl:NamedIndividual ,
+                                :Report ;
+                       dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                       dct:created "2025-01-31T04:37:25Z"^^xsd:dateTime ;
+                       rdfs:label "Smoke, Mirrors & Hot Air: How ExxonMobil Uses Big Tobacco's Tactics to \"Manufacture Uncertainty\" on Climate Change" ;
+                       :url <https://www.ucsusa.org/resources/smoke-mirrors-hot-air> .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/Sources_and_Amplifiers_of_Climate_Change_Denial
+:Sources_and_Amplifiers_of_Climate_Change_Denial rdf:type owl:NamedIndividual ,
+                                                          :Journal_Article ;
+                                                 dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                                                 dct:created "2025-01-31T04:17:33Z"^^xsd:dateTime ;
+                                                 rdfs:label "Sources and Amplifiers of Climate Change Denial" ;
+                                                 :url <https://www.researchgate.net/publication/346088327_Sources_and_Amplifiers_of_Climate_Change_Denial> .
+
+
 ###  https://www.michaeldebellis.com/climate_obstruction/South_America
 :South_America rdf:type owl:NamedIndividual ,
                         :Continent ;
                dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
                dct:created "2025-01-31T02:40:07Z"^^xsd:dateTime .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/Strategy_in_Information_and_Influence_Campaigns
+:Strategy_in_Information_and_Influence_Campaigns rdf:type owl:NamedIndividual ,
+                                                          :Book ;
+                                                 dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                                                 dct:created "2025-01-31T04:28:19Z"^^xsd:dateTime ;
+                                                 rdfs:label "Strategy in Information and Influence Campaigns How Policy Advocates, Social Movements, Insurgent Groups, Corporations, Governments and Others Get What They Want" ;
+                                                 :url <https://www.routledge.com/Strategy-in-Information-and-Influence-Campaigns-How-Policy-Advocates-Social/Manheim/p/book/9780415887298> .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/Text-mining_the_signals_of_climate_change_doubt
+:Text-mining_the_signals_of_climate_change_doubt rdf:type owl:NamedIndividual ,
+                                                          :Journal_Article ;
+                                                 dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                                                 dct:created "2025-01-31T04:22:59Z"^^xsd:dateTime ;
+                                                 rdfs:label "Text-mining the signals of climate change doubt" ;
+                                                 :url <https://www.sciencedirect.com/science/article/abs/pii/S0959378015300728?casa_token=RFYHWK5WkwkAAAAA:5QTDaWIlNNANq7awL4hQZFiSUHYwt469h2IsKqIutT5WbSVlW2jvGLRNncL1CqSCPFL4XwOhWoI> .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/The_Structure_and_Culture_of_Climate_Change_Denial
+:The_Structure_and_Culture_of_Climate_Change_Denial rdf:type owl:NamedIndividual ,
+                                                             :Journal_Article ;
+                                                    dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                                                    dct:created "2025-01-31T04:21:07Z"^^xsd:dateTime ;
+                                                    rdfs:label "The Structure and Culture of Climate Change Denial" ;
+                                                    :url <https://www.asanet.org/footnotes-article/structure-and-culture-climate-change-denial/> .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/The_growth_of_climate_change_misinformation_in_US_philanthropy
+:The_growth_of_climate_change_misinformation_in_US_philanthropy rdf:type owl:NamedIndividual ,
+                                                                         :Journal_Article ;
+                                                                dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                                                                dct:created "2025-01-31T04:45:20Z"^^xsd:dateTime ;
+                                                                rdfs:label "The growth of climate change misinformation in US philanthropy: evidence from natural language processing" ;
+                                                                :url <https://cssn.org/wp-content/uploads/2020/12/The-growth-of-climate-change-misinformation-in-US-philanthropy-evidence-from-natural-language-processing-Justin-Farrell.pdf> .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/USA
@@ -4430,6 +4536,15 @@ The contested advertising concerned a sticker on Chiquita's bananas which includ
                 <https://w3id.org/semanticarts/ns/ontology/gist/isGeoContainedIn> :Europe ;
                 dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
                 dct:created "2025-01-31T02:52:16Z"^^xsd:dateTime .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/diagram-the-structure-of-obstruction
+:diagram-the-structure-of-obstruction rdf:type owl:NamedIndividual ,
+                                               <https://w3id.org/semanticarts/ns/ontology/gist/FormattedContent> ;
+                                      dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                                      dct:created "2025-01-31T04:32:50Z"^^xsd:dateTime ;
+                                      rdfs:label "CSSN Primer Diagram: The Structure of Obstruction" ;
+                                      :url <https://www.asanet.org/wp-content/uploads/diagram-the-structure-of-obstruction.pdf> .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Federal_Public_Prosecutor’s_Office_v_Érico_Batista_de_Souza
