@@ -96,15 +96,11 @@ def extract_sciencedirect_links(csv_file_path):
     return links
 
 def create_sub_section(document, heading=None, text=None):
-    sub_section = conn.createURI(domain_ont_str + str(uuid.uuid4()))
-    conn.add(sub_section, RDF.TYPE, section_class)
     if heading is not None:
-        conn.add(sub_section, heading_prop, heading)
-        conn.add(sub_section, rdfs_label_prop, heading)
-    if text is not None:
-        conn.add(sub_section, text_prop, text)
-    conn.add(document, sub_section_prop, sub_section)
-    return sub_section
+        text = heading + text
+    put_value(document, text_prop, text)
+
+
 
 # This function is used to build the sections for a document. It uses the document parser to get the sections
 
