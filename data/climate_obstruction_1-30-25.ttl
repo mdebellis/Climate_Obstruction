@@ -4405,14 +4405,6 @@ on social drivers of action and inaction on climate change""" .
                dct:created "2025-01-31T02:40:26Z"^^xsd:dateTime .
 
 
-###  https://www.michaeldebellis.com/climate_obstruction/Oil_Lobbys_Energy_Citizens_Astroturf_Campaign_Exposed
-:Oil_Lobbys_Energy_Citizens_Astroturf_Campaign_Exposed rdf:type owl:NamedIndividual ,
-                                                                :Web_Page ;
-                                                       dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-                                                       dct:created "2025-01-31T05:34:24Z"^^xsd:dateTime ;
-                                                       rdfs:label "Oil Lobby's 'Energy Citizens' Astroturf Campaign Exposed" ;
-                                                       :url <https://www.huffpost.com/entry/leaked-memo-oil-lobbys_b_259149> .
-
 
 ###  https://www.michaeldebellis.com/climate_obstruction/PETER_NEWELL
 :PETER_NEWELL rdf:type owl:NamedIndividual ,
@@ -4429,14 +4421,6 @@ on social drivers of action and inaction on climate change""" .
          dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
          dct:created "2025-01-29T23:52:21Z"^^xsd:dateTime .
 
-
-###  https://www.michaeldebellis.com/climate_obstruction/Protecting_the_power_to_pollute
-:Protecting_the_power_to_pollute rdf:type owl:NamedIndividual ,
-                                          :Journal_Article ;
-                                 dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-                                 dct:created "2025-01-31T05:32:21Z"^^xsd:dateTime ;
-                                 rdfs:label "Protecting the power to pollute: Identity co-optation, gender, and the public relations strategies of fossil fuel industries in the United States" ;
-                                 :url <https://www.tandfonline.com/doi/pdf/10.1080/23251042.2019.1624001?casa_token=39EUzyRfKpQAAAAA:_BUTl6sWSe8WybojdtGB3MQS3QfT1QL-J1aOwf9loR2oiN4jNLDn4i9sEJUavISDb3ooOxniS60qoA> .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/RCC_Ruling_on_Chiquita_climate_neutral_bananas
@@ -4487,14 +4471,6 @@ The contested advertising concerned a sticker on Chiquita's bananas which includ
                        rdfs:label "Smoke, Mirrors & Hot Air: How ExxonMobil Uses Big Tobacco's Tactics to \"Manufacture Uncertainty\" on Climate Change" ;
                        :url <https://www.ucsusa.org/resources/smoke-mirrors-hot-air> .
 
-
-###  https://www.michaeldebellis.com/climate_obstruction/Sociology_and_the_Climate_Crisis
-:Sociology_and_the_Climate_Crisis rdf:type owl:NamedIndividual ,
-                                           :Journal_Article ;
-                                  dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-                                  dct:created "2025-01-31T05:44:24Z"^^xsd:dateTime ;
-                                  rdfs:label "Sociology and the Climate Crisis" ;
-                                  :url <https://www.annualreviews.org/content/journals/10.1146/annurev-soc-121919-054750> .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Sources_and_Amplifiers_of_Climate_Change_Denial
