@@ -595,7 +595,7 @@ Note that the unit of measure of the accuracy has to be compatible with the unit
 ###  https://w3id.org/semanticarts/ns/ontology/gist/isDirectPartOf
 <https://w3id.org/semanticarts/ns/ontology/gist/isDirectPartOf> rdf:type owl:ObjectProperty ;
                                                                 rdfs:subPropertyOf <https://w3id.org/semanticarts/ns/ontology/gist/isPartOf> ;
-                                                                owl:inverseOf :has_Direct_Part ;
+                                                                owl:inverseOf :has_direct_part ;
                                                                 rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore> ;
                                                                 <http://www.w3.org/2004/02/skos/core#definition> "The relationship between a part and a whole where the part has independent existence and there are no other parts in between." ;
                                                                 <http://www.w3.org/2004/02/skos/core#prefLabel> "is direct part of" ;
@@ -669,7 +669,7 @@ Note that the unit of measure of the accuracy has to be compatible with the unit
 
 ###  https://w3id.org/semanticarts/ns/ontology/gist/isPartOf
 <https://w3id.org/semanticarts/ns/ontology/gist/isPartOf> rdf:type owl:ObjectProperty ;
-                                                          owl:inverseOf :has_Part ;
+                                                          owl:inverseOf :has_part ;
                                                           rdf:type owl:TransitiveProperty ;
                                                           rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore> ;
                                                           <http://www.w3.org/2004/02/skos/core#definition> "The relationship between a part and a whole where the part has independent existence." ;
@@ -835,18 +835,23 @@ Note that the unit of measure of the accuracy has to be compatible with the unit
 	Implementations requiring a more specific meaning should define subproperties.""" .
 
 
-###  https://www.michaeldebellis.com/climate_obstruction/has_Direct_Part
-:has_Direct_Part rdf:type owl:ObjectProperty ;
-                 rdfs:subPropertyOf :has_Part ;
-                 dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-                 dct:created "2025-01-29T01:00:03Z"^^xsd:dateTime .
+###  https://www.michaeldebellis.com/climate_obstruction/ad_agency
+:ad_agency rdf:type owl:ObjectProperty ;
+           rdfs:range :Advertizing_Agency ;
+           dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+           dct:created "2025-02-06T00:22:32Z"^^xsd:dateTime .
 
 
-###  https://www.michaeldebellis.com/climate_obstruction/has_Part
-:has_Part rdf:type owl:ObjectProperty ,
-                   owl:TransitiveProperty ;
-          dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-          dct:created "2025-01-29T00:59:49Z"^^xsd:dateTime .
+###  https://www.michaeldebellis.com/climate_obstruction/has_BCAP_code
+:has_BCAP_code rdf:type owl:ObjectProperty ;
+               dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+               dct:created "2025-02-05T17:04:38Z"^^xsd:dateTime .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/has_CAP_Code
+:has_CAP_Code rdf:type owl:ObjectProperty ;
+              dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+              dct:created "2025-02-05T17:07:24Z"^^xsd:dateTime .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/has_author
@@ -856,6 +861,20 @@ Note that the unit of measure of the accuracy has to be compatible with the unit
             rdfs:range :Agent ;
             dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
             dct:created "2025-01-29T00:54:44Z"^^xsd:dateTime .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/has_cause
+:has_cause rdf:type owl:ObjectProperty ;
+           owl:inverseOf :is_cause_of ;
+           dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+           dct:created "2025-02-04T23:35:26Z"^^xsd:dateTime .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/has_direct_part
+:has_direct_part rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :has_part ;
+                 dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                 dct:created "2025-01-29T01:00:03Z"^^xsd:dateTime .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/has_employee
@@ -872,6 +891,13 @@ Note that the unit of measure of the accuracy has to be compatible with the unit
                   dct:created "2025-01-30T02:55:36Z"^^xsd:dateTime .
 
 
+###  https://www.michaeldebellis.com/climate_obstruction/has_part
+:has_part rdf:type owl:ObjectProperty ,
+                   owl:TransitiveProperty ;
+          dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+          dct:created "2025-01-29T00:59:49Z"^^xsd:dateTime .
+
+
 ###  https://www.michaeldebellis.com/climate_obstruction/has_status
 :has_status rdf:type owl:ObjectProperty ;
             rdfs:range :Status ;
@@ -883,6 +909,12 @@ Note that the unit of measure of the accuracy has to be compatible with the unit
 :is_author_of rdf:type owl:ObjectProperty ;
               dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
               dct:created "2025-01-29T00:55:21Z"^^xsd:dateTime .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/is_cause_of
+:is_cause_of rdf:type owl:ObjectProperty ;
+             dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+             dct:created "2025-02-04T23:35:40Z"^^xsd:dateTime .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/is_employee_of
@@ -898,6 +930,13 @@ Note that the unit of measure of the accuracy has to be compatible with the unit
 :is_jurisdiction_for rdf:type owl:ObjectProperty ;
                      dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
                      dct:created "2025-01-30T02:55:55Z"^^xsd:dateTime .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/litigant
+:litigant rdf:type owl:ObjectProperty ;
+          rdfs:range :Agent ;
+          dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+          dct:created "2025-02-06T00:26:38Z"^^xsd:dateTime .
 
 
 #################################################################
@@ -3378,6 +3417,52 @@ The conventions for precision that are repeated in each property name are as fol
                                                                <http://www.w3.org/2004/02/skos/core#prefLabel> "Unit of Measure" .
 
 
+###  https://www.michaeldebellis.com/climate_obstruction/ASA_Ruling
+:ASA_Ruling rdf:type owl:Class ;
+            rdfs:subClassOf :Regulatory_Decision ;
+            dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+            dct:created "2025-02-05T22:14:51Z"^^xsd:dateTime ;
+            rdfs:isDefinedBy <https://www.asa.org.uk/about-asa-and-cap/about-regulation/about-the-asa-and-cap.html> ;
+            <http://www.w3.org/2004/02/skos/core#definition> """Regulating ads 
+The ASA respond to complaints but we also check ads across media to make sure they’re sticking to the rules. We monitor ads in sectors where there are potential consumer protection issues or where there are societal concerns about specific products, for instance age-restricted products like alcohol, gambling or electronic cigarettes. 
+
+Together with CAP, the ASA works to support the industry to help them get their ads right before they are published. For example by providing guidance, pre-publication advice and training for the industry. Last year, we provided 1 million pieces of advice and training for the industry, most of which was free of charge.
+
+What happens before an ad is published? 
+The Advertising Codes require that advertisers hold evidence to prove the claims that they make before they are published or aired. We expect all advertisers to follow the rules when creating their ad campaigns. 
+
+Pre-clearance for TV and radio advertising 
+The vast majority of TV and radio ads are pre-cleared before they are broadcast. 
+
+Under their licences broadcasters must take reasonable steps to ensure that the ads they broadcast stick to the UK Code of Broadcast Advertising. 
+
+To help them do this, the broadcasters have established and funded two pre-clearance centres:
+
+Clearcast for television commercials.
+Radiocentre for radio ads. 
+Non-broadcast advertising
+There are many millions of non-broadcast ads published every year in the UK, so it would be impossible to check every one of them before they appear. For example there are more than 30 million press advertisements and 100 million pieces of direct marketing every year. 
+
+However, to help advertisers get their ads right, CAP provides a range of advice, guidance and training, including free pre-publication Copy Advice service. 
+
+We also encourage advertisers and anyone with an interest in the rules or who is involved in producing ads to sign up for Insight and Update, CAP’s advice newsletters here which provide current and timely advice on the latest positions on hundreds of different advertising issues. 
+
+Regulation after an advertisement has appeared 
+Even though many steps are taken to ensure ads are in line with the Codes before they are aired or published, consumers have the right to complain about ads they have seen, which they believe to be misleading, harmful or offensive.
+
+The ASA can act on just one complaint. We don’t play a numbers game: our concern is whether the ad rules have been broken. 
+
+Find out more about how we handle complaints
+
+Sanctions
+The Advertising Codes and the ASA’s rulings have universal coverage across the advertising industry. Advertisers cannot opt out of them. 
+
+If we have judged an ad has broken the advertising rules, then it must be withdrawn or amended. The vast majority of advertisers stick to the ASA’s rulings and they act quickly to amend or withdraw an ad that breaks the Codes. 
+
+We have a range of sanctions to act against the small number of advertisers who are either unwilling or unable to work within the rules and to ensure they are brought into line. In 2013 Trading Standards took over from the Office of Fair Trading as the ASA’s ‘legal backstop’ on the non-broadcast side.  On the broadcast side, Ofcom acts as our ‘legal backstop’.""" ,
+                                                             "The Advertising Standards Authority (ASA) is the UK’s independent advertising regulator. The ASA makes sure ads across UK media stick to the advertising rules (the Advertising Codes)." .
+
+
 ###  https://www.michaeldebellis.com/climate_obstruction/Advertizing_Agency
 :Advertizing_Agency rdf:type owl:Class ;
                     rdfs:subClassOf :Business_Organization ;
@@ -3448,6 +3533,7 @@ Claim does not reflect consistent organizational practice""" .
           rdfs:subClassOf :Industry_Code ;
           dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
           dct:created "2025-01-22T02:24:30Z"^^xsd:dateTime ;
+          rdfs:isDefinedBy <https://www.asa.org.uk/type/capcode/code_rule/3.1.html?_vhid=E75FAE137AB5FD10A2682E643403C071> ;
           <http://www.w3.org/2004/02/skos/core#definition> """**Overview of the CAP Code**
 
 1. **What it is**  
@@ -3565,7 +3651,7 @@ Source: ChatGPT""" .
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Court
 :Court rdf:type owl:Class ;
-       rdfs:subClassOf <https://w3id.org/semanticarts/ns/ontology/gist/Organization> ;
+       rdfs:subClassOf <https://w3id.org/semanticarts/ns/ontology/gist/GovernmentOrganization> ;
        dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
        dct:created "2025-01-30T02:58:05Z"^^xsd:dateTime .
 
@@ -3589,7 +3675,24 @@ Source: ChatGPT""" .
               rdfs:subClassOf :Impact ;
               dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
               dct:created "2025-01-14T04:21:26Z"^^xsd:dateTime ;
-              <http://www.w3.org/2004/02/skos/core#definition> "Making claims/policies that either exaggerate achievements, or fail to live up to them" .
+              <http://www.w3.org/2004/02/skos/core#definition> """2.1 Does the claim over-state positive improvements to the environment?
+
+IF YES...−
+IT'S GREENWASHING
+Organizations can exaggerate the impact of their green practices by overstating their goals or commitments that a) have not been fulfilled; b) based on available information on current trends are unlikely to be achieved; or c) do not lead to any follow-up action with measurable and significant impact. Setting dates far into the future (e.g. decades) without regularly updated interim goals also falls under this category of greenwashing. Several authors associate greenwashing to a decoupling behavior (Siano et al. 2017) which this indicator intends to capture.""" ,
+                                                               """2.2 Is the marketing budget disproportionately large compared to the budget allocated for the claim, or when compared to the marketing budget for other products or initiatives that are a higher proportion of the organization's activity?
+
+If yes...−
+IT'S GREENWASHING
+In 2020, the fossil fuel industry spent $10 million on Facebook ads selling “innovative” climate solutions and visions of a “lower-carbon future” (InfluenceMap, 2021). Although challenging to obtain, information about marketing budget may be crucial for assessing potential greenwash. One source could be the annual data available for the biggest companies' ad budgets (Statista, 2024). This indicator also captures those cases, where the marketing budget behind the claim/campaign is much larger when compared to the marketing of other products/initiatives with a higher proportion of the overall business activity (e.g. an energy company is disproportionately spending on communicating 'green' initiatives that make up a small fraction of its business). The most famous example of this form of greenwashing is ExxonMobil's marketing of biofuels made from algae, where the marketing budget was reportedly $100 million, the actual investment was $350 million, and the project itself was cancelled after it became clear that it would never achieve scale (Westervelt, 2023).""" ,
+                                                               "Making claims/policies that either exaggerate achievements, or fail to live up to them" .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/Energy_Corporation
+:Energy_Corporation rdf:type owl:Class ;
+                    rdfs:subClassOf :Corporation ;
+                    dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                    dct:created "2025-02-06T00:28:04Z"^^xsd:dateTime .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/False_Communication
@@ -3603,7 +3706,30 @@ Source: ChatGPT""" .
 :Falsehoods rdf:type owl:Class ;
             rdfs:subClassOf :Impact ;
             dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-            dct:created "2025-01-14T04:21:26Z"^^xsd:dateTime .
+            dct:created "2025-01-14T04:21:26Z"^^xsd:dateTime ;
+            <http://www.w3.org/2004/02/skos/core#definition> """4.1 Is the claim based on solutions or justifications that are not supported by scientific consensus?
+
+If yes...−
+IT'S GREENWASHING
+Claims may fall on a continuum of verifiable support to having little or no proof. To avoid false advertising claims, organizations need to be aware of and comply with relevant statutes and regulations that govern competition and advertising in their jurisdiction and industry. Falsity does not require illegality. This greenwash category is commonly used by organizations to suggest that their preferred solution is also an environmentally responsible one. For example, the fossil fuel industry recently began buying ads that portray natural gas as a green fuel source, when methane is a powerful greenhouse gas, or arguments that decarbonization would make energy unaffordable (Grist, 2021). If there is significant disagreement or doubt over the environmental impacts of certain practices/products/services, the organization should refrain from marketing the message altogether (European Commission, 2021). Whatever the reason for advertising a certain policy/activity/product, a case by case analysis is required to assess whether scientific consensus exists to support the claim.""" ,
+                                                             """4.2 Does the claim contain statements that are not based on robust, independent, verifiable and generally recognized evidence?
+
+If yes...−
+IT'S GREENWASHING
+Evidence that verify claims should be easily accessible by the public. The documentation for claims needs to be up to date for as long as the claims remain in use in marketing.""" ,
+                                                             """4.3. Is the claim based on implementation methodologies that are not clear or transparent, do not have robust metrics or are based on aggregated broader sector data that benefit the organization?
+
+If yes...−
+IT'S GREENWASHING
+Inadequate quantification is a common category of greenwashing. For example, natural capital accounting is a controversial methodology that attempts to put a price on nature and ecosystem. The approach has significant conceptual weaknesses and produces figures irrelevant for demonstrating the actual state of or change within the physical environment (e.g. emission cuts). Likewise, communicating on the wrong metrics, e.g., outcome instead of impact, intensity instead of absolute emissions, or using flattering aggregate figures could also fall into this category. For example, salmon farmed in open ocean pens have significant documented negative environmental impacts, but industry actors may use statistics from research on \"aquaculture\" to make environmental claims about the industry because other types of aquaculture, such as farming shellfish and seaweed, have documented positive environmental effects.""" ,
+                                                             "The claim cannot be substantiated by accessible supporting information" .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/Food_Distributor_and_Producer
+:Food_Distributor_and_Producer rdf:type owl:Class ;
+                               rdfs:subClassOf :Corporation ;
+                               dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                               dct:created "2025-02-06T01:06:36Z"^^xsd:dateTime .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Foundation
@@ -3618,14 +3744,24 @@ Source: ChatGPT""" .
 :Green_Washing rdf:type owl:Class ;
                rdfs:subClassOf :Communication ;
                dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-               dct:created "2025-01-14T00:55:49Z"^^xsd:dateTime .
+               dct:created "2025-01-14T00:55:49Z"^^xsd:dateTime ;
+               rdfs:isDefinedBy <https://cssn.org/special-projects/greenwashing-tool/> .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/Hoax
+:Hoax rdf:type owl:Class ;
+      rdfs:subClassOf :Proposition ;
+      dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+      dct:created "2025-02-04T23:33:45Z"^^xsd:dateTime ;
+      <http://www.w3.org/2004/02/skos/core#definition> "A hoax is a false proposition that has been created by some Agent in pursuit of some goal." .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Impact
 :Impact rdf:type owl:Class ;
         rdfs:subClassOf :Green_Washing ;
         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-        dct:created "2025-01-14T01:03:46Z"^^xsd:dateTime .
+        dct:created "2025-01-14T01:03:46Z"^^xsd:dateTime ;
+        rdfs:isDefinedBy <https://cssn.org/special-projects/greenwashing-tool/impact/> .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Industry_Code
@@ -3648,7 +3784,18 @@ Source: ChatGPT""" .
             rdfs:subClassOf :Impact ;
             dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
             dct:created "2025-01-14T04:21:26Z"^^xsd:dateTime ;
-            <http://www.w3.org/2004/02/skos/core#definition> "Proclaiming accomplishments that are irrelevant or already required by law/competitors" .
+            <http://www.w3.org/2004/02/skos/core#definition> """3.1 Is the claim presented as voluntary when it is required by law or policy?
+If yes...
+
+If yes...−
+IT'S GREENWASHING
+Claiming that e.g. a product is free of certain substances if such substances are already prohibited by legislation/standard practice of similar organizations is greenwashing as it suggests that the organization is taking unusual environmental steps compared to others, when the same activity is required.""" ,
+                                                             """3.2 Is an unrelated issue included in a claim about a particular environmental benefit?
+
+If yes...−
+IT'S GREENWASHING
+Not all environmental benefits are related. Positive organizational performance on one issue, such as emissions reduction, cannot \"stand in\" for activity on another issue, such as supporting biodiversity gains. Similarly, acknowledgement of environmental performance in one area, through receipt of awards or certification, cannot absolve an organization for responsibilities elsewhere.""" ,
+                                                             "Proclaiming accomplishments that are irrelevant or already required by law/competitors" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Journal_Article
@@ -3708,7 +3855,18 @@ Source: ChatGPT""" .
 :Not_Credible rdf:type owl:Class ;
               rdfs:subClassOf :Impact ;
               dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-              dct:created "2025-01-14T04:21:26Z"^^xsd:dateTime .
+              dct:created "2025-01-14T04:21:26Z"^^xsd:dateTime ;
+              <http://www.w3.org/2004/02/skos/core#definition> """5.1 Does the claim try to make the public feel positive about a product, service, or policy that is demonstrably dangerous, harmful, or unsafe?
+
+If yes...−
+IT'S GREENWASHING
+This indicator is intended to capture the green marketing of products/services/policies that are presumed to be dangerous or unsafe such tobacco or herbicides. Dangerous could mean containing substances that are toxic, hazardous to the environment, carcinogenic, mutagenic or toxic for reproduction (CMR), causing endocrine disruption to human health or the environment, persistent, bio-accumulative and toxic (PBT) without explicitly mentioning this fact when publishing the green claim. If expert studies give rise to significant disagreement or doubt over environmental impacts of certain practices/products/services, the organization should refrain from marketing the message altogether (European Commission, 2021). Highly controversial solutions involve the choice of ecologically counter productive practices that do not maintain or enhance the ecological quality. Having a stake in/supporting fossil fuels (including gas, oils sands, and hydraulic fracking), nuclear energy, agro-fuels from primary crops, utilization of bioenergy as transitional technology, intensive industrial agriculture, sustainable aviation fuels, bottom trawling, etc. are just few examples of such controversial practices. Further references to determine when proposed solutions/practices/products are considered questionable by science: IEA's Net Zero by 2050 report (IEA, 2021); Roe et al (2019); EAT-Lancet Commission on Food, Planet, Health (EAT, 2019).""" ,
+                                                               """5.2 Is the claim disproportionately small or concerned with minor issues compared with the scale of the environmental impacts associated with the organization/practice?
+
+If yes...−
+IT'S GREENWASHING
+This indicator refers to positive environmental activities, products, or achievements that are very modest compared to the scale of the negative environmental harm associated with an industry or organizational practice. For example, in June 2023 the UK Advertising Standards Authority found that ads by Shell Ltd were likely to mislead because the ads gave the overall impression (ASA, 2023e) that a significant proportion of their business comprised of lower-carbon energy products without providing information on the proportion of their overall business model that comprised lower-carbon energy products.""" ,
+                                                               "Claim touts environmental friendly attributes of a practice / policy / product that is environmentally harmful or focuses on minor issues" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Policy_Outcome
@@ -3750,6 +3908,21 @@ Source: https://en.wikipedia.org/wiki/Proposition""" .
                dct:created "2025-01-17T21:44:35Z"^^xsd:dateTime ;
                :influence :Policy_Outcome ,
                           :Political_Agenda .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/RCC_Ruling
+:RCC_Ruling rdf:type owl:Class ;
+            rdfs:subClassOf :Litigation ;
+            dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+            dct:created "2025-02-05T22:20:25Z"^^xsd:dateTime .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/Regulatory_Decision
+:Regulatory_Decision rdf:type owl:Class ;
+                     rdfs:subClassOf <https://w3id.org/semanticarts/ns/ontology/gist/Commitment> ;
+                     dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                     dct:created "2025-02-06T00:18:36Z"^^xsd:dateTime ;
+                     rdfs:label "Regulatory Decision (Self-Regulatory or Industry Rulings)" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Report
@@ -3927,7 +4100,10 @@ Claiming biodiversity or carbon neutrality or a reduction of environmental harm 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/ASA_Ruling_on_Repsol_SA
 :ASA_Ruling_on_Repsol_SA rdf:type owl:NamedIndividual ,
+                                  :ASA_Ruling ,
                                   :Selective_Disclosure ;
+                         :ad_agency :DDB_Spain ;
+                         :litigant :Repsol ;
                          <https://w3id.org/semanticarts/ns/ontology/gist/containedText> """2. Upheld
 
 The CAP Code required that the basis of environmental claims must be clear.
@@ -3984,11 +4160,102 @@ Repsol summarised that they have reduced energy consumption in their industrial 
 Repsol said that they will allocate more than €5 billion in organic investment and that 35% of these investments will be allocated to low-carbon technologies and projects. The company has implemented a methodology to determine whether a new investment is in line with its decarbonisation targets, and any investment proposed to the Executive Committee and the Board of Directors must include a report prepared by their Sustainability Department. In the second half of 2023 they are introducing a new biofuels facility that will supply 250,000 tons per year of advanced biofuels. The use of these fuels will make it possible to avoid emissions of 900,000 tons of carbon dioxide per year. They also are preparing to build synthetic fuels and urban waste recovery plants and have partnered with Enerkem to develop a plant which will process around 400,000 tons of non-recyclable municipal solid waste to produce around 240,000 tons of renewable methanol (biomethanol).
 
 Repsol explained that renewable fuels make up 10% of their fuel sales in Spain and they expect to grow this aggressively. They have existing pilot projects in three cities which involve 100% biofuel pumps for fleet vehicles and have also launched a recent initiative to pay customers for their used cooking oil for incorporation into the processing of fatty residues. Repsol said they are committed to acting ethically and would remove the ad immediately.""" ;
+                         <https://w3id.org/semanticarts/ns/ontology/gist/idText> "A23-1185942 Repsol SA" ;
                          <https://w3id.org/semanticarts/ns/ontology/gist/isRecordedAt> "2023-06-07T00:00:00"^^xsd:dateTime ;
                          dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
                          dct:created "2025-01-21T22:56:25Z"^^xsd:dateTime ;
                          rdfs:isDefinedBy <https://www.asa.org.uk/rulings/repsol-sa-a23-1185942-repsol-sa.html> ;
                          rdfs:label "ASA Ruling on Repsol SA" .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/ASA_Ruling_on_Shell_UK_Ltd
+:ASA_Ruling_on_Shell_UK_Ltd rdf:type owl:NamedIndividual ,
+                                     :ASA_Ruling ,
+                                     :Not_Credible ;
+                            :ad_agency :Wunderman_Thompson ;
+                            :litigant :Shell_UK_Ltd ;
+                            <https://w3id.org/semanticarts/ns/ontology/gist/containedText> """Action
+Ads (a), (b) and (c) must not appear again in the form complained of. We told Shell UK Ltd to ensure that their future ads featuring environmental claims did not mislead by exaggerating or, omitting material information about, the proportion of their business activities that were comprised of lower carbon activities.""" ,
+                                                                                           """Ad description
+A poster, a TV ad, and a YouTube ad for Shell:
+
+a. The poster, seen in Bristol on 20 June 2022, featured large text that stated, “BRISTOL is READY for Cleaner Energy” superimposed over a cityscape shot of Bristol. The Shell logo (a red and yellow coloured shell) appeared in the top right-hand corner of the poster. Further text at the bottom of the poster stated, “In the South West 78,000 homes use 100% renewable electricity from Shell Energy” above smaller text that stated, “Shell Energy’s renewable electricity is supplied by the National Grid and certified by Renewable Energy Guarantees of Origin, matching electricity bought with the equivalent amount from 100% renewable sources”.
+
+b. The TV ad, seen on 14 June 2022, opened with a man stating, “In the UK, 1.4 million households use 100% renewable electricity from Shell” as he helped a young child to cycle down the street. The scene that followed depicted two offshore engineers working on-site at a beach. The one facing the camera stated “Shell experts are working on a wind project that could power six million homes” as animated design plans for wind turbines popped up on the horizon. The ad then depicted an electric car driving into a rural town before its driver stated, “Nearly one in five new cars now plug in” as he plugged his car into a charging point. A woman out walking her dog then stated, “These chargers are popping up on our streets” before a man fitting an EV charging point added, “Shell aims to fit 50,000 chargers nationwide by 2025”. An employee at a Shell petrol and electric vehicle charging station then stated, “And with more electric car charge points coming to Shell forecourts near you, the UK is ready for Cleaner energy.” Throughout the ad, large individual letters appeared in the background of successive scenes to spell the word “READY”. The video ended with large on-screen text “The UK is READY for Cleaner Energy” followed by the Shell logo and the hashtag “#PoweringProgress”.
+
+Superimposed text that appeared on-screen during the ad’s opening shots stated “Shell Energy’s renewable electricity is supplied by the National Grid and certified by Renewable Energy Guarantees of Origin, matching electricity bought with the equivalent amount from 100% renewable sources”.
+
+c. The YouTube video, posted on Shell’s YouTube channel on 9 June 2022, was titled “The UK is READY For Cleaner Energy” and included text in its caption that stated, “From electric vehicle charging to renewable electricity for your home, Shell is giving customers more low-carbon choices and helping drive the UK’s energy transition. The UK is ready for cleaner energy. Learn more: https://go.shell.com/399dfw2. #PoweringProgress”. The video was identical to ad (b).""" ,
+                                                                                           """Assessment
+1. Upheld
+
+The ASA acknowledged that consumers were likely to understand that energy products derived from fossil fuels were environmentally detrimental. We further acknowledged that many consumers would closely associate Shell with petrol sales, and more broadly understand that the company was involved in oil and gas investment and extraction. However, they would also have an awareness that many companies in carbon-intensive industries, including the oil and gas sector, aimed to dramatically reduce their emissions in response to the climate crisis. We considered that consumers were increasingly concerned about the environmental impact of activities related to higher-carbon products and services, and would be interested in seeking out businesses, including oil and gas companies, that were making meaningful progress towards transitioning away from higher-carbon products and services. However, they were unlikely to be aware of the details of this in relation to specific companies, and ads were therefore likely to mislead consumers if they misrepresented the contribution that lower-carbon initiatives played, or would play in the near future, as part of the overall balance of a company's activities. We assessed the ads on that basis.Ad (a) featured the claim “BRISTOL is READY for Cleaner Energy” in large text, which was accompanied by text at the bottom of the ad, that read “In the South-West 78,000 homes use 100% renewable electricity from Shell Energy”. The Shell logo appeared in the top right-hand corner of the poster. We acknowledged that the claims in the ad referred specifically to “Shell Energy”, as opposed to “Shell”, and referred to a single area of Shell’s business activities, namely those related to its role as a domestic electricity provider in the South-West of England. However, we did not consider that consumers would draw a distinction between “Shell” and “Shell Energy”, particularly because Shell was a brand well known for its energy products in a more general sense. We considered that the use of the Shell logo, the ad’s focus on the claim “BRISTOL is READY for Cleaner Energy” (emphasis on “READY”) and the other claim focusing on the number of existing customers meant that consumers would interpret the ad as making a broader claim about Shell as a whole providing cleaner energy, and featuring one illustrative example of Shell’s environmental credentials rather than as a narrow claim about one specific product offering. We considered the overall impression of the ad was that low-carbon energy products comprised a significant proportion of the energy products Shell invested in and sold in the UK in 2022, or were likely to do so in the near future.
+
+Ads (b) and (c) depicted some of Shell’s business activities in 2022 and focused on more environmentally friendly energy products. The ads included the claims: “In the UK, 1.4 million households use 100% renewable electricity from Shell”; “Shell experts are working on a wind project that could power six million homes”; and “Shell aims to fit 50,000 [electric vehicle] chargers nationwide by 2025”. The claims “The UK is READY for cleaner energy” and hashtag “#PoweringProgress” appeared on-screen in the closing shots of the ads, together with the Shell logo and “Shell International”.
+
+We considered that, in the absence of qualifying information, the cumulative effect of the claims relating to applications or sources of lower-carbon energy that spanned distinct and diverse areas of Shell’s operations, together with the claim “The UK is READY for Cleaner Energy”, which was immediately followed by the Shell logo, was to give the impression that low-carbon energy products comprised a significant proportion of the energy products Shell invested in and sold in the UK in 2022, or were likely to do so in the near future. In addition, the YouTube ad (c) included the caption “From electric vehicle charging to renewable electricity for your home, Shell is giving customers more low-carbon choices and helping drive the UK’s energy transition ...”. We considered the caption reinforced that impression.
+
+We acknowledged Shell’s comment that, rather than being an explicit claim about Shell, the claim “The UK is READY for cleaner energy” in ads (b) and (c) was intended as a forward-looking statement about the UK-wide demand for less environmentally detrimental energy sources. However, in the context of the claim’s appearance in an ad for Shell, a well-known provider of energy products, we considered that consumers were likely to interpret the claim as being, in part, a claim about Shell’s own products and capacity to deliver low-carbon energy. We also considered that the emphasis the ads placed on “READY”, as well as the fact that the only timeframe mentioned by the ads was short-term, implied that lower-carbon energy products, like those shown in the ads, already comprised a significant proportion of the energy products Shell invested in and sold in the UK, or were likely to do so in the near future.
+
+We acknowledged that “#PoweringProgress” in ad (c) referred to the name of Shell’s “Powering Progress” strategy through which the business aimed to achieve its target of reaching net-zero emissions by 2050. However, we considered that consumers were unlikely to recognise it as such. Instead, we considered that the claim reinforced the impression given by the ad’s preceding scenes that, not only was there immediate UK-wide demand for energy products that were less environmentally detrimental than those derived from fossil fuels, but that Shell’s business activities in 2022 were such that the company was already well-placed to meet that demand by providing “cleaner energy”, thereby “powering progress”.
+
+We acknowledged that Shell said they were taking steps towards net zero and promoting sustainable energy. However, according to Shell’s 2021 Sustainability Report, Shell’s operations gave rise to greenhouse gas emissions in 2021 that were estimated as equivalent to 1375 million tonnes of carbon dioxide. While that estimate did not capture Shell’s absolute emissions in 2021, given that it included deductions linked to carbon offsets and did not cover certain commercial contracts, it nonetheless represented a large contribution to greenhouse gas emissions. We understood that large-scale oil and gas investment and extraction comprised the vast majority of the company’s business model in 2022 and would continue to do so in the near future. We therefore considered that, because ads (a), (b) and (c) gave the overall impression that a significant proportion of Shell’s business comprised lower-carbon energy products, further information about the proportion of Shell’s overall business model that comprised lower-carbon energy products was material information that should have been included. Because the ads did not include such information, we concluded that they omitted material information and were likely to mislead.
+
+On this point, ads (a) and (c) breached CAP Code (Edition 12) rules 3.1 and 3.3 (Misleading advertising) and 11.1 (Environmental claims) and ad (b) breached BCAP Code rules 3.1 and 3.2 (Misleading advertising) and 9.2 (Environmental claims).
+
+2. Not upheld
+
+The ASA noted that, since 2021, the UK Government had been conducting a review of ‘green’ electricity tariffs. That review was partly concerned with the question of whether Renewable Energy Guarantees of Origin (REGOs) were adequate to ensure transparency regarding the provenance of the electricity associated with particular tariffs. Nevertheless, we understood that, at the time the ad appeared, the regulatory regime in the UK continued to allow domestic electricity providers to account for renewable energy supplied to consumers by holding REGOs, including by purchasing them via a third-party marketplace.
+
+We understood the complainant was concerned that the claim “In the South West 78,000 homes use 100% renewable electricity from Shell Energy” in ad (a), and the claim “In the UK, 1.4 million households use 100% renewable electricity from Shell” in ads (b) and (c), misrepresented the number of homes in each region that purchased 100% renewable electricity from Shell Energy, and implied that Shell Energy directly supplied energy to the claimed number of homes in each region.
+
+We considered that consumers would understand the claims to mean that the number of homes specified in each ad used electricity supplied under a domestic energy tariff by Shell, and that the electricity supplied was classed as 100% renewable. We understood that most electricity generated from renewable sources was distributed through the National Grid. The amount of electricity taken from the National Grid by consumers of renewable electricity products was equal to the amount of electricity fed into the National Grid from renewable sources.
+
+The customer data that Shell had provided substantiated that the number of homes subscribed to their 100% renewable energy tariff in each region exceeded the claimed figure. Ofgem’s REGO certified that energy purchased via Shell’s 100% renewable electricity tariff was exclusively derived from renewable sources. For those reasons, we considered that the ads were not likely to mislead in relation to the number of households that purchased 100% renewable electricity from Shell.
+
+Regarding how the electricity was supplied, each ad referred to the intermediacy of the National Grid with text that stated, “Shell Energy’s renewable electricity is supplied by the National Grid and certified by Renewable Energy Guarantees of Origin, matching electricity bought with the equivalent amount from 100% renewable sources”. In ads (b) and (c), that text featured on-screen for the entire duration of the ads’ opening shots. In ad (a), the text was included directly underneath the main claim. Because of the inclusion of this information, we did not consider that the ads implied that the electricity generated from renewable sources was delivered directly and only to Shell’s green energy tariff customers.
+
+Because Shell had substantiated the claimed figures, and the ads made clear that the electricity was supplied via the National Grid rather than directly, we concluded that the ads were not likely to mislead.
+
+On this point we investigated ads (a) and (c) under CAP Code rules 3.1, 3.3 and 3.7 (Misleading advertising) and 11.1 (Environmental claims), but did not find them in breach. We also investigated ad (b) under BCAP Code rules 3.1, 3.2 and 3.9 (Misleading advertising) and 9.2 (Environmental claims), but did not find it in breach.""" ,
+                                                                                           """Background
+Summary of Council decision:
+
+Two issues were investigated, one of which was Upheld and one was Not upheld.""" ,
+                                                                                           """Issue
+Adfree Cities, who understood that Shell’s business activities included substantial, ongoing and expanding fossil fuel production, challenged whether:
+
+1. the ads were misleading, because they omitted significant information about the overall environmental impact of Shell’s business activities in 2022; and
+
+2. the claim “In the South West 78,000 homes use 100% renewable electricity from Shell Energy” in ad (a) and the claim “In the UK, 1.4 million households use 100% renewable electricity from Shell” in ads (b) and (c) were misleading and could be substantiated.""" ,
+                                                                                           """Response
+1. Shell UK Ltd stated that their intent with the ads was to raise consumer awareness of, and increase demand for, the range of lower emissions energy products and services they offered, the availability of which was increasing through continued investment. They believed that the ads accurately represented those products and services and did not omit material information about their more environmentally detrimental energy products, such as petrol. Consumers would already be well-informed regarding that aspect of their operations and, in fact, would primarily associate their brand with the sale of petrol. Recent market research conducted by an independent third-party company supported that 83% of consumers did so, and also suggested that a much smaller proportion were familiar with Shell’s lower-carbon energy products and services, including renewable electricity and electric vehicle (EV) charging. Shell hoped to bridge that gap in consumers’ knowledge by providing clear and accurate information about their newer products. Achieving that would be an essential step towards realising the business’s overarching aim of helping customers transition towards lower-emissions energy sources. Particularly because of their finding that petrol sales remained the most visible part of their brand to consumers, they believed that consumers were very unlikely to assume that the ads’ content covered the full range of Shell’s business activities. In line with that, they thought there was a low risk of the ads delivering the misleading impression that they were representative of the total environmental impact associated with Shell’s operations. Because the ads’ purpose was to promote low-carbon energy, they believed that any mention of high-carbon Shell products would have been counterproductive. Information about those Shell products would have only served to highlight their existence and availability, and thereby dilute the impact of the ads’ positive environmental message. In addition, it would be disproportionate and unworkable for regulators to require businesses with diverse product portfolios to ensure that ads, the primary purpose of which was usually to promote a specific range of products, always provided a representative overview of the advertiser’s business as a whole.
+
+Shell explained that, through use of the hashtag “#PoweringProgress”, ads (b) and (c) called attention to Shell’s Powering Progress strategy, which was central to their objective of playing a leading role in helping society meet the challenges of climate change. As part of that strategy, Shell’s commitment in relation to their own operations was to become a net-zero energy business by 2050. In addition, they aimed to expand on the 13,000 EV charging points they provided in 2022 by increasing that number to 100,000 by 2030. They emphasised that the achievement of such aims would be heavily contingent on improving consumers’ awareness of their less environmentally detrimental energy products.
+
+Shell neither believed that the ads misrepresented the overall environmental impact of their business activities, nor that the ads omitted significant information about that impact. They highlighted that ad (a) gave specific information about the number of Shell Energy customers in Bristol who received renewable electricity. On that basis, they believed consumers were unlikely to view it as relevant to the total environmental impact associated with the full range of Shell’s business activities. They stated that ad (a) was instead likely to deliver the narrower impression that the carbon dioxide and greenhouse gas emissions associated with the renewable energy Shell provided to 78,000 homes in Bristol were lower than the emissions associated with the average UK fuel mix (i.e., a mix which incorporated fossil fuels). They also stated that consumers would likely understand that the ad only went so far as to position Shell’s renewable electricity sales as part of a strategy to aid customers’ transition away from higher-emissions products.
+
+Shell also believed that consumers were unlikely to regard the selection of environmentally motivated initiatives referred to and championed in ads (b) and (c) as a representative sample of the full range of Shell’s business activities. Not only would consumers have recognised that those ads did not mention Shell’s high-carbon products such as petrol, but they were also unlikely to regard the set of initiatives depicted as having a wide enough scope to comprise anything resembling a representative cross-section of Shell’s business model. In particular, they would note that the ads’ content was solely focused on the delivery of electricity to UK consumers, and understand that Shell’s activities in that regard constituted a relatively minor part of their overall business. In line with that, they believed consumers were unlikely to infer that the ad intended to send any message whatsoever regarding the overall environmental impact or balance of Shell’s operations. Instead, they stated that consumers would interpret the ads as merely emphasising that Shell Energy supplied renewable electricity to UK homes, that Shell was involved in the development of offshore windfarms, and that, in line with their aim to increase potential EV purchasers’ confidence in the availability of chargers, Shell was in the process of rapidly expanding its existing EV charging infrastructure. Consumers would understand that such activities were consistent with Shell’s overarching environmental aims.
+
+Shell stated that the claim “BRISTOL IS READY FOR CLEANER ENERGY” in ad (a), as well as the similar claim “THE UK IS READY FOR CLEANER ENERGY” in ads (b) and (c), would be recognised as a forward looking statement regarding the potential of certain Shell products to provide consumers with energy that contributed lower greenhouse gas emissions than energy from non-renewable sources. They emphasised their view that neither the claims themselves, nor the ads as a whole, featured anything to imply Shell exclusively or predominantly supplied renewable or low emissions energy. Instead, the ads merely highlighted that Shell already supplied lower-carbon energy products to some UK consumers.
+
+Clearcast, responding in relation to the TV ad (b) only, believed that the ad did not misrepresent the overall environmental impact of Shell’s operations by stating or implying that impact was not negative. That was because ad (b) made clear that it did not seek to provide a holistic view of Shell’s environmental impact in 2022. Instead, the ad gave an overview of environmentally motivated initiatives running in areas of Shell’s business that were specifically concerned with the generation and supply of low-carbon electricity, while inviting consumers to transition towards less environmentally detrimental energy sources. They understood the tagline “The UK is ready for cleaner energy” as referring to a society-wide appetite for less environmentally detrimental energy products, and further stated that it did not emphasise or explicitly relate to Shell’s overall impact, nor even to any environmental benefits of the initiatives featured in ad (b). In addition, the claim “Nearly one in five new cars now plug in” drew focus to the important role that individual consumers’ behavioural changes would play in the fight against climate change. On that basis, they believed the claim suggested there was a limit to what Shell could achieve without consumers’ co-operation. They supported Shell’s view that consumers’ awareness of Shell’s petrol sales would mitigate any risk of ad (b) delivering the misleading impression that it was representative of the overall environmental impact of Shell’s business activities. In particular, ad (b)’s reference to, and visuals depicting, a Shell “forecourt” would specifically bring the company’s fossil-fuel based energy products to mind.
+
+2. Shell said that the claim in ad (a) and the similar claims in ads (b) and (c) were substantiated by customer data they provided. They also believed that the qualifying text in each ad, “Shell Energy’s renewable electricity is supplied by the National Grid and certified by Renewable Energy Guarantees of Origin, matching electricity bought with the equivalent amount from 100% renewable sources” was prominent enough to make the intermediacy of the National Grid clear. On that basis, the ads did not suggest that Shell’s renewable energy was supplied to customers directly.
+
+Shell believed that the claim in ad (a), “In the South West 78,000 homes use 100% renewable electricity from Shell Energy”, gave the impression that 78,000 homes in the South West of England purchased 100% renewable electricity from Shell Energy. The qualifying text made the intermediacy of the National Grid clear, meaning the ad gave the overall impression that, while electricity was supplied by the National Grid, the energy consumed by the claimed number of homes was accounted for by an equivalent amount of exclusively renewable energy that Shell Energy purchased.
+
+Shell said that the claim in ads (b) and (c), “In the UK, 1.4 million households use 100% renewable electricity from Shell” gave the impression that 1.4 million homes across the UK were subscribed to Shell’s 100% renewable energy tariff. Because the qualifying text made the intermediacy of the National Grid clear, viewers would not have the misleading impression that Shell Energy supplied energy directly to those customers.
+
+The customer data indicated that, in April 2022, in the South West of England 78,507 households were subscribed to Shell Energy’s 100% renewable electricity tariff. It also indicated that 1,403,357 households across the UK were subscribed to the same tariff. Every unit of the electricity provided to those customers was certified as renewable by the electricity and gas regulator Ofgem’s Renewable Energy Guarantees of Origin (REGOs).
+
+In relation to the TV ad (b) only, Clearcast supported Shell’s response on this point.""" ;
+                            <https://w3id.org/semanticarts/ns/ontology/gist/isRecordedAt> "2023-06-07T00:00:00"^^xsd:dateTime ;
+                            dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                            dct:created "2025-02-05T16:51:29Z"^^xsd:dateTime ;
+                            rdfs:isDefinedBy <https://www.asa.org.uk/rulings/shell-uk-ltd-g22-1170842-shell-uk-ltd.html> ;
+                            rdfs:label "ASA Ruling on Shell UK Ltd t/a Shell" ;
+                            <http://www.w3.org/2004/02/skos/core#definition> "in June 2023 the UK’s Advertising Standards Authority (ASA, 2023e) found that ads by Shell Ltd were likely to mislead because they gave the overall impression that a significant proportion of their business was comprised of lower-carbon energy products without providing information on the proportion of their overall business model that comprised lower-carbon energy products." .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/A_Sociological_View_of_Efforts_to_Obstruct_Climate_Action
@@ -4280,6 +4547,641 @@ Most of the copies of the 10 agreements were obtained through public record act 
                   dct:created "2025-01-29T18:22:44Z"^^xsd:dateTime .
 
 
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_3-41
+:CAP_3-41 rdf:type owl:NamedIndividual ,
+                   :CAP_Code ;
+          dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+          dct:created "2025-02-05T21:57:42Z"^^xsd:dateTime ;
+          rdfs:label "CAP 3.41" ;
+          <http://www.w3.org/2004/02/skos/core#definition> "Marketing communications must not mislead the consumer about who manufactures the product." .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_3-42
+:CAP_3-42 rdf:type owl:NamedIndividual ,
+                   :CAP_Code ;
+          dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+          dct:created "2025-02-05T21:58:37Z"^^xsd:dateTime ;
+          rdfs:label "CAP 3.42" ;
+          <http://www.w3.org/2004/02/skos/core#definition> "Marketing communications must not discredit or denigrate another product, marketer, trade mark, trade name or other distinguishing mark." .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_3-43
+:CAP_3-43 rdf:type owl:NamedIndividual ,
+                   :CAP_Code ;
+          dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+          dct:created "2025-02-05T21:59:00Z"^^xsd:dateTime ;
+          rdfs:label "CAP 3.43" ;
+          <http://www.w3.org/2004/02/skos/core#definition> "Marketing communications must not take unfair advantage of the reputation of a competitor's trade mark, trade name or other distinguishing mark or of the designation of origin of a competing product." .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_3-44
+:CAP_3-44 rdf:type owl:NamedIndividual ,
+                   :CAP_Code ;
+          dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+          dct:created "2025-02-05T21:59:44Z"^^xsd:dateTime ;
+          rdfs:label "CAP 3.44" ;
+          <http://www.w3.org/2004/02/skos/core#definition> "Marketing communications must not present a product as an imitation or replica of a product with a protected trade mark or trade name." .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_3-45
+:CAP_3-45 rdf:type owl:NamedIndividual ,
+                   :CAP_Code ;
+          dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+          dct:created "2025-02-05T22:00:07Z"^^xsd:dateTime ;
+          rdfs:label "CAP 3.45" ;
+          <http://www.w3.org/2004/02/skos/core#definition> "Marketers must hold documentary evidence that a testimonial or endorsement used in a marketing communication is genuine, unless it is obviously fictitious, and hold contact details for the person who, or organisation that, gives it." .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_3-46
+:CAP_3-46 rdf:type owl:NamedIndividual ,
+                   :CAP_Code ;
+          dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+          dct:created "2025-02-05T22:00:52Z"^^xsd:dateTime ;
+          rdfs:label "CAP 3.46" ;
+          <http://www.w3.org/2004/02/skos/core#definition> "Testimonials must relate to the advertised product." .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_3-47
+:CAP_3-47 rdf:type owl:NamedIndividual ,
+                   :CAP_Code ;
+          dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+          dct:created "2025-02-05T22:01:18Z"^^xsd:dateTime ;
+          rdfs:label "CAP 3.47" ;
+          <http://www.w3.org/2004/02/skos/core#definition> "Claims that are likely to be interpreted as factual and appear in a testimonial must not mislead or be likely to mislead the consumer." .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_3-48
+:CAP_3-48 rdf:type owl:NamedIndividual ,
+                   :CAP_Code ;
+          dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+          dct:created "2025-02-05T22:01:46Z"^^xsd:dateTime ;
+          rdfs:label "CAP 3.48" ;
+          <http://www.w3.org/2004/02/skos/core#definition> "Marketing communications must not feature a testimonial without permission; exceptions are normally made for accurate statements taken from a published source, quotations from a publication or references to a test, trial, professional endorsement, research facility or professional journal, which may be acceptable without express permission." .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_3-49
+:CAP_3-49 rdf:type owl:NamedIndividual ,
+                   :CAP_Code ;
+          dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+          dct:created "2025-02-05T22:02:08Z"^^xsd:dateTime ;
+          rdfs:label "CAP 3.49" ;
+          <http://www.w3.org/2004/02/skos/core#definition> "Marketers must not refer in a marketing communication to advice received from CAP or imply endorsement by the ASA or CAP." .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_3-50
+:CAP_3-50 rdf:type owl:NamedIndividual ,
+                   :CAP_Code ;
+          dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+          dct:created "2025-02-05T22:02:32Z"^^xsd:dateTime ;
+          rdfs:label "CAP 3.50" ;
+          <http://www.w3.org/2004/02/skos/core#definition> "Marketing communications must not display a trust mark, quality mark or equivalent without the necessary authorisation. Marketing communications must not claim that the marketer (or any other entity referred to), the marketing communication or the advertised product has been approved, endorsed or authorised by any public or other body if it has not or without complying with the terms of the approval, endorsement or authorisation." .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_3-51
+:CAP_3-51 rdf:type owl:NamedIndividual ,
+                   :CAP_Code ;
+          dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+          dct:created "2025-02-05T22:02:57Z"^^xsd:dateTime ;
+          rdfs:label "CAP 3.51" ;
+          <http://www.w3.org/2004/02/skos/core#definition> "Marketing communications must not falsely claim that the marketer, or other entity referred to in the marketing communication, is a signatory to a code of conduct. They must not falsely claim that a code of conduct has an endorsement from a public or other body." .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_3-52
+:CAP_3-52 rdf:type owl:NamedIndividual ,
+                   :CAP_Code ;
+          dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+          dct:created "2025-02-05T22:03:30Z"^^xsd:dateTime ;
+          rdfs:label "CAP 3.52" ;
+          <http://www.w3.org/2004/02/skos/core#definition> "Marketing communications must not use the Royal Arms or Emblems without prior permission from the Lord Chamberlain's office. References to a Royal Warrant should be checked with the Royal Warrant Holders' Association." .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_3-53
+:CAP_3-53 rdf:type owl:NamedIndividual ,
+                   :CAP_Code ;
+          dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+          dct:created "2025-02-05T22:03:54Z"^^xsd:dateTime ;
+          rdfs:label "CAP 3.53" ;
+          <http://www.w3.org/2004/02/skos/core#definition> "Marketing communications must not use the word \"guarantee\" in a way that could cause confusion about a consumer's rights." .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_3-54
+:CAP_3-54 rdf:type owl:NamedIndividual ,
+                   :CAP_Code ;
+          dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+          dct:created "2025-02-05T22:04:20Z"^^xsd:dateTime ;
+          rdfs:label "CAP 3.54" ;
+          <http://www.w3.org/2004/02/skos/core#definition> "Marketing communications must make clear each significant limitation to an advertised guarantee (of the type that has implications for a consumer's rights). Marketers must supply the full terms before the consumer is committed to taking up the guarantee." .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_3-55
+:CAP_3-55 rdf:type owl:NamedIndividual ,
+                   :CAP_Code ;
+          dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+          dct:created "2025-02-05T22:04:42Z"^^xsd:dateTime ;
+          rdfs:label "CAP 3.55" ;
+          <http://www.w3.org/2004/02/skos/core#definition> "Marketers must promptly refund consumers who make valid claims under an advertised money-back guarantee." .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_3-56
+:CAP_3-56 rdf:type owl:NamedIndividual ,
+                   :CAP_Code ;
+          dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+          dct:created "2025-02-05T22:05:04Z"^^xsd:dateTime ;
+          rdfs:label "CAP 3.56" ;
+          <http://www.w3.org/2004/02/skos/core#definition> "Marketing communications must not falsely claim or imply that after-sales service is available in an EEA member state in which the advertised product is not sold." .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_3-57
+:CAP_3-57 rdf:type owl:NamedIndividual ,
+                   :CAP_Code ;
+          dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+          dct:created "2025-02-05T22:05:29Z"^^xsd:dateTime ;
+          rdfs:label "CAP 3.57" ;
+          <http://www.w3.org/2004/02/skos/core#definition> "If a marketing communication in a language other than an official language of the EEA State where the trader is located offers after-sales service but the after-sales service is not available in the language of the marketing communication, the marketer must explain that to the consumer before the contract is concluded" .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_31
+:CAP_31 rdf:type owl:NamedIndividual ,
+                 :CAP_Code ;
+        dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+        dct:created "2025-02-05T17:08:31Z"^^xsd:dateTime ;
+        rdfs:label "CAP 3.1" ;
+        <http://www.w3.org/2004/02/skos/core#definition> "Marketing communications must not materially mislead or be likely to do so." .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_310
+:CAP_310 rdf:type owl:NamedIndividual ,
+                  :CAP_Code ;
+         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+         dct:created "2025-02-05T17:26:14Z"^^xsd:dateTime ;
+         rdfs:label "CAP 3.10" ;
+         <http://www.w3.org/2004/02/skos/core#definition> """Qualifications must be presented clearly.
+
+CAP has published Advertising Guidance on Misleading advertising: use of qualifications: https://www.asa.org.uk/resource/guidance-use-of-qualifications.html""" .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_311
+:CAP_311 rdf:type owl:NamedIndividual ,
+                  :CAP_Code ;
+         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+         dct:created "2025-02-05T17:26:38Z"^^xsd:dateTime ;
+         rdfs:label "CAP 3.11" ;
+         <http://www.w3.org/2004/02/skos/core#definition> "Marketing communications must not mislead consumers by exaggerating the capability or performance of a product." .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_312
+:CAP_312 rdf:type owl:NamedIndividual ,
+                  :CAP_Code ;
+         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+         dct:created "2025-02-05T17:27:13Z"^^xsd:dateTime ;
+         rdfs:label "CAP 3.12" ;
+         <http://www.w3.org/2004/02/skos/core#definition> "Marketing communications must not present rights given to consumers in law as a distinctive feature of the marketer's offer." .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_313
+:CAP_313 rdf:type owl:NamedIndividual ,
+                  :CAP_Code ;
+         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+         dct:created "2025-02-05T17:27:36Z"^^xsd:dateTime ;
+         rdfs:label "CAP 3.13" ;
+         <http://www.w3.org/2004/02/skos/core#definition> "Marketing communications must not suggest that their claims are universally accepted if a significant division of informed or scientific opinion exists." .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_314
+:CAP_314 rdf:type owl:NamedIndividual ,
+                  :CAP_Code ;
+         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+         dct:created "2025-02-05T17:27:57Z"^^xsd:dateTime ;
+         rdfs:label "CAP 3.14" ;
+         <http://www.w3.org/2004/02/skos/core#definition> "Marketing communications must not claim that products can facilitate winning in games of chance." .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_315
+:CAP_315 rdf:type owl:NamedIndividual ,
+                  :CAP_Code ;
+         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+         dct:created "2025-02-05T17:28:35Z"^^xsd:dateTime ;
+         rdfs:label "CAP 3.15" ;
+         <http://www.w3.org/2004/02/skos/core#definition> "Marketing communications must not explicitly claim that the advertiser's job or livelihood is in jeopardy if the consumer does not buy the advertised product." .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_316
+:CAP_316 rdf:type owl:NamedIndividual ,
+                  :CAP_Code ;
+         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+         dct:created "2025-02-05T17:28:58Z"^^xsd:dateTime ;
+         rdfs:label "CAP 3.16" ;
+         <http://www.w3.org/2004/02/skos/core#definition> "No marketing communication may promote a pyramid promotional scheme. Pyramid promotional schemes are those in which consumers pay for the opportunity to receive payments derived primarily from the introduction of other consumers into the scheme, not from the sale or consumption of products." .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_317
+:CAP_317 rdf:type owl:NamedIndividual ,
+                  :CAP_Code ;
+         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+         dct:created "2025-02-05T17:29:20Z"^^xsd:dateTime ;
+         rdfs:label "CAP 3.17" ;
+         <http://www.w3.org/2004/02/skos/core#definition> "Price statements must not mislead by omission, undue emphasis or distortion. They must relate to the product featured in the marketing communication." .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_318
+:CAP_318 rdf:type owl:NamedIndividual ,
+                  :CAP_Code ;
+         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+         dct:created "2025-02-05T17:29:40Z"^^xsd:dateTime ;
+         rdfs:label "CAP 3.18" ;
+         <http://www.w3.org/2004/02/skos/core#definition> "Quoted prices must include non-optional taxes, duties, fees and charges that apply to all or most buyers. However, VAT-exclusive prices may be given if all those to whom the price claim is clearly addressed pay no VAT or can recover VAT.  Such VAT-exclusive prices must be accompanied by a prominent statement of the amount or rate of VAT payable." .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_319
+:CAP_319 rdf:type owl:NamedIndividual ,
+                  :CAP_Code ;
+         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+         dct:created "2025-02-05T17:30:28Z"^^xsd:dateTime ;
+         rdfs:label "CAP 3.19" ;
+         <http://www.w3.org/2004/02/skos/core#definition> "If a tax, duty, fee or charge cannot be calculated in advance, for example, because it depends on the consumer's circumstances, the marketing communication must make clear that it is excluded from the advertised price and state how it is calculated." .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_32
+:CAP_32 rdf:type owl:NamedIndividual ,
+                 :CAP_Code ;
+        dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+        dct:created "2025-02-05T17:16:17Z"^^xsd:dateTime ;
+        rdfs:label "CAP 3.2" ;
+        <http://www.w3.org/2004/02/skos/core#definition> "Obvious exaggerations (\"puffery\") and claims that the average consumer who sees the marketing communication is unlikely to take literally are allowed provided they do not materially mislead." .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_320
+:CAP_320 rdf:type owl:NamedIndividual ,
+                  :CAP_Code ;
+         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+         dct:created "2025-02-05T17:31:10Z"^^xsd:dateTime ;
+         rdfs:label "CAP 3.20" ;
+         <http://www.w3.org/2004/02/skos/core#definition> "Marketing communications that state prices must also state applicable delivery, freight or postal charges or, if those cannot reasonably be calculated in advance, state that such charges are payable." .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_321
+:CAP_321 rdf:type owl:NamedIndividual ,
+                  :CAP_Code ;
+         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+         dct:created "2025-02-05T17:31:34Z"^^xsd:dateTime ;
+         rdfs:label "CAP 3.21" ;
+         <http://www.w3.org/2004/02/skos/core#definition> "If the price of one product depends on another, marketing communications must make clear the extent of the commitment the consumer must make to obtain the advertised price." .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_322
+:CAP_322 rdf:type owl:NamedIndividual ,
+                  :CAP_Code ;
+         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+         dct:created "2025-02-05T17:32:01Z"^^xsd:dateTime ;
+         rdfs:label "CAP 3.22" ;
+         <http://www.w3.org/2004/02/skos/core#definition> "Price claims such as \"up to\" and \"from\" must not exaggerate the availability or amount of benefits likely to be obtained by the consumer." .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_323
+:CAP_323 rdf:type owl:NamedIndividual ,
+                  :CAP_Code ;
+         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+         dct:created "2025-02-05T17:32:54Z"^^xsd:dateTime ;
+         rdfs:label "CAP 3.23" ;
+         <http://www.w3.org/2004/02/skos/core#definition> "Marketing communications must make clear the extent of the commitment the consumer must make to take advantage of a \"free\" offer." .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_324
+:CAP_324 rdf:type owl:NamedIndividual ,
+                  :CAP_Code ;
+         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+         dct:created "2025-02-05T17:33:12Z"^^xsd:dateTime ;
+         rdfs:label "CAP 3.24" ;
+         <http://www.w3.org/2004/02/skos/core#definition> "Marketing communications must not describe items as \"free\" if: (see subsequent codes)" .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_3241
+:CAP_3241 rdf:type owl:NamedIndividual ,
+                   :CAP_Code ;
+          dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+          dct:created "2025-02-05T17:33:36Z"^^xsd:dateTime ;
+          rdfs:label "CAP 3.24.1" ;
+          <http://www.w3.org/2004/02/skos/core#definition> "the consumer has to pay packing, packaging, handling or administration charges for the \"free\" product" .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_3242
+:CAP_3242 rdf:type owl:NamedIndividual ,
+                   :CAP_Code ;
+          dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+          dct:created "2025-02-05T17:34:02Z"^^xsd:dateTime ;
+          rdfs:label "CAP 3.24.2" ;
+          <http://www.w3.org/2004/02/skos/core#definition> "the cost of response, including the price of a product that the consumer must buy to take advantage of the offer, has been increased, except where the increase results from factors that are unrelated to the cost of the promotion, or" .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_3243
+:CAP_3243 rdf:type owl:NamedIndividual ,
+                   :CAP_Code ;
+          dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+          dct:created "2025-02-05T17:34:24Z"^^xsd:dateTime ;
+          rdfs:label "CAP 3.24.3" ;
+          <http://www.w3.org/2004/02/skos/core#definition> """the quality of the product that the consumer must buy has been reduced.
+
+CAP and BCAP have published joint guidance on the use of \"free\": https://www.asa.org.uk/resource/free-claims.html""" .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_325
+:CAP_325 rdf:type owl:NamedIndividual ,
+                  :CAP_Code ;
+         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+         dct:created "2025-02-05T17:34:44Z"^^xsd:dateTime ;
+         rdfs:label "CAP 3.25" ;
+         <http://www.w3.org/2004/02/skos/core#definition> "Marketers must not describe an element of a package as \"free\" if that element is included in the package price unless consumers are likely to regard it as an additional benefit because it has recently been added to the package without increasing its price." .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_326
+:CAP_326 rdf:type owl:NamedIndividual ,
+                  :CAP_Code ;
+         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+         dct:created "2025-02-05T17:35:19Z"^^xsd:dateTime ;
+         rdfs:label "CAP 3.26" ;
+         <http://www.w3.org/2004/02/skos/core#definition> "Marketers must not use the term \"free trial\" to describe \"satisfaction or your money back\" offers or offers for which a non-refundable purchase is required." .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_327
+:CAP_327 rdf:type owl:NamedIndividual ,
+                  :CAP_Code ;
+         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+         dct:created "2025-02-05T17:36:38Z"^^xsd:dateTime ;
+         rdfs:label "CAP 3.27" ;
+         <http://www.w3.org/2004/02/skos/core#definition> "Marketers must make a reasonable estimate of demand for advertised products." .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_328
+:CAP_328 rdf:type owl:NamedIndividual ,
+                  :CAP_Code ;
+         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+         dct:created "2025-02-05T17:37:06Z"^^xsd:dateTime ;
+         rdfs:label "CAP 3.28" ;
+         <http://www.w3.org/2004/02/skos/core#definition> "Marketing communications that quote a price for a featured product must state any reasonable grounds the marketer has for believing that it might not be able to supply the advertised (or an equivalent) product at the advertised price within a reasonable period and in reasonable quantities. In particular:" .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_3281
+:CAP_3281 rdf:type owl:NamedIndividual ,
+                   :CAP_Code ;
+          dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+          dct:created "2025-02-05T17:37:31Z"^^xsd:dateTime ;
+          rdfs:label "CAP 3.28.1" ;
+          <http://www.w3.org/2004/02/skos/core#definition> "if estimated demand exceeds supply, marketing communications must make clear that stock is limited" .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_3282
+:CAP_3282 rdf:type owl:NamedIndividual ,
+                   :CAP_Code ;
+          dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+          dct:created "2025-02-05T17:37:55Z"^^xsd:dateTime ;
+          rdfs:label "CAP 3.28.2" ;
+          <http://www.w3.org/2004/02/skos/core#definition> "if the marketer does not intend to fulfil orders, for example, because the purpose of the marketing communication is to assess potential demand, the marketing communication must make that clear" .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_3283
+:CAP_3283 rdf:type owl:NamedIndividual ,
+                   :CAP_Code ;
+          dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+          dct:created "2025-02-05T17:38:37Z"^^xsd:dateTime ;
+          rdfs:label "CAP 3.28.3" ;
+          <http://www.w3.org/2004/02/skos/core#definition> "marketing communications must not mislead consumers by omitting restrictions on the availability of products; for example, geographical restrictions or age limits." .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_329
+:CAP_329 rdf:type owl:NamedIndividual ,
+                  :CAP_Code ;
+         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+         dct:created "2025-02-05T17:38:59Z"^^xsd:dateTime ;
+         rdfs:label "CAP 3.29" ;
+         <http://www.w3.org/2004/02/skos/core#definition> "Marketers must monitor stocks. If a product becomes unavailable, marketers must, whenever possible, withdraw or amend marketing communications that feature that product." .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_33
+:CAP_33 rdf:type owl:NamedIndividual ,
+                 :CAP_Code ;
+        dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+        dct:created "2025-02-05T17:17:56Z"^^xsd:dateTime ;
+        rdfs:label "CAP 3.3" ;
+        <http://www.w3.org/2004/02/skos/core#definition> """Marketing communications must not mislead the consumer by omitting material information. They must not mislead by hiding material information or presenting it in an unclear, unintelligible, ambiguous or untimely manner.
+
+Material information is information that the consumer needs to make informed decisions in relation to a product. Whether the omission or presentation of material information is likely to mislead the consumer depends on the context, the  medium and, if the medium of the marketing communication is constrained by time or space, the measures that the marketer takes to make that information available to the consumer by other means..""" .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_330
+:CAP_330 rdf:type owl:NamedIndividual ,
+                  :CAP_Code ;
+         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+         dct:created "2025-02-05T17:39:27Z"^^xsd:dateTime ;
+         rdfs:label "CAP 3.30" ;
+         <http://www.w3.org/2004/02/skos/core#definition> "Marketers must not use the technique of switch selling, in which their sales staff decline to show the advertised product, refuse to take orders for it or to deliver it within a reasonable time or demonstrate a defective sample of it to promote a different product." .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_331
+:CAP_331 rdf:type owl:NamedIndividual ,
+                  :CAP_Code ;
+         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+         dct:created "2025-02-05T17:39:53Z"^^xsd:dateTime ;
+         rdfs:label "CAP 3.31" ;
+         <http://www.w3.org/2004/02/skos/core#definition> "Marketing communications must not falsely claim that the marketer is about to cease trading or move premises. They must not falsely state that a product, or the terms on which it is offered, will be available only for a very limited time to deprive consumers of the time or opportunity to make an informed choice." .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_332
+:CAP_332 rdf:type owl:NamedIndividual ,
+                  :CAP_Code ;
+         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+         dct:created "2025-02-05T17:40:17Z"^^xsd:dateTime ;
+         rdfs:label "CAP 3.32" ;
+         <http://www.w3.org/2004/02/skos/core#definition> "Marketing communications must not mislead the consumer about market conditions or the possibility of finding the product elsewhere to induce consumers to buy the product at conditions less favourable than normal market conditions." .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_333
+:CAP_333 rdf:type owl:NamedIndividual ,
+                  :CAP_Code ;
+         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+         dct:created "2025-02-05T17:40:39Z"^^xsd:dateTime ;
+         rdfs:label "CAP 3.33" ;
+         <http://www.w3.org/2004/02/skos/core#definition> "Marketing communications that include a comparison with an identifiable competitor must not mislead, or be likely to mislead, the consumer about either the advertised product or the competing product." .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_334
+:CAP_334 rdf:type owl:NamedIndividual ,
+                  :CAP_Code ;
+         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+         dct:created "2025-02-05T21:42:44Z"^^xsd:dateTime ;
+         rdfs:label "CAP 3.34" ;
+         <http://www.w3.org/2004/02/skos/core#definition> "They must compare products meeting the same need or intended for the same purpose." .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_335
+:CAP_335 rdf:type owl:NamedIndividual ,
+                  :CAP_Code ;
+         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+         dct:created "2025-02-05T21:43:12Z"^^xsd:dateTime ;
+         rdfs:label "CAP 3.35" ;
+         <http://www.w3.org/2004/02/skos/core#definition> "They must objectively compare one or more material, relevant, verifiable and representative feature of those products, which may include price." .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_336
+:CAP_336 rdf:type owl:NamedIndividual ,
+                  :CAP_Code ;
+         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+         dct:created "2025-02-05T21:43:42Z"^^xsd:dateTime ;
+         rdfs:label "CAP 3.36" ;
+         <http://www.w3.org/2004/02/skos/core#definition> "They must not create confusion between the marketer and its competitors or between the marketer's product, trade mark, trade name or other distinguishing mark and that of a competitor." .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_337
+:CAP_337 rdf:type owl:NamedIndividual ,
+                  :CAP_Code ;
+         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+         dct:created "2025-02-05T21:48:46Z"^^xsd:dateTime ;
+         rdfs:label "CAP 3.37" ;
+         <http://www.w3.org/2004/02/skos/core#definition> "Certain EU agricultural products and foods are, because of their unique geographical area and method of production, given special protection by being registered as having a \"designation of origin\". Products with a designation of origin must be compared only with other products with the same designation." .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_338
+:CAP_338 rdf:type owl:NamedIndividual ,
+                  :CAP_Code ;
+         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+         dct:created "2025-02-05T21:49:12Z"^^xsd:dateTime ;
+         rdfs:label "CAP 3.38" ;
+         <http://www.w3.org/2004/02/skos/core#definition> "Marketing communications that include a comparison with an unidentifiable competitor must not mislead, or be likely to mislead, the consumer. The elements of the comparison must not be selected to give the marketer an unrepresentative advantage." .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_339
+:CAP_339 rdf:type owl:NamedIndividual ,
+                  :CAP_Code ;
+         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+         dct:created "2025-02-05T21:49:38Z"^^xsd:dateTime ;
+         rdfs:label "CAP 3.39" ;
+         <http://www.w3.org/2004/02/skos/core#definition> """Marketing communications that include a price comparison must make the basis of the comparison clear.
+
+CAP has published a Help Note on Retailers' Price Comparisons: https://www.asa.org.uk/resource/retailers-price-comparisons.html and a Help Note on Lowest Price Claims and Price Promises: https://www.asa.org.uk/resource/lowest-price-claims-and-promises.html""" .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_34
+:CAP_34 rdf:type owl:NamedIndividual ,
+                 :CAP_Code ;
+        dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+        dct:created "2025-02-05T17:19:07Z"^^xsd:dateTime ;
+        rdfs:label "CAP 3.4" ;
+        <http://www.w3.org/2004/02/skos/core#definition> "For marketing communications that quote prices for advertised products, material information [for the purposes of rule 3.3] includes:3.4.1 - 3.4.6" .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_340
+:CAP_340 rdf:type owl:NamedIndividual ,
+                  :CAP_Code ;
+         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+         dct:created "2025-02-05T21:50:03Z"^^xsd:dateTime ;
+         rdfs:label "CAP 3.40" ;
+         <http://www.w3.org/2004/02/skos/core#definition> "Price comparisons must not mislead by falsely claiming a price advantage. Comparisons with recommended retail prices (RRPs) are likely to mislead if the RRP differs significantly from the price at which the product or service is generally sold." .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_341
+:CAP_341 rdf:type owl:NamedIndividual ,
+                  :CAP_Code ;
+         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+         dct:created "2025-02-05T17:19:44Z"^^xsd:dateTime ;
+         rdfs:label "CAP 3.4.1" ;
+         <http://www.w3.org/2004/02/skos/core#definition> "the main characteristics of the product" .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_342
+:CAP_342 rdf:type owl:NamedIndividual ,
+                  :CAP_Code ;
+         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+         dct:created "2025-02-05T17:20:16Z"^^xsd:dateTime ;
+         rdfs:label "CAP 3.4.2" ;
+         <http://www.w3.org/2004/02/skos/core#definition> "the identity (for example, a trading name) and geographical address of the marketer and any other trader on whose behalf the marketer is acting" .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_343
+:CAP_343 rdf:type owl:NamedIndividual ,
+                  :CAP_Code ;
+         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+         dct:created "2025-02-05T17:21:03Z"^^xsd:dateTime ;
+         rdfs:label "CAP 3.4.3" ;
+         <http://www.w3.org/2004/02/skos/core#definition> "the price of the advertised product, including taxes, or, if the nature of the product is such that the price cannot be calculated in advance, the manner in which the price is calculated" .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_344
+:CAP_344 rdf:type owl:NamedIndividual ,
+                  :CAP_Code ;
+         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+         dct:created "2025-02-05T17:21:46Z"^^xsd:dateTime ;
+         rdfs:label "CAP 3.4.4" ;
+         <http://www.w3.org/2004/02/skos/core#definition> "delivery charges" .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_345
+:CAP_345 rdf:type owl:NamedIndividual ,
+                  :CAP_Code ;
+         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+         dct:created "2025-02-05T17:22:22Z"^^xsd:dateTime ;
+         rdfs:label "CAP 3.4.5" ;
+         <http://www.w3.org/2004/02/skos/core#definition> "the arrangements for payment, delivery, performance or complaint handling, if those differ from the arrangements that consumers are likely to reasonably expect" .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_346
+:CAP_346 rdf:type owl:NamedIndividual ,
+                  :CAP_Code ;
+         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+         dct:created "2025-02-05T17:22:59Z"^^xsd:dateTime ;
+         rdfs:label "CAP 3.4.6" ;
+         <http://www.w3.org/2004/02/skos/core#definition> "that consumers have the right to withdraw or cancel, if they have that right (see rule 3.55)." .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_35
+:CAP_35 rdf:type owl:NamedIndividual ,
+                 :CAP_Code ;
+        dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+        dct:created "2025-02-05T17:23:24Z"^^xsd:dateTime ;
+        rdfs:label "CAP 3.5" ;
+        <http://www.w3.org/2004/02/skos/core#definition> """Marketing communications must not materially mislead by omitting the identity of the marketer.
+
+Some marketing communications must include the marketer's identity and contact details. Marketing communications that fall under the Database Practice or Employment sections of the Code must comply with the more detailed rules in those sections.
+
+Marketers should note the law requires marketers to identify themselves in some marketing communications. Marketers should take legal advice.""" .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_36
+:CAP_36 rdf:type owl:NamedIndividual ,
+                 :CAP_Code ;
+        dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+        dct:created "2025-02-05T17:23:52Z"^^xsd:dateTime ;
+        rdfs:label "CAP 3.6" ;
+        <http://www.w3.org/2004/02/skos/core#definition> "Subjective claims must not mislead the consumer; marketing communications must not imply that expressions of opinion are objective claims." .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_37
+:CAP_37 rdf:type owl:NamedIndividual ,
+                 :CAP_Code ;
+        dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+        dct:created "2025-02-05T17:24:48Z"^^xsd:dateTime ;
+        rdfs:label "CAP 3.7" ;
+        <http://www.w3.org/2004/02/skos/core#definition> "Before distributing or submitting a marketing communication for publication, marketers must hold documentary evidence to prove claims that consumers are likely to regard as objective and that are capable of objective substantiation. The ASA may regard claims as misleading in the absence of adequate substantiation." .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_38
+:CAP_38 rdf:type owl:NamedIndividual ,
+                 :CAP_Code ;
+        dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+        dct:created "2025-02-05T17:25:11Z"^^xsd:dateTime ;
+        rdfs:label "CAP 3.8" ;
+        <http://www.w3.org/2004/02/skos/core#definition> """Claims for the content of non-fiction publications should not exaggerate the value, accuracy, scientific validity or practical usefulness of the product. Marketers must ensure that claims that have not been independently substantiated but are based merely on the content of a publication do not mislead consumers.
+
+CAP has published a Help Note on the Marketing of Publications: https://www.asa.org.uk/resource/publications.html""" .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_39
+:CAP_39 rdf:type owl:NamedIndividual ,
+                 :CAP_Code ;
+        dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+        dct:created "2025-02-05T17:25:51Z"^^xsd:dateTime ;
+        rdfs:label "CAP 3.9" ;
+        <http://www.w3.org/2004/02/skos/core#definition> "Marketing communications must state significant limitations and qualifications. Qualifications may clarify but must not contradict the claims that they qualify." .
+
+
 ###  https://www.michaeldebellis.com/climate_obstruction/Challenging_Climate_Change_The_Denial_Countermovement
 :Challenging_Climate_Change_The_Denial_Countermovement rdf:type owl:NamedIndividual ,
                                                                 :Journal_Article ;
@@ -4295,6 +5197,14 @@ Most of the copies of the 10 agreements were obtained through public record act 
        <https://w3id.org/semanticarts/ns/ontology/gist/isGeoContainedIn> :South_America ;
        dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
        dct:created "2025-01-30T02:53:39Z"^^xsd:dateTime .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/Chiquita_Brands_International
+:Chiquita_Brands_International rdf:type owl:NamedIndividual ,
+                                        :Food_Distributor_and_Producer ;
+                               dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                               dct:created "2025-02-06T01:10:01Z"^^xsd:dateTime ;
+                               rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Chiquita> .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Climate_Obstruction_in_Europe
@@ -4362,6 +5272,23 @@ The Court, therefore, granted the appeal and ordered that the application be rem
                                         dct:created "2025-01-31T04:40:53Z"^^xsd:dateTime ;
                                         rdfs:label "Corporate promotion and climate change: an analysis of key variables affecting advertising spending by major oil corporations, 1986–2015" ;
                                         :url <https://link.springer.com/article/10.1007/s10584-019-02582-8> .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/DDB_Spain
+:DDB_Spain rdf:type owl:NamedIndividual ,
+                    :Advertizing_Agency ;
+           <https://w3id.org/semanticarts/ns/ontology/gist/isDirectPartOf> :DDB_Worldwide_Communications_Group_LLC ;
+           dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+           dct:created "2025-02-05T22:24:36Z"^^xsd:dateTime .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/DDB_Worldwide_Communications_Group_LLC
+:DDB_Worldwide_Communications_Group_LLC rdf:type owl:NamedIndividual ,
+                                                 :Advertizing_Agency ;
+                                        <https://w3id.org/semanticarts/ns/ontology/gist/isDirectPartOf> :Omnicom_Group ;
+                                        dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                                        dct:created "2025-02-05T22:49:25Z"^^xsd:dateTime ;
+                                        rdfs:label "DDB Worldwide Communications Group LLC" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Decided
@@ -4472,6 +5399,13 @@ on social drivers of action and inaction on climate change""" .
                dct:created "2025-01-31T02:40:26Z"^^xsd:dateTime .
 
 
+###  https://www.michaeldebellis.com/climate_obstruction/Omnicom_Group
+:Omnicom_Group rdf:type owl:NamedIndividual ,
+                        :Media_Corporation ;
+               dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+               dct:created "2025-02-05T23:04:20Z"^^xsd:dateTime .
+
+
 ###  https://www.michaeldebellis.com/climate_obstruction/PETER_NEWELL
 :PETER_NEWELL rdf:type owl:NamedIndividual ,
                        <https://w3id.org/semanticarts/ns/ontology/gist/Person> ;
@@ -4490,6 +5424,7 @@ on social drivers of action and inaction on climate change""" .
 
 ###  https://www.michaeldebellis.com/climate_obstruction/RCC_Ruling_on_Chiquita_climate_neutral_bananas
 :RCC_Ruling_on_Chiquita_climate_neutral_bananas rdf:type owl:NamedIndividual ,
+                                                         :RCC_Ruling ,
                                                          :Selective_Disclosure ;
                                                 <https://w3id.org/semanticarts/ns/ontology/gist/containedText> "At Issue: Whether Chiquita's advertising of its bananas as \"CO2 neutral\" was misleading." ,
                                                                                                                """Filing Date: 2022
@@ -4506,6 +5441,7 @@ The contested advertising concerned a sticker on Chiquita's bananas which includ
                                                 <https://w3id.org/semanticarts/ns/ontology/gist/isRecordedAt> "2022-01-01T00:00:00"^^xsd:dateTime ;
                                                 dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
                                                 dct:created "2025-01-22T04:30:29Z"^^xsd:dateTime ;
+                                                rdfs:isDefinedBy <https://climatecasechart.com/non-us-case/rcc-ruling-on-chiquita-climate-neutral-bananas/> ;
                                                 rdfs:label "RCC Ruling on Chiquita “climate neutral bananas”" .
 
 
@@ -4526,6 +5462,39 @@ The contested advertising concerned a sticker on Chiquita's bananas which includ
             :last_name "MCKIE" ;
             dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
             dct:created "2025-01-29T18:40:04Z"^^xsd:dateTime .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/Repsol
+:Repsol rdf:type owl:NamedIndividual ,
+                 :Energy_Corporation ;
+        dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+        dct:created "2025-02-06T00:28:37Z"^^xsd:dateTime ;
+        rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Repsol> .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/Shell_UK_Ltd
+:Shell_UK_Ltd rdf:type owl:NamedIndividual ,
+                       :Energy_Corporation ;
+              <https://w3id.org/semanticarts/ns/ontology/gist/isDirectPartOf> :Shell_plc ;
+              dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+              dct:created "2025-02-06T00:38:32Z"^^xsd:dateTime .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/Shell_USA
+:Shell_USA rdf:type owl:NamedIndividual ,
+                    :Energy_Corporation ;
+           <https://w3id.org/semanticarts/ns/ontology/gist/isDirectPartOf> :Shell_plc ;
+           dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+           dct:created "2025-02-06T00:34:41Z"^^xsd:dateTime ;
+           rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Shell_USA> .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/Shell_plc
+:Shell_plc rdf:type owl:NamedIndividual ,
+                    :Energy_Corporation ;
+           dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+           dct:created "2025-02-06T00:33:25Z"^^xsd:dateTime ;
+           rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Shell_plc> .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Smoke_Mirrors_Hot_Air
@@ -4603,6 +5572,13 @@ The contested advertising concerned a sticker on Chiquita's bananas which includ
                 <https://w3id.org/semanticarts/ns/ontology/gist/isGeoContainedIn> :Europe ;
                 dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
                 dct:created "2025-01-31T02:52:16Z"^^xsd:dateTime .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/Wunderman_Thompson
+:Wunderman_Thompson rdf:type owl:NamedIndividual ,
+                             :Advertizing_Agency ;
+                    dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                    dct:created "2025-02-06T00:53:23Z"^^xsd:dateTime .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/diagram-the-structure-of-obstruction
