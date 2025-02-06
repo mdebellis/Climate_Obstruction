@@ -1,0 +1,52 @@
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX gist: <https://w3id.org/semanticarts/ns/ontology/gist/>
+PREFIX env:  <https://www.michaeldebellis.com/climate_obstruction/>
+
+# When you use User Defined IRIs, Protege doesn't fill in a value for the label. 
+# Sometimes I'll add the label but often I won't because it is easy to generate them with SPARQL
+# This is one of the reasons to use "_" for blanks, rather than CamelCase. It makes generating labels even easier.
+# Note: these are for use in Snap SPARQL. If you are using AllegroGraph change the CONSTRUCT to INSERT
+# Added ?lblname != "" because some of the Gist entities don't have labels. 
+# and end up with empty strings because they don't match the IRI. Will fix those later. 
+
+#Create labels for all Classes
+CONSTRUCT {?c rdfs:label ?lblname.}
+WHERE {?c rdfs:subClassOf owl:Thing.
+        BIND(STRAFTER(STR(?c), 'climate_obstruction/') as ?name)
+	BIND(REPLACE(?name,"_", " " ) as ?namewbs)
+	BIND (IF (STRSTARTS(?namewbs," "),SUBSTR(?namewbs,1),?namewbs) AS ?lblname)
+	OPTIONAL{?c rdfs:label ?elbl.}
+	FILTER(?c != owl:Thing && ?c != owl:Nothing && !BOUND(?elbl) && ?lblname != "")}		
+
+#Create labels for all Individuals		
+CONSTRUCT {?i rdfs:label ?lblname.}
+WHERE {?i a owl:Thing.
+        BIND(STRAFTER(STR(?i), 'climate_obstruction/') as ?name)
+	BIND(REPLACE(?name,"_", " " ) as ?namewbs)
+	BIND (IF (STRSTARTS(?namewbs," "),SUBSTR(?namewbs,1),?namewbs) AS ?lblname)
+	OPTIONAL{?i rdfs:label ?elbl.}
+	FILTER(!BOUND(?elbl) && ?lblname != "")}			
+
+
+#Create labels for all Object Properties
+CONSTRUCT {?p rdfs:label ?lblname.}
+WHERE {?p a owl:ObjectProperty.
+        BIND(STRAFTER(STR(?p), 'climate_obstruction/') as ?name)
+	BIND(REPLACE(?name,"_", " " ) as ?lblname)
+	OPTIONAL{?p rdfs:label ?elbl.}
+	FILTER(?p != owl:topObjectProperty &&!BOUND(?elbl) && ?lblname != "")}	
+
+
+#Create labels for all Data Properties
+CONSTRUCT {?p rdfs:label ?lblname.}
+WHERE {?p a owl:DatatypeProperty.
+        BIND(STRAFTER(STR(?p), 'climate_obstruction/') as ?name)
+	BIND(REPLACE(?name,"_", " " ) as ?lblname)		
+	OPTIONAL{?p rdfs:label ?elbl.}
+	FILTER(?p != owl:topDataProperty && !BOUND(?elbl) && ?lblname != "")}	
+
+
+				 

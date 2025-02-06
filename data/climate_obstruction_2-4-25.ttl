@@ -839,20 +839,23 @@ Note that the unit of measure of the accuracy has to be compatible with the unit
 :ad_agency rdf:type owl:ObjectProperty ;
            rdfs:range :Advertizing_Agency ;
            dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-           dct:created "2025-02-06T00:22:32Z"^^xsd:dateTime .
+           dct:created "2025-02-06T00:22:32Z"^^xsd:dateTime ;
+           rdfs:label "ad agency" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/has_BCAP_code
 :has_BCAP_code rdf:type owl:ObjectProperty ;
                dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-               dct:created "2025-02-05T17:04:38Z"^^xsd:dateTime .
+               dct:created "2025-02-05T17:04:38Z"^^xsd:dateTime ;
+               rdfs:label "has BCAP code" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/has_CAP_Code
 :has_CAP_Code rdf:type owl:ObjectProperty ;
               rdfs:range :CAP_Code ;
               dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-              dct:created "2025-02-05T17:07:24Z"^^xsd:dateTime .
+              dct:created "2025-02-05T17:07:24Z"^^xsd:dateTime ;
+              rdfs:label "has CAP Code" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/has_author
@@ -861,61 +864,70 @@ Note that the unit of measure of the accuracy has to be compatible with the unit
             rdfs:domain <https://w3id.org/semanticarts/ns/ontology/gist/Content> ;
             rdfs:range :Agent ;
             dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-            dct:created "2025-01-29T00:54:44Z"^^xsd:dateTime .
+            dct:created "2025-01-29T00:54:44Z"^^xsd:dateTime ;
+            rdfs:label "has author" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/has_cause
 :has_cause rdf:type owl:ObjectProperty ;
            owl:inverseOf :is_cause_of ;
            dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-           dct:created "2025-02-04T23:35:26Z"^^xsd:dateTime .
+           dct:created "2025-02-04T23:35:26Z"^^xsd:dateTime ;
+           rdfs:label "has cause" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/has_direct_part
 :has_direct_part rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf :has_part ;
                  dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-                 dct:created "2025-01-29T01:00:03Z"^^xsd:dateTime .
+                 dct:created "2025-01-29T01:00:03Z"^^xsd:dateTime ;
+                 rdfs:label "has direct part" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/has_employee
 :has_employee rdf:type owl:ObjectProperty ;
               owl:inverseOf :is_employee_of ;
               dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-              dct:created "2025-01-29T18:26:11Z"^^xsd:dateTime .
+              dct:created "2025-01-29T18:26:11Z"^^xsd:dateTime ;
+              rdfs:label "has employee" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/has_jurisdiction
 :has_jurisdiction rdf:type owl:ObjectProperty ;
                   owl:inverseOf :is_jurisdiction_for ;
                   dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-                  dct:created "2025-01-30T02:55:36Z"^^xsd:dateTime .
+                  dct:created "2025-01-30T02:55:36Z"^^xsd:dateTime ;
+                  rdfs:label "has jurisdiction" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/has_part
 :has_part rdf:type owl:ObjectProperty ,
                    owl:TransitiveProperty ;
           dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-          dct:created "2025-01-29T00:59:49Z"^^xsd:dateTime .
+          dct:created "2025-01-29T00:59:49Z"^^xsd:dateTime ;
+          rdfs:label "has part" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/has_status
 :has_status rdf:type owl:ObjectProperty ;
             rdfs:range :Status ;
             dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-            dct:created "2025-01-29T22:19:35Z"^^xsd:dateTime .
+            dct:created "2025-01-29T22:19:35Z"^^xsd:dateTime ;
+            rdfs:label "has status" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/is_author_of
 :is_author_of rdf:type owl:ObjectProperty ;
               dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-              dct:created "2025-01-29T00:55:21Z"^^xsd:dateTime .
+              dct:created "2025-01-29T00:55:21Z"^^xsd:dateTime ;
+              rdfs:label "is author of" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/is_cause_of
 :is_cause_of rdf:type owl:ObjectProperty ;
              dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-             dct:created "2025-02-04T23:35:40Z"^^xsd:dateTime .
+             dct:created "2025-02-04T23:35:40Z"^^xsd:dateTime ;
+             rdfs:label "is cause of" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/is_employee_of
@@ -924,20 +936,23 @@ Note that the unit of measure of the accuracy has to be compatible with the unit
                 rdfs:domain <https://w3id.org/semanticarts/ns/ontology/gist/Person> ;
                 rdfs:range <https://w3id.org/semanticarts/ns/ontology/gist/Organization> ;
                 dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-                dct:created "2025-01-29T18:24:35Z"^^xsd:dateTime .
+                dct:created "2025-01-29T18:24:35Z"^^xsd:dateTime ;
+                rdfs:label "is employee of" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/is_jurisdiction_for
 :is_jurisdiction_for rdf:type owl:ObjectProperty ;
                      dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-                     dct:created "2025-01-30T02:55:55Z"^^xsd:dateTime .
+                     dct:created "2025-01-30T02:55:55Z"^^xsd:dateTime ;
+                     rdfs:label "is jurisdiction for" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/litigant
 :litigant rdf:type owl:ObjectProperty ;
           rdfs:range :Agent ;
           dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-          dct:created "2025-02-06T00:26:38Z"^^xsd:dateTime .
+          dct:created "2025-02-06T00:26:38Z"^^xsd:dateTime ;
+          rdfs:label "litigant" .
 
 
 #################################################################
@@ -1695,7 +1710,8 @@ The conventions for precision that are repeated in each property name are as fol
 :at_issue rdf:type owl:DatatypeProperty ;
           rdfs:subPropertyOf <https://w3id.org/semanticarts/ns/ontology/gist/containedText> ;
           dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-          dct:created "2025-01-29T22:09:03Z"^^xsd:dateTime .
+          dct:created "2025-01-29T22:09:03Z"^^xsd:dateTime ;
+          rdfs:label "at issue" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/author_string
@@ -1703,6 +1719,7 @@ The conventions for precision that are repeated in each property name are as fol
                rdfs:subPropertyOf :content_metadata ;
                dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
                dct:created "2025-01-30T04:43:25Z"^^xsd:dateTime ;
+               rdfs:label "author string" ;
                <http://www.w3.org/2004/02/skos/core#definition> "A string with the authors of a book, article, or other content. Often more than one author delimited by a semi-colon." .
 
 
@@ -1710,19 +1727,22 @@ The conventions for precision that are repeated in each property name are as fol
 :content_metadata rdf:type owl:DatatypeProperty ;
                   dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
                   dct:created "2025-01-30T04:45:57Z"^^xsd:dateTime ;
+                  rdfs:label "content metadata" ;
                   <http://www.w3.org/2004/02/skos/core#definition> "Text strings that hold metadata for content such as books, journal articles, web pages, etc. These strings are for the initial metadata before post processing turns them into objects and object properties or datatypes such as xsd:dateTime" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/first_name
 :first_name rdf:type owl:DatatypeProperty ;
             dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-            dct:created "2025-01-29T00:49:23Z"^^xsd:dateTime .
+            dct:created "2025-01-29T00:49:23Z"^^xsd:dateTime ;
+            rdfs:label "first name" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/last_name
 :last_name rdf:type owl:DatatypeProperty ;
            dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
            dct:created "2025-01-29T00:49:13Z"^^xsd:dateTime ;
+           rdfs:label "last name" ;
            <http://www.w3.org/2004/02/skos/core#definition> "Last name for a Person. This is the only mandatory name property." .
 
 
@@ -1730,13 +1750,15 @@ The conventions for precision that are repeated in each property name are as fol
 :media_link rdf:type owl:DatatypeProperty ;
             rdfs:range xsd:anyURI ;
             dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-            dct:created "2025-02-06T05:14:14Z"^^xsd:dateTime .
+            dct:created "2025-02-06T05:14:14Z"^^xsd:dateTime ;
+            rdfs:label "media link" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/middle_name
 :middle_name rdf:type owl:DatatypeProperty ;
              dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-             dct:created "2025-01-29T00:49:33Z"^^xsd:dateTime .
+             dct:created "2025-01-29T00:49:33Z"^^xsd:dateTime ;
+             rdfs:label "middle name" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/publication_date
@@ -1744,6 +1766,7 @@ The conventions for precision that are repeated in each property name are as fol
                   rdfs:subPropertyOf :content_metadata ;
                   dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
                   dct:created "2025-01-30T04:48:54Z"^^xsd:dateTime ;
+                  rdfs:label "publication date" ;
                   <http://www.w3.org/2004/02/skos/core#definition> "The datatype here is a literal (string) rather than xsd:dateTime because this is for dates scraped from web sites or other metadata." .
 
 
@@ -1751,14 +1774,16 @@ The conventions for precision that are repeated in each property name are as fol
 :summary rdf:type owl:DatatypeProperty ;
          rdfs:subPropertyOf <https://w3id.org/semanticarts/ns/ontology/gist/containedText> ;
          dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-         dct:created "2025-01-29T22:07:46Z"^^xsd:dateTime .
+         dct:created "2025-01-29T22:07:46Z"^^xsd:dateTime ;
+         rdfs:label "summary" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/text
 :text rdf:type owl:DatatypeProperty ;
       rdfs:subPropertyOf :content_metadata ;
       dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-      dct:created "2025-01-30T05:14:56Z"^^xsd:dateTime .
+      dct:created "2025-01-30T05:14:56Z"^^xsd:dateTime ;
+      rdfs:label "text" .
 
 
 #################################################################
@@ -3431,6 +3456,7 @@ The conventions for precision that are repeated in each property name are as fol
             dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
             dct:created "2025-02-05T22:14:51Z"^^xsd:dateTime ;
             rdfs:isDefinedBy <https://www.asa.org.uk/about-asa-and-cap/about-regulation/about-the-asa-and-cap.html> ;
+            rdfs:label "ASA Ruling" ;
             <http://www.w3.org/2004/02/skos/core#definition> """Regulating ads 
 The ASA respond to complaints but we also check ads across media to make sure they’re sticking to the rules. We monitor ads in sectors where there are potential consumer protection issues or where there are societal concerns about specific products, for instance age-restricted products like alcohol, gambling or electronic cigarettes. 
 
@@ -3476,6 +3502,7 @@ We have a range of sanctions to act against the small number of advertisers who 
                     rdfs:subClassOf :Business_Organization ;
                     dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
                     dct:created "2025-01-10T23:54:34Z"^^xsd:dateTime ;
+                    rdfs:label "Advertizing Agency" ;
                     :advertising_campaigns :Public_Agenda ;
                     :create_astroturf_groups :Advocacy_Organization ;
                     :information_stories :Conservative_Media_Corporation .
@@ -3486,6 +3513,7 @@ We have a range of sanctions to act against the small number of advertisers who 
                        rdfs:subClassOf :Non-Profit_Organization ;
                        dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
                        dct:created "2025-01-10T23:55:51Z"^^xsd:dateTime ;
+                       rdfs:label "Advocacy Organization" ;
                        :information_stories :Conservative_Media_Corporation ;
                        :membership <https://w3id.org/semanticarts/ns/ontology/gist/Person> ;
                        :political_mobilization :Public_Agenda ;
@@ -3497,20 +3525,23 @@ We have a range of sanctions to act against the small number of advertisers who 
         rdfs:subClassOf <https://w3id.org/semanticarts/ns/ontology/gist/Intention> ;
         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
         dct:created "2025-01-17T21:43:21Z"^^xsd:dateTime ;
-        rdfs:isDefinedBy "https://cssn.org/news-research/europe-volume/ p. 7" .
+        rdfs:isDefinedBy "https://cssn.org/news-research/europe-volume/ p. 7" ;
+        rdfs:label "Agenda" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Agent
 :Agent rdf:type owl:Class ;
        dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-       dct:created "2025-01-10T22:48:04Z"^^xsd:dateTime .
+       dct:created "2025-01-10T22:48:04Z"^^xsd:dateTime ;
+       rdfs:label "Agent" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Airline
 :Airline rdf:type owl:Class ;
          rdfs:subClassOf :Transportation_Corporation ;
          dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-         dct:created "2025-02-06T03:01:57Z"^^xsd:dateTime .
+         dct:created "2025-02-06T03:01:57Z"^^xsd:dateTime ;
+         rdfs:label "Airline" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Alignment
@@ -3518,6 +3549,7 @@ We have a range of sanctions to act against the small number of advertisers who 
            rdfs:subClassOf :Green_Washing ;
            dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
            dct:created "2025-01-14T01:03:46Z"^^xsd:dateTime ;
+           rdfs:label "Alignment" ;
            <http://www.w3.org/2004/02/skos/core#definition> """Inconsistent organization in practice
 Claim does not reflect consistent organizational practice""" .
 
@@ -3526,21 +3558,24 @@ Claim does not reflect consistent organizational practice""" .
 :Book rdf:type owl:Class ;
       rdfs:subClassOf :Document ;
       dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-      dct:created "2025-01-29T00:44:51Z"^^xsd:dateTime .
+      dct:created "2025-01-29T00:44:51Z"^^xsd:dateTime ;
+      rdfs:label "Book" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Book_Chapter
 :Book_Chapter rdf:type owl:Class ;
               rdfs:subClassOf :Document ;
               dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-              dct:created "2025-01-29T00:45:04Z"^^xsd:dateTime .
+              dct:created "2025-01-29T00:45:04Z"^^xsd:dateTime ;
+              rdfs:label "Book Chapter" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Business_Organization
 :Business_Organization rdf:type owl:Class ;
                        rdfs:subClassOf <https://w3id.org/semanticarts/ns/ontology/gist/Organization> ;
                        dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-                       dct:created "2025-01-10T23:53:25Z"^^xsd:dateTime .
+                       dct:created "2025-01-10T23:53:25Z"^^xsd:dateTime ;
+                       rdfs:label "Business Organization" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/CAP_Code
@@ -3549,6 +3584,7 @@ Claim does not reflect consistent organizational practice""" .
           dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
           dct:created "2025-01-22T02:24:30Z"^^xsd:dateTime ;
           rdfs:isDefinedBy <https://www.asa.org.uk/type/capcode/code_rule/3.1.html?_vhid=E75FAE137AB5FD10A2682E643403C071> ;
+          rdfs:label "CAP Code" ;
           <http://www.w3.org/2004/02/skos/core#definition> """**Overview of the CAP Code**
 
 1. **What it is**  
@@ -3608,6 +3644,7 @@ Source: ChatGPT""" .
                       rdfs:subClassOf :Non-Profit_Organization ;
                       dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
                       dct:created "2025-01-10T23:59:16Z"^^xsd:dateTime ;
+                      rdfs:label "Campaign Funding PAC" ;
                       :support_political_policies :Political_Agenda .
 
 
@@ -3615,14 +3652,29 @@ Source: ChatGPT""" .
 :City rdf:type owl:Class ;
       rdfs:subClassOf <https://w3id.org/semanticarts/ns/ontology/gist/CountryGeoRegion> ;
       dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-      dct:created "2025-01-30T02:53:11Z"^^xsd:dateTime .
+      dct:created "2025-01-30T02:53:11Z"^^xsd:dateTime ;
+      rdfs:label "City" .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/Co-opted_endorsement
+:Co-opted_endorsement rdf:type owl:Class ;
+                      rdfs:subClassOf :Alignment ;
+                      dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                      dct:created "2025-02-06T19:19:42Z"^^xsd:dateTime ;
+                      rdfs:label "Co-opted endorsement" ;
+                      <http://www.w3.org/2004/02/skos/core#definition> """9.1 Does the organization help publicise, endorse, or support another organization's claim that is greenwash?
+If yes...−
+IT'S GREENWASHING via Co-opted Endorsement.
+This indicator assesses an organization B and requires that a) there is an organization A which has a claim that falls into a greenwash category according to any of the indicators of this framework and there is an organization B that supports, endorses or helps to promote that claim OR b) organization B makes a green claim while at the same time supports harmful activities/policies of organization A.""" ,
+                                                                       "Claims that greenwash organization's activities are endorsed by other organizations" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Communication
 :Communication rdf:type owl:Class ;
                rdfs:subClassOf <https://w3id.org/semanticarts/ns/ontology/gist/Event> ;
                dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-               dct:created "2025-01-14T00:55:26Z"^^xsd:dateTime .
+               dct:created "2025-01-14T00:55:26Z"^^xsd:dateTime ;
+               rdfs:label "Communication" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Conservative_Media_Corporation
@@ -3630,6 +3682,7 @@ Source: ChatGPT""" .
                                 rdfs:subClassOf :Media_Corporation ;
                                 dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
                                 dct:created "2025-01-11T00:00:33Z"^^xsd:dateTime ;
+                                rdfs:label "Conservative Media Corporation" ;
                                 :influence :Media_Agenda ,
                                            :Public_Agenda .
 
@@ -3638,7 +3691,8 @@ Source: ChatGPT""" .
 :Continent rdf:type owl:Class ;
            rdfs:subClassOf <https://w3id.org/semanticarts/ns/ontology/gist/GeoRegion> ;
            dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-           dct:created "2025-01-31T02:39:46Z"^^xsd:dateTime .
+           dct:created "2025-01-31T02:39:46Z"^^xsd:dateTime ;
+           rdfs:label "Continent" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Corporation
@@ -3647,6 +3701,7 @@ Source: ChatGPT""" .
              dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
              dct:created "2025-01-10T23:57:09Z"^^xsd:dateTime ;
              rdfs:comment "tem" ;
+             rdfs:label "Corporation" ;
              :funding_and_political_service :Trade_Association ;
              :funding_and_research_agendas :University ;
              :money :Advertizing_Agency ,
@@ -3661,28 +3716,56 @@ Source: ChatGPT""" .
 :County rdf:type owl:Class ;
         rdfs:subClassOf <https://w3id.org/semanticarts/ns/ontology/gist/CountryGeoRegion> ;
         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-        dct:created "2025-01-30T02:53:11Z"^^xsd:dateTime .
+        dct:created "2025-01-30T02:53:11Z"^^xsd:dateTime ;
+        rdfs:label "County" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Court
 :Court rdf:type owl:Class ;
        rdfs:subClassOf <https://w3id.org/semanticarts/ns/ontology/gist/GovernmentOrganization> ;
        dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-       dct:created "2025-01-30T02:58:05Z"^^xsd:dateTime .
+       dct:created "2025-01-30T02:58:05Z"^^xsd:dateTime ;
+       rdfs:label "Court" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/District
 :District rdf:type owl:Class ;
           rdfs:subClassOf <https://w3id.org/semanticarts/ns/ontology/gist/CountryGeoRegion> ;
           dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-          dct:created "2025-01-30T02:53:11Z"^^xsd:dateTime .
+          dct:created "2025-01-30T02:53:11Z"^^xsd:dateTime ;
+          rdfs:label "District" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Document
 :Document rdf:type owl:Class ;
           rdfs:subClassOf <https://w3id.org/semanticarts/ns/ontology/gist/Content> ;
           dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-          dct:created "2025-01-31T02:48:36Z"^^xsd:dateTime .
+          dct:created "2025-01-31T02:48:36Z"^^xsd:dateTime ;
+          rdfs:label "Document" .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/Dubious_certifications_and_labels
+:Dubious_certifications_and_labels rdf:type owl:Class ;
+                                   rdfs:subClassOf :Alignment ;
+                                   dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                                   dct:created "2025-02-06T19:17:59Z"^^xsd:dateTime ;
+                                   rdfs:label "Dubious certifications & labels" ;
+                                   <http://www.w3.org/2004/02/skos/core#definition> """7.1 Is the certification or label not verified by independent accredited body?
+If yes...−
+IT'S GREENWASHING with Dubious Certifications & Labels
+When an organization chooses to use a labelling scheme, symbol or certificate for marketing purposes, these should be verified by an independent accredited body or a designated community stakeholder. Certain exceptions may exist to the general requirement of \"independent accredited body\" such as when an add-on certification exist which relies on the adherence to a well-established certification (e.g. the case of Demeter, which certifies biodynamic products of its own members - this certification is conditioned by the adherence to biodynamic standards and organic certification). Another exception may be participatory certification which is not to be considered a greenwash practise as long as the process is accountable and transparent. *Note that all other greenwashing themes apply to the communication of certifications/labels, not just this theme.""" ,
+                                                                                    """7.2 Are the benefits of the certification not clearly communicated or easily accessible?
+If yes...−
+IT'S GREENWASHING via Dubious Certifications & Labels
+The criteria of certification schemes need to demonstrate clear environmental benefits compared with competing products/organizations, should be easily publicly accessible and labels cannot be capable of being confused with other labels, including, for example, labels of publicly run labelling schemes or schemes of competitors.’ (European Commission, 2016). \"All certification schemes shall have a clearly defined scope and also indicate what is not included – to avoid 'scope creep'\" (EDPB, 2021). An important element of transparency and increased accountability and credibility of a certification scheme is the publication of key documents (e.g. standards, inspection guidelines, audit reports) and information related to certification bodies and complaints on the organization's website. These allow stakeholders to evaluate the performance of certificate holders and supply chain actors against the certification scheme’s standards, and to assess how good job the auditors and certification bodies have done. If information is not readily available on the website, it should be available by requesting the standard owner.""" ,
+                                                                                    """7.3 Can the standard owner or certification body be challenged through adequate and accessible complaint and objection procedures?
+If yes...−
+IT'S GREENWASHING via Dubious Certifications & Labels
+Most certification schemes have a dispute or grievance mechanism that enables complaints to be made against certified companies and operations, the conformity assessment bodies (CABs) and the scheme itself. A growing literature provides somewhat mixed evidence regarding the potential for certification to reduce environmental and social impacts (Lambin et al., 2018). Many certification schemes are unable to protect ecosystems' and people’s rights, and thus additional due diligence is required to provide an assurance of responsibly sourced produce. An effective due diligence screening program allows an organization to make an informed decision about whether it is safe to proceed with the certification. Also, many certification and standards systems have a chain of custody model or traceability approach, which is critical for downstream actors to understand who they are sourcing from. However, a Chain of Custody standard might only prescribe handling processes, and not include social abuses or environmental issues that could occur across the supply chain (ISEAL Alliance, 2020). However, often these mechanisms and the cases heard under them are not made public. They may not have clear processes or be easy to use, and complaints may not be addressed in a timely and comprehensive manner. They may also not provide for effective compensation to be paid to those who have been negatively affected. Certifications may also lack a third-party complaint procedure that ensures the process is fair and independent. CABs should not be able to act as both certifier and complainant. Lacking these accountability mechanisms mean the scheme can easily greenwash harmful activities.""" ,
+                                                                                    """7.4 Does the certification scheme, label, or initiative certify business as usual; products that violate its standards; illegal, or environmentally destructive activities?
+If yes...−
+IT'S GREENWASHING via Dubious Certifications & Labels
+To address concerns of greenwashing, certification schemes need to shift away their focus from certifying as much volume as possible to concentrating on rigorous enforcement of standards and developing a strong monitoring and evaluation (M&E) program. When any of the three conditions listed in the indicator question is true, the scheme can be accused of greenwashing.""" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Empty_Claims
@@ -3690,6 +3773,7 @@ Source: ChatGPT""" .
               rdfs:subClassOf :Impact ;
               dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
               dct:created "2025-01-14T04:21:26Z"^^xsd:dateTime ;
+              rdfs:label "Empty Claims" ;
               <http://www.w3.org/2004/02/skos/core#definition> """2.1 Does the claim over-state positive improvements to the environment?
 
 IF YES...−
@@ -3707,14 +3791,16 @@ In 2020, the fossil fuel industry spent $10 million on Facebook ads selling “i
 :Energy_Corporation rdf:type owl:Class ;
                     rdfs:subClassOf :Corporation ;
                     dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-                    dct:created "2025-02-06T00:28:04Z"^^xsd:dateTime .
+                    dct:created "2025-02-06T00:28:04Z"^^xsd:dateTime ;
+                    rdfs:label "Energy Corporation" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/False_Communication
 :False_Communication rdf:type owl:Class ;
                      rdfs:subClassOf :Green_Washing ;
                      dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-                     dct:created "2025-01-14T01:03:46Z"^^xsd:dateTime .
+                     dct:created "2025-01-14T01:03:46Z"^^xsd:dateTime ;
+                     rdfs:label "False Communication" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Falsehoods
@@ -3722,6 +3808,7 @@ In 2020, the fossil fuel industry spent $10 million on Facebook ads selling “i
             rdfs:subClassOf :Impact ;
             dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
             dct:created "2025-01-14T04:21:26Z"^^xsd:dateTime ;
+            rdfs:label "Falsehoods" ;
             <http://www.w3.org/2004/02/skos/core#definition> """4.1 Is the claim based on solutions or justifications that are not supported by scientific consensus?
 
 If yes...−
@@ -3744,7 +3831,8 @@ Inadequate quantification is a common category of greenwashing. For example, nat
 :Food_Distributor_and_Producer rdf:type owl:Class ;
                                rdfs:subClassOf :Corporation ;
                                dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-                               dct:created "2025-02-06T01:06:36Z"^^xsd:dateTime .
+                               dct:created "2025-02-06T01:06:36Z"^^xsd:dateTime ;
+                               rdfs:label "Food Distributor and Producer" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Foundation
@@ -3752,6 +3840,7 @@ Inadequate quantification is a common category of greenwashing. For example, nat
             rdfs:subClassOf :Non-Profit_Organization ;
             dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
             dct:created "2025-01-10T23:52:35Z"^^xsd:dateTime ;
+            rdfs:label "Foundation" ;
             :money :Think_Tank .
 
 
@@ -3760,7 +3849,8 @@ Inadequate quantification is a common category of greenwashing. For example, nat
                rdfs:subClassOf :Communication ;
                dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
                dct:created "2025-01-14T00:55:49Z"^^xsd:dateTime ;
-               rdfs:isDefinedBy <https://cssn.org/special-projects/greenwashing-tool/> .
+               rdfs:isDefinedBy <https://cssn.org/special-projects/greenwashing-tool/> ;
+               rdfs:label "Green Washing" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Hoax
@@ -3768,6 +3858,7 @@ Inadequate quantification is a common category of greenwashing. For example, nat
       rdfs:subClassOf :Proposition ;
       dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
       dct:created "2025-02-04T23:33:45Z"^^xsd:dateTime ;
+      rdfs:label "Hoax" ;
       <http://www.w3.org/2004/02/skos/core#definition> "A hoax is a false proposition that has been created by some Agent in pursuit of some goal." .
 
 
@@ -3776,7 +3867,25 @@ Inadequate quantification is a common category of greenwashing. For example, nat
         rdfs:subClassOf :Green_Washing ;
         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
         dct:created "2025-01-14T01:03:46Z"^^xsd:dateTime ;
-        rdfs:isDefinedBy <https://cssn.org/special-projects/greenwashing-tool/impact/> .
+        rdfs:isDefinedBy <https://cssn.org/special-projects/greenwashing-tool/impact/> ;
+        rdfs:label "Impact" .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/Inconsistent_organization_in_practice
+:Inconsistent_organization_in_practice rdf:type owl:Class ;
+                                       rdfs:subClassOf :Alignment ;
+                                       dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                                       dct:created "2025-02-06T19:16:34Z"^^xsd:dateTime ;
+                                       rdfs:label "Inconsistent organization in practice" ;
+                                       <http://www.w3.org/2004/02/skos/core#definition> """6.1 Are the products, procurement practices, vision, public statements or other firm- wide practices and policies in conflict with the claim?
+If yes...−
+IT'S GREENWASHING with Inconsistent Organization in Practice.
+This indicator can be assessed by searching if a contradicting product / policy / practice / statement by a representative exists within the same organization that makes a claim. For example, an organization may publicly claim to be pursuing environmental responsibility while continuing to invest in fossil fuel expansion through an investment portfolio""" ,
+                                                                                        """6.2 Has the organization using a voluntary certification scheme failed to create a due diligence policy to ensure that the product claim is genuine?
+If yes...−
+IT'S GREENWASHING via Inconsistent Organization in Practice.
+A growing literature provides mixed evidence regarding the potential for certification to reduce environmental and social impacts (Lambin et al., 2018). Many certification schemes are unable to protect ecosystems' and people’s rights, and thus additional due diligence is required to provide an assurance of responsibly sourced produce. An effective due diligence screening program allows an organization to make an informed decision about whether it is safe to proceed with the certification. Also, many certification and standards systems have a chain of custody model or traceability approach, which is critical for downstream actors to understand who they are sourcing from. However, a Chain of Custody standard might only prescribe handling processes, and not include social abuses or environmental issues that could occur across the supply chain (ISEAL Alliance, 2024). This indicator ensures that when retailers or producers communicate about their (own brand) products being certified they do not merely rely on voluntary certification schemes but ensure that they have a regularly updated effective due diligence policy in place.""" ,
+                                                                                        "Claim does not reflect consistent organizational practice" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Industry_Code
@@ -3784,6 +3893,7 @@ Inadequate quantification is a common category of greenwashing. For example, nat
                rdfs:subClassOf <https://w3id.org/semanticarts/ns/ontology/gist/Commitment> ;
                dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
                dct:created "2025-01-22T02:19:41Z"^^xsd:dateTime ;
+               rdfs:label "Industry Code" ;
                <http://www.w3.org/2004/02/skos/core#definition> "Guidelines and standards defined by an Industry group rather than a Government or an NGO such as the UN. The Cap Code that sets enforceable guidelines by Cap in the UK is an example." .
 
 
@@ -3791,7 +3901,8 @@ Inadequate quantification is a common category of greenwashing. For example, nat
 :Industry_Regulatory_Body rdf:type owl:Class ;
                           rdfs:subClassOf :Business_Organization ;
                           dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-                          dct:created "2025-01-23T03:28:07Z"^^xsd:dateTime .
+                          dct:created "2025-01-23T03:28:07Z"^^xsd:dateTime ;
+                          rdfs:label "Industry Regulatory Body" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Irrelevant
@@ -3799,6 +3910,7 @@ Inadequate quantification is a common category of greenwashing. For example, nat
             rdfs:subClassOf :Impact ;
             dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
             dct:created "2025-01-14T04:21:26Z"^^xsd:dateTime ;
+            rdfs:label "Irrelevant" ;
             <http://www.w3.org/2004/02/skos/core#definition> """3.1 Is the claim presented as voluntary when it is required by law or policy?
 If yes...
 
@@ -3813,18 +3925,33 @@ Not all environmental benefits are related. Positive organizational performance 
                                                              "Proclaiming accomplishments that are irrelevant or already required by law/competitors" .
 
 
+###  https://www.michaeldebellis.com/climate_obstruction/Jargon
+:Jargon rdf:type owl:Class ;
+        rdfs:subClassOf :False_Communication ;
+        dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+        dct:created "2025-02-06T19:23:38Z"^^xsd:dateTime ;
+        rdfs:label "Jargon" ;
+        <http://www.w3.org/2004/02/skos/core#definition> """12.1 Does the claim use technical language/complex scientific jargon that makes it difficult for people to understand?
+If yes...−
+IT'S GREENWASHING with Jargon.
+Green claims containing words that only a specialist can understand is a commonly used variety of greenwashing. Often riddled with industry acronyms, jargon is difficult for outsiders to understand. For instance, the Federal Trade Commission (FTC, 2012, p. 62122) instructs to “use clear and prominent qualifying language to convey that a general environmental claim refers only to a specific and limited environmental benefit(s)”. This indicator relates to products and services as well as policies and public speeches.""" ,
+                                                         "Jargon is when a corporation makes a claim that uses jargon / information that consumers cannot understand / verify" .
+
+
 ###  https://www.michaeldebellis.com/climate_obstruction/Journal_Article
 :Journal_Article rdf:type owl:Class ;
                  rdfs:subClassOf :Document ;
                  dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-                 dct:created "2025-01-30T18:43:31Z"^^xsd:dateTime .
+                 dct:created "2025-01-30T18:43:31Z"^^xsd:dateTime ;
+                 rdfs:label "Journal Article" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Litigation
 :Litigation rdf:type owl:Class ;
             rdfs:subClassOf <https://w3id.org/semanticarts/ns/ontology/gist/Commitment> ;
             dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-            dct:created "2025-01-29T23:54:00Z"^^xsd:dateTime .
+            dct:created "2025-01-29T23:54:00Z"^^xsd:dateTime ;
+            rdfs:label "Litigation" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Lobbying_Firm
@@ -3832,6 +3959,7 @@ Not all environmental benefits are related. Positive organizational performance 
                rdfs:subClassOf :Business_Organization ;
                dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
                dct:created "2025-01-10T23:58:46Z"^^xsd:dateTime ;
+               rdfs:label "Lobbying Firm" ;
                :lobby_for_policy_proposals :Political_Agenda .
 
 
@@ -3840,6 +3968,7 @@ Not all environmental benefits are related. Positive organizational performance 
               rdfs:subClassOf :Agenda ;
               dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
               dct:created "2025-01-17T21:44:35Z"^^xsd:dateTime ;
+              rdfs:label "Media Agenda" ;
               :influence :Policy_Outcome ,
                          :Political_Agenda ,
                          :Public_Agenda .
@@ -3849,28 +3978,49 @@ Not all environmental benefits are related. Positive organizational performance 
 :Media_Corporation rdf:type owl:Class ;
                    rdfs:subClassOf :Corporation ;
                    dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-                   dct:created "2025-01-10T23:59:46Z"^^xsd:dateTime .
+                   dct:created "2025-01-10T23:59:46Z"^^xsd:dateTime ;
+                   rdfs:label "Media Corporation" .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/Misleading_imagery
+:Misleading_imagery rdf:type owl:Class ;
+                    rdfs:subClassOf :False_Communication ;
+                    dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                    dct:created "2025-02-06T19:22:40Z"^^xsd:dateTime ;
+                    rdfs:label "Misleading imagery" ;
+                    <http://www.w3.org/2004/02/skos/core#definition> """11.1 Does the claim use images of the environment that imply that the product or organization has a positive environmental impact that it does not have?
+If yes...−
+IT'S GREENWASHING with misleading imagery.
+The wording and overall presentation (i.e. layout, choice of colours, images, pictures, sounds, symbols or labels) has to be truthful about the environmental benefit. If green imagery or colours are used, or environmentally friendly footage to promote products or services, this should be treated as separate green claim which should be documented and substantiated. This is a requirement under the Danish Marketing Practices Act and the EU Green Claims Directive. A recent case by the UK's Advertising Standards Authority (Innocent Ltd t/a Innocent) (ASA, 2022c) showed that ads are considered misleading when they implied (through imagery and lyrics) that purchasing products was a choice which would have a positive environmental impact when that was not the case.""" ,
+                                                                     """11.2 Does the claim systematically use images of the environment that are unrelated or a very minor part of their core operations?
+If yes...−
+IT'S GREENWASHING with misleading imagery
+While organizations are free to use environmental imagery, the practice can be misleading if it implies that environmentally responsible products or behaviour are a larger portion of their activities than they are or redirects attention away from core business activities that are environmentally damaging. Supran and Hickey (2022) identify disproportionate use of environmental imagery in their analysis of social media communication by fossil fuel, aviation, and car manufacturing companies, with nearly half of posts featuring themes of \"green innovation\" detached from the companies' core offerings.""" ,
+                                                                     "Misleading imagery is using visuals and symbols that induce a false perception of the organization's greenness" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Nation
 :Nation rdf:type owl:Class ;
         rdfs:subClassOf <https://w3id.org/semanticarts/ns/ontology/gist/CountryGeoRegion> ;
         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-        dct:created "2025-01-30T02:53:11Z"^^xsd:dateTime .
+        dct:created "2025-01-30T02:53:11Z"^^xsd:dateTime ;
+        rdfs:label "Nation" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Newspaper_Article
 :Newspaper_Article rdf:type owl:Class ;
                    rdfs:subClassOf :Document ;
                    dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-                   dct:created "2025-02-06T03:22:50Z"^^xsd:dateTime .
+                   dct:created "2025-02-06T03:22:50Z"^^xsd:dateTime ;
+                   rdfs:label "Newspaper Article" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Non-Profit_Organization
 :Non-Profit_Organization rdf:type owl:Class ;
                          rdfs:subClassOf <https://w3id.org/semanticarts/ns/ontology/gist/Organization> ;
                          dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-                         dct:created "2025-01-10T23:55:06Z"^^xsd:dateTime .
+                         dct:created "2025-01-10T23:55:06Z"^^xsd:dateTime ;
+                         rdfs:label "Non-Profit Organization" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Not_Credible
@@ -3878,6 +4028,7 @@ Not all environmental benefits are related. Positive organizational performance 
               rdfs:subClassOf :Impact ;
               dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
               dct:created "2025-01-14T04:21:26Z"^^xsd:dateTime ;
+              rdfs:label "Not Credible" ;
               <http://www.w3.org/2004/02/skos/core#definition> """5.1 Does the claim try to make the public feel positive about a product, service, or policy that is demonstrably dangerous, harmful, or unsafe?
 
 If yes...−
@@ -3895,7 +4046,8 @@ This indicator refers to positive environmental activities, products, or achieve
 :Policy_Outcome rdf:type owl:Class ;
                 rdfs:subClassOf :Proposition ;
                 dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-                dct:created "2025-02-04T21:30:01Z"^^xsd:dateTime .
+                dct:created "2025-02-04T21:30:01Z"^^xsd:dateTime ;
+                rdfs:label "Policy Outcome" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Political_Agenda
@@ -3903,14 +4055,33 @@ This indicator refers to positive environmental activities, products, or achieve
                   rdfs:subClassOf :Agenda ;
                   dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
                   dct:created "2025-01-17T21:44:35Z"^^xsd:dateTime ;
+                  rdfs:label "Political Agenda" ;
                   :influence :Media_Agenda ,
                              :Policy_Outcome .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/Political_spin
+:Political_spin rdf:type owl:Class ;
+                rdfs:subClassOf :Alignment ;
+                dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                dct:created "2025-02-06T19:18:39Z"^^xsd:dateTime ;
+                rdfs:label "Political spin" ;
+                <http://www.w3.org/2004/02/skos/core#definition> """8.1 Has the organization making the claim or helping a corporate entity making a claim lobbied in contradiction of that claim?
+If yes...−
+IT'S GREENWASHING using Political Spin.
+Although it can be difficult to obtain evidence on lobbying lobbying (in which case 'unknown' could be the answer), there are instances when such activities become exposed. Useful references are the OpenSecrets in the USA<.a>; and the Transparency Register in EU; and Corporate Europe Observatory's website. A further suggested reference for this indicator is InfluenceMap, which provides independent data and analysis on how business and finance are affecting the climate crisis.""" ,
+                                                                 """8.2 Is the organization affiliated with think tanks, trade associations or other groups that spread environmental science disinformation and/or block environmental action in contradiction to its claims?
+If yes...−
+IT'S GREENWASHING via Political Spin.
+Critical studies of environmental sustainability initiatives point to the need to evaluate the influence of (industry or other) groups on organizations making green claims. Social network analyses (e.g., Brulle 2019; Farrell 2015; Pattberg 2007) can be used to determine the policy position, funding contributions, or political involvement of think tanks, trade associations or other groups. Affiliation also refers to profiting from, investing in, or collaborating with other organizations. For instance, according to Client Earth's Greenwashing file, Chevron (which makes claims about reducing carbon intensity and investing in renewable and “low-carbon” energies) is a member of a number of trade associations and lobby groups which have sought to block a transition away from fossil fuels (the American Petroleum Institute, the American Fuel and Petrochemical Manufacturers and the American Legislative Exchange Council). Studies show how these associations have been responsible over recent years for obstructive lobbying practices against urgently needed climate policies and laws, and there are concerns that Chevron—like many other fossil fuel companies—continues to fight climate measures, including behind closed doors.""" ,
+                                                                 "Claim boasts of green commitments, while the same organization lobbies against environmental laws" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Proposition
 :Proposition rdf:type owl:Class ;
              dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
              dct:created "2025-01-24T00:17:47Z"^^xsd:dateTime ;
+             rdfs:label "Proposition" ;
              <http://www.w3.org/2004/02/skos/core#definition> """A proposition is a central concept in the philosophy of language, semantics, logic, and related fields, often characterized as the primary bearer of truth or falsity. Propositions are also often characterized as the type of object that declarative sentences denote. For instance, the sentence \"The sky is blue\" denotes the proposition that the sky is blue. However, crucially, propositions are not themselves linguistic expressions. For instance, the English sentence \"Snow is white\" denotes the same proposition as the German sentence \"Schnee ist weiß\" even though the two sentences are not the same. Similarly, propositions can also be characterized as the objects of belief and other propositional attitudes. For instance if someone believes that the sky is blue, the object of their belief is the proposition that the sky is blue.
 
 Source: https://en.wikipedia.org/wiki/Proposition""" .
@@ -3920,7 +4091,8 @@ Source: https://en.wikipedia.org/wiki/Proposition""" .
 :Province rdf:type owl:Class ;
           rdfs:subClassOf <https://w3id.org/semanticarts/ns/ontology/gist/CountryGeoRegion> ;
           dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-          dct:created "2025-01-30T02:53:11Z"^^xsd:dateTime .
+          dct:created "2025-01-30T02:53:11Z"^^xsd:dateTime ;
+          rdfs:label "Province" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Public_Agenda
@@ -3928,6 +4100,7 @@ Source: https://en.wikipedia.org/wiki/Proposition""" .
                rdfs:subClassOf :Agenda ;
                dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
                dct:created "2025-01-17T21:44:35Z"^^xsd:dateTime ;
+               rdfs:label "Public Agenda" ;
                :influence :Policy_Outcome ,
                           :Political_Agenda .
 
@@ -3936,7 +4109,8 @@ Source: https://en.wikipedia.org/wiki/Proposition""" .
 :RCC_Ruling rdf:type owl:Class ;
             rdfs:subClassOf :Litigation ;
             dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-            dct:created "2025-02-05T22:20:25Z"^^xsd:dateTime .
+            dct:created "2025-02-05T22:20:25Z"^^xsd:dateTime ;
+            rdfs:label "RCC Ruling" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Regulatory_Decision
@@ -3951,7 +4125,8 @@ Source: https://en.wikipedia.org/wiki/Proposition""" .
 :Report rdf:type owl:Class ;
         rdfs:subClassOf :Document ;
         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-        dct:created "2025-01-31T04:39:00Z"^^xsd:dateTime .
+        dct:created "2025-01-31T04:39:00Z"^^xsd:dateTime ;
+        rdfs:label "Report" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Selective_Disclosure
@@ -3960,6 +4135,7 @@ Source: https://en.wikipedia.org/wiki/Proposition""" .
                       dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
                       dct:created "2025-01-14T04:19:51Z"^^xsd:dateTime ;
                       rdfs:isDefinedBy <https://cssn.org/special-projects/greenwashing-tool/impact/> ;
+                      rdfs:label "Selective Disclosure" ;
                       <http://www.w3.org/2004/02/skos/core#definition> """1.1 Does the organization fail to disclose relevant information regarding the environmental claim being made, such as lifecycle or cumulative impacts?
 
 If yes...−
@@ -3982,7 +4158,8 @@ Claiming biodiversity or carbon neutrality or a reduction of environmental harm 
 :State rdf:type owl:Class ;
        rdfs:subClassOf <https://w3id.org/semanticarts/ns/ontology/gist/CountryGeoRegion> ;
        dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-       dct:created "2025-01-30T02:53:11Z"^^xsd:dateTime .
+       dct:created "2025-01-30T02:53:11Z"^^xsd:dateTime ;
+       rdfs:label "State" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Status
@@ -3995,7 +4172,8 @@ Claiming biodiversity or carbon neutrality or a reduction of environmental harm 
         rdfs:subClassOf <https://w3id.org/semanticarts/ns/ontology/gist/Category> ;
         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
         dct:created "2025-01-29T22:17:06Z"^^xsd:dateTime ;
-        rdfs:comment "Will add more status values based on data" .
+        rdfs:comment "Will add more status values based on data" ;
+        rdfs:label "Status" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Think_Tank
@@ -4004,6 +4182,7 @@ Claiming biodiversity or carbon neutrality or a reduction of environmental harm 
             dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
             dct:created "2025-01-24T22:27:28Z"^^xsd:dateTime ;
             rdfs:comment "temp" ;
+            rdfs:label "Think Tank" ;
             :editorials_books_and_articles :Public_Agenda ;
             :information_and_stories :Conservative_Media_Corporation ,
                                      :Public_Agenda ;
@@ -4017,7 +4196,8 @@ Claiming biodiversity or carbon neutrality or a reduction of environmental harm 
 :Town rdf:type owl:Class ;
       rdfs:subClassOf <https://w3id.org/semanticarts/ns/ontology/gist/CountryGeoRegion> ;
       dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-      dct:created "2025-01-30T02:53:11Z"^^xsd:dateTime .
+      dct:created "2025-01-30T02:53:11Z"^^xsd:dateTime ;
+      rdfs:label "Town" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Trade_Association
@@ -4026,6 +4206,7 @@ Claiming biodiversity or carbon neutrality or a reduction of environmental harm 
                    dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
                    dct:created "2025-01-10T23:57:36Z"^^xsd:dateTime ;
                    rdfs:comment "In the diagram it looks as if money flows from Think Tanks to  Trade Associations. I'm guessing that is probably an error because it seems more likely that it flows in the other direction, so that's how I modeled it for now. Will seek clarification from authors." ;
+                   rdfs:label "Trade Association" ;
                    :information_and_stories :Conservative_Media_Corporation ;
                    :money :Advertizing_Agency ,
                           :Campaign_Funding_PAC ,
@@ -4039,7 +4220,8 @@ Claiming biodiversity or carbon neutrality or a reduction of environmental harm 
 :Transportation_Corporation rdf:type owl:Class ;
                             rdfs:subClassOf :Corporation ;
                             dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-                            dct:created "2025-02-06T03:01:45Z"^^xsd:dateTime .
+                            dct:created "2025-02-06T03:01:45Z"^^xsd:dateTime ;
+                            rdfs:label "Transportation Corporation" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/University
@@ -4047,16 +4229,40 @@ Claiming biodiversity or carbon neutrality or a reduction of environmental harm 
             rdfs:subClassOf :Non-Profit_Organization ;
             dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
             dct:created "2025-01-10T23:58:21Z"^^xsd:dateTime ;
+            rdfs:label "University" ;
             :expert_sources :Media_Agenda ;
             :legitimacy_and_talent :Think_Tank ;
             :testimony_at_hearings :Political_Agenda .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/Vagueness
+:Vagueness rdf:type owl:Class ;
+           rdfs:subClassOf :False_Communication ;
+           dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+           dct:created "2025-02-06T19:21:24Z"^^xsd:dateTime ;
+           rdfs:label "Vagueness" ;
+           <http://www.w3.org/2004/02/skos/core#definition> """10.1 Has the claim failed to specify whether it refers to the product/packaging/service or just a portion?
+
+If yes...−
+IT'S GREENWASHING Vagueness
+Claims can refer to a part/feature of a product/organization (or simply to the packaging) instead of the whole product/organization creating confusion among consumers about the claim. A typical example maybe a plastic package containing a new product which is labelled “recyclable” without further elaboration. The context of the claim does not make clear if it refers to the plastic package or the product, therefore the claim is deceptive if any part of either the package or the product, other than minor, incidental components, cannot be recycled.""" ,
+                                                            """10.2 Do the words of the claim have unclear or ambiguous meanings that are not defined?
+If yes...−
+IT'S GREENWASHING Vagueness
+Words such as \"sustainably sourced”, “eco-friendly”, “green”, “sustainable”, “non-toxic”, “biodegradable”, \"natural\", etc are ambiguous terms. The absence of clear definitions for many green marketing terms has made it difficult for consumers to weigh how credible these claims are. Statements such as ‘good for you, good for the planet, good for the future’ also raise as many questions as they answer. Is it good for the planet because of the packaging, because of how the item is produced, because it is healthy for you and the soil or simply because it's less harmful than similar products? Such claims require substantiation, covering the whole lifecycle of the product. Similarly, one cannot just say that plant-based burgers or pet food are better for the planet than a traditional meat burger/meat-based pet food. What ingredients contain the plant-based product, how has it been produced, with what inputs and where was it shipped from? Unless clearly defined and adequately substantiated with easily accessible, independent, verifiable scientific information, such claims remain greenwash.""" ,
+                                                            """10.3 When making a net zero/climate-related claim, has the organization failed to follow relevant internationally endorsed guidelines?
+If yes...−
+IT'S GREENWASHING Vagueness
+There is a wide range of terms and claims used by companies in addition to “net zero”, such as \"carbon negative\" or \"climate positive\"; or that they seek to achieve \"net negative\" emissions or \"deep decarbonisation\"; or that they plan to become \"emissions-free\" or achieve \"zero emissions\"; or that they are committed to a \"1.5 degrees C pathway\"; or invest in low-carbon technologies”. \"Most “net zero” targets involve vaguely-written plans with loopholes that allow emissions to continue rising - often for decades after commitments have been taken. The Science Based Targets Initiative (Science Based Targets, 2021) requires that \"companies set targets based on emission reductions through direct action within their own boundaries or their value chains\" and \"offsets are only considered to be an option for companies wanting to contribute to finance additional emission reductions beyond their science-based target/net-zero” (Ibid). Established international best practice guidelines in this area require that organizations/ countries: a) measure, track and regularly publish their emissions according to the latest IPCC or GHG Protocol guidance (e.g. scope 1 and 2 emissions and scope 3 emissions to the furthest extent possible); b) have a clear strategy, implementation planning process and interim targets to reach any future single point targets AND c) develop and publish a long-term strategy with a decarbonisation pathway that prioritizes reducing own emissions.""" ,
+                                                            "Vagueness is when a claim is poorly defined / broad so its real meaning is misunderstood" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Web_Page
 :Web_Page rdf:type owl:Class ;
           rdfs:subClassOf :Document ;
           dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-          dct:created "2025-01-29T22:05:30Z"^^xsd:dateTime .
+          dct:created "2025-01-29T22:05:30Z"^^xsd:dateTime ;
+          rdfs:label "Web Page" .
 
 
 #################################################################
@@ -4469,21 +4675,24 @@ In relation to the TV ad (b) only, Clearcast supported Shell’s response on thi
 :Africa rdf:type owl:NamedIndividual ,
                  :Continent ;
         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-        dct:created "2025-01-31T02:40:36Z"^^xsd:dateTime .
+        dct:created "2025-01-31T02:40:36Z"^^xsd:dateTime ;
+        rdfs:label "Africa" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Antarctica
 :Antarctica rdf:type owl:NamedIndividual ,
                      :Continent ;
             dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-            dct:created "2025-01-31T02:41:21Z"^^xsd:dateTime .
+            dct:created "2025-01-31T02:41:21Z"^^xsd:dateTime ;
+            rdfs:label "Antarctica" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Asia
 :Asia rdf:type owl:NamedIndividual ,
                :Continent ;
       dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-      dct:created "2025-01-31T02:40:42Z"^^xsd:dateTime .
+      dct:created "2025-01-31T02:40:42Z"^^xsd:dateTime ;
+      rdfs:label "Asia" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Assessing_ExxonMobils_global_warming_projections
@@ -4679,7 +4888,8 @@ It has been established that, for many years, Exxon’s public affairs strategy 
                     :Continent ,
                     :Nation ;
            dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-           dct:created "2025-01-31T02:42:26Z"^^xsd:dateTime .
+           dct:created "2025-01-31T02:42:26Z"^^xsd:dateTime ;
+           rdfs:label "Australia" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Austrian_Airlines
@@ -4957,14 +5167,16 @@ Most of the copies of the 10 agreements were obtained through public record act 
                  :Nation ;
         <https://w3id.org/semanticarts/ns/ontology/gist/isGeoContainedIn> :South_America ;
         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-        dct:created "2025-01-30T02:53:31Z"^^xsd:dateTime .
+        dct:created "2025-01-30T02:53:31Z"^^xsd:dateTime ;
+        rdfs:label "Brazil" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Brown_University
 :Brown_University rdf:type owl:NamedIndividual ,
                            :University ;
                   dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-                  dct:created "2025-01-29T18:22:44Z"^^xsd:dateTime .
+                  dct:created "2025-01-29T18:22:44Z"^^xsd:dateTime ;
+                  rdfs:label "Brown University" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/CAP_3-41
@@ -5616,7 +5828,8 @@ CAP has published a Help Note on the Marketing of Publications: https://www.asa.
                 :Nation ;
        <https://w3id.org/semanticarts/ns/ontology/gist/isGeoContainedIn> :South_America ;
        dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-       dct:created "2025-01-30T02:53:39Z"^^xsd:dateTime .
+       dct:created "2025-01-30T02:53:39Z"^^xsd:dateTime ;
+       rdfs:label "Chile" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Chiquita_Brands_International
@@ -5624,7 +5837,8 @@ CAP has published a Help Note on the Marketing of Publications: https://www.asa.
                                         :Food_Distributor_and_Producer ;
                                dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
                                dct:created "2025-02-06T01:10:01Z"^^xsd:dateTime ;
-                               rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Chiquita> .
+                               rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Chiquita> ;
+                               rdfs:label "Chiquita Brands International" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Climate_Obstruction_in_Europe
@@ -5699,7 +5913,8 @@ The Court, therefore, granted the appeal and ordered that the application be rem
                     :Advertizing_Agency ;
            <https://w3id.org/semanticarts/ns/ontology/gist/isDirectPartOf> :DDB_Worldwide_Communications_Group_LLC ;
            dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-           dct:created "2025-02-05T22:24:36Z"^^xsd:dateTime .
+           dct:created "2025-02-05T22:24:36Z"^^xsd:dateTime ;
+           rdfs:label "DDB Spain" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/DDB_Worldwide_Communications_Group_LLC
@@ -5715,7 +5930,8 @@ The Court, therefore, granted the appeal and ordered that the application be rem
 :Decided rdf:type owl:NamedIndividual ,
                   :Status ;
          dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-         dct:created "2025-01-29T22:17:33Z"^^xsd:dateTime .
+         dct:created "2025-01-29T22:17:33Z"^^xsd:dateTime ;
+         rdfs:label "Decided" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Deutsche_Lufthansa
@@ -5748,7 +5964,8 @@ The Court, therefore, granted the appeal and ordered that the application be rem
 :Europe rdf:type owl:NamedIndividual ,
                  :Continent ;
         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-        dct:created "2025-01-31T02:40:58Z"^^xsd:dateTime .
+        dct:created "2025-01-31T02:40:58Z"^^xsd:dateTime ;
+        rdfs:label "Europe" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/FREDDIE_DALEY
@@ -5757,7 +5974,8 @@ The Court, therefore, granted the appeal and ordered that the application be rem
                :first_name "FREDDIE" ;
                :last_name "DALEY" ;
                dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-               dct:created "2025-01-29T18:36:40Z"^^xsd:dateTime .
+               dct:created "2025-01-29T18:36:40Z"^^xsd:dateTime ;
+               rdfs:label "FREDDIE DALEY" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/High_Court_of_Ireland
@@ -5765,7 +5983,8 @@ The Court, therefore, granted the appeal and ordered that the application be rem
                                 :Court ;
                        <https://w3id.org/semanticarts/ns/ontology/gist/hasPhysicalLocation> :Ireland ;
                        dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-                       dct:created "2025-01-30T02:58:58Z"^^xsd:dateTime .
+                       dct:created "2025-01-30T02:58:58Z"^^xsd:dateTime ;
+                       rdfs:label "High Court of Ireland" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Institutionalizing_delay_foundation_funding_and_the_creation_of_US_climate_change_counter-movement_organizations
@@ -5840,7 +6059,8 @@ The CMA has also launched a video and published guidance for shoppers about thei
 :Ireland rdf:type owl:NamedIndividual ,
                   :Nation ;
          dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-         dct:created "2025-01-30T02:54:01Z"^^xsd:dateTime .
+         dct:created "2025-01-30T02:54:01Z"^^xsd:dateTime ;
+         rdfs:label "Ireland" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/JAMES_PAINTER
@@ -5849,7 +6069,8 @@ The CMA has also launched a video and published guidance for shoppers about thei
                :first_name "JAMES" ;
                :last_name "PAINTER" ;
                dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-               dct:created "2025-01-29T18:41:19Z"^^xsd:dateTime .
+               dct:created "2025-01-29T18:41:19Z"^^xsd:dateTime ;
+               rdfs:label "JAMES PAINTER" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/J_TIMMONS_ROBERTS
@@ -5861,6 +6082,7 @@ The CMA has also launched a video and published guidance for shoppers about thei
                    :middle_name "TIMMONS" ;
                    dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
                    dct:created "2025-01-29T00:52:09Z"^^xsd:dateTime ;
+                   rdfs:label "J TIMMONS ROBERTS" ;
                    <http://www.w3.org/2004/02/skos/core#definition> """J. Timmons Roberts is the Ittleson Professor of Environmental Studies
 and Sociology at Brown University and the executive director of the
 Climate Social Science Network (CSSN). His current research focuses
@@ -5880,14 +6102,16 @@ on social drivers of action and inaction on climate change""" .
 :North_America rdf:type owl:NamedIndividual ,
                         :Continent ;
                dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-               dct:created "2025-01-31T02:40:26Z"^^xsd:dateTime .
+               dct:created "2025-01-31T02:40:26Z"^^xsd:dateTime ;
+               rdfs:label "North America" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Omnicom_Group
 :Omnicom_Group rdf:type owl:NamedIndividual ,
                         :Media_Corporation ;
                dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-               dct:created "2025-02-05T23:04:20Z"^^xsd:dateTime .
+               dct:created "2025-02-05T23:04:20Z"^^xsd:dateTime ;
+               rdfs:label "Omnicom Group" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/PETER_NEWELL
@@ -5896,14 +6120,16 @@ on social drivers of action and inaction on climate change""" .
               :first_name "PETER" ;
               :last_name "NEWELL" ;
               dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-              dct:created "2025-01-29T18:38:10Z"^^xsd:dateTime .
+              dct:created "2025-01-29T18:38:10Z"^^xsd:dateTime ;
+              rdfs:label "PETER NEWELL" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Pending
 :Pending rdf:type owl:NamedIndividual ,
                   :Status ;
          dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-         dct:created "2025-01-29T23:52:21Z"^^xsd:dateTime .
+         dct:created "2025-01-29T23:52:21Z"^^xsd:dateTime ;
+         rdfs:label "Pending" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/RCC_Ruling_on_Chiquita_climate_neutral_bananas
@@ -5938,7 +6164,8 @@ The contested advertising concerned a sticker on Chiquita's bananas which includ
                  :last_name "BRULLE" ;
                  :middle_name "J." ;
                  dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-                 dct:created "2025-01-29T00:48:16Z"^^xsd:dateTime .
+                 dct:created "2025-01-29T00:48:16Z"^^xsd:dateTime ;
+                 rdfs:label "ROBERT J BRULLE" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/RUTH_MCKIE
@@ -5947,7 +6174,8 @@ The contested advertising concerned a sticker on Chiquita's bananas which includ
             :first_name "RUTH" ;
             :last_name "MCKIE" ;
             dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-            dct:created "2025-01-29T18:40:04Z"^^xsd:dateTime .
+            dct:created "2025-01-29T18:40:04Z"^^xsd:dateTime ;
+            rdfs:label "RUTH MCKIE" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Repsol
@@ -5955,7 +6183,8 @@ The contested advertising concerned a sticker on Chiquita's bananas which includ
                  :Energy_Corporation ;
         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
         dct:created "2025-02-06T00:28:37Z"^^xsd:dateTime ;
-        rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Repsol> .
+        rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Repsol> ;
+        rdfs:label "Repsol" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Shell_UK_Ltd
@@ -5963,7 +6192,8 @@ The contested advertising concerned a sticker on Chiquita's bananas which includ
                        :Energy_Corporation ;
               <https://w3id.org/semanticarts/ns/ontology/gist/isDirectPartOf> :Shell_plc ;
               dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-              dct:created "2025-02-06T00:38:32Z"^^xsd:dateTime .
+              dct:created "2025-02-06T00:38:32Z"^^xsd:dateTime ;
+              rdfs:label "Shell UK Ltd" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Shell_USA
@@ -5972,7 +6202,8 @@ The contested advertising concerned a sticker on Chiquita's bananas which includ
            <https://w3id.org/semanticarts/ns/ontology/gist/isDirectPartOf> :Shell_plc ;
            dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
            dct:created "2025-02-06T00:34:41Z"^^xsd:dateTime ;
-           rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Shell_USA> .
+           rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Shell_USA> ;
+           rdfs:label "Shell USA" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Shell_plc
@@ -5980,7 +6211,8 @@ The contested advertising concerned a sticker on Chiquita's bananas which includ
                     :Energy_Corporation ;
            dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
            dct:created "2025-02-06T00:33:25Z"^^xsd:dateTime ;
-           rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Shell_plc> .
+           rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Shell_plc> ;
+           rdfs:label "Shell plc" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Smoke_Mirrors_Hot_Air
@@ -6005,7 +6237,8 @@ The contested advertising concerned a sticker on Chiquita's bananas which includ
 :South_America rdf:type owl:NamedIndividual ,
                         :Continent ;
                dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-               dct:created "2025-01-31T02:40:07Z"^^xsd:dateTime .
+               dct:created "2025-01-31T02:40:07Z"^^xsd:dateTime ;
+               rdfs:label "South America" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Strategy_in_Information_and_Influence_Campaigns
@@ -6058,7 +6291,8 @@ The contested advertising concerned a sticker on Chiquita's bananas which includ
               :Nation ;
      <https://w3id.org/semanticarts/ns/ontology/gist/isGeoContainedIn> :North_America ;
      dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-     dct:created "2025-01-31T02:52:02Z"^^xsd:dateTime .
+     dct:created "2025-01-31T02:52:02Z"^^xsd:dateTime ;
+     rdfs:label "USA" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/United_Kingdom
@@ -6066,14 +6300,16 @@ The contested advertising concerned a sticker on Chiquita's bananas which includ
                          :Nation ;
                 <https://w3id.org/semanticarts/ns/ontology/gist/isGeoContainedIn> :Europe ;
                 dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-                dct:created "2025-01-31T02:52:16Z"^^xsd:dateTime .
+                dct:created "2025-01-31T02:52:16Z"^^xsd:dateTime ;
+                rdfs:label "United Kingdom" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Wunderman_Thompson
 :Wunderman_Thompson rdf:type owl:NamedIndividual ,
                              :Advertizing_Agency ;
                     dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-                    dct:created "2025-02-06T00:53:23Z"^^xsd:dateTime .
+                    dct:created "2025-02-06T00:53:23Z"^^xsd:dateTime ;
+                    rdfs:label "Wunderman Thompson" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/diagram-the-structure-of-obstruction
@@ -6089,7 +6325,8 @@ The contested advertising concerned a sticker on Chiquita's bananas which includ
 <https://www.michaeldebellis.com/climate_obstruction/4Air_LLC> rdf:type owl:NamedIndividual ,
                                                                         :Airline ;
                                                                dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-                                                               dct:created "2025-02-06T03:28:46Z"^^xsd:dateTime .
+                                                               dct:created "2025-02-06T03:28:46Z"^^xsd:dateTime ;
+                                                               rdfs:label "4Air LLC" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Federal_Public_Prosecutor’s_Office_v_Érico_Batista_de_Souza
