@@ -1,0 +1,39 @@
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX gist: <https://w3id.org/semanticarts/ns/ontology/gist/>
+PREFIX env:  <https://www.michaeldebellis.com/climate_obstruction/>
+
+# Some example SPARQL queries that may be useful for debugging
+SELECT * 
+WHERE 	{?person rdf:type gist:Person;
+		          env:last_name ?last;
+				  env:first_name ?first;
+				  env:middle_name ?middle.}
+
+SELECT * 
+WHERE 	{?subject rdf:type gist:Person;
+		          ?predicate ?object.
+		FILTER(!isBlank(?object))}
+
+SELECT * 
+WHERE 	{?subject rdf:type gist:Person.
+		gist:Person ?predicate ?object.
+		FILTER(!isBlank(?o))}
+ 
+SELECT * 
+WHERE {gist:Person ?p ?o.
+       gist:Corporation ?p1 ?o1.
+	   env:Foundation ?p2 ?o2.}
+
+SELECT * 
+WHERE {?property rdf:type owl:ObjectProperty;
+                 rdfs:domain ?dclass;
+                 rdfs:range ?rclass.}
+				 
+SELECT *
+WHERE {?s ?p ?o.
+       ?p rdfs:subPropertyOf env:influence.}
+				 
+				 
