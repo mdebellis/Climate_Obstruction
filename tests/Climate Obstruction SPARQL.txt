@@ -6,34 +6,57 @@ PREFIX gist: <https://w3id.org/semanticarts/ns/ontology/gist/>
 PREFIX env:  <https://www.michaeldebellis.com/climate_obstruction/>
 
 # Some example SPARQL queries that may be useful for debugging
+# List all people (mostly authors at this point) and their names
 SELECT * 
 WHERE 	{?person rdf:type gist:Person;
 		          env:last_name ?last;
 				  env:first_name ?first;
 				  env:middle_name ?middle.}
-
+				  
+# List all People and all their property values.
+# The FILTER is because there can be axioms that aren't meant to be viewed
+# (which is why they are blank nodes) but are still part of the graph
 SELECT * 
 WHERE 	{?subject rdf:type gist:Person;
 		          ?predicate ?object.
 		FILTER(!isBlank(?object))}
 
+# Honestly can't remember why I needed this but I remember it was useful for something
+# Displays all instances of Person as well as all properties of the Person class. 
 SELECT * 
 WHERE 	{?subject rdf:type gist:Person.
 		gist:Person ?predicate ?object.
 		FILTER(!isBlank(?o))}
- 
+
+# Displays various subclasses of Agent and their properties. 
+# Useful for showing connections among Agents
 SELECT * 
 WHERE {gist:Person ?p ?o.
        gist:Corporation ?p1 ?o1.
 	   env:Foundation ?p2 ?o2.}
 
+# Lists all properties with their domain and range
 SELECT * 
 WHERE {?property rdf:type owl:ObjectProperty;
                  rdfs:domain ?dclass;
                  rdfs:range ?rclass.}
 				 
+# This is to replicate one of the figures (figure 1) in the 
+# Environmental Obstruction book. Used Annotation Properties because
+# the nodes in the figure are classes and don't want to use puns			 
 SELECT *
 WHERE {?s ?p ?o.
        ?p rdfs:subPropertyOf env:influence.}
 				 
-				 
+# Check for duplicate entities
+SELECT *
+WHERE {?s1 rdfs:label ?label.
+       ?s2 rdfs:label ?label.
+FILTER(STR(?s1) < STR(?s2))}
+
+# Delete duplicate entities
+DELETE {?s2 ?p ?o.}
+WHERE {?s1 rdfs:label ?label.
+       ?s2 rdfs:label ?label;
+	        ?p ?o.
+FILTER(STR(?s1) < STR(?s2))}
