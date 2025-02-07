@@ -3550,8 +3550,7 @@ We have a range of sanctions to act against the small number of advertisers who 
            dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
            dct:created "2025-01-14T01:03:46Z"^^xsd:dateTime ;
            rdfs:label "Alignment" ;
-           <http://www.w3.org/2004/02/skos/core#definition> """Inconsistent organization in practice
-Claim does not reflect consistent organizational practice""" .
+           <http://www.w3.org/2004/02/skos/core#definition> "There are 4 sub-categories of Alignment Green Washing:  Co-Opted Endorsement,  Dubious certifications and labels, Inconsistent organization in practice and political spin." .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Book
@@ -3777,12 +3776,12 @@ To address concerns of greenwashing, certification schemes need to shift away th
               <http://www.w3.org/2004/02/skos/core#definition> """2.1 Does the claim over-state positive improvements to the environment?
 
 IF YES...−
-IT'S GREENWASHING
+IT'S Empty Claims GREENWASHING
 Organizations can exaggerate the impact of their green practices by overstating their goals or commitments that a) have not been fulfilled; b) based on available information on current trends are unlikely to be achieved; or c) do not lead to any follow-up action with measurable and significant impact. Setting dates far into the future (e.g. decades) without regularly updated interim goals also falls under this category of greenwashing. Several authors associate greenwashing to a decoupling behavior (Siano et al. 2017) which this indicator intends to capture.""" ,
                                                                """2.2 Is the marketing budget disproportionately large compared to the budget allocated for the claim, or when compared to the marketing budget for other products or initiatives that are a higher proportion of the organization's activity?
 
 If yes...−
-IT'S GREENWASHING
+IT'S Empty Claims GREENWASHING
 In 2020, the fossil fuel industry spent $10 million on Facebook ads selling “innovative” climate solutions and visions of a “lower-carbon future” (InfluenceMap, 2021). Although challenging to obtain, information about marketing budget may be crucial for assessing potential greenwash. One source could be the annual data available for the biggest companies' ad budgets (Statista, 2024). This indicator also captures those cases, where the marketing budget behind the claim/campaign is much larger when compared to the marketing of other products/initiatives with a higher proportion of the overall business activity (e.g. an energy company is disproportionately spending on communicating 'green' initiatives that make up a small fraction of its business). The most famous example of this form of greenwashing is ExxonMobil's marketing of biofuels made from algae, where the marketing budget was reportedly $100 million, the actual investment was $350 million, and the project itself was cancelled after it became clear that it would never achieve scale (Westervelt, 2023).""" ,
                                                                "Making claims/policies that either exaggerate achievements, or fail to live up to them" .
 
@@ -3795,12 +3794,21 @@ In 2020, the fossil fuel industry spent $10 million on Facebook ads selling “i
                     rdfs:label "Energy Corporation" .
 
 
+###  https://www.michaeldebellis.com/climate_obstruction/Environmental_Process
+:Environmental_Process rdf:type owl:Class ;
+                       rdfs:subClassOf <https://w3id.org/semanticarts/ns/ontology/gist/Event> ;
+                       dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                       dct:created "2025-02-07T03:00:50Z"^^xsd:dateTime ;
+                       <http://www.w3.org/2004/02/skos/core#definition> "An environmental process is any process that impacts or defines the environment such as Climate Change, the depletion of the ozone layer, and the Carbon cycle" .
+
+
 ###  https://www.michaeldebellis.com/climate_obstruction/False_Communication
 :False_Communication rdf:type owl:Class ;
                      rdfs:subClassOf :Green_Washing ;
                      dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
                      dct:created "2025-01-14T01:03:46Z"^^xsd:dateTime ;
-                     rdfs:label "False Communication" .
+                     rdfs:label "False Communication" ;
+                     <http://www.w3.org/2004/02/skos/core#definition> "There are three sub-categories of False Communication Green Washing: Jargon, Misleading imagery, and Vagueness." .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Falsehoods
@@ -3812,17 +3820,17 @@ In 2020, the fossil fuel industry spent $10 million on Facebook ads selling “i
             <http://www.w3.org/2004/02/skos/core#definition> """4.1 Is the claim based on solutions or justifications that are not supported by scientific consensus?
 
 If yes...−
-IT'S GREENWASHING
+IT'S Falsehoods GREENWASHING
 Claims may fall on a continuum of verifiable support to having little or no proof. To avoid false advertising claims, organizations need to be aware of and comply with relevant statutes and regulations that govern competition and advertising in their jurisdiction and industry. Falsity does not require illegality. This greenwash category is commonly used by organizations to suggest that their preferred solution is also an environmentally responsible one. For example, the fossil fuel industry recently began buying ads that portray natural gas as a green fuel source, when methane is a powerful greenhouse gas, or arguments that decarbonization would make energy unaffordable (Grist, 2021). If there is significant disagreement or doubt over the environmental impacts of certain practices/products/services, the organization should refrain from marketing the message altogether (European Commission, 2021). Whatever the reason for advertising a certain policy/activity/product, a case by case analysis is required to assess whether scientific consensus exists to support the claim.""" ,
                                                              """4.2 Does the claim contain statements that are not based on robust, independent, verifiable and generally recognized evidence?
 
 If yes...−
-IT'S GREENWASHING
+IT'S  Falsehoods GREENWASHING
 Evidence that verify claims should be easily accessible by the public. The documentation for claims needs to be up to date for as long as the claims remain in use in marketing.""" ,
                                                              """4.3. Is the claim based on implementation methodologies that are not clear or transparent, do not have robust metrics or are based on aggregated broader sector data that benefit the organization?
 
 If yes...−
-IT'S GREENWASHING
+IT'S  Falsehoods GREENWASHING
 Inadequate quantification is a common category of greenwashing. For example, natural capital accounting is a controversial methodology that attempts to put a price on nature and ecosystem. The approach has significant conceptual weaknesses and produces figures irrelevant for demonstrating the actual state of or change within the physical environment (e.g. emission cuts). Likewise, communicating on the wrong metrics, e.g., outcome instead of impact, intensity instead of absolute emissions, or using flattering aggregate figures could also fall into this category. For example, salmon farmed in open ocean pens have significant documented negative environmental impacts, but industry actors may use statistics from research on \"aquaculture\" to make environmental claims about the industry because other types of aquaculture, such as farming shellfish and seaweed, have documented positive environmental effects.""" ,
                                                              "The claim cannot be substantiated by accessible supporting information" .
 
@@ -3850,7 +3858,8 @@ Inadequate quantification is a common category of greenwashing. For example, nat
                dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
                dct:created "2025-01-14T00:55:49Z"^^xsd:dateTime ;
                rdfs:isDefinedBy <https://cssn.org/special-projects/greenwashing-tool/> ;
-               rdfs:label "Green Washing" .
+               rdfs:label "Green Washing" ;
+               <http://www.w3.org/2004/02/skos/core#definition> "The three main categories of Green Washing are Alignment, False Communication, and Impact. Each category has several sub categories." .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Hoax
@@ -3868,7 +3877,8 @@ Inadequate quantification is a common category of greenwashing. For example, nat
         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
         dct:created "2025-01-14T01:03:46Z"^^xsd:dateTime ;
         rdfs:isDefinedBy <https://cssn.org/special-projects/greenwashing-tool/impact/> ;
-        rdfs:label "Impact" .
+        rdfs:label "Impact" ;
+        <http://www.w3.org/2004/02/skos/core#definition> "There are five sub-categories of Impact Green Washing: Empty Claims, Falsehoods, Irrelevant, Not Credible, and Selective Disclosure." .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Inconsistent_organization_in_practice
@@ -3915,12 +3925,12 @@ A growing literature provides mixed evidence regarding the potential for certifi
 If yes...
 
 If yes...−
-IT'S GREENWASHING
+IT'S Irrelevant GREENWASHING
 Claiming that e.g. a product is free of certain substances if such substances are already prohibited by legislation/standard practice of similar organizations is greenwashing as it suggests that the organization is taking unusual environmental steps compared to others, when the same activity is required.""" ,
                                                              """3.2 Is an unrelated issue included in a claim about a particular environmental benefit?
 
 If yes...−
-IT'S GREENWASHING
+IT'S  Irrelevant GREENWASHING
 Not all environmental benefits are related. Positive organizational performance on one issue, such as emissions reduction, cannot \"stand in\" for activity on another issue, such as supporting biodiversity gains. Similarly, acknowledgement of environmental performance in one area, through receipt of awards or certification, cannot absolve an organization for responsibilities elsewhere.""" ,
                                                              "Proclaiming accomplishments that are irrelevant or already required by law/competitors" .
 
@@ -4032,12 +4042,12 @@ While organizations are free to use environmental imagery, the practice can be m
               <http://www.w3.org/2004/02/skos/core#definition> """5.1 Does the claim try to make the public feel positive about a product, service, or policy that is demonstrably dangerous, harmful, or unsafe?
 
 If yes...−
-IT'S GREENWASHING
+IT'S \"Not Credible\" GREENWASHING
 This indicator is intended to capture the green marketing of products/services/policies that are presumed to be dangerous or unsafe such tobacco or herbicides. Dangerous could mean containing substances that are toxic, hazardous to the environment, carcinogenic, mutagenic or toxic for reproduction (CMR), causing endocrine disruption to human health or the environment, persistent, bio-accumulative and toxic (PBT) without explicitly mentioning this fact when publishing the green claim. If expert studies give rise to significant disagreement or doubt over environmental impacts of certain practices/products/services, the organization should refrain from marketing the message altogether (European Commission, 2021). Highly controversial solutions involve the choice of ecologically counter productive practices that do not maintain or enhance the ecological quality. Having a stake in/supporting fossil fuels (including gas, oils sands, and hydraulic fracking), nuclear energy, agro-fuels from primary crops, utilization of bioenergy as transitional technology, intensive industrial agriculture, sustainable aviation fuels, bottom trawling, etc. are just few examples of such controversial practices. Further references to determine when proposed solutions/practices/products are considered questionable by science: IEA's Net Zero by 2050 report (IEA, 2021); Roe et al (2019); EAT-Lancet Commission on Food, Planet, Health (EAT, 2019).""" ,
                                                                """5.2 Is the claim disproportionately small or concerned with minor issues compared with the scale of the environmental impacts associated with the organization/practice?
 
 If yes...−
-IT'S GREENWASHING
+IT'S  \"Not Credible\" GREENWASHING
 This indicator refers to positive environmental activities, products, or achievements that are very modest compared to the scale of the negative environmental harm associated with an industry or organizational practice. For example, in June 2023 the UK Advertising Standards Authority found that ads by Shell Ltd were likely to mislead because the ads gave the overall impression (ASA, 2023e) that a significant proportion of their business comprised of lower-carbon energy products without providing information on the proportion of their overall business model that comprised lower-carbon energy products.""" ,
                                                                "Claim touts environmental friendly attributes of a practice / policy / product that is environmentally harmful or focuses on minor issues" .
 
@@ -4139,17 +4149,17 @@ Source: https://en.wikipedia.org/wiki/Proposition""" .
                       <http://www.w3.org/2004/02/skos/core#definition> """1.1 Does the organization fail to disclose relevant information regarding the environmental claim being made, such as lifecycle or cumulative impacts?
 
 If yes...−
-IT'S GREENWASHING
+IT'S Selective Disclosure GREENWASHING
 For assessing this indicator, it is important to understand whether a) the exact scope of action and b) the limitations or system boundaries are transparently communicated. Even if not all stages of life cycle or not all scopes/cumulative impacts can be assessed for the claim, if boundaries are clearly communicated (what is and what is not assessed) and there is a clear pathway of improving the coverage of scope, that is not a greenwash. Likewise, the claimed product/service should not contribute to any significant negative impacts on the environment nor should result in an undue transfer of such impacts (unless the total net environmental benefit has been significantly improved). Life Cycle Analysis (LCA) is the most often used tool to assess different environmental aspects, although this approach comes with limitations. When assessing a claim related to environmental impacts, the product/service’s impact over its whole life cycle (on and off-site) is relevant. For the organization's impacts, the GRI Standards could provide an extensive list of specific measures. For products, all production steps including (where applicable) extraction through production, use, and postuse need to be included. An LCA should follow internationally accepted standards (e.g. ISO14000 series (ISO 2006)). Claims lead to greenwashing where they reflect only part of the life cycle/impacts and do not make clear which part they refer to thereby creating a misleading impression about the overall impact on the environment.""" ,
                                                                        """1.2 When making a comparison, does the claim provide insufficient information to assess the difference between the claim and alternatives?
 
 If yes...−
-IT'S GREENWASHING
+IT'S Selective Disclosure  GREENWASHING
 Absolute claims need to be supported by a high level of substantiation. Comparative claims such as “greener” “friendlier” \"more sustainable\" can be justified if the advertised product/organization/service provides environmental benefit over that of the organizations’ previous products/services or competitors’ products/services, and the basis of the comparison is clear. Similarly, if the advertised \"better/greener\" products/services only constitute a minority of the same product/service range within the organization creating the impression that it is the dominant type of product/service, this has to be transparently communicated, otherwise it falls under this category of greenwashing.""" ,
                                                                        """1.3 Is a claim of environmental neutrality based on offsetting rather than reduction of direct environmental harm?
 
 If yes...−
-IT'S GREENWASHING
+IT'S Selective Disclosure GREENWASHING
 Claiming biodiversity or carbon neutrality or a reduction of environmental harm based predominantly on offsetting can mislead people to believe that the claimant is doing more to mitigate environmental harm than they are. For many, overuse of offsetting risks justifying the continuation of business-as-usual practices that damage the environment. Decades of experience with offsets have proven that they are unlikely to provide real long-term gains to balance the certain, often irreversible, destruction resulting from certain business activities. Terms such as “climate neutral” or “climate positive” that rely on offsetting will be banned from the EU by 2026 as part of a new regulations on misleading environmental claims. IUCN, a respected global authority on the state of nature and what is needed to safeguard it, concluded that “…evidence is lacking as to the extent to which no net loss (NNL) / net gains (NG) and offset policies are achieving their goals or contributing to better biodiversity outcomes in the jurisdictions where they exist.” (IUCN, 2014) (NewClimate Institute, 2020). At the same time, well-meaning investments by organizations in environmental protection projects are very much needed and they can be communicated. To this end, NewClimate’s Climate Responsibility approach (NewClimate Institute, 2020) calls for financially supporting others’ climate action, and disclosing that support within company reports, while not using them to “net-out’’ own impacts.""" ,
                                                                        "Claim is based on a narrow set of attributes and distracts consumers from the organization's greater environmental impact" .
 
@@ -4387,7 +4397,8 @@ On the question of the full life cycle of the products associated with their ser
                         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
                         dct:created "2025-02-06T03:28:13Z"^^xsd:dateTime ;
                         rdfs:isDefinedBy <https://www.asa.org.uk/rulings/4air-llc-a23-1184018-4air-llc.html> ;
-                        rdfs:label "ASA Ruling on 4AIR LLC" .
+                        rdfs:label "ASA Ruling on 4AIR LLC" ;
+                        <http://www.w3.org/2004/02/skos/core#definition> "ASA Ruling on 4AIR LLC is an example of Empty Claims Greenwashing" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/ASA_Ruling_on_Deutsche_Lufthansa_AG_ta_Lufthansa
@@ -4429,7 +4440,8 @@ The website stated that air transport connected people, countries and cultures a
                                                   dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
                                                   dct:created "2025-02-06T03:35:53Z"^^xsd:dateTime ;
                                                   rdfs:isDefinedBy <https://www.asa.org.uk/rulings/deutsche-lufthansa-ag-a22-1169419-deutsche-lufthansa-ag.html> ;
-                                                  rdfs:label "ASA Ruling on Deutsche Lufthansa AG t/a Lufthansa" .
+                                                  rdfs:label "ASA Ruling on Deutsche Lufthansa AG t/a Lufthansa" ;
+                                                  <http://www.w3.org/2004/02/skos/core#definition> "ASA Ruling on Deutsche Lufthansa AG t/a Lufthansa is an example of Empty Claims Greenwashing" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/ASA_Ruling_on_Etihad_Airways
@@ -4495,7 +4507,8 @@ Etihad said they had also achieved a number of awards which evidenced their “l
                               dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
                               dct:created "2025-02-06T02:59:19Z"^^xsd:dateTime ;
                               rdfs:isDefinedBy <https://www.asa.org.uk/rulings/etihad-airways-a22-1174208-etihad-airways.html> ;
-                              rdfs:label "ASA Ruling on Etihad Airways" .
+                              rdfs:label "ASA Ruling on Etihad Airways" ;
+                              <http://www.w3.org/2004/02/skos/core#definition> "ASA Ruling on Etihad Airways is an example of Empty Claims Green Washing" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/ASA_Ruling_on_Repsol_SA
@@ -4655,7 +4668,8 @@ In relation to the TV ad (b) only, Clearcast supported Shell’s response on thi
                             dct:created "2025-02-05T16:51:29Z"^^xsd:dateTime ;
                             rdfs:isDefinedBy <https://www.asa.org.uk/rulings/shell-uk-ltd-g22-1170842-shell-uk-ltd.html> ;
                             rdfs:label "ASA Ruling on Shell UK Ltd t/a Shell" ;
-                            <http://www.w3.org/2004/02/skos/core#definition> "in June 2023 the UK’s Advertising Standards Authority (ASA, 2023e) found that ads by Shell Ltd were likely to mislead because they gave the overall impression that a significant proportion of their business was comprised of lower-carbon energy products without providing information on the proportion of their overall business model that comprised lower-carbon energy products." .
+                            <http://www.w3.org/2004/02/skos/core#definition> "ASA Ruling on Shell UK Ltd t/a Shell is an example of Not Credible Green Washing. The ad agency associated with ASA Ruling on Shell UK Ltd t/a Shell  was Wanderman Thompson" ,
+                                                                             "in June 2023 the UK’s Advertising Standards Authority (ASA, 2023e) found that ads by Shell Ltd were likely to mislead because they gave the overall impression that a significant proportion of their business was comprised of lower-carbon energy products without providing information on the proportion of their overall business model that comprised lower-carbon energy products." .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/A_Sociological_View_of_Efforts_to_Obstruct_Climate_Action
@@ -4880,7 +4894,8 @@ It has been established that, for many years, Exxon’s public affairs strategy 
                                                   dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
                                                   dct:created "2025-02-06T04:56:01Z"^^xsd:dateTime ;
                                                   rdfs:isDefinedBy <https://www.science.org/doi/10.1126/science.abk0063> ;
-                                                  rdfs:label "Assessing ExxonMobil’s global warming projections" .
+                                                  rdfs:label "Assessing ExxonMobil’s global warming projections" ;
+                                                  <http://www.w3.org/2004/02/skos/core#definition> "ExxonMobil’s global warming projections are an example of Falsehoods Green Washing" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Australia
@@ -5841,6 +5856,13 @@ CAP has published a Help Note on the Marketing of Publications: https://www.asa.
                                rdfs:label "Chiquita Brands International" .
 
 
+###  https://www.michaeldebellis.com/climate_obstruction/Climate_Change
+:Climate_Change rdf:type owl:NamedIndividual ,
+                         :Environmental_Process ;
+                dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                dct:created "2025-02-07T03:02:24Z"^^xsd:dateTime .
+
+
 ###  https://www.michaeldebellis.com/climate_obstruction/Climate_Obstruction_in_Europe
 :Climate_Obstruction_in_Europe rdf:type owl:NamedIndividual ,
                                         :Book ;
@@ -6184,7 +6206,8 @@ The contested advertising concerned a sticker on Chiquita's bananas which includ
         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
         dct:created "2025-02-06T00:28:37Z"^^xsd:dateTime ;
         rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Repsol> ;
-        rdfs:label "Repsol" .
+        rdfs:label "Repsol" ;
+        <http://www.w3.org/2004/02/skos/core#definition> "Repsol is an Energy Corporation" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Shell_UK_Ltd
@@ -6193,7 +6216,8 @@ The contested advertising concerned a sticker on Chiquita's bananas which includ
               <https://w3id.org/semanticarts/ns/ontology/gist/isDirectPartOf> :Shell_plc ;
               dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
               dct:created "2025-02-06T00:38:32Z"^^xsd:dateTime ;
-              rdfs:label "Shell UK Ltd" .
+              rdfs:label "Shell UK Ltd" ;
+              <http://www.w3.org/2004/02/skos/core#definition> "Shell UK Ltd is a subsidiary of Shell plc" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Shell_USA
@@ -6212,7 +6236,9 @@ The contested advertising concerned a sticker on Chiquita's bananas which includ
            dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
            dct:created "2025-02-06T00:33:25Z"^^xsd:dateTime ;
            rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Shell_plc> ;
-           rdfs:label "Shell plc" .
+           rdfs:label "Shell plc" ;
+           <http://www.w3.org/2004/02/skos/core#definition> "Shell plc has subsidiaries Shell UK Ltd and Shell USA" ,
+                                                            "Shell plc is an energy corporation" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Smoke_Mirrors_Hot_Air

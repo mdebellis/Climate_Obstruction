@@ -1,0 +1,14 @@
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX gist: <https://w3id.org/semanticarts/ns/ontology/gist/>
+PREFIX env:  <https://www.michaeldebellis.com/climate_obstruction/>
+PREFIX llm: <http://franz.com/ns/allegrograph/8.0.0/llm/> 
+
+SELECT  ?response ?citation
+WHERE {(?response ?score ?citation ?content) llm:askMyDocuments ("What is Green Washing" "co_vec" 4 0.7).}
+
+SELECT  *
+WHERE {(?response ?score ?citation ?content) llm:askMyDocuments ("What is Green Washing" "co_vec" 4 0.7).
+        ?citation ?p ?o.}
