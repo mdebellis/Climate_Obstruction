@@ -1,0 +1,36 @@
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX gist: <https://w3id.org/semanticarts/ns/ontology/gist/>
+PREFIX env:  <https://www.michaeldebellis.com/climate_obstruction/>
+
+
+
+
+# The following queries transform the Annotation Properties to object properties
+# and Generate puns for the classes
+# Use this to visualize the graph in Stardog which can't see Annotation properties
+# Note: these miss a few property values and puns which I added manually
+SELECT *
+WHERE {?agenda rdfs:label "Agenda".       
+?agendas rdfs:subClassOf ?agenda;
+         rdfs:label ?agenda_label.}
+		 
+CONSTRUCT {?agendas rdf:type owl:NamedIndividual}	 
+WHERE {?agenda rdfs:label "Agenda".       
+?agendas rdfs:subClassOf ?agenda;
+         rdfs:label ?agenda_label.}
+		 
+CONSTRUCT {?agents rdf:type owl:NamedIndividual}	 
+WHERE {?agent rdfs:label "Agent".       
+?agents rdfs:subClassOf ?agent;
+         rdfs:label ?agenda_label.}
+
+INSERT {?influence rdf:type owl:ObjectProperty.}	 
+WHERE {?influence rdfs:subPropertyOf env:influence;
+				 rdfs:label ?influence_label.}
+				 
+SELECT *
+wHERE {?influence rdfs:subPropertyOf env:influence.
+        ?influencer ?influence ?influencee.}

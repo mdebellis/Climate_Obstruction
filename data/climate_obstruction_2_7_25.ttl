@@ -1027,6 +1027,13 @@ Note that the unit of measure of the accuracy has to be compatible with the unit
                    dct:created "2025-02-07T22:26:32Z"^^xsd:dateTime .
 
 
+###  https://www.michaeldebellis.com/climate_obstruction/is_published_by
+:is_published_by rdf:type owl:ObjectProperty ;
+                 owl:inverseOf :publishes ;
+                 dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                 dct:created "2025-02-08T05:36:39Z"^^xsd:dateTime .
+
+
 ###  https://www.michaeldebellis.com/climate_obstruction/is_responsible_agent_for
 :is_responsible_agent_for rdf:type owl:ObjectProperty ;
                           rdfs:subPropertyOf :is_participant_in ;
@@ -1135,59 +1142,15 @@ dct:title rdf:type owl:DatatypeProperty ;
                                                                <http://www.w3.org/2004/02/skos/core#scopeNote> "Used for things where the precision of a year is sufficient. Recommended usage is to zero out the hours through microseconds to avoid spurious precision. Note that it is not valid to zero out months and days, so arbitrary values must be included." .
 
 
-###  https://w3id.org/semanticarts/ns/ontology/gist/actualStartDate
-<https://w3id.org/semanticarts/ns/ontology/gist/actualStartDate> rdf:type owl:DatatypeProperty ;
-                                                                 rdfs:subPropertyOf <https://w3id.org/semanticarts/ns/ontology/gist/actualStartDateTime> ;
-                                                                 rdfs:range xsd:dateTime ;
-                                                                 rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore> ;
-                                                                 <http://www.w3.org/2004/02/skos/core#definition> "The actual date that something started, with precision of one day." ;
-                                                                 <http://www.w3.org/2004/02/skos/core#example> "'2021-06-01T00:00:00-6:00'^^xsd:dateTime" ;
-                                                                 <http://www.w3.org/2004/02/skos/core#prefLabel> "actual start date" ;
-                                                                 <http://www.w3.org/2004/02/skos/core#scopeNote> "Used for things where the precision of a date is sufficient, such as most projects, tasks, and the like. Recommended usage is to zero out the hours through microseconds to avoid spurious precision." .
-
-
 ###  https://w3id.org/semanticarts/ns/ontology/gist/actualStartDateTime
 <https://w3id.org/semanticarts/ns/ontology/gist/actualStartDateTime> rdf:type owl:DatatypeProperty ;
                                                                      rdfs:subPropertyOf <https://w3id.org/semanticarts/ns/ontology/gist/startDateTime> ;
                                                                      rdfs:range xsd:dateTime ;
+                                                                     rdfs:comment "Deleted sub properties since date, minute, year can all be expressed in xsd:dateTime and there are no conceivable use cases in this domain where microseconds matter." ;
                                                                      rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore> ;
                                                                      <http://www.w3.org/2004/02/skos/core#definition> "The actual date and time that something started, with no implied precision." ;
                                                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "actual start date time" ;
                                                                      <http://www.w3.org/2004/02/skos/core#scopeNote> "This is an abstraction over the various precisions of actual start time, and is not expected to be asserted directly. Values of predicates with different precisions can be compared since they are all formally xsd:datetimes." .
-
-
-###  https://w3id.org/semanticarts/ns/ontology/gist/actualStartMicrosecond
-<https://w3id.org/semanticarts/ns/ontology/gist/actualStartMicrosecond> rdf:type owl:DatatypeProperty ;
-                                                                        rdfs:subPropertyOf <https://w3id.org/semanticarts/ns/ontology/gist/actualStartDateTime> ;
-                                                                        rdfs:range xsd:dateTime ;
-                                                                        rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore> ;
-                                                                        <http://www.w3.org/2004/02/skos/core#definition> "The actual time that something started, expressed as a system time used for timestamps." ;
-                                                                        <http://www.w3.org/2004/02/skos/core#example> "'2021-06-01T08:03:27.12324-6:00'^^xsd:dateTime" ;
-                                                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "actual start microsecond" ;
-                                                                        <http://www.w3.org/2004/02/skos/core#scopeNote> "A system time will be as precise as the system can supply, typically at least milliseconds, sometimes microseconds. The convention for timestamps, such as recording a transaction, is to specify just the end point; the start time is rarely needed. This property is defined for the cases when you do need to capture the runtime of a system process, and is then used in conjunction with gist:actualEndMicrosecond." .
-
-
-###  https://w3id.org/semanticarts/ns/ontology/gist/actualStartMinute
-<https://w3id.org/semanticarts/ns/ontology/gist/actualStartMinute> rdf:type owl:DatatypeProperty ;
-                                                                   rdfs:subPropertyOf <https://w3id.org/semanticarts/ns/ontology/gist/actualStartDateTime> ;
-                                                                   rdfs:range xsd:dateTime ;
-                                                                   rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore> ;
-                                                                   <http://www.w3.org/2004/02/skos/core#definition> "The actual date and time that something started, with precision of one minute." ;
-                                                                   <http://www.w3.org/2004/02/skos/core#example> "'2021-06-01T08:32:00-6:00'^^xsd:dateTime" ;
-                                                                   <http://www.w3.org/2004/02/skos/core#prefLabel> "actual start minute" ;
-                                                                   <http://www.w3.org/2004/02/skos/core#scopeNote> "Used for things like meetings and time card entries, where the hour and minute are important. Recommended usage is to zero out the seconds and microseconds to avoid spurious precision." .
-
-
-###  https://w3id.org/semanticarts/ns/ontology/gist/actualStartYear
-<https://w3id.org/semanticarts/ns/ontology/gist/actualStartYear> rdf:type owl:DatatypeProperty ;
-                                                                 rdfs:subPropertyOf <https://w3id.org/semanticarts/ns/ontology/gist/actualStartDateTime> ;
-                                                                 rdfs:range xsd:dateTime ;
-                                                                 rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore> ;
-                                                                 <http://www.w3.org/2004/02/skos/core#definition> "The actual date that something started, with precision of one year." ;
-                                                                 <http://www.w3.org/2004/02/skos/core#example> "'2021-01-01T00:00:00-6:00'^^xsd:dateTime" ,
-                                                                                                               "The tenure of the current chairman of the board began in 2021." ;
-                                                                 <http://www.w3.org/2004/02/skos/core#prefLabel> "actual start year" ;
-                                                                 <http://www.w3.org/2004/02/skos/core#scopeNote> "Used for things where the precision of a year is sufficient. Recommended usage is to zero out the hours through microseconds to avoid spurious precision. Note that it is not valid to zero out months and days, so arbitrary values must be included." .
 
 
 ###  https://w3id.org/semanticarts/ns/ontology/gist/atDateTime
@@ -1712,49 +1675,16 @@ The conventions for precision that are repeated in each property name are as fol
                                                                 <http://www.w3.org/2004/02/skos/core#scopeNote> "Used for anything with a planned end date where precision of one year is sufficient. Typically a planned date is in the future when first captured, but when tasks run late, we leave the plan where it was and compare it to the actual. Recommended usage is to zero out the hours through microseconds to avoid spurious precision. Note that it is not valid to zero out months and days, so arbitrary values must be included." .
 
 
-###  https://w3id.org/semanticarts/ns/ontology/gist/plannedStartDate
-<https://w3id.org/semanticarts/ns/ontology/gist/plannedStartDate> rdf:type owl:DatatypeProperty ;
-                                                                  rdfs:subPropertyOf <https://w3id.org/semanticarts/ns/ontology/gist/plannedStartDateTime> ;
-                                                                  rdfs:range xsd:dateTime ;
-                                                                  rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore> ;
-                                                                  <http://www.w3.org/2004/02/skos/core#definition> "The date that something is or was planned to start, with precision of one day." ;
-                                                                  <http://www.w3.org/2004/02/skos/core#example> "'2021-06-01T00:00:00-6:00'^^xsd:dateTime" ;
-                                                                  <http://www.w3.org/2004/02/skos/core#prefLabel> "planned start date" ;
-                                                                  <http://www.w3.org/2004/02/skos/core#scopeNote> "Used for anything with a planned start date, such as when a lease will start, when a configuration becomes available, etc. Typically a planned date is in the future when first captured, but when tasks run late, we leave the plan where it was and compare it to the actual. Recommended usage is to zero out the hours through microseconds to avoid spurious precision." .
-
-
 ###  https://w3id.org/semanticarts/ns/ontology/gist/plannedStartDateTime
 <https://w3id.org/semanticarts/ns/ontology/gist/plannedStartDateTime> rdf:type owl:DatatypeProperty ;
                                                                       rdfs:subPropertyOf <https://w3id.org/semanticarts/ns/ontology/gist/startDateTime> ;
                                                                       rdfs:range xsd:dateTime ;
+                                                                      rdfs:comment "Deleted sub properties since date, minute, year can all be expressed in xsd:dateTime" ;
                                                                       rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore> ;
                                                                       <http://www.w3.org/2004/02/skos/core#definition> "The date and time that something is or was planned to start, with no implied precision." ;
                                                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "planned start date time" ;
                                                                       <http://www.w3.org/2004/02/skos/core#scopeNote> "This is an abstraction over the various precisions of planned start time, and is not expected to be asserted directly. Values of predicates with different precisions can be compared since they are all formally xsd:datetimes." ,
                                                                                                                       "This property, unlike gist:actualStartDateTime, does not have a subproperty for microsecond precision, because planned times typically are not expressed at that level of granularity. Typically a planned date is in the future when first captured, but when tasks run late, we leave the plan where it was and compare it to the actual." .
-
-
-###  https://w3id.org/semanticarts/ns/ontology/gist/plannedStartMinute
-<https://w3id.org/semanticarts/ns/ontology/gist/plannedStartMinute> rdf:type owl:DatatypeProperty ;
-                                                                    rdfs:subPropertyOf <https://w3id.org/semanticarts/ns/ontology/gist/plannedStartDateTime> ;
-                                                                    rdfs:range xsd:dateTime ;
-                                                                    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore> ;
-                                                                    <http://www.w3.org/2004/02/skos/core#definition> "The date and time that something is or was planned to start, with precision of one minute." ;
-                                                                    <http://www.w3.org/2004/02/skos/core#example> "'2021-06-01T08:32:00-6:00'^^xsd:dateTime" ;
-                                                                    <http://www.w3.org/2004/02/skos/core#prefLabel> "planned start minute" ;
-                                                                    <http://www.w3.org/2004/02/skos/core#scopeNote> "Used for things like meetings and time card entries, where the hour and minute are important. Typically a planned date is in the future when first captured, but when tasks run late, we leave the plan where it was and compare it to the actual. Recommended usage is to zero out the seconds and microseconds to avoid spurious precision." .
-
-
-###  https://w3id.org/semanticarts/ns/ontology/gist/plannedStartYear
-<https://w3id.org/semanticarts/ns/ontology/gist/plannedStartYear> rdf:type owl:DatatypeProperty ;
-                                                                  rdfs:subPropertyOf <https://w3id.org/semanticarts/ns/ontology/gist/plannedStartDateTime> ;
-                                                                  rdfs:range xsd:dateTime ;
-                                                                  rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore> ;
-                                                                  <http://www.w3.org/2004/02/skos/core#definition> "The date that something is or was planned to start, with precision of one year." ;
-                                                                  <http://www.w3.org/2004/02/skos/core#example> "'2021-01-01T00:00:00-6:00'^^xsd:dateTime" ,
-                                                                                                                "The automobile manufacturer announced that its full line-up will include only electric cars starting in 2035." ;
-                                                                  <http://www.w3.org/2004/02/skos/core#prefLabel> "planned start year" ;
-                                                                  <http://www.w3.org/2004/02/skos/core#scopeNote> "Used for anything with a planned start date where precision of one year is sufficient. Typically a planned date is in the future when first captured, but when tasks run late, we leave the plan where it was and compare it to the actual. Recommended usage is to zero out the hours through microseconds to avoid spurious precision. Note that it is not valid to zero out months and days, so arbitrary values must be included." .
 
 
 ###  https://w3id.org/semanticarts/ns/ontology/gist/sequence
@@ -3182,11 +3112,11 @@ The conventions for precision that are repeated in each property name are as fol
 
 ###  https://w3id.org/semanticarts/ns/ontology/gist/Project
 <https://w3id.org/semanticarts/ns/ontology/gist/Project> rdf:type owl:Class ;
-                                                         owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/semanticarts/ns/ontology/gist/Task>
+                                                         owl:equivalentClass [ owl:intersectionOf ( :Task
                                                                                                     [ rdf:type owl:Restriction ;
                                                                                                       owl:onProperty [ owl:inverseOf <https://w3id.org/semanticarts/ns/ontology/gist/isPartOf>
                                                                                                                      ] ;
-                                                                                                      owl:someValuesFrom <https://w3id.org/semanticarts/ns/ontology/gist/Task>
+                                                                                                      owl:someValuesFrom :Task
                                                                                                     ]
                                                                                                   ) ;
                                                                                rdf:type owl:Class
@@ -3266,7 +3196,7 @@ The conventions for precision that are repeated in each property name are as fol
 ###  https://w3id.org/semanticarts/ns/ontology/gist/ScheduledTask
 <https://w3id.org/semanticarts/ns/ontology/gist/ScheduledTask> rdf:type owl:Class ;
                                                                owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/semanticarts/ns/ontology/gist/ScheduledEvent>
-                                                                                                          <https://w3id.org/semanticarts/ns/ontology/gist/Task>
+                                                                                                          :Task
                                                                                                         ) ;
                                                                                      rdf:type owl:Class
                                                                                    ] ;
@@ -3363,16 +3293,6 @@ The conventions for precision that are repeated in each property name are as fol
                                                      <http://www.w3.org/2004/02/skos/core#definition> "A term in a folksonomy used to categorize things. Tags can be made up on the fly by users." ;
                                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Tag" ;
                                                      <http://www.w3.org/2004/02/skos/core#scopeNote> "Whether to use gist:containedText or gist:uniqueText on tags is an implementation decision." .
-
-
-###  https://w3id.org/semanticarts/ns/ontology/gist/Task
-<https://w3id.org/semanticarts/ns/ontology/gist/Task> rdf:type owl:Class ;
-                                                      rdfs:subClassOf :Intentional_Event ;
-                                                      rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore> ;
-                                                      <http://www.w3.org/2004/02/skos/core#definition> "A piece of work that is either proposed, planned, scheduled, underway, or completed." ;
-                                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Task" ;
-                                                      <http://www.w3.org/2004/02/skos/core#scopeNote> "Something that could potentially be executed, which is merely described but not proposed in any specific way, such as a business process for onboarding a new employee, or the steps in a recipe for making polyethylene from ethylene, is not a task but rather a task template." ,
-                                                                                                      "Use the property isBasedOn to link a Task back to the TaskTemplate." .
 
 
 ###  https://w3id.org/semanticarts/ns/ontology/gist/TaskTemplate
@@ -3889,12 +3809,12 @@ In 2020, the fossil fuel industry spent $10 million on Facebook ads selling “i
                     rdfs:label "Energy Corporation" .
 
 
-###  https://www.michaeldebellis.com/climate_obstruction/Environmental_Process
-:Environmental_Process rdf:type owl:Class ;
-                       rdfs:subClassOf <https://w3id.org/semanticarts/ns/ontology/gist/Event> ;
-                       dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-                       dct:created "2025-02-07T03:00:50Z"^^xsd:dateTime ;
-                       <http://www.w3.org/2004/02/skos/core#definition> "An environmental process is any process that impacts or defines the environment such as Climate Change, the depletion of the ozone layer, and the Carbon cycle" .
+###  https://www.michaeldebellis.com/climate_obstruction/Environmental_Event
+:Environmental_Event rdf:type owl:Class ;
+                     rdfs:subClassOf <https://w3id.org/semanticarts/ns/ontology/gist/Event> ;
+                     dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                     dct:created "2025-02-07T03:00:50Z"^^xsd:dateTime ;
+                     <http://www.w3.org/2004/02/skos/core#definition> "An environmental process is any process that impacts or defines the environment such as Climate Change, the depletion of the ozone layer, and the Carbon cycle" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/False_Communication
@@ -4324,6 +4244,16 @@ Claiming biodiversity or carbon neutrality or a reduction of environmental harm 
         dct:created "2025-01-29T22:17:06Z"^^xsd:dateTime ;
         rdfs:comment "Will add more status values based on data" ;
         rdfs:label "Status" .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/Task
+:Task rdf:type owl:Class ;
+      rdfs:subClassOf :Intentional_Event ;
+      rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore> ;
+      <http://www.w3.org/2004/02/skos/core#definition> "A piece of work that is either proposed, planned, scheduled, underway, or completed." ;
+      <http://www.w3.org/2004/02/skos/core#prefLabel> "Task" ;
+      <http://www.w3.org/2004/02/skos/core#scopeNote> "Something that could potentially be executed, which is merely described but not proposed in any specific way, such as a business process for onboarding a new employee, or the steps in a recipe for making polyethylene from ethylene, is not a task but rather a task template." ,
+                                                      "Use the property isBasedOn to link a Task back to the TaskTemplate." .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Think_Tank
@@ -5106,6 +5036,17 @@ Additionally, BEUC, the European Consumer Organization, has filed a complaint ag
                                                   dct:created "2025-02-06T03:20:27Z"^^xsd:dateTime ;
                                                   rdfs:isDefinedBy <https://www.esgtoday.com/austrian-airlines-found-guilty-in-greenwashing-over-carbon-neutral-flight-claims/> ;
                                                   rdfs:label "Austrian Airlines Found Guilty in Greenwashing Case over Carbon Neutral Flight Claims" .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/Avoiding_a_Climate_Lockdown
+:Avoiding_a_Climate_Lockdown rdf:type owl:NamedIndividual ,
+                                      :Web_Page ;
+                             :has_author :Mariana_Mazzucato ;
+                             :is_published_by :Project_Syndicate ;
+                             dct:abstract "Mazzucato argued for a “green economic transformation” and a “radical overhaul” of energy, warning of the steps that may be necessary if this agenda fails, such as limits on car use, meat consumption and extreme energy-saving measures. She also connected the current climate, economic and public health crises, linking pandemics like COVID-19 to environmental degradation and social injustice. Her argument did not celebrate the idea of climaterelated lockdowns, but rather laid out the policies needed to avoid them." ;
+                             dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                             dct:created "2025-02-08T05:32:48Z"^^xsd:dateTime ;
+                             rdfs:isDefinedBy <https://www.project-syndicate.org/commentary/radical-green-overhaul-to-avoid-climate-lockdown-by-mariana-mazzucato-2020-09?barrier=accesspaylog> .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Avoiding_cultural_trauma_climate_change_and_social_inertia
@@ -6028,7 +5969,7 @@ CAP has published a Help Note on the Marketing of Publications: https://www.asa.
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Climate_Change
 :Climate_Change rdf:type owl:NamedIndividual ,
-                         :Environmental_Process ;
+                         :Environmental_Event ;
                 dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
                 dct:created "2025-02-07T03:02:24Z"^^xsd:dateTime .
 
@@ -6371,10 +6312,33 @@ Climate Social Science Network (CSSN). His current research focuses
 on social drivers of action and inaction on climate change""" .
 
 
+###  https://www.michaeldebellis.com/climate_obstruction/Mariana_Mazzucato
+:Mariana_Mazzucato rdf:type owl:NamedIndividual ,
+                            <https://w3id.org/semanticarts/ns/ontology/gist/Person> ;
+                   dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                   dct:created "2025-02-08T05:33:30Z"^^xsd:dateTime .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/Market_Watch
+:Market_Watch rdf:type owl:NamedIndividual ,
+                       :Media_Corporation ;
+              dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+              dct:created "2025-02-08T05:47:02Z"^^xsd:dateTime .
+
+
 ###  https://www.michaeldebellis.com/climate_obstruction/Milloy_Tweet
 :Milloy_Tweet rdf:type owl:NamedIndividual ,
                        :Tweet ;
               :has_web_link_to :The_Guardian_view_on_the_climate_and_coronavirus_global_warnings ;
+              <https://w3id.org/semanticarts/ns/ontology/gist/containedText> """How climate bedwetters hope to translate the #coronavirus lockdown into a climate lockdown:
+
+\"What was once impossible (socialist, reckless) now turns out not to be, at all.\"
+
+All their words.https://t.co/J3x8evz1p6
+
+— Steve Milloy (@JunkScience) April 13, 2020
+
+https://www.theguardian.com/commentisfree/2020/apr/12/the-guardian-view-on-the-climate-and-coronavirus-global-warnings?CMP=share_btn_tw""" ;
               dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
               dct:created "2025-02-07T22:57:30Z"^^xsd:dateTime ;
               <http://www.w3.org/2004/02/skos/core#definition> "Steve Milloy Tweet that links to Guardian Article: \"The Guardian view on the climate and coroanavirus: global warnings. Commenting: “how climate bedwetters hope to translate the #coronavirus lockdown into a climate lockdown”." .
@@ -6439,6 +6403,30 @@ on social drivers of action and inaction on climate change""" .
          dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
          dct:created "2025-01-29T23:52:21Z"^^xsd:dateTime ;
          rdfs:label "Pending" .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/Project_Syndicate
+:Project_Syndicate rdf:type owl:NamedIndividual ,
+                            :Media_Outlet ;
+                   <https://w3id.org/semanticarts/ns/ontology/gist/containedText> """OUR CONTRIBUTORS
+Only Project Syndicate can consistently tap the most insightful contributors – from Africa, Asia, Europe, and the Americas – to provide trenchant, authoritative analysis of the issues commanding global attention and promote viable solutions to the world’s urgent problems. As a result, we often play an agenda-shaping role for other news organizations.
+
+Project Syndicate’s contributors are prominent politicians, policymakers, scholars, business leaders, and civic activists from six continents. They include Nobel laureates, heads of state, grassroots campaigners, and academic specialists in fields ranging from economics and politics to the natural sciences and cultural studies – all of whom bring to bear the credibility, diversity, and high-quality analysis that readers demand.
+
+Our ability to reach readers worldwide is unparalleled. In 2024, Project Syndicate commentaries were published a total of 16,904 times around the world.""" ,
+                                                                                  """Our Reach
+Because no publication is turned down solely on the basis of its ability to pay, Project Syndicate has cultivated strong partnerships with the most respected news media in every country in which it operates. This, in turn, has made Project Syndicate an even more attractive outlet for the world’s most eminent authors, for whom a truly global audience simply is not available elsewhere.""" ;
+                   dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                   dct:created "2025-02-08T04:02:46Z"^^xsd:dateTime ;
+                   rdfs:isDefinedBy <https://www.project-syndicate.org/> ;
+                   <http://www.w3.org/2004/02/skos/core#definition> """We believe the entire world deserves access to its greatest minds. Our mission is to reach those without this opportunity.
+
+Project Syndicate produces and delivers original, high-quality commentaries to a global audience. Featuring exclusive contributions by prominent political leaders, policymakers, scholars, business leaders, and civic activists from around the world, we provide news media and their readers with cutting-edge analysis and insight, regardless of ability to pay. Our membership includes over 500 media outlets – more than half of which receive our commentaries for free or at subsidized rates – in 150 countries.
+
+How we do it
+News organizations in developed countries provide financial contributions for the rights to Project Syndicate commentaries, which enables us to offer these rights for free, or at subsidized rates, to newspapers and other media in the developing world.
+
+Indeed, because our highest priority is to disseminate authors’ commentaries as widely as possible, we provide translations free of charge, enabling editors worldwide to publish them simultaneously. We currently translate authors’ commentaries from English into 13 languages (Arabic, Chinese, Dutch, French, German, Indonesian, Italian, Norwegian, Polish, Portuguese, Russian, Slovak, and Spanish). Member publications translate into 50 additional languages.""" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/RCC_Ruling_on_Chiquita_climate_neutral_bananas
@@ -6633,6 +6621,14 @@ The contested advertising concerned a sticker on Chiquita's bananas which includ
                 dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
                 dct:created "2025-01-31T02:52:16Z"^^xsd:dateTime ;
                 rdfs:label "United Kingdom" .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/We_need_to_act_boldly_to_avoid_economy-wide_lockdowns_to_halt_climate_change
+:We_need_to_act_boldly_to_avoid_economy-wide_lockdowns_to_halt_climate_change rdf:type owl:NamedIndividual ,
+                                                                                       :Web_Page ;
+                                                                              dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                                                                              dct:created "2025-02-08T05:48:59Z"^^xsd:dateTime ;
+                                                                              rdfs:label "Opinion: We need to act boldly now if we are to avoid economy-wide lockdowns to halt climate change" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Wunderman_Thompson

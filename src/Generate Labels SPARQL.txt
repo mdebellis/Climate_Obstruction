@@ -46,6 +46,14 @@ WHERE {?p a owl:DatatypeProperty.
         BIND(STRAFTER(STR(?p), 'climate_obstruction/') as ?name)
 	BIND(REPLACE(?name,"_", " " ) as ?lblname)		
 	OPTIONAL{?p rdfs:label ?elbl.}
+	FILTER(?p != owl:topDataProperty && !BOUND(?elbl) && ?lblname != "")}
+
+#Create labels for all Annotation Properties
+CONSTRUCT {?p rdfs:label ?lblname.}
+WHERE {?p a owl:AnnotationProperty.
+        BIND(STRAFTER(STR(?p), 'climate_obstruction/') as ?name)
+	BIND(REPLACE(?name,"_", " " ) as ?lblname)		
+	OPTIONAL{?p rdfs:label ?elbl.}
 	FILTER(?p != owl:topDataProperty && !BOUND(?elbl) && ?lblname != "")}	
 
 
