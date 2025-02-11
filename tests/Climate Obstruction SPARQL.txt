@@ -3,15 +3,20 @@ PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX gist: <https://w3id.org/semanticarts/ns/ontology/gist/>
-PREFIX env:  <https://www.michaeldebellis.com/climate_obstruction/>
+PREFIX co:  <https://www.michaeldebellis.com/climate_obstruction/>
+
+SELECT * 
+WHERE {co:The_Climate_Lockdown_Conspiracy_Theory co:has_direct_part ?sub_task.
+OPTIONAL {?sub_task co:has_direct_part ?sub-sub_task.}}
+
 
 # Some example SPARQL queries that may be useful for debugging
 # List all people (mostly authors at this point) and their names
 SELECT * 
 WHERE 	{?person rdf:type gist:Person;
-		          env:last_name ?last;
-				  env:first_name ?first;
-				  env:middle_name ?middle.}
+		          co:last_name ?last;
+				  co:first_name ?first;
+				  co:middle_name ?middle.}
 				  
 # List all People and all their property values.
 # The FILTER is because there can be axioms that aren't meant to be viewed
@@ -33,7 +38,7 @@ WHERE 	{?subject rdf:type gist:Person.
 SELECT * 
 WHERE {gist:Person ?p ?o.
        gist:Corporation ?p1 ?o1.
-	   env:Foundation ?p2 ?o2.}
+	   co:Foundation ?p2 ?o2.}
 
 # Lists all properties with their domain and range
 SELECT * 
@@ -46,7 +51,7 @@ WHERE {?property rdf:type owl:ObjectProperty;
 # the nodes in the figure are classes and don't want to use puns			 
 SELECT *
 WHERE {?s ?p ?o.
-       ?p rdfs:subPropertyOf env:influence.}
+       ?p rdfs:subPropertyOf co:influence.}
 				 
 # Check for duplicate entities
 SELECT *
@@ -61,27 +66,5 @@ WHERE {?s1 rdfs:label ?label.
 	        ?p ?o.
 FILTER(STR(?s1) < STR(?s2))}
 
-# Generate puns 
-SELECT *
-WHERE {?agenda rdfs:label "Agenda".       
-?agendas rdfs:subClassOf ?agenda;
-         rdfs:label ?agenda_label.}
-		 
-CONSTRUCT {?agendas rdf:type owl:NamedIndividual}	 
-WHERE {?agenda rdfs:label "Agenda".       
-?agendas rdfs:subClassOf ?agenda;
-         rdfs:label ?agenda_label.}
-		 
-CONSTRUCT {?agents rdf:type owl:NamedIndividual}	 
-WHERE {?agent rdfs:label "Agent".       
-?agents rdfs:subClassOf ?agent;
-         rdfs:label ?agenda_label.}
 
-INSERT {?influence rdf:type owl:ObjectProperty.}	 
-WHERE {?influence rdfs:subPropertyOf env:influence;
-				 rdfs:label ?influence_label.}
-				 
-SELECT *
-wHERE {?influence rdfs:subPropertyOf env:influence.
-        ?influencer ?influence ?influencee.}
 		

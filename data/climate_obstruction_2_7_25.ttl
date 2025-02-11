@@ -790,8 +790,9 @@ Note that the unit of measure of the accuracy has to be compatible with the unit
 
 
 ###  https://w3id.org/semanticarts/ns/ontology/gist/precedes
-<https://w3id.org/semanticarts/ns/ontology/gist/precedes> rdf:type owl:ObjectProperty ,
-                                                                   owl:TransitiveProperty ;
+<https://w3id.org/semanticarts/ns/ontology/gist/precedes> rdf:type owl:ObjectProperty ;
+                                                          owl:inverseOf :succeeds ;
+                                                          rdf:type owl:TransitiveProperty ;
                                                           rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore> ;
                                                           <http://www.w3.org/2004/02/skos/core#definition> "A generic ordering relation indicating that the subject comes before the object." ;
                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "precedes" ;
@@ -803,6 +804,7 @@ Note that the unit of measure of the accuracy has to be compatible with the unit
 ###  https://w3id.org/semanticarts/ns/ontology/gist/precedesDirectly
 <https://w3id.org/semanticarts/ns/ontology/gist/precedesDirectly> rdf:type owl:ObjectProperty ;
                                                                   rdfs:subPropertyOf <https://w3id.org/semanticarts/ns/ontology/gist/precedes> ;
+                                                                  owl:inverseOf :succeeds_directly ;
                                                                   rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore> ;
                                                                   <http://www.w3.org/2004/02/skos/core#definition> "A generic ordering relation indicating that the subject comes immediately before the object." ;
                                                                   <http://www.w3.org/2004/02/skos/core#prefLabel> "precedes directly" ;
@@ -1051,11 +1053,23 @@ Note that the unit of measure of the accuracy has to be compatible with the unit
 
 ###  https://www.michaeldebellis.com/climate_obstruction/publishes
 :publishes rdf:type owl:ObjectProperty ;
-           rdfs:domain :Communication ;
            rdfs:range <https://w3id.org/semanticarts/ns/ontology/gist/Content> ;
            dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
            dct:created "2025-02-07T21:35:42Z"^^xsd:dateTime ;
            <http://www.w3.org/2004/02/skos/core#definition> "Relation between a communication event and the content (article, video, report, etc.) that is published due to the event." .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/succeeds
+:succeeds rdf:type owl:ObjectProperty ;
+          dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+          dct:created "2025-02-11T01:20:39Z"^^xsd:dateTime .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/succeeds_directly
+:succeeds_directly rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :succeeds ;
+                   dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                   dct:created "2025-02-11T01:20:53Z"^^xsd:dateTime .
 
 
 #################################################################
@@ -3701,6 +3715,14 @@ This indicator assesses an organization B and requires that a) there is an organ
                                            :Public_Agenda .
 
 
+###  https://www.michaeldebellis.com/climate_obstruction/Conspiracy_Theory
+:Conspiracy_Theory rdf:type owl:Class ;
+                   rdfs:subClassOf :Belief ;
+                   dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                   dct:created "2025-02-10T19:17:10Z"^^xsd:dateTime ;
+                   <http://www.w3.org/2004/02/skos/core#definition> "The definition of what makes a conspiracy theory is not straight forward. In the political and social world it is not uncommon for hypotheses (especially those that go outside what the main stream media considers acceptable topics and points of view) to be dismissed as conspiracy theories which then turn out to be true. E.g., that the US provoked the Gulf of Tonkin incident, that the incident was part of a planned campaign designed to provoke the North Vietnamese into an action that could be used to justify increased US involvement in the Vietnam war was once branded a conspiracy theory, however, the publication of the Pentagon Papers clearly demonstrated that this was indeed the truth. With that caveat in mind our definition is 1) any theory or hypothesis that has no evidence from reliable (non-partisan) sources,2) that contradicts accepted science, or published literature from reliable sources and 3) that furhters a specific political agenda. If a theory meets all 3 criteria it is a Conspiracy Theory" .
+
+
 ###  https://www.michaeldebellis.com/climate_obstruction/Continent
 :Continent rdf:type owl:Class ;
            rdfs:subClassOf <https://w3id.org/semanticarts/ns/ontology/gist/GeoRegion> ;
@@ -3883,15 +3905,6 @@ Inadequate quantification is a common category of greenwashing. For example, nat
        dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
        dct:created "2025-02-07T16:06:52Z"^^xsd:dateTime ;
        <http://www.w3.org/2004/02/skos/core#definition> "A group is a collection of two or more Agents. It includes informal collections of Agents as well as organized groups (Organizations such as political parties). E.g., Conservative Americans are a group. A mob that forms during a riot is a Group. Scientists are a Group. Women in America is a Group." .
-
-
-###  https://www.michaeldebellis.com/climate_obstruction/Hoax
-:Hoax rdf:type owl:Class ;
-      rdfs:subClassOf :Communication ;
-      dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-      dct:created "2025-02-04T23:33:45Z"^^xsd:dateTime ;
-      rdfs:label "Hoax" ;
-      <http://www.w3.org/2004/02/skos/core#definition> "A hoax is a false proposition that has been created by some Agent in pursuit of some goal." .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Impact
@@ -4130,6 +4143,15 @@ If yes...−
 IT'S GREENWASHING via Political Spin.
 Critical studies of environmental sustainability initiatives point to the need to evaluate the influence of (industry or other) groups on organizations making green claims. Social network analyses (e.g., Brulle 2019; Farrell 2015; Pattberg 2007) can be used to determine the policy position, funding contributions, or political involvement of think tanks, trade associations or other groups. Affiliation also refers to profiting from, investing in, or collaborating with other organizations. For instance, according to Client Earth's Greenwashing file, Chevron (which makes claims about reducing carbon intensity and investing in renewable and “low-carbon” energies) is a member of a number of trade associations and lobby groups which have sought to block a transition away from fossil fuels (the American Petroleum Institute, the American Fuel and Petrochemical Manufacturers and the American Legislative Exchange Council). Studies show how these associations have been responsible over recent years for obstructive lobbying practices against urgently needed climate policies and laws, and there are concerns that Chevron—like many other fossil fuel companies—continues to fight climate measures, including behind closed doors.""" ,
                                                                  "Claim boasts of green commitments, while the same organization lobbies against environmental laws" .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/Promote_Disinformation
+:Promote_Disinformation rdf:type owl:Class ;
+                        rdfs:subClassOf :Communication ;
+                        dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                        dct:created "2025-02-04T23:33:45Z"^^xsd:dateTime ;
+                        rdfs:label "Promote Disinformation" ;
+                        <http://www.w3.org/2004/02/skos/core#definition> "A hoax is a false proposition that has been created by some Agent in pursuit of some goal." .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Proposition
@@ -6012,6 +6034,15 @@ CAP has published a Help Note on the Marketing of Publications: https://www.asa.
 Climate Depot was launched in April of 2009 as a special project of CFACT, The Committee For a Constructive Tomorrow, a Washington, D.C.-based, freedom-oriented, public policy organization that has been working since 1985 to provide facts and analysis that allow people to make informed choices on these crucial issues. Vast sums are being expended, major economic transformations proposed, and we are regularly asked to curtail individual freedom, all in the name of global warming, climate change, climate crisis, or whatever they come up with next. The dire pronouncements we hear daily, the routine falsehoods and exaggerations, and the questionable, yet undeniably expensive, “solutions” set forth, cry out for critical examination. Climate Depot effectively ensures that examination takes place for all to see. We need to make informed, rational decisions about what drives the climate, whether and what actions are advisable, how effective they would be, and whether the benefits outweigh the costs. Climate Depot fearlessly and diligently provides all sides when we consider a public policy issue. We stand squarely behind your right to speak and know. To those who seek to cut off debate, bury the facts, and censor inconvenient viewpoints we ask, “What are you afraid of?”""" .
 
 
+###  https://www.michaeldebellis.com/climate_obstruction/Climate_Depot_Publishes_Article_Promoting_Milloy_Tweet
+:Climate_Depot_Publishes_Article_Promoting_Milloy_Tweet rdf:type owl:NamedIndividual ,
+                                                                 :Publish_Article ;
+                                                        <https://w3id.org/semanticarts/ns/ontology/gist/precedesDirectly> :Project_Syndicate_Publishes_Avoiding_Climate_Lockdown ;
+                                                        :publishes :UK_Guardian_activists_hope_Coronavirus_lockdown_becomes_climate_lockdown ;
+                                                        dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                                                        dct:created "2025-02-11T01:12:31Z"^^xsd:dateTime .
+
+
 ###  https://www.michaeldebellis.com/climate_obstruction/Climate_Lockdown_Conspiracy
 :Climate_Lockdown_Conspiracy rdf:type owl:NamedIndividual ,
                                       :Belief ;
@@ -6150,6 +6181,14 @@ The Court, therefore, granted the appeal and ordered that the application be rem
                              :url <https://www.cambridge.org/core/journals/global-sustainability/article/discourses-of-climate-delay/7B11B722E3E3454BB6212378E32985A7> .
 
 
+###  https://www.michaeldebellis.com/climate_obstruction/Engaging_A_Broad_Church
+:Engaging_A_Broad_Church rdf:type owl:NamedIndividual ,
+                                  :Promote_Disinformation ;
+                         <https://w3id.org/semanticarts/ns/ontology/gist/isDirectPartOf> :The_Climate_Lockdown_Conspiracy_Theory ;
+                         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                         dct:created "2025-02-11T01:34:26Z"^^xsd:dateTime .
+
+
 ###  https://www.michaeldebellis.com/climate_obstruction/Etihad_Airways
 :Etihad_Airways rdf:type owl:NamedIndividual ,
                          :Airline ;
@@ -6184,9 +6223,20 @@ The Court, therefore, granted the appeal and ordered that the application be rem
           dct:created "2025-02-07T21:13:25Z"^^xsd:dateTime .
 
 
+###  https://www.michaeldebellis.com/climate_obstruction/Fuel_To_The_Flames
+:Fuel_To_The_Flames rdf:type owl:NamedIndividual ,
+                             :Promote_Disinformation ;
+                    <https://w3id.org/semanticarts/ns/ontology/gist/isDirectPartOf> :The_Climate_Lockdown_Conspiracy_Theory ;
+                    <https://w3id.org/semanticarts/ns/ontology/gist/precedesDirectly> :Engaging_A_Broad_Church ;
+                    dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                    dct:created "2025-02-11T01:32:10Z"^^xsd:dateTime .
+
+
 ###  https://www.michaeldebellis.com/climate_obstruction/Guardian_Publishes_Climate_and_Coronavirus_Article
 :Guardian_Publishes_Climate_and_Coronavirus_Article rdf:type owl:NamedIndividual ,
                                                              :Publish_Article ;
+                                                    <https://w3id.org/semanticarts/ns/ontology/gist/isDirectPartOf> :Trouble_Brewing ;
+                                                    <https://w3id.org/semanticarts/ns/ontology/gist/precedesDirectly> :Milloy_Tweets_Link_to_Guardian_Article ;
                                                     :publishes :The_Guardian_view_on_the_climate_and_coronavirus_global_warnings ;
                                                     <https://w3id.org/semanticarts/ns/ontology/gist/isRecordedAt> "2020-04-12T13:25:00-04:00"^^xsd:dateTime ;
                                                     dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
@@ -6347,6 +6397,8 @@ https://www.theguardian.com/commentisfree/2020/apr/12/the-guardian-view-on-the-c
 ###  https://www.michaeldebellis.com/climate_obstruction/Milloy_Tweets_Link_to_Guardian_Article
 :Milloy_Tweets_Link_to_Guardian_Article rdf:type owl:NamedIndividual ,
                                                  :Publish_Tweet ;
+                                        <https://w3id.org/semanticarts/ns/ontology/gist/isDirectPartOf> :Trouble_Brewing ;
+                                        <https://w3id.org/semanticarts/ns/ontology/gist/precedesDirectly> :Climate_Depot_Publishes_Article_Promoting_Milloy_Tweet ;
                                         :has_responsible_agent :Steve_Milloy ;
                                         :publishes :Milloy_Tweet ;
                                         <https://w3id.org/semanticarts/ns/ontology/gist/isRecordedAt> "2020-04-13T00:00:00-00:00"^^xsd:dateTime ;
@@ -6405,6 +6457,15 @@ https://www.theguardian.com/commentisfree/2020/apr/12/the-guardian-view-on-the-c
          rdfs:label "Pending" .
 
 
+###  https://www.michaeldebellis.com/climate_obstruction/Point_Of_No_Return
+:Point_Of_No_Return rdf:type owl:NamedIndividual ,
+                             :Promote_Disinformation ;
+                    <https://w3id.org/semanticarts/ns/ontology/gist/isDirectPartOf> :The_Climate_Lockdown_Conspiracy_Theory ;
+                    <https://w3id.org/semanticarts/ns/ontology/gist/precedesDirectly> :Slow_Burn ;
+                    dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                    dct:created "2025-02-11T01:28:25Z"^^xsd:dateTime .
+
+
 ###  https://www.michaeldebellis.com/climate_obstruction/Project_Syndicate
 :Project_Syndicate rdf:type owl:NamedIndividual ,
                             :Media_Outlet ;
@@ -6427,6 +6488,17 @@ How we do it
 News organizations in developed countries provide financial contributions for the rights to Project Syndicate commentaries, which enables us to offer these rights for free, or at subsidized rates, to newspapers and other media in the developing world.
 
 Indeed, because our highest priority is to disseminate authors’ commentaries as widely as possible, we provide translations free of charge, enabling editors worldwide to publish them simultaneously. We currently translate authors’ commentaries from English into 13 languages (Arabic, Chinese, Dutch, French, German, Indonesian, Italian, Norwegian, Polish, Portuguese, Russian, Slovak, and Spanish). Member publications translate into 50 additional languages.""" .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/Project_Syndicate_Publishes_Avoiding_Climate_Lockdown
+:Project_Syndicate_Publishes_Avoiding_Climate_Lockdown rdf:type owl:NamedIndividual ,
+                                                                :Publish_Article ;
+                                                       <https://w3id.org/semanticarts/ns/ontology/gist/isDirectPartOf> :Point_Of_No_Return ;
+                                                       :has_responsible_agent :Project_Syndicate ;
+                                                       :publishes :Avoiding_a_Climate_Lockdown ;
+                                                       dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                                                       dct:created "2025-02-11T01:48:54Z"^^xsd:dateTime ;
+                                                       <http://www.w3.org/2004/02/skos/core#definition> "Mazzucato argued for a “green economic transformation” and a “radical overhaul” of energy, warning of the steps that may be necessary if this agenda fails, such as limits on car use, meat consumption and extreme energy-saving measures. She also connected the current climate, economic and public health crises, linking pandemics like COVID-19 to environmental degradation and social injustice. Her argument did not celebrate the idea of climaterelated lockdowns, but rather laid out the policies needed to avoid them." .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/RCC_Ruling_on_Chiquita_climate_neutral_bananas
@@ -6516,6 +6588,16 @@ The contested advertising concerned a sticker on Chiquita's bananas which includ
                                                             "Shell plc is an energy corporation" .
 
 
+###  https://www.michaeldebellis.com/climate_obstruction/Slow_Burn
+:Slow_Burn rdf:type owl:NamedIndividual ,
+                    :Promote_Disinformation ;
+           <https://w3id.org/semanticarts/ns/ontology/gist/isDirectPartOf> :The_Climate_Lockdown_Conspiracy_Theory ;
+           <https://w3id.org/semanticarts/ns/ontology/gist/precedesDirectly> :Fuel_To_The_Flames ;
+           :has_direct_part :We_need_to_act_boldly_to_avoid_economy-wide_lockdowns_to_halt_climate_change ;
+           dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+           dct:created "2025-02-11T01:30:17Z"^^xsd:dateTime .
+
+
 ###  https://www.michaeldebellis.com/climate_obstruction/Smoke_Mirrors_Hot_Air
 :Smoke_Mirrors_Hot_Air rdf:type owl:NamedIndividual ,
                                 :Report ;
@@ -6577,6 +6659,13 @@ The contested advertising concerned a sticker on Chiquita's bananas which includ
                                                  :url <https://www.sciencedirect.com/science/article/abs/pii/S0959378015300728?casa_token=RFYHWK5WkwkAAAAA:5QTDaWIlNNANq7awL4hQZFiSUHYwt469h2IsKqIutT5WbSVlW2jvGLRNncL1CqSCPFL4XwOhWoI> .
 
 
+###  https://www.michaeldebellis.com/climate_obstruction/The_Climate_Lockdown_Conspiracy_Theory
+:The_Climate_Lockdown_Conspiracy_Theory rdf:type owl:NamedIndividual ,
+                                                 :Promote_Disinformation ;
+                                        dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                                        dct:created "2025-02-11T01:24:23Z"^^xsd:dateTime .
+
+
 ###  https://www.michaeldebellis.com/climate_obstruction/The_Guardian_view_on_the_climate_and_coronavirus_global_warnings
 :The_Guardian_view_on_the_climate_and_coronavirus_global_warnings rdf:type owl:NamedIndividual ,
                                                                            :Newspaper_Article ;
@@ -6603,6 +6692,40 @@ The contested advertising concerned a sticker on Chiquita's bananas which includ
                                                                 dct:created "2025-01-31T04:45:20Z"^^xsd:dateTime ;
                                                                 rdfs:label "The growth of climate change misinformation in US philanthropy: evidence from natural language processing" ;
                                                                 :url <https://cssn.org/wp-content/uploads/2020/12/The-growth-of-climate-change-misinformation-in-US-philanthropy-evidence-from-natural-language-processing-Justin-Farrell.pdf> .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/Trouble_Brewing
+:Trouble_Brewing rdf:type owl:NamedIndividual ,
+                          :Promote_Disinformation ;
+                 <https://w3id.org/semanticarts/ns/ontology/gist/isDirectPartOf> :The_Climate_Lockdown_Conspiracy_Theory ;
+                 <https://w3id.org/semanticarts/ns/ontology/gist/precedesDirectly> :Point_Of_No_Return ;
+                 :has_direct_part :Climate_Depot_Publishes_Article_Promoting_Milloy_Tweet ;
+                 dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                 dct:created "2025-02-11T01:26:39Z"^^xsd:dateTime .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/UK_Guardian_activists_hope_Coronavirus_lockdown_becomes_climate_lockdown
+:UK_Guardian_activists_hope_Coronavirus_lockdown_becomes_climate_lockdown rdf:type owl:NamedIndividual ,
+                                                                                   :Web_Page ;
+                                                                          :is_published_by :Climate_Depot ;
+                                                                          <https://w3id.org/semanticarts/ns/ontology/gist/containedText> """The Guardian view on the climate and coronavirus: global warnings
+Editorial
+Steep falls in emissions have been the pandemic’s immediate effect. But what’s needed is a green recovery
+
+So far, discussions of a coronavirus exit strategy have mainly focused on the steps that could bring an end to the lockdown. In the short term, both in the UK and elsewhere, there is nothing more desirable than letting people resume their lives, once it is safe to do so.
+
+But the speed of the “return to normal” is not the only thing that matters. The manner in which the world’s leaders manage the colossal economic and political shocks caused by the virus is also of the utmost importance. And at the top of their list of priorities, alongside human welfare, must be the biosphere and its future.
+
+It’s too soon to say with any confidence what impact coronavirus will have on the climate emergency. The brakes placed on economic activities of many kinds, worldwide, have led to carbon emission cuts that would previously have been unthinkable: 18% in China between February and March; between 40% and 60% over recent weeks in Europe. Habits and behaviours once regarded as sacrosanct have been turned on their heads: road traffic in the UK has fallen by 70%. Global air traffic has halved. Meanwhile, a much-needed spotlight has been thrown on humans’ troubling relationship to wildlife, with some experts arguing that the degradation of the natural world and exploitation of other species is among the pandemic’s causes.
+
+In human terms, the economic contraction precipitated by the virus – and predicted by the World Bank to lead to a severe depression – is sure to be brutal. No one, and least of all an elected government, would have chosen to limit emissions in this way. But if further savage waves of destruction to people’s livelihoods are to be avoided, rather than simply stored up or ignored until they become unignorable, just as coronavirus was, every possible effort must now be made to ensure that the recovery, when it comes, is as green as possible; that any and every stimulus package is directed towards renewable energy and zero- or low-carbon infrastructure and transport.
+
+The urgency and desperation surrounding all such efforts are likely to militate against progressive measures. Already, governments are coming under huge pressure to bail out oil and gas companies (in the US and Canada this has already begun). But while in the short term the low oil price, which is also the result of a price war being waged by Saudi Arabia and Russia, could have the damaging effect of making oil more competitive against renewables, plunging demand and turmoil in the industry provide an opportunity that must be seized by all who oppose the continued dominance of fossil fuels.""" ;
+                                                                          <https://w3id.org/semanticarts/ns/ontology/gist/isRecordedAt> "2020-04-13T15:40:00-04:00"^^xsd:dateTime ;
+                                                                          dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                                                                          dct:created "2025-02-11T01:05:02Z"^^xsd:dateTime ;
+                                                                          rdfs:isDefinedBy <https://www.climatedepot.com/2020/04/13/uk-guardian-acvitists-hope-coronavirus-lockdown-becomes-climate-lockdown-what-was-once-impossible-socialist-reckless-now-turns-out-not-to-be-at-all/> ;
+                                                                          rdfs:label "UK Guardian activists hope Coronavirus lockdown becomes climate lockdown: ‘What was once impossible (socialist, reckless) now turns out not to be, at all’" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/USA
