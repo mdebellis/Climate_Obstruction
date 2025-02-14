@@ -7,7 +7,7 @@ PREFIX co:  <https://www.michaeldebellis.com/climate_obstruction/>
 
 SELECT * 
 WHERE {co:The_Climate_Lockdown_Conspiracy_Theory co:has_direct_part ?sub_task.
-OPTIONAL {?sub_task co:has_direct_part ?sub-sub_task.}}
+OPTIONAL {?sub_task co:has_direct_part ?subSub_task.}}
 
 
 # Some example SPARQL queries that may be useful for debugging

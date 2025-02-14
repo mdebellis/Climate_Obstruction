@@ -3719,7 +3719,8 @@ This indicator assesses an organization B and requires that a) there is an organ
 :Conspiracy_Theory rdf:type owl:Class ;
                    rdfs:subClassOf :Belief ;
                    dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-                   dct:created "2025-02-10T19:17:10Z"^^xsd:dateTime ;
+                   dct:created "2025-02-10T19:17:10Z"^^xsd:dateTime ,
+                               "2025-02-12T19:40:56Z"^^xsd:dateTime ;
                    <http://www.w3.org/2004/02/skos/core#definition> "The definition of what makes a conspiracy theory is not straight forward. In the political and social world it is not uncommon for hypotheses (especially those that go outside what the main stream media considers acceptable topics and points of view) to be dismissed as conspiracy theories which then turn out to be true. E.g., that the US provoked the Gulf of Tonkin incident, that the incident was part of a planned campaign designed to provoke the North Vietnamese into an action that could be used to justify increased US involvement in the Vietnam war was once branded a conspiracy theory, however, the publication of the Pentagon Papers clearly demonstrated that this was indeed the truth. With that caveat in mind our definition is 1) any theory or hypothesis that has no evidence from reliable (non-partisan) sources,2) that contradicts accepted science, or published literature from reliable sources and 3) that furhters a specific political agenda. If a theory meets all 3 criteria it is a Conspiracy Theory" .
 
 
@@ -3762,6 +3763,13 @@ This indicator assesses an organization B and requires that a) there is an organ
        dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
        dct:created "2025-01-30T02:58:05Z"^^xsd:dateTime ;
        rdfs:label "Court" .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/Delete_Tweet
+:Delete_Tweet rdf:type owl:Class ;
+              rdfs:subClassOf :Publish_Revision ;
+              dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+              dct:created "2025-02-12T03:54:14Z"^^xsd:dateTime .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/District
@@ -4145,6 +4153,13 @@ Critical studies of environmental sustainability initiatives point to the need t
                                                                  "Claim boasts of green commitments, while the same organization lobbies against environmental laws" .
 
 
+###  https://www.michaeldebellis.com/climate_obstruction/Promote_Conspiracy_Theory
+:Promote_Conspiracy_Theory rdf:type owl:Class ;
+                           rdfs:subClassOf :Promote_Disinformation ;
+                           dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                           dct:created "2025-02-12T19:42:29Z"^^xsd:dateTime .
+
+
 ###  https://www.michaeldebellis.com/climate_obstruction/Promote_Disinformation
 :Promote_Disinformation rdf:type owl:Class ;
                         rdfs:subClassOf :Communication ;
@@ -4188,6 +4203,13 @@ Source: https://en.wikipedia.org/wiki/Proposition""" .
                  rdfs:subClassOf :Communication ;
                  dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
                  dct:created "2025-02-07T21:34:23Z"^^xsd:dateTime .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/Publish_Revision
+:Publish_Revision rdf:type owl:Class ;
+                  rdfs:subClassOf :Communication ;
+                  dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                  dct:created "2025-02-12T04:30:42Z"^^xsd:dateTime .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Publish_Tweet
@@ -4276,6 +4298,13 @@ Claiming biodiversity or carbon neutrality or a reduction of environmental harm 
       <http://www.w3.org/2004/02/skos/core#prefLabel> "Task" ;
       <http://www.w3.org/2004/02/skos/core#scopeNote> "Something that could potentially be executed, which is merely described but not proposed in any specific way, such as a business process for onboarding a new employee, or the steps in a recipe for making polyethylene from ethylene, is not a task but rather a task template." ,
                                                       "Use the property isBasedOn to link a Task back to the TaskTemplate." .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/Television_Broadcast
+:Television_Broadcast rdf:type owl:Class ;
+                      rdfs:subClassOf :Communication ;
+                      dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                      dct:created "2025-02-12T19:45:52Z"^^xsd:dateTime .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Think_Tank
@@ -6216,6 +6245,15 @@ The Court, therefore, granted the appeal and ordered that the application be rem
                rdfs:label "FREDDIE DALEY" .
 
 
+###  https://www.michaeldebellis.com/climate_obstruction/Far-right_libertarian_blogZero_Hedge_publishes_article_on_Climate_Lockdown
+:Far-right_libertarian_blogZero_Hedge_publishes_article_on_Climate_Lockdown rdf:type owl:NamedIndividual ,
+                                                                                     :Publish_Article ;
+                                                                            <https://w3id.org/semanticarts/ns/ontology/gist/isDirectPartOf> :Fuel_To_The_Flames ;
+                                                                            dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                                                                            dct:created "2025-02-12T04:14:43Z"^^xsd:dateTime ;
+                                                                            rdfs:label "Far-right libertarian blog Zero HedgeAn publishes article in the  titled, ‘Guardian Promotes “Global Lockdown” Every Two Years To Combat Climate Change’" .
+
+
 ###  https://www.michaeldebellis.com/climate_obstruction/Fox_News
 :Fox_News rdf:type owl:NamedIndividual ,
                    :Conservative_Media_Corporation ;
@@ -6232,6 +6270,19 @@ The Court, therefore, granted the appeal and ordered that the application be rem
                     dct:created "2025-02-11T01:32:10Z"^^xsd:dateTime .
 
 
+###  https://www.michaeldebellis.com/climate_obstruction/Guardian_Published_Climate_Lockdown_Article
+:Guardian_Published_Climate_Lockdown_Article rdf:type owl:NamedIndividual ,
+                                                      :Publish_Article ;
+                                             <https://w3id.org/semanticarts/ns/ontology/gist/isDirectPartOf> :Fuel_To_The_Flames ;
+                                             <https://w3id.org/semanticarts/ns/ontology/gist/precedesDirectly> :Twitter_Backlash_To_Guardian_Article ;
+                                             :is_cause_of :Twitter_Backlash_To_Guardian_Article ;
+                                             <https://w3id.org/semanticarts/ns/ontology/gist/isRecordedAt> "2021-03-03T00:00:00"^^xsd:dateTime ;
+                                             dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                                             dct:created "2025-02-12T04:05:50Z"^^xsd:dateTime ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> """On 3 March, The Guardian then posted a misleading headline that implied there would need to be global lockdowns “every two years” to meet the Paris climate goals. Following backlash on Twitter for this alarmist language, the paper revised the headline to a neutral alternative. However, this revision led to - what was at the time - the largest spike in ‘climate lockdown’ content since the narrative emerged.
+Source: https://www.isdglobal.org/wp-content/uploads/2021/10/20211014-ISDG-25-Climate-Lockdown-Part-1-V92.pdf""" .
+
+
 ###  https://www.michaeldebellis.com/climate_obstruction/Guardian_Publishes_Climate_and_Coronavirus_Article
 :Guardian_Publishes_Climate_and_Coronavirus_Article rdf:type owl:NamedIndividual ,
                                                              :Publish_Article ;
@@ -6241,6 +6292,15 @@ The Court, therefore, granted the appeal and ordered that the application be rem
                                                     <https://w3id.org/semanticarts/ns/ontology/gist/isRecordedAt> "2020-04-12T13:25:00-04:00"^^xsd:dateTime ;
                                                     dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
                                                     dct:created "2025-02-07T21:42:44Z"^^xsd:dateTime .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/Guardian_Publishes_Revision_To_Clmate_Lockdown_Article
+:Guardian_Publishes_Revision_To_Clmate_Lockdown_Article rdf:type owl:NamedIndividual ,
+                                                                 :Publish_Revision ;
+                                                        <https://w3id.org/semanticarts/ns/ontology/gist/isDirectPartOf> :Fuel_To_The_Flames ;
+                                                        :has_cause :Twitter_Backlash_To_Guardian_Article ;
+                                                        dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                                                        dct:created "2025-02-12T19:32:17Z"^^xsd:dateTime .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Heartland_Institute
@@ -6258,6 +6318,27 @@ The Court, therefore, granted the appeal and ordered that the application be rem
                        dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
                        dct:created "2025-01-30T02:58:58Z"^^xsd:dateTime ;
                        rdfs:label "High Court of Ireland" .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/Highest_Number_of_Tweets_Yet_Correlating_Climate_Change_and_Lockdown
+:Highest_Number_of_Tweets_Yet_Correlating_Climate_Change_and_Lockdown rdf:type owl:NamedIndividual ,
+                                                                               :Publish_Tweet ;
+                                                                      <https://w3id.org/semanticarts/ns/ontology/gist/isDirectPartOf> :Engaging_A_Broad_Church ;
+                                                                      :has_cause :Ingraham_claim_that_climate_agenda_about_controlling_the_people ;
+                                                                      dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                                                                      dct:created "2025-02-12T19:51:16Z"^^xsd:dateTime ;
+                                                                      rdfs:isDefinedBy <https://www.isdglobal.org/wp-content/uploads/2021/10/20211014-ISDG-25-Climate-Lockdown-Part-1-V92.pdf> ;
+                                                                      rdfs:label "Ingraham broadcasts generate far more traffic on Twitter than the previous two segments in December" .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/Ingraham_claim_that_climate_agenda_about_controlling_the_people
+:Ingraham_claim_that_climate_agenda_about_controlling_the_people rdf:type owl:NamedIndividual ,
+                                                                          :Television_Broadcast ;
+                                                                 <https://w3id.org/semanticarts/ns/ontology/gist/isDirectPartOf> :Engaging_A_Broad_Church ;
+                                                                 :has_responsible_agent :Laura_Ingraham ;
+                                                                 dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                                                                 dct:created "2025-02-12T19:47:27Z"^^xsd:dateTime ;
+                                                                 rdfs:label "Ingraham claimed that the “climate agenda isn’t really about saving the planet; it’s about controlling the people.”" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Institutionalizing_delay_foundation_funding_and_the_creation_of_US_climate_change_counter-movement_organizations
@@ -6360,6 +6441,13 @@ The CMA has also launched a video and published guidance for shoppers about thei
 and Sociology at Brown University and the executive director of the
 Climate Social Science Network (CSSN). His current research focuses
 on social drivers of action and inaction on climate change""" .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/Laura_Ingraham
+:Laura_Ingraham rdf:type owl:NamedIndividual ,
+                         <https://w3id.org/semanticarts/ns/ontology/gist/Person> ;
+                dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                dct:created "2025-02-12T19:48:40Z"^^xsd:dateTime .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Mariana_Mazzucato
@@ -6663,7 +6751,8 @@ The contested advertising concerned a sticker on Chiquita's bananas which includ
 :The_Climate_Lockdown_Conspiracy_Theory rdf:type owl:NamedIndividual ,
                                                  :Promote_Disinformation ;
                                         dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
-                                        dct:created "2025-02-11T01:24:23Z"^^xsd:dateTime .
+                                        dct:created "2025-02-11T01:24:23Z"^^xsd:dateTime ;
+                                        rdfs:isDefinedBy <https://www.isdglobal.org/wp-content/uploads/2021/10/20211014-ISDG-25-Climate-Lockdown-Part-1-V92.pdf> .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/The_Guardian_view_on_the_climate_and_coronavirus_global_warnings
@@ -6694,6 +6783,16 @@ The contested advertising concerned a sticker on Chiquita's bananas which includ
                                                                 :url <https://cssn.org/wp-content/uploads/2020/12/The-growth-of-climate-change-misinformation-in-US-philanthropy-evidence-from-natural-language-processing-Justin-Farrell.pdf> .
 
 
+###  https://www.michaeldebellis.com/climate_obstruction/Time_Magazine_publishes_Now_Its_the_Climates_Turn
+:Time_Magazine_publishes_Now_Its_the_Climates_Turn rdf:type owl:NamedIndividual ,
+                                                            :Publish_Article ;
+                                                   <https://w3id.org/semanticarts/ns/ontology/gist/isDirectPartOf> :Fuel_To_The_Flames ;
+                                                   dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                                                   dct:created "2025-02-12T04:20:41Z"^^xsd:dateTime ;
+                                                   rdfs:isDefinedBy <https://time.com/5953374/climate-is-everything-2/> ;
+                                                   rdfs:label "Time Magazine published a cover story titled “The Pandemic Remade Every Corner of Society. Now It’s the Climate’s Turn”" .
+
+
 ###  https://www.michaeldebellis.com/climate_obstruction/Trouble_Brewing
 :Trouble_Brewing rdf:type owl:NamedIndividual ,
                           :Promote_Disinformation ;
@@ -6702,6 +6801,15 @@ The contested advertising concerned a sticker on Chiquita's bananas which includ
                  :has_direct_part :Climate_Depot_Publishes_Article_Promoting_Milloy_Tweet ;
                  dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
                  dct:created "2025-02-11T01:26:39Z"^^xsd:dateTime .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/Twitter_Backlash_To_Guardian_Article
+:Twitter_Backlash_To_Guardian_Article rdf:type owl:NamedIndividual ,
+                                               :Publish_Tweet ;
+                                      <https://w3id.org/semanticarts/ns/ontology/gist/isDirectPartOf> :Fuel_To_The_Flames ;
+                                      <https://w3id.org/semanticarts/ns/ontology/gist/precedesDirectly> :Guardian_Publishes_Revision_To_Clmate_Lockdown_Article ;
+                                      dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                                      dct:created "2025-02-12T04:44:54Z"^^xsd:dateTime .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/UK_Guardian_activists_hope_Coronavirus_lockdown_becomes_climate_lockdown
@@ -6752,6 +6860,18 @@ The urgency and desperation surrounding all such efforts are likely to militate 
                                                                               dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
                                                                               dct:created "2025-02-08T05:48:59Z"^^xsd:dateTime ;
                                                                               rdfs:label "Opinion: We need to act boldly now if we are to avoid economy-wide lockdowns to halt climate change" .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/World_Economic_Forum_Deletes_and_Apologizes_For_Tweet
+:World_Economic_Forum_Deletes_and_Apologizes_For_Tweet rdf:type owl:NamedIndividual ,
+                                                                :Delete_Tweet ;
+                                                       <https://w3id.org/semanticarts/ns/ontology/gist/isDirectPartOf> :Fuel_To_The_Flames ;
+                                                       <https://w3id.org/semanticarts/ns/ontology/gist/isRecordedAt> "2021-02-26T00:00:00Z"^^xsd:dateTime ;
+                                                       dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                                                       dct:created "2025-02-12T03:55:19Z"^^xsd:dateTime ;
+                                                       <http://www.w3.org/2004/02/skos/core#definition> """World Economic Forum (WEF) deleted and apologised for a tweet that suggested lockdowns were “quietly improving cities”, despite the post linking to an article discussing earthquake sensors. The impact of
+their mistake is significant. The Great Reset conspiracy itself arose from a June 2020 WEF initiative of the same name, which outlined the need to rebuild global economic and social systems sustainably after COVID-19. In particular, the WEF initiative suggested using the pandemic as an impetus to reduce economic disparity and address the climate crisis. Their poorly phrased tweet in February prompted some conservative news outlets, such as Sky News Australia, to present ‘climate lockdowns’ as a genuine threat connected to this conspiracy (Figure 6). Meanwhile, for existing proponents, the deleted tweet served only to reinforce their beliefs and provide evidence of a ‘cover-up’. 
+Source: https://www.isdglobal.org/wp-content/uploads/2021/10/20211014-ISDG-25-Climate-Lockdown-Part-1-V92.pdf""" .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Wunderman_Thompson
