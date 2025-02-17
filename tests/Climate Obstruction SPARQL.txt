@@ -5,9 +5,15 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX gist: <https://w3id.org/semanticarts/ns/ontology/gist/>
 PREFIX co:  <https://www.michaeldebellis.com/climate_obstruction/>
 
+SELECT *
+WHERE {?doc rdf:type co:Document;
+            co:url ?url.}
+			
+			
 SELECT * 
 WHERE {co:The_Climate_Lockdown_Conspiracy_Theory co:has_direct_part ?sub_task.
 OPTIONAL {?sub_task co:has_direct_part ?subSub_task.}}
+
 
 
 # Some example SPARQL queries that may be useful for debugging
@@ -68,3 +74,58 @@ FILTER(STR(?s1) < STR(?s2))}
 
 
 		
+CONSTRUCT{co:Austria rdf:type co:Nation;
+                  gist:isMemberOf co:European_Union.
+co:Belgium rdf:type co:Nation;
+                  gist:isMemberOf co:European_Union.
+co:Bulgaria rdf:type co:Nation;
+                  gist:isMemberOf co:European_Union.
+co:Croatia rdf:type co:Nation;
+                  gist:isMemberOf co:European_Union.
+co:Cyprus rdf:type co:Nation;
+                  gist:isMemberOf co:European_Union.
+co:Czech Republic rdf:type co:Nation;
+                  gist:isMemberOf co:European_Union.
+co:Denmark rdf:type co:Nation;
+                  gist:isMemberOf co:European_Union.
+co:Estonia rdf:type co:Nation;
+                  gist:isMemberOf co:European_Union.
+co:Finland rdf:type co:Nation;
+                  gist:isMemberOf co:European_Union.
+co:France rdf:type co:Nation;
+                  gist:isMemberOf co:European_Union.
+co:Germany rdf:type co:Nation;
+                  gist:isMemberOf co:European_Union.
+co:Greece rdf:type co:Nation;
+                  gist:isMemberOf co:European_Union.
+co:Hungary rdf:type co:Nation;
+                  gist:isMemberOf co:European_Union.
+co:Ireland rdf:type co:Nation;
+                  gist:isMemberOf co:European_Union.
+co:Italy rdf:type co:Nation;
+                  gist:isMemberOf co:European_Union.
+co:Latvia rdf:type co:Nation;
+                  gist:isMemberOf co:European_Union.
+co:Lithuania rdf:type co:Nation;
+                  gist:isMemberOf co:European_Union.
+co:Luxembourg rdf:type co:Nation;
+                  gist:isMemberOf co:European_Union.
+co:Malta rdf:type co:Nation;
+                  gist:isMemberOf co:European_Union.
+co:Netherlands rdf:type co:Nation;
+                  gist:isMemberOf co:European_Union.
+co:Poland rdf:type co:Nation;
+                  gist:isMemberOf co:European_Union.
+co:Portugal rdf:type co:Nation;
+                  gist:isMemberOf co:European_Union.
+co:Romania rdf:type co:Nation;
+                  gist:isMemberOf co:European_Union.
+co:Slovakia rdf:type co:Nation;
+                  gist:isMemberOf co:European_Union.
+co:Slovenia rdf:type co:Nation;
+                  gist:isMemberOf co:European_Union.
+co:Spain rdf:type co:Nation;
+                  gist:isMemberOf co:European_Union.
+co:Sweden rdf:type co:Nation;
+                  gist:isMemberOf co:European_Union.}
+WHERE {}
