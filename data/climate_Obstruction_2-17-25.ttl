@@ -3743,6 +3743,13 @@ Enforcement: The ASA investigates complaints from the public and can request tha
 Source: ChatGPT""" .
 
 
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_Ruling
+:CAP_Ruling rdf:type owl:Class ;
+            rdfs:subClassOf :Regulatory_Decision ;
+            dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+            dct:created "2025-02-18T02:10:36Z"^^xsd:dateTime .
+
+
 ###  https://www.michaeldebellis.com/climate_obstruction/Campaign_Funding_PAC
 :Campaign_Funding_PAC rdf:type owl:Class ;
                       rdfs:subClassOf :Non-Profit_Organization ;
