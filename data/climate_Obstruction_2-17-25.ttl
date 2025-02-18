@@ -8,6 +8,7 @@
 @base <https://www.michaeldebellis.com/climate_obstruction/> .
 
 <https://www.michaeldebellis.com/climate_obstruction> rdf:type owl:Ontology ;
+                                                       rdfs:comment "2/17/25 Deleted some axioms on Gist classes (marked each one with a comment and the deleted axiom) because the reasoner was getting slow and the axioms weren't doing any work. M. DeBellis" ;
                                                        <http://www.w3.org/2004/02/skos/core#definition> "gist is a minimalist upper ontology created by Semantic Arts." ;
                                                        <http://www.w3.org/2004/02/skos/core#historyNote> """gist 13.0.0 released 2024-Jul-24.
         gist 12.1.0 released 2024-Feb-27.
@@ -1102,7 +1103,8 @@ dct:title rdf:type owl:DatatypeProperty ;
 
 ###  http://purl.org/ontology/bibo/issue
 <http://purl.org/ontology/bibo/issue> rdf:type owl:DatatypeProperty ;
-                                      rdfs:subPropertyOf :content_metadata .
+                                      rdfs:subPropertyOf :CAP_property ,
+                                                         :content_metadata .
 
 
 ###  http://purl.org/ontology/bibo/volume
@@ -1755,6 +1757,33 @@ The conventions for precision that are repeated in each property name are as fol
                                                                                                                             <https://w3id.org/semanticarts/ns/ontology/gist/Text> .
 
 
+###  https://www.michaeldebellis.com/climate_obstruction/CAP_property
+:CAP_property rdf:type owl:DatatypeProperty ;
+              dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+              dct:created "2025-02-18T00:55:53Z"^^xsd:dateTime .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/action
+:action rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf :CAP_property ;
+        dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+        dct:created "2025-02-18T00:58:55Z"^^xsd:dateTime .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/ad_description
+:ad_description rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf :CAP_property ;
+                dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                dct:created "2025-02-18T00:58:55Z"^^xsd:dateTime .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/assessment
+:assessment rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :CAP_property ;
+            dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+            dct:created "2025-02-18T00:58:55Z"^^xsd:dateTime .
+
+
 ###  https://www.michaeldebellis.com/climate_obstruction/at_issue
 :at_issue rdf:type owl:DatatypeProperty ;
           rdfs:subPropertyOf <https://w3id.org/semanticarts/ns/ontology/gist/containedText> ;
@@ -1770,6 +1799,27 @@ The conventions for precision that are repeated in each property name are as fol
                dct:created "2025-01-30T04:43:25Z"^^xsd:dateTime ;
                rdfs:label "author string" ;
                <http://www.w3.org/2004/02/skos/core#definition> "A string with the authors of a book, article, or other content. Often more than one author delimited by a semi-colon." .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/background
+:background rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :CAP_property ;
+            dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+            dct:created "2025-02-18T00:58:55Z"^^xsd:dateTime .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/bcap_code
+:bcap_code rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf :CAP_property ;
+           dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+           dct:created "2025-02-18T00:58:55Z"^^xsd:dateTime .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/cap_code
+:cap_code rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf :CAP_property ;
+          dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+          dct:created "2025-02-18T00:58:55Z"^^xsd:dateTime .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/content_metadata
@@ -1817,6 +1867,27 @@ The conventions for precision that are repeated in each property name are as fol
                   dct:created "2025-01-30T04:48:54Z"^^xsd:dateTime ;
                   rdfs:label "publication date" ;
                   <http://www.w3.org/2004/02/skos/core#definition> "The datatype here is a literal (string) rather than xsd:dateTime because this is for dates scraped from web sites or other metadata." .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/related_rulings
+:related_rulings rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf :CAP_property ;
+                 dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                 dct:created "2025-02-18T00:58:55Z"^^xsd:dateTime .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/response
+:response rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf :CAP_property ;
+          dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+          dct:created "2025-02-18T00:58:55Z"^^xsd:dateTime .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/same_company_rulings
+:same_company_rulings rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf :CAP_property ;
+                      dct:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                      dct:created "2025-02-18T00:58:55Z"^^xsd:dateTime .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/summary
@@ -1998,26 +2069,11 @@ The conventions for precision that are repeated in each property name are as fol
 
 ###  https://w3id.org/semanticarts/ns/ontology/gist/Commitment
 <https://w3id.org/semanticarts/ns/ontology/gist/Commitment> rdf:type owl:Class ;
-                                                            owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Class ;
-                                                                                                         owl:unionOf ( <https://w3id.org/semanticarts/ns/ontology/gist/Requirement>
-                                                                                                                       <https://w3id.org/semanticarts/ns/ontology/gist/Restriction>
-                                                                                                                     )
-                                                                                                       ]
-                                                                                                       [ rdf:type owl:Restriction ;
-                                                                                                         owl:onProperty <https://w3id.org/semanticarts/ns/ontology/gist/hasGiver> ;
-                                                                                                         owl:someValuesFrom [ rdf:type owl:Class ;
-                                                                                                                              owl:unionOf ( <https://w3id.org/semanticarts/ns/ontology/gist/Organization>
-                                                                                                                                            <https://w3id.org/semanticarts/ns/ontology/gist/Person>
-                                                                                                                                          )
-                                                                                                                            ]
-                                                                                                       ]
-                                                                                                       [ rdf:type owl:Restriction ;
-                                                                                                         owl:onProperty <https://w3id.org/semanticarts/ns/ontology/gist/isCategorizedBy> ;
-                                                                                                         owl:someValuesFrom <https://w3id.org/semanticarts/ns/ontology/gist/DegreeOfCommitment>
-                                                                                                       ]
-                                                                                                     ) ;
-                                                                                  rdf:type owl:Class
-                                                                                ] ;
+                                                            rdfs:comment """Deleted Axiom:
+(Requirement or Restriction)
+ and ('has giver' some 
+    (Organization or Individual))
+ and ('is categorized by' some 'Degree Of Commitment')""" ;
                                                             rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore> ;
                                                             <http://www.w3.org/2004/02/skos/core#definition> "An obligation (possibly unilateral)." ;
                                                             <http://www.w3.org/2004/02/skos/core#prefLabel> "Commitment" .
@@ -2667,25 +2723,14 @@ The conventions for precision that are repeated in each property name are as fol
 
 ###  https://w3id.org/semanticarts/ns/ontology/gist/Magnitude
 <https://w3id.org/semanticarts/ns/ontology/gist/Magnitude> rdf:type owl:Class ;
-                                                           owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                                                                        owl:onProperty <https://w3id.org/semanticarts/ns/ontology/gist/hasAspect> ;
-                                                                                                        owl:someValuesFrom <https://w3id.org/semanticarts/ns/ontology/gist/Aspect>
-                                                                                                      ]
-                                                                                                      [ rdf:type owl:Restriction ;
-                                                                                                        owl:onProperty <https://w3id.org/semanticarts/ns/ontology/gist/hasUnitOfMeasure> ;
-                                                                                                        owl:someValuesFrom <https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure>
-                                                                                                      ]
-                                                                                                      [ rdf:type owl:Restriction ;
-                                                                                                        owl:onProperty <https://w3id.org/semanticarts/ns/ontology/gist/numericValue> ;
-                                                                                                        owl:someValuesFrom rdfs:Literal
-                                                                                                      ]
-                                                                                                    ) ;
-                                                                                 rdf:type owl:Class
-                                                                               ] ;
                                                            owl:disjointWith <https://w3id.org/semanticarts/ns/ontology/gist/Organization> ,
                                                                             <https://w3id.org/semanticarts/ns/ontology/gist/PhysicalIdentifiableItem> ,
                                                                             <https://w3id.org/semanticarts/ns/ontology/gist/PhysicalSubstance> ,
                                                                             <https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure> ;
+                                                           rdfs:comment """Deleted Equivalent To axiom:
+('has aspect' some Aspect)
+ and ('has unit of measure' some 'Unit of Measure')
+ and ('numeric value' some rdfs:Literal)""" ;
                                                            rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore> ;
                                                            rdfs:seeAlso <https://w3id.org/semanticarts/ns/ontology/gist/hasAccuracy> ;
                                                            <http://www.w3.org/2004/02/skos/core#definition> "The amount of a measurable characteristic (aspect)." ;
@@ -3037,33 +3082,19 @@ The conventions for precision that are repeated in each property name are as fol
 ###  https://w3id.org/semanticarts/ns/ontology/gist/PhysicalIdentifiableItem
 <https://w3id.org/semanticarts/ns/ontology/gist/PhysicalIdentifiableItem> rdf:type owl:Class ;
                                                                           rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                                                            owl:onProperty <https://w3id.org/semanticarts/ns/ontology/gist/hasMagnitude> ;
-                                                                                            owl:someValuesFrom [ owl:intersectionOf ( <https://w3id.org/semanticarts/ns/ontology/gist/Magnitude>
-                                                                                                                                      [ rdf:type owl:Restriction ;
-                                                                                                                                        owl:onProperty <https://w3id.org/semanticarts/ns/ontology/gist/hasAspect> ;
-                                                                                                                                        owl:hasValue <https://w3id.org/semanticarts/ns/data/gist/_Aspect_mass>
-                                                                                                                                      ]
-                                                                                                                                    ) ;
-                                                                                                                 rdf:type owl:Class
-                                                                                                               ]
-                                                                                          ] ,
-                                                                                          [ rdf:type owl:Restriction ;
-                                                                                            owl:onProperty <https://w3id.org/semanticarts/ns/ontology/gist/hasMagnitude> ;
-                                                                                            owl:someValuesFrom [ owl:intersectionOf ( <https://w3id.org/semanticarts/ns/ontology/gist/Magnitude>
-                                                                                                                                      [ rdf:type owl:Restriction ;
-                                                                                                                                        owl:onProperty <https://w3id.org/semanticarts/ns/ontology/gist/hasAspect> ;
-                                                                                                                                        owl:hasValue <https://w3id.org/semanticarts/ns/data/gist/_Aspect_volume>
-                                                                                                                                      ]
-                                                                                                                                    ) ;
-                                                                                                                 rdf:type owl:Class
-                                                                                                               ]
-                                                                                          ] ,
-                                                                                          [ rdf:type owl:Restriction ;
                                                                                             owl:onProperty <https://w3id.org/semanticarts/ns/ontology/gist/isMadeUpOf> ;
                                                                                             owl:someValuesFrom <https://w3id.org/semanticarts/ns/ontology/gist/PhysicalSubstance>
                                                                                           ] ;
                                                                           owl:disjointWith <https://w3id.org/semanticarts/ns/ontology/gist/SchemaMetaData> ,
                                                                                            <https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure> ;
+                                                                          rdfs:comment """Deleted SubClass Axiom:
+'has magnitude' some 
+    (Magnitude
+     and ('has aspect' value mass))""" ,
+                                                                                       """Deleted Subclass Axiom:
+'has magnitude' some 
+    (Magnitude
+     and ('has aspect' value volume))""" ;
                                                                           rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore> ;
                                                                           <http://www.w3.org/2004/02/skos/core#definition> "A discrete physical object which, if subdivided, will result in parts that are distinguishable in nature from the whole and in general also from the other parts." ;
                                                                           <http://www.w3.org/2004/02/skos/core#example> "A computer, book, car." ;
