@@ -1833,6 +1833,12 @@ The conventions for precision that are repeated in each property name are as fol
                                                                dcterms:created "2025-02-18T00:58:55Z"^^xsd:dateTime .
 
 
+###  https://www.michaeldebellis.com/climate_obstruction/case_categories
+<https://www.michaeldebellis.com/climate_obstruction/case_categories> rdf:type owl:DatatypeProperty ;
+                                                                      dcterms:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                                                                      dcterms:created "2025-02-18T21:15:25Z"^^xsd:dateTime .
+
+
 ###  https://www.michaeldebellis.com/climate_obstruction/content_metadata
 <https://www.michaeldebellis.com/climate_obstruction/content_metadata> rdf:type owl:DatatypeProperty ;
                                                                        dcterms:contributor <https://orcid.org/0000-0002-8824-9577> ;
@@ -1887,6 +1893,12 @@ The conventions for precision that are repeated in each property name are as fol
                                                                       dcterms:created "2025-02-18T00:58:55Z"^^xsd:dateTime .
 
 
+###  https://www.michaeldebellis.com/climate_obstruction/reporter_info
+<https://www.michaeldebellis.com/climate_obstruction/reporter_info> rdf:type owl:DatatypeProperty ;
+                                                                    dcterms:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                                                                    dcterms:created "2025-02-18T21:12:29Z"^^xsd:dateTime .
+
+
 ###  https://www.michaeldebellis.com/climate_obstruction/response
 <https://www.michaeldebellis.com/climate_obstruction/response> rdf:type owl:DatatypeProperty ;
                                                                rdfs:subPropertyOf <https://www.michaeldebellis.com/climate_obstruction/CAP_property> ;
@@ -1899,6 +1911,12 @@ The conventions for precision that are repeated in each property name are as fol
                                                                            rdfs:subPropertyOf <https://www.michaeldebellis.com/climate_obstruction/CAP_property> ;
                                                                            dcterms:contributor <https://orcid.org/0000-0002-8824-9577> ;
                                                                            dcterms:created "2025-02-18T00:58:55Z"^^xsd:dateTime .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/status
+<https://www.michaeldebellis.com/climate_obstruction/status> rdf:type owl:DatatypeProperty ;
+                                                             dcterms:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                                                             dcterms:created "2025-02-18T21:14:17Z"^^xsd:dateTime .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/summary
@@ -1915,6 +1933,12 @@ The conventions for precision that are repeated in each property name are as fol
                                                            dcterms:contributor <https://orcid.org/0000-0002-8824-9577> ;
                                                            dcterms:created "2025-01-30T05:14:56Z"^^xsd:dateTime ;
                                                            rdfs:label "text" .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/year
+<https://www.michaeldebellis.com/climate_obstruction/year> rdf:type owl:DatatypeProperty ;
+                                                           dcterms:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                                                           dcterms:created "2025-02-18T21:10:34Z"^^xsd:dateTime .
 
 
 #################################################################
