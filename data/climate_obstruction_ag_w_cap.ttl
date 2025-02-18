@@ -1839,6 +1839,12 @@ The conventions for precision that are repeated in each property name are as fol
                                                                       dcterms:created "2025-02-18T21:15:25Z"^^xsd:dateTime .
 
 
+###  https://www.michaeldebellis.com/climate_obstruction/case_documents
+<https://www.michaeldebellis.com/climate_obstruction/case_documents> rdf:type owl:DatatypeProperty ;
+                                                                     dcterms:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                                                                     dcterms:created "2025-02-18T22:41:51Z"^^xsd:dateTime .
+
+
 ###  https://www.michaeldebellis.com/climate_obstruction/content_metadata
 <https://www.michaeldebellis.com/climate_obstruction/content_metadata> rdf:type owl:DatatypeProperty ;
                                                                        dcterms:contributor <https://orcid.org/0000-0002-8824-9577> ;
@@ -1852,6 +1858,12 @@ The conventions for precision that are repeated in each property name are as fol
                                                                  dcterms:contributor <https://orcid.org/0000-0002-8824-9577> ;
                                                                  dcterms:created "2025-01-29T00:49:23Z"^^xsd:dateTime ;
                                                                  rdfs:label "first name" .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/jurisdictions
+<https://www.michaeldebellis.com/climate_obstruction/jurisdictions> rdf:type owl:DatatypeProperty ;
+                                                                    dcterms:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                                                                    dcterms:created "2025-02-18T21:17:38Z"^^xsd:dateTime .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/last_name
@@ -1875,6 +1887,12 @@ The conventions for precision that are repeated in each property name are as fol
                                                                   dcterms:contributor <https://orcid.org/0000-0002-8824-9577> ;
                                                                   dcterms:created "2025-01-29T00:49:33Z"^^xsd:dateTime ;
                                                                   rdfs:label "middle name" .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/principal_laws
+<https://www.michaeldebellis.com/climate_obstruction/principal_laws> rdf:type owl:DatatypeProperty ;
+                                                                     dcterms:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                                                                     dcterms:created "2025-02-18T21:19:14Z"^^xsd:dateTime .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/publication_date
