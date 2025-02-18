@@ -2,7 +2,7 @@ import csv
 import uuid
 from src.ag_api import *
 
-csv_path = "CAP1_w_urls.csv"
+csv_path = "RSS1wIRIs.csv"
 # file_class is the IRI for the class that the properties in the csv file apply to. I.e.,
 # when parsing the file, the system will search for an instance of that class and if one is
 # not found, then it will be created.
