@@ -7122,6 +7122,7 @@ The Scarborough Energy Project will include the installation of a floating produ
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Shell_Canada
 <https://www.michaeldebellis.com/climate_obstruction/Shell_Canada> rdf:type owl:NamedIndividual ,
+                                                                            <https://www.michaeldebellis.com/climate_obstruction/Corporation> ,
                                                                             <https://www.michaeldebellis.com/climate_obstruction/Oil> ;
                                                                    <https://w3id.org/semanticarts/ns/ontology/gist/isDirectPartOf> <https://www.michaeldebellis.com/climate_obstruction/Shell_plc> ;
                                                                    dcterms:contributor <https://orcid.org/0000-0002-8824-9577> ;
