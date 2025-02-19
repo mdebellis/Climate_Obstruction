@@ -3,7 +3,7 @@ PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX gist: <https://w3id.org/semanticarts/ns/ontology/gist/>
-PREFIX env:  <https://www.michaeldebellis.com/climate_obstruction/>
+PREFIX co:  <https://www.michaeldebellis.com/climate_obstruction/>
 
 # When you use User Defined IRIs, Protege doesn't fill in a value for the label. 
 # Sometimes I'll add the label but often I won't because it is easy to generate them with SPARQL

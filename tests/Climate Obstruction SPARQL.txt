@@ -72,7 +72,8 @@ WHERE {?s1 rdfs:label ?label.
 	        ?p ?o.
 FILTER(STR(?s1) < STR(?s2))}
 
-
+CONSTRUCT {?doc skos:isDefinedBy ?url}
+WHERE {?doc co:url ?url}
 		
 CONSTRUCT{co:Austria rdf:type co:Nation;
                   gist:isMemberOf co:European_Union.
