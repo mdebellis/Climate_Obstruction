@@ -16,7 +16,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix keyword: <http://franz.com/ns/keyword#> .
-@base <https://www.michaeldebellis.com/climate_obstruction> .
+@base <https://www.michaeldebellis.com/climate_obstruction#> .
 
 <https://www.michaeldebellis.com/climate_obstruction> rdf:type owl:Ontology ;
                                                        rdfs:comment "2/17/25 Deleted some axioms on Gist classes (marked each one with a comment and the deleted axiom) because the reasoner was getting slow and the axioms weren't doing any work. M. DeBellis" ;
@@ -254,6 +254,14 @@ skos:scopeNote rdf:type owl:AnnotationProperty .
                                                                                  dcterms:contributor <https://orcid.org/0000-0002-8824-9577> ;
                                                                                  dcterms:created "2025-01-23T21:35:25Z"^^xsd:dateTime ;
                                                                                  rdfs:subPropertyOf <https://www.michaeldebellis.com/climate_obstruction/influence> .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/tbox
+<https://www.michaeldebellis.com/climate_obstruction/tbox> rdf:type owl:AnnotationProperty ;
+                                                           dcterms:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                                                           dcterms:created "2025-02-24T19:42:45Z"^^xsd:dateTime ;
+                                                           skos:definition "This is a boolean to tag any instances that should not be deleted when deleting A-Box data (i.e., instances and their property values). It is for test data that we don't want deleted as well as instances that make up enumerated classes or other T-Box definitions." ;
+                                                           rdfs:range xsd:boolean .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/testimony_at_hearings
@@ -6528,7 +6536,8 @@ The Court, therefore, granted the appeal and ordered that the application be rem
                                                                        <https://www.michaeldebellis.com/climate_obstruction/Status> ;
                                                               dcterms:contributor <https://orcid.org/0000-0002-8824-9577> ;
                                                               dcterms:created "2025-01-29T22:17:33Z"^^xsd:dateTime ;
-                                                              rdfs:label "Decided" .
+                                                              rdfs:label "Decided" ;
+                                                              <https://www.michaeldebellis.com/climate_obstruction/tbox> "true"^^xsd:boolean .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Deutsche_Lufthansa
@@ -6963,7 +6972,8 @@ Source: https://num.org.uk/""" .
                                                                        <https://www.michaeldebellis.com/climate_obstruction/Status> ;
                                                               dcterms:contributor <https://orcid.org/0000-0002-8824-9577> ;
                                                               dcterms:created "2025-01-29T23:52:21Z"^^xsd:dateTime ;
-                                                              rdfs:label "Pending" .
+                                                              rdfs:label "Pending" ;
+                                                              <https://www.michaeldebellis.com/climate_obstruction/tbox> "true"^^xsd:boolean .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Point_Of_No_Return

@@ -7,8 +7,8 @@ PREFIX env:  <https://www.michaeldebellis.com/climate_obstruction/>
 PREFIX llm: <http://franz.com/ns/allegrograph/8.0.0/llm/> 
 
 SELECT  ?response ?citation
-WHERE {(?response ?score ?citation ?content) llm:askMyDocuments ("What is Green Washing" "co_vec" 4 0.7).}
+WHERE {(?response ?score ?citation ?content) llm:askMyDocuments ("What is Green Washing" "cov" 4 0.7).}
 
 SELECT  *
-WHERE {(?response ?score ?citation ?content) llm:askMyDocuments ("What is Green Washing" "co_vec" 4 0.7).
+WHERE {(?response ?score ?citation ?content) llm:askMyDocuments ("What is Green Washing" "cov" 4 0.7).
         ?citation ?p ?o.}
