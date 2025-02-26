@@ -2,11 +2,11 @@ import csv
 import uuid
 from src.ag_api import *
 
-csv_path = "RSS1wIRIs.csv"
+csv_path = "public_part_suits.csv"
 # file_class is the IRI for the class that the properties in the csv file apply to. I.e.,
 # when parsing the file, the system will search for an instance of that class and if one is
 # not found, then it will be created.
-file_class_str = "https://www.michaeldebellis.com/climate_obstruction/CAP_Ruling"
+file_class_str = "https://www.michaeldebellis.com/climate_obstruction/RCC_Ruling"
 file_class = conn.createURI(file_class_str)
 
 # Reads a CSV file where the first line is a list of properties

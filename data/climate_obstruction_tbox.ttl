@@ -4462,7 +4462,7 @@ Source: https://en.wikipedia.org/wiki/Proposition""" .
 
 ###  https://www.michaeldebellis.com/climate_obstruction/RCC_Ruling
 :RCC_Ruling rdf:type owl:Class ;
-            rdfs:subClassOf :Litigation ;
+            rdfs:subClassOf :Climate_Litigation ;
             dcterms:contributor <https://orcid.org/0000-0002-8824-9577> ;
             dcterms:created "2025-02-05T22:20:25Z"^^xsd:dateTime ;
             rdfs:label "RCC Ruling" .

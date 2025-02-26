@@ -5,6 +5,39 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX gist: <https://w3id.org/semanticarts/ns/ontology/gist/>
 PREFIX co:  <https://www.michaeldebellis.com/climate_obstruction/>
 
+#Find all A-Box subject triples
+SELECT *
+WHERE {?individual rdf:type owl:NamedIndividual.
+OPTIONAL{?s ?p ?individual}         
+OPTIONAL{?individual co:tbox ?tbox}
+BIND(EXISTS{?individual rdf:type co:Document} AS ?doc)
+FILTER(!bound(?tbox) && !?doc)}
+
+#Delete all A-Box subject triples
+DELETE {?s ?p ?individual}
+WHERE {?individual rdf:type owl:NamedIndividual.
+OPTIONAL{?s ?p ?individual}         
+OPTIONAL{?individual co:tbox ?tbox}
+BIND(EXISTS{?individual rdf:type co:Document} AS ?doc)
+FILTER(!bound(?tbox) && !?doc)}
+
+#Find all A-Box object triples
+SELECT *
+WHERE {?individual rdf:type owl:NamedIndividual.
+OPTIONAL{?individual ?p ?o}         
+OPTIONAL{?individual co:tbox ?tbox}
+BIND(EXISTS{?individual rdf:type co:Document} AS ?doc)
+FILTER(!bound(?tbox) && !?doc)}
+
+#Delete all A-Box object triples
+DELETE {?individual ?p ?o} 
+WHERE {?individual rdf:type owl:NamedIndividual.
+OPTIONAL{?individual ?p ?o}         
+OPTIONAL{?individual co:tbox ?tbox}
+BIND(EXISTS{?individual rdf:type co:Document} AS ?doc)
+FILTER(!bound(?tbox) && !?doc)}
+
+
 SELECT *
 WHERE {?doc rdf:type co:Document;
             co:url ?url.}
