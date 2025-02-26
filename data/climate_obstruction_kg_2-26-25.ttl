@@ -16,7 +16,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix keyword: <http://franz.com/ns/keyword#> .
-@base <https://www.michaeldebellis.com/climate_obstruction> .
+@base <https://www.michaeldebellis.com/climate_obstruction#> .
 
 <https://www.michaeldebellis.com/climate_obstruction> rdf:type owl:Ontology ;
                                                        rdfs:comment "2/17/25 Deleted some axioms on Gist classes (marked each one with a comment and the deleted axiom) because the reasoner was getting slow and the axioms weren't doing any work. M. DeBellis" ;
@@ -493,6 +493,7 @@ Note that the unit of measure of the accuracy has to be compatible with the unit
 
 ###  https://w3id.org/semanticarts/ns/ontology/gist/hasParticipant
 <https://w3id.org/semanticarts/ns/ontology/gist/hasParticipant> rdf:type owl:ObjectProperty ;
+                                                                owl:inverseOf <https://www.michaeldebellis.com/climate_obstruction/is_participant_in> ;
                                                                 rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore> ;
                                                                 skos:definition "Relates something (e.g. an agreement) to things that play a role, or take part or are otherwise involved in some way." ;
                                                                 skos:example "An event of transferring money has a participating account that receives the money." ;
@@ -973,7 +974,6 @@ Note that the unit of measure of the accuracy has to be compatible with the unit
 
 ###  https://www.michaeldebellis.com/climate_obstruction/has_participant
 <https://www.michaeldebellis.com/climate_obstruction/has_participant> rdf:type owl:ObjectProperty ;
-                                                                      owl:inverseOf <https://www.michaeldebellis.com/climate_obstruction/is_participant_in> ;
                                                                       rdfs:domain <https://www.michaeldebellis.com/climate_obstruction/Intentional_Event> ;
                                                                       rdfs:range <https://www.michaeldebellis.com/climate_obstruction/Agent> ;
                                                                       dcterms:contributor <https://orcid.org/0000-0002-8824-9577> ;
@@ -991,7 +991,7 @@ Note that the unit of measure of the accuracy has to be compatible with the unit
 
 ###  https://www.michaeldebellis.com/climate_obstruction/has_responsible_agent
 <https://www.michaeldebellis.com/climate_obstruction/has_responsible_agent> rdf:type owl:ObjectProperty ;
-                                                                            rdfs:subPropertyOf <https://www.michaeldebellis.com/climate_obstruction/has_participant> ;
+                                                                            rdfs:subPropertyOf <https://w3id.org/semanticarts/ns/ontology/gist/hasParticipant> ;
                                                                             owl:inverseOf <https://www.michaeldebellis.com/climate_obstruction/is_responsible_agent_for> ;
                                                                             dcterms:contributor <https://orcid.org/0000-0002-8824-9577> ;
                                                                             dcterms:created "2025-02-07T22:22:54Z"^^xsd:dateTime ;
@@ -3845,6 +3845,25 @@ This indicator assesses an organization B and requires that a) there is an organ
                                                                dcterms:contributor <https://orcid.org/0000-0002-8824-9577> ;
                                                                dcterms:created "2025-01-31T02:48:36Z"^^xsd:dateTime ;
                                                                rdfs:label "Document" .
+
+
+###  https://www.michaeldebellis.com/climate_obstruction/Donation
+<https://www.michaeldebellis.com/climate_obstruction/Donation> rdf:type owl:Class ;
+                                                               owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/semanticarts/ns/ontology/gist/Transaction>
+                                                                                                          [ rdf:type owl:Restriction ;
+                                                                                                            owl:onProperty <https://w3id.org/semanticarts/ns/ontology/gist/hasGiver> ;
+                                                                                                            owl:someValuesFrom <https://www.michaeldebellis.com/climate_obstruction/Agent>
+                                                                                                          ]
+                                                                                                          [ rdf:type owl:Restriction ;
+                                                                                                            owl:onProperty <https://w3id.org/semanticarts/ns/ontology/gist/hasRecipient> ;
+                                                                                                            owl:someValuesFrom <https://www.michaeldebellis.com/climate_obstruction/Agent>
+                                                                                                          ]
+                                                                                                        ) ;
+                                                                                     rdf:type owl:Class
+                                                                                   ] ;
+                                                               rdfs:subClassOf <https://w3id.org/semanticarts/ns/ontology/gist/Transaction> ;
+                                                               dcterms:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                                                               dcterms:created "2025-02-26T19:37:17Z"^^xsd:dateTime .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Dubious_certifications_and_labels
