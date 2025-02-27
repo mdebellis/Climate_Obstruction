@@ -1874,6 +1874,14 @@ The conventions for precision that are repeated in each property name are as fol
                                                                  rdfs:label "first name" .
 
 
+###  https://www.michaeldebellis.com/climate_obstruction/heading
+<https://www.michaeldebellis.com/climate_obstruction/heading> rdf:type owl:DatatypeProperty ;
+                                                              rdfs:domain <https://w3id.org/semanticarts/ns/ontology/gist/Content> ;
+                                                              dcterms:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                                                              dcterms:created "2025-02-27T19:35:37Z"^^xsd:dateTime ;
+                                                              skos:definition "Holds the string for the heading of a Section object. Made the domain Content which is the superclass of Section because other subclasses may have a use for headings as well." .
+
+
 ###  https://www.michaeldebellis.com/climate_obstruction/jurisdictions
 <https://www.michaeldebellis.com/climate_obstruction/jurisdictions> rdf:type owl:DatatypeProperty ;
                                                                     dcterms:contributor <https://orcid.org/0000-0002-8824-9577> ;
@@ -4545,6 +4553,14 @@ Source: https://en.wikipedia.org/wiki/Proposition""" .
                                                                      dcterms:created "2025-02-14T22:17:23Z"^^xsd:dateTime .
 
 
+###  https://www.michaeldebellis.com/climate_obstruction/Section
+<https://www.michaeldebellis.com/climate_obstruction/Section> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <https://w3id.org/semanticarts/ns/ontology/gist/Content> ;
+                                                              dcterms:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                                                              dcterms:created "2025-02-27T19:33:01Z"^^xsd:dateTime ;
+                                                              skos:definition "This class models instances that are a part of a document." .
+
+
 ###  https://www.michaeldebellis.com/climate_obstruction/Selective_Disclosure
 <https://www.michaeldebellis.com/climate_obstruction/Selective_Disclosure> rdf:type owl:Class ;
                                                                            rdfs:subClassOf <https://www.michaeldebellis.com/climate_obstruction/Impact> ;
@@ -4952,7 +4968,8 @@ It has been established that, for many years, Exxon’s public affairs strategy 
                                                                                                        dcterms:created "2025-02-06T04:56:01Z"^^xsd:dateTime ;
                                                                                                        rdfs:isDefinedBy <https://www.science.org/doi/10.1126/science.abk0063> ;
                                                                                                        rdfs:label "Assessing ExxonMobil’s global warming projections" ;
-                                                                                                       skos:definition "ExxonMobil’s global warming projections are an example of Falsehoods Green Washing" .
+                                                                                                       skos:definition "ExxonMobil’s global warming projections are an example of Falsehoods Green Washing" ;
+                                                                                                       <https://www.michaeldebellis.com/climate_obstruction/url> <https://www.science.org/doi/10.1126/science.abk0063> .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Avoiding_a_Climate_Lockdown
@@ -4961,7 +4978,8 @@ It has been established that, for many years, Exxon’s public affairs strategy 
                                                                                   dcterms:abstract "Mazzucato argued for a “green economic transformation” and a “radical overhaul” of energy, warning of the steps that may be necessary if this agenda fails, such as limits on car use, meat consumption and extreme energy-saving measures. She also connected the current climate, economic and public health crises, linking pandemics like COVID-19 to environmental degradation and social injustice. Her argument did not celebrate the idea of climaterelated lockdowns, but rather laid out the policies needed to avoid them." ;
                                                                                   dcterms:contributor <https://orcid.org/0000-0002-8824-9577> ;
                                                                                   dcterms:created "2025-02-08T05:32:48Z"^^xsd:dateTime ;
-                                                                                  rdfs:isDefinedBy <https://www.project-syndicate.org/commentary/radical-green-overhaul-to-avoid-climate-lockdown-by-mariana-mazzucato-2020-09?barrier=accesspaylog> .
+                                                                                  rdfs:isDefinedBy <https://www.project-syndicate.org/commentary/radical-green-overhaul-to-avoid-climate-lockdown-by-mariana-mazzucato-2020-09?barrier=accesspaylog> ;
+                                                                                  <https://www.michaeldebellis.com/climate_obstruction/url> <https://www.project-syndicate.org/commentary/radical-green-overhaul-to-avoid-climate-lockdown-by-mariana-mazzucato-2020-09?barrier=accesspaylog> .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Avoiding_cultural_trauma_climate_change_and_social_inertia
@@ -5214,7 +5232,8 @@ Most of the copies of the 10 agreements were obtained through public record act 
                                                                                             dcterms:contributor <https://orcid.org/0000-0002-8824-9577> ;
                                                                                             dcterms:created "2025-02-07T21:18:53Z"^^xsd:dateTime ;
                                                                                             rdfs:isDefinedBy <https://www.isdglobal.org/wp-content/uploads/2021/10/20211014-ISDG-25-Climate-Lockdown-Part-1-V92.pdf> ;
-                                                                                            rdfs:label "‘Climate Lockdown’ and the Culture Wars: How COVID-19 sparked a new narrative against climate action" .
+                                                                                            rdfs:label "‘Climate Lockdown’ and the Culture Wars: How COVID-19 sparked a new narrative against climate action" ;
+                                                                                            <https://www.michaeldebellis.com/climate_obstruction/url> <https://www.isdglobal.org/wp-content/uploads/2021/10/20211014-ISDG-25-Climate-Lockdown-Part-1-V92.pdf> .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/Climate_Obstruction_in_Europe
@@ -5387,7 +5406,8 @@ The Court, therefore, granted the appeal and ordered that the application be rem
                                                                                                                        dcterms:contributor <https://orcid.org/0000-0002-8824-9577> ;
                                                                                                                        dcterms:created "2025-02-07T21:41:03Z"^^xsd:dateTime ;
                                                                                                                        rdfs:isDefinedBy <https://www.theguardian.com/commentisfree/2020/apr/12/the-guardian-view-on-the-climate-and-coronavirus-global-warnings> ;
-                                                                                                                       rdfs:label "The Guardian view on the climate and coronavirus: global warnings" .
+                                                                                                                       rdfs:label "The Guardian view on the climate and coronavirus: global warnings" ;
+                                                                                                                       <https://www.michaeldebellis.com/climate_obstruction/url> <https://www.theguardian.com/commentisfree/2020/apr/12/the-guardian-view-on-the-climate-and-coronavirus-global-warnings> .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/The_Structure_and_Culture_of_Climate_Change_Denial
@@ -5430,7 +5450,8 @@ The urgency and desperation surrounding all such efforts are likely to militate 
                                                                                                                                dcterms:contributor <https://orcid.org/0000-0002-8824-9577> ;
                                                                                                                                dcterms:created "2025-02-11T01:05:02Z"^^xsd:dateTime ;
                                                                                                                                rdfs:isDefinedBy <https://www.climatedepot.com/2020/04/13/uk-guardian-acvitists-hope-coronavirus-lockdown-becomes-climate-lockdown-what-was-once-impossible-socialist-reckless-now-turns-out-not-to-be-at-all/> ;
-                                                                                                                               rdfs:label "UK Guardian activists hope Coronavirus lockdown becomes climate lockdown: ‘What was once impossible (socialist, reckless) now turns out not to be, at all’" .
+                                                                                                                               rdfs:label "UK Guardian activists hope Coronavirus lockdown becomes climate lockdown: ‘What was once impossible (socialist, reckless) now turns out not to be, at all’" ;
+                                                                                                                               <https://www.michaeldebellis.com/climate_obstruction/url> <https://www.climatedepot.com/2020/04/13/uk-guardian-acvitists-hope-coronavirus-lockdown-becomes-climate-lockdown-what-was-once-impossible-socialist-reckless-now-turns-out-not-to-be-at-all/> .
 
 
 ###  https://www.michaeldebellis.com/climate_obstruction/We_need_to_act_boldly_to_avoid_economy-wide_lockdowns_to_halt_climate_change
@@ -12016,7 +12037,8 @@ In March 2022, the defendant submitted a defense, denying responsibility for the
                                                                                                                        dcterms:contributor <https://orcid.org/0000-0002-8824-9577> ;
                                                                                                                        dcterms:created "2025-02-07T17:01:17Z"^^xsd:dateTime ;
                                                                                                                        rdfs:isDefinedBy <https://misinforeview.hks.harvard.edu/article/the-climate-lockdown-conspiracy-you-cant-fact-check-possibility/> ;
-                                                                                                                       rdfs:label "The climate lockdown conspiracy: You can’t fact-check possibility" .
+                                                                                                                       rdfs:label "The climate lockdown conspiracy: You can’t fact-check possibility" ;
+                                                                                                                       <https://www.michaeldebellis.com/climate_obstruction/url> <https://misinforeview.hks.harvard.edu/article/the-climate-lockdown-conspiracy-you-cant-fact-check-possibility/> .
 
 
 ###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
