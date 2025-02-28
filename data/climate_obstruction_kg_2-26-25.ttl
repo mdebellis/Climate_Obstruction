@@ -4774,7 +4774,7 @@ There is a wide range of terms and claims used by companies in addition to “ne
                                                                                                                 dcterms:publisher "Footnotes: A magazine of the American Socilogical Institute" ;
                                                                                                                 <http://purl.org/ontology/bibo/issue> "3" ;
                                                                                                                 <http://purl.org/ontology/bibo/volume> "40" ;
-                                                                                                                <https://www.michaeldebellis.com/climate_obstruction/author_string> "Robert J. Brulle; Riley E. Dunlap" ;
+                                                                                                                <https://www.michaeldebellis.com/climate_obstruction/author_string> "Brulle, Robert J. ; Dunlap, Riley E." ;
                                                                                                                 dcterms:contributor <https://orcid.org/0000-0002-8824-9577> ;
                                                                                                                 dcterms:created "2025-01-30T18:43:46Z"^^xsd:dateTime ;
                                                                                                                 rdfs:isDefinedBy <https://www.asanet.org/footnotes-article/sociological-view-effort-obstruct-action-climate-change/> ;
@@ -4962,7 +4962,8 @@ anthro
 Our findings about the company’s early understanding of climate science contradict many of the claims that the company and its allies have made in public.
 Emphasizing uncertainties
 It has been established that, for many years, Exxon’s public affairs strategy was—as a 1988 internal memo put it—to “emphasize the uncertainty in scientific conclusions regarding the potential enhanced greenhouse effect” (10, 44, 50). However, our analysis shows that in their reports and briefings to management, ExxonMobil’s own scientists did not particularly emphasize uncertainty; on the contrary, the level of uncertainty indicated by their global warming projections (bootstrapped 2σ standard error of the mean = ±21%) was commensurate with that reported by independent academics (±16%). Crucially, it excluded the possibility of no anthropogenic global warming; at no point did company scientists suggest that human-caused global warming would not occur. Nor did they conclude that the uncertainties were too great to permit differentiation of human and natural drivers. Yet publicly, ExxonMobil Corp made these claims until at least the early 2010s (see Box 2).""" ;
-                                                                                                       <https://www.michaeldebellis.com/climate_obstruction/author_string> "G. SUPRAN; S. RAHMSTORF; N. ORESKES" ;
+                                                                                                       <https://www.michaeldebellis.com/climate_obstruction/author_string> "G. SUPRAN; S. RAHMSTORF; N. ORESKES" ,
+                                                                                                                                                                           "G. Supran; S. Rahmstorf; N. Oreskes" ;
                                                                                                        <https://www.michaeldebellis.com/climate_obstruction/media_link> "https://www.science.org/doi/10.1126/science.abk0063#F1"^^xsd:anyURI ;
                                                                                                        dcterms:contributor <https://orcid.org/0000-0002-8824-9577> ;
                                                                                                        dcterms:created "2025-02-06T04:56:01Z"^^xsd:dateTime ;
@@ -4985,6 +4986,7 @@ It has been established that, for many years, Exxon’s public affairs strategy 
 ###  https://www.michaeldebellis.com/climate_obstruction/Avoiding_cultural_trauma_climate_change_and_social_inertia
 <https://www.michaeldebellis.com/climate_obstruction/Avoiding_cultural_trauma_climate_change_and_social_inertia> rdf:type owl:NamedIndividual ,
                                                                                                                           <https://www.michaeldebellis.com/climate_obstruction/Journal_Article> ;
+                                                                                                                 <https://www.michaeldebellis.com/climate_obstruction/author_string> "Brull, Robert J.; Kari Marie Norgaard" ;
                                                                                                                  dcterms:contributor <https://orcid.org/0000-0002-8824-9577> ;
                                                                                                                  dcterms:created "2025-01-31T02:50:23Z"^^xsd:dateTime ;
                                                                                                                  rdfs:isDefinedBy <https://www.tandfonline.com/doi/full/10.1080/09644016.2018.1562138> ;
@@ -5219,6 +5221,7 @@ Most of the copies of the 10 agreements were obtained through public record act 
 ###  https://www.michaeldebellis.com/climate_obstruction/Challenging_Climate_Change_The_Denial_Countermovement
 <https://www.michaeldebellis.com/climate_obstruction/Challenging_Climate_Change_The_Denial_Countermovement> rdf:type owl:NamedIndividual ,
                                                                                                                      <https://www.michaeldebellis.com/climate_obstruction/Journal_Article> ;
+                                                                                                            <https://www.michaeldebellis.com/climate_obstruction/author_string> "Riley E. Dunlap; Aaron M. McCright" ;
                                                                                                             dcterms:contributor <https://orcid.org/0000-0002-8824-9577> ;
                                                                                                             dcterms:created "2025-01-31T04:19:22Z"^^xsd:dateTime ;
                                                                                                             rdfs:isDefinedBy <https://www.researchgate.net/publication/291353557_Challenging_Climate_Change_The_Denial_Countermovement#fullTextFileContent> ;
@@ -5293,6 +5296,7 @@ The Court, therefore, granted the appeal and ordered that the application be rem
 ###  https://www.michaeldebellis.com/climate_obstruction/Corporate_promotion_and_climate_change
 <https://www.michaeldebellis.com/climate_obstruction/Corporate_promotion_and_climate_change> rdf:type owl:NamedIndividual ,
                                                                                                       <https://www.michaeldebellis.com/climate_obstruction/Journal_Article> ;
+                                                                                             <https://www.michaeldebellis.com/climate_obstruction/author_string> "Robert J. Brulle; Melissa Aronczyk; Jason Carmichael" ;
                                                                                              dcterms:contributor <https://orcid.org/0000-0002-8824-9577> ;
                                                                                              dcterms:created "2025-01-31T04:40:53Z"^^xsd:dateTime ;
                                                                                              rdfs:isDefinedBy <https://link.springer.com/article/10.1007/s10584-019-02582-8> ;
@@ -5312,6 +5316,8 @@ The Court, therefore, granted the appeal and ordered that the application be rem
 ###  https://www.michaeldebellis.com/climate_obstruction/Discourses_of_climate_delay
 <https://www.michaeldebellis.com/climate_obstruction/Discourses_of_climate_delay> rdf:type owl:NamedIndividual ,
                                                                                            <https://www.michaeldebellis.com/climate_obstruction/Journal_Article> ;
+                                                                                  <https://www.michaeldebellis.com/climate_obstruction/author_string> """William F. Lamb;  Giulio Mattioli; Sebastian Levi; J. Timmons Roberts; Stuart Capstick; 
+Felix Creutzig; Jan C. Minx; Finn Müller-Hansen; Trevor Culhane; Julia K. Steinberger""" ;
                                                                                   dcterms:contributor <https://orcid.org/0000-0002-8824-9577> ;
                                                                                   dcterms:created "2025-01-31T04:35:28Z"^^xsd:dateTime ;
                                                                                   rdfs:isDefinedBy <https://www.cambridge.org/core/journals/global-sustainability/article/discourses-of-climate-delay/7B11B722E3E3454BB6212378E32985A7> ;
@@ -5322,6 +5328,7 @@ The Court, therefore, granted the appeal and ordered that the application be rem
 ###  https://www.michaeldebellis.com/climate_obstruction/Institutionalizing_delay_foundation_funding_and_the_creation_of_US_climate_change_counter-movement_organizations
 <https://www.michaeldebellis.com/climate_obstruction/Institutionalizing_delay_foundation_funding_and_the_creation_of_US_climate_change_counter-movement_organizations> rdf:type owl:NamedIndividual ,
                                                                                                                                                                                 <https://www.michaeldebellis.com/climate_obstruction/Journal_Article> ;
+                                                                                                                                                                       <https://www.michaeldebellis.com/climate_obstruction/author_string> "Robert J. Brulle" ;
                                                                                                                                                                        dcterms:contributor <https://orcid.org/0000-0002-8824-9577> ;
                                                                                                                                                                        dcterms:created "2025-01-31T04:26:25Z"^^xsd:dateTime ;
                                                                                                                                                                        rdfs:isDefinedBy <https://link.springer.com/article/10.1007/s10584-013-1018-7> ;
@@ -5343,6 +5350,7 @@ The Court, therefore, granted the appeal and ordered that the application be rem
 ###  https://www.michaeldebellis.com/climate_obstruction/Network_structure_and_influence_of_the_climate_change_counter-movement
 <https://www.michaeldebellis.com/climate_obstruction/Network_structure_and_influence_of_the_climate_change_counter-movement> rdf:type owl:NamedIndividual ,
                                                                                                                                       <https://www.michaeldebellis.com/climate_obstruction/Journal_Article> ;
+                                                                                                                             <https://www.michaeldebellis.com/climate_obstruction/author_string> "Justin Farrell" ;
                                                                                                                              dcterms:contributor <https://orcid.org/0000-0002-8824-9577> ;
                                                                                                                              dcterms:created "2025-01-31T04:42:34Z"^^xsd:dateTime ;
                                                                                                                              rdfs:isDefinedBy <https://www.nature.com/articles/nclimate2875> ;
@@ -5372,6 +5380,7 @@ The Court, therefore, granted the appeal and ordered that the application be rem
 ###  https://www.michaeldebellis.com/climate_obstruction/Sources_and_Amplifiers_of_Climate_Change_Denial
 <https://www.michaeldebellis.com/climate_obstruction/Sources_and_Amplifiers_of_Climate_Change_Denial> rdf:type owl:NamedIndividual ,
                                                                                                                <https://www.michaeldebellis.com/climate_obstruction/Journal_Article> ;
+                                                                                                      <https://www.michaeldebellis.com/climate_obstruction/author_string> "Riley E. Dunlap; Robert J. Brulle" ;
                                                                                                       dcterms:contributor <https://orcid.org/0000-0002-8824-9577> ;
                                                                                                       dcterms:created "2025-01-31T04:17:33Z"^^xsd:dateTime ;
                                                                                                       rdfs:isDefinedBy <https://www.researchgate.net/publication/346088327_Sources_and_Amplifiers_of_Climate_Change_Denial> ;
@@ -5392,6 +5401,7 @@ The Court, therefore, granted the appeal and ordered that the application be rem
 ###  https://www.michaeldebellis.com/climate_obstruction/Text-mining_the_signals_of_climate_change_doubt
 <https://www.michaeldebellis.com/climate_obstruction/Text-mining_the_signals_of_climate_change_doubt> rdf:type owl:NamedIndividual ,
                                                                                                                <https://www.michaeldebellis.com/climate_obstruction/Journal_Article> ;
+                                                                                                      <https://www.michaeldebellis.com/climate_obstruction/author_string> "Constantine Boussalis; Travis G. Coan" ;
                                                                                                       dcterms:contributor <https://orcid.org/0000-0002-8824-9577> ;
                                                                                                       dcterms:created "2025-01-31T04:22:59Z"^^xsd:dateTime ;
                                                                                                       rdfs:isDefinedBy <https://www.sciencedirect.com/science/article/abs/pii/S0959378015300728?casa_token=RFYHWK5WkwkAAAAA:5QTDaWIlNNANq7awL4hQZFiSUHYwt469h2IsKqIutT5WbSVlW2jvGLRNncL1CqSCPFL4XwOhWoI> ;
@@ -5413,6 +5423,7 @@ The Court, therefore, granted the appeal and ordered that the application be rem
 ###  https://www.michaeldebellis.com/climate_obstruction/The_Structure_and_Culture_of_Climate_Change_Denial
 <https://www.michaeldebellis.com/climate_obstruction/The_Structure_and_Culture_of_Climate_Change_Denial> rdf:type owl:NamedIndividual ,
                                                                                                                   <https://www.michaeldebellis.com/climate_obstruction/Journal_Article> ;
+                                                                                                         <https://www.michaeldebellis.com/climate_obstruction/author_string> "Jeremiah Bohr" ;
                                                                                                          dcterms:contributor <https://orcid.org/0000-0002-8824-9577> ;
                                                                                                          dcterms:created "2025-01-31T04:21:07Z"^^xsd:dateTime ;
                                                                                                          rdfs:isDefinedBy <https://www.asanet.org/footnotes-article/structure-and-culture-climate-change-denial/> ;
@@ -5423,6 +5434,7 @@ The Court, therefore, granted the appeal and ordered that the application be rem
 ###  https://www.michaeldebellis.com/climate_obstruction/The_growth_of_climate_change_misinformation_in_US_philanthropy
 <https://www.michaeldebellis.com/climate_obstruction/The_growth_of_climate_change_misinformation_in_US_philanthropy> rdf:type owl:NamedIndividual ,
                                                                                                                               <https://www.michaeldebellis.com/climate_obstruction/Journal_Article> ;
+                                                                                                                     <https://www.michaeldebellis.com/climate_obstruction/author_string> "Justin Farrell" ;
                                                                                                                      dcterms:contributor <https://orcid.org/0000-0002-8824-9577> ;
                                                                                                                      dcterms:created "2025-01-31T04:45:20Z"^^xsd:dateTime ;
                                                                                                                      rdfs:isDefinedBy <https://cssn.org/wp-content/uploads/2020/12/The-growth-of-climate-change-misinformation-in-US-philanthropy-evidence-from-natural-language-processing-Justin-Farrell.pdf> ;
@@ -12034,6 +12046,7 @@ In March 2022, the defendant submitted a defense, denying responsibility for the
 <https://www.michaeldebellis.com/climate_obstruction/The_climate_lockdown_conspiracy_You_can’t_fact-check_possibility> rdf:type owl:NamedIndividual ,
                                                                                                                                 <https://www.michaeldebellis.com/climate_obstruction/Journal_Article> ;
                                                                                                                        dcterms:abstract "The climate lockdown conspiracies claim that a clandestine group of elites are planning to use climate change as a justification to enact widespread lockdowns and curtail freedoms. This conspiracy draws on a wide range of unconnected real-world events and suggests that their possibility of happening again is all the proof required. The focus on possibility instead of reality demonstrates the deep-seated philosophical differences between conspiracy theories and the fact-checking processes that counter them" ;
+                                                                                                                       <https://www.michaeldebellis.com/climate_obstruction/author_string> "Michael P. Murphy" ;
                                                                                                                        dcterms:contributor <https://orcid.org/0000-0002-8824-9577> ;
                                                                                                                        dcterms:created "2025-02-07T17:01:17Z"^^xsd:dateTime ;
                                                                                                                        rdfs:isDefinedBy <https://misinforeview.hks.harvard.edu/article/the-climate-lockdown-conspiracy-you-cant-fact-check-possibility/> ;

@@ -105,7 +105,7 @@ def get_value(instance, owl_property):
                 return statement.getObject()
             elif len(statements) == 1:
                 return statement.getObject()
-    print(f'Error: No property value for: {instance, owl_property}.')
+    print(f'Warning: No property value for: {instance, owl_property}.')
     return None
 
 # Returns the values of a the property of an instance in a set if no values returns an empty set
