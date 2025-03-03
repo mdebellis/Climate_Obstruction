@@ -1,6 +1,7 @@
 import uuid
 from src.ag_api import *
-from src.ag_api import find_property
+from nameparser import HumanName
+
 
 last_name_prop = find_property(make_ontology_iri("last_name"))
 first_name_prop = find_property(make_ontology_iri("first_name"))
@@ -26,15 +27,16 @@ def create_author(last_name, first_name=None, middle_name=None):
 
 
 def parse_authors(authors_string):
-    # Just a basic start, ignoring middle names and many alternative patterns
-    authors = authors_string.split(";")  # Split authors by semicolon
+    print(authors_string) #Debugging
+    authors = authors_string.split(";")   #split the authors by semi-colon
     author_list = []
     for author in authors:
-        name_parts = author.split(",")  # Split each author by comma
-        last = name_parts[0].strip()  # Get the last name and strip whitespace
-        first = name_parts[1].strip()
-        author_iri = create_author(last_name=last, first_name=first)
-        author_list.append(author_iri)  # Add the created author's IRI to the list
+        name = HumanName(author.strip())  #use name parser to parse the names
+        first_name = name.first
+        last_name = name.last
+        #create an append author object
+        author_obj = Author(first_name=first_name, last_name=last_name)
+        author_list.append(author_obj)
     return author_list
 
 # Checks if there are already author objects for the document
@@ -58,7 +60,7 @@ def make_author_objects():
 
 
 #make_author_objects()
-#parse_authors("Justin Farrell")
+parse_authors("Justin Farrell")
 
 
 
