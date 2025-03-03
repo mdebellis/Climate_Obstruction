@@ -63,18 +63,31 @@ def find_author_string(document):
     else: return document_author_string
 
 #Loops through all the instances of Document
+#if the Document has an author_string and has no values for the object property
+#author_property then it creates a new object for each author (unless one already exists)
+#and sets the author property to the appropriate (new or existing) OWL author object
 def make_author_objects():
     documents = find_instances_of_class(document_class)
     for document in documents:
         document_authors = find_author_string(document)
+        existing_authors = get_values(document, author_property)
         print(document_authors)
-        if document_authors:
+        if document_authors and not existing_authors:
             author_list = parse_authors(convert_to_string(document_authors))
             for author_pobject in author_list:
                 find_or_create_author(author_pobject, document)
 
+def get_author_label(author_pobject):
+    first_name = author_pobject.first_name
+    last_name = author_pobject.last_name
+    if first_name is None:
+        return last_name
+    else:
+        return first_name + " " + last_name
+
 def find_or_create_author(author_pobject, document):
-    author_object = find_object_from_label("Stub Value")
+    author_label = get_author_label(author_pobject)
+    author_object = find_object_from_label(author_label)
     if author_object:
         put_value(document, author_property, author_object)
     else:
