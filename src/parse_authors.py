@@ -39,7 +39,7 @@ def create_author(last_name, first_name=None, middle_name=None):
 
 
 def parse_authors(authors_string):
-    print(authors_string) #Debugging
+    print(f'Calling parse_authors with parameter: {authors_string}') #Debugging
     authors = authors_string.split(";")   #split the authors by semi-colon
     author_list = []
     for author in authors:
@@ -97,9 +97,9 @@ def find_or_create_author(author_pobject, document):
 
 
 
-#make_author_objects()
-print(parse_authors("Jennifer Washburn"))
-print(parse_authors("Jennifer Washburn; Noam Chomsky"))
+make_author_objects()
+#print(parse_authors("Jennifer Washburn"))
+#print(parse_authors("Jennifer Washburn; Noam Chomsky"))
 
 
 
