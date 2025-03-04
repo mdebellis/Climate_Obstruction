@@ -27,7 +27,19 @@ person_class = find_class(make_gist_iri("Person"))
 document_class = find_class(make_ontology_iri("Journal_Article"))
 author_string_property = find_property(make_ontology_iri("author_string"))
 author_property = find_property(make_ontology_iri("has_author"))
+# List of words commonly found in organization names, to be used to check for organization authors
+org_keywords = {"institute", "corporation", "university", "company", "associates", "group", "org.", ".com", "llc",
+                "foundation", "agency", "department", "press", "thoughtworks", "enterprise"}
 test_document1 = find_object_from_label("The climate lockdown conspiracy: You can’t fact-check possibility")
+
+# Test if a string is likely a name of an organization rather than a person
+def is_human_author(author_string):
+    # Check for common organization keywords
+    lower_name = author_string.lower()
+    if any(word in lower_name for word in org_keywords):
+        return False
+    else:
+        return True
 
 class Author:
     def __init__(self, first_name, last_name):
@@ -130,6 +142,8 @@ def find_or_create_author(author_pobject, document):
 #print(find_author_string(test_document1))
 #print(get_values(test_document1, author_property))
 #print(find_object_from_label("Jennifer Washburn"))
+#print(is_human_author("Institute for Research in Economics and Economic Policy"))
+#print(is_human_author("Allen"))
 
 
 
