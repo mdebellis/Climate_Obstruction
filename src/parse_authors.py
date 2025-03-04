@@ -92,7 +92,6 @@ def make_author_objects():
     for document in documents:
         document_authors = find_author_string(document)
         existing_authors = get_values(document, author_property)
-        print(document_authors)
         if document_authors and not existing_authors:
             author_list = parse_authors(document_authors)
             for author_pobject in author_list:
@@ -123,7 +122,7 @@ def find_or_create_author(author_pobject, document):
 
 
 
-make_author_objects()
+#make_author_objects()
 #print(parse_authors("Jennifer Washburn"))
 #print(parse_authors("Jennifer Washburn; Noam Chomsky"))
 #print(find_instances_of_class(document_class))
