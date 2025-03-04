@@ -1,6 +1,24 @@
 import uuid
+import re
 from src.ag_api import *
 from nameparser import HumanName
+import functools
+
+
+def trace_function(func):
+    """A decorator to trace the function calls."""
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        # Log the function call with arguments
+        print(f"Calling {func.__name__} with arguments: args={args}, kwargs={kwargs}")
+        result = func(*args, **kwargs)
+        # Log the return value
+        print(f"{func.__name__} returned: {result}")
+        return result
+
+    return wrapper
+
 
 last_name_prop = find_property(make_ontology_iri("last_name"))
 first_name_prop = find_property(make_ontology_iri("first_name"))
@@ -9,6 +27,7 @@ person_class = find_class(make_gist_iri("Person"))
 document_class = find_class(make_ontology_iri("Journal_Article"))
 author_string_property = find_property(make_ontology_iri("author_string"))
 author_property = find_property(make_ontology_iri("has_author"))
+test_document1 = find_object_from_label("The climate lockdown conspiracy: You can’t fact-check possibility")
 
 class Author:
     def __init__(self, first_name, last_name):
@@ -19,6 +38,7 @@ class Author:
     def __repr__(self):
         return f"Author('{self.first_name}', '{self.last_name}')"
 
+@trace_function
 def create_author(last_name, first_name=None, middle_name=None):
     print(f'Creating author with parameters: {last_name}, {first_name}, {middle_name}')
     #This assumes that last_name is always bound
@@ -31,21 +51,20 @@ def create_author(last_name, first_name=None, middle_name=None):
     if first_name is not None:
         put_value(author_iri, first_name_prop, first_name)
         put_value(author_iri, last_name_prop, last_name)
-        put_value(author_iri, rdfs_label_property,  first_name + " " + last_name)
+        put_value(author_iri, rdfs_label_property,  format_name(first_name + " " + last_name))
     else:
         put_value(author_iri, last_name_prop, last_name)
-        put_value(author_iri, rdfs_label_property, last_name)
+        put_value(author_iri, rdfs_label_property, format_name(last_name))
     return author_iri
 
-
+@trace_function
 def parse_authors(authors_string):
-    print(f'Calling parse_authors with parameter: {authors_string}') #Debugging
     authors = authors_string.split(";")   #split the authors by semi-colon
     author_list = []
     for author in authors:
         name = HumanName(author.strip())  #use name parser to parse the names
-        first_name = name.first
-        last_name = name.last
+        first_name = name.first.strip('"')
+        last_name = name.last.strip('"')
         #create an append author object
         author_obj = Author(first_name=first_name, last_name=last_name)
         author_list.append(author_obj)
@@ -54,6 +73,7 @@ def parse_authors(authors_string):
 # Checks if there are already author objects for the document
 # and if there is a value for the author string, if there is an author string
 # and there are no author objects then return the author string, otherwise return false
+@trace_function
 def find_author_string(document):
     document_author_string = get_value(document, author_string_property)
     document_authors = get_values(document, author_property)
@@ -61,7 +81,7 @@ def find_author_string(document):
         return False
     elif document_authors:
         return False
-    else: return document_author_string
+    else: return str(document_author_string).strip('"')
 
 #Loops through all the instances of Document
 #if the Document has an author_string and has no values for the object property
@@ -74,18 +94,24 @@ def make_author_objects():
         existing_authors = get_values(document, author_property)
         print(document_authors)
         if document_authors and not existing_authors:
-            author_list = parse_authors(convert_to_string(document_authors))
+            author_list = parse_authors(document_authors)
             for author_pobject in author_list:
                 find_or_create_author(author_pobject, document)
+
+# Some names are in all caps. This makes sure the labels will be the same.
+def format_name(name):
+    return re.sub(r"\b(\w+)\b", lambda m: m.group(1).capitalize(), name.lower())
+
 
 def get_author_label(author_pobject):
     first_name = author_pobject.first_name
     last_name = author_pobject.last_name
     if first_name is None:
-        return last_name
+        return format_name(last_name)
     else:
-        return first_name + " " + last_name
+        return format_name(first_name + " " + last_name)
 
+@trace_function
 def find_or_create_author(author_pobject, document):
     author_label = get_author_label(author_pobject)
     author_object = find_object_from_label(author_label)
@@ -97,10 +123,16 @@ def find_or_create_author(author_pobject, document):
 
 
 
-#make_author_objects()
+make_author_objects()
 #print(parse_authors("Jennifer Washburn"))
 #print(parse_authors("Jennifer Washburn; Noam Chomsky"))
-print(find_instances_of_class(document_class))
+#print(find_instances_of_class(document_class))
+#print(format_name("JOSEPH P. McDougel"))
+#print(find_author_string(test_document1))
+#print(get_values(test_document1, author_property))
+#print(find_object_from_label("Jennifer Washburn"))
+
+
 
 
 

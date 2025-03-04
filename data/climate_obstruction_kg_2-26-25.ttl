@@ -5316,8 +5316,7 @@ The Court, therefore, granted the appeal and ordered that the application be rem
 ###  https://www.michaeldebellis.com/climate_obstruction/Discourses_of_climate_delay
 <https://www.michaeldebellis.com/climate_obstruction/Discourses_of_climate_delay> rdf:type owl:NamedIndividual ,
                                                                                            <https://www.michaeldebellis.com/climate_obstruction/Journal_Article> ;
-                                                                                  <https://www.michaeldebellis.com/climate_obstruction/author_string> """William F. Lamb;  Giulio Mattioli; Sebastian Levi; J. Timmons Roberts; Stuart Capstick; 
-Felix Creutzig; Jan C. Minx; Finn Müller-Hansen; Trevor Culhane; Julia K. Steinberger""" ;
+                                                                                  <https://www.michaeldebellis.com/climate_obstruction/author_string> "William F. Lamb;  Giulio Mattioli; Sebastian Levi; J. Timmons Roberts; Stuart Capstick; Felix Creutzig; Jan C. Minx; Finn Müller-Hansen; Trevor Culhane; Julia K. Steinberger" ;
                                                                                   dcterms:contributor <https://orcid.org/0000-0002-8824-9577> ;
                                                                                   dcterms:created "2025-01-31T04:35:28Z"^^xsd:dateTime ;
                                                                                   rdfs:isDefinedBy <https://www.cambridge.org/core/journals/global-sustainability/article/discourses-of-climate-delay/7B11B722E3E3454BB6212378E32985A7> ;
