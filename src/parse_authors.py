@@ -20,6 +20,7 @@ class Author:
         return f"Author('{self.first_name}', '{self.last_name}')"
 
 def create_author(last_name, first_name=None, middle_name=None):
+    print(f'Creating author with parameters: {last_name}, {first_name}, {middle_name}')
     #This assumes that last_name is always bound
     if last_name is None:
         print("Error New person must have a last name") # This should exit the function
@@ -91,13 +92,14 @@ def find_or_create_author(author_pobject, document):
     if author_object:
         put_value(document, author_property, author_object)
     else:
-        author_object = create_author(author_pobject.last_name, author_pobject.first_name, author_pobject.middle_name)
+        author_object = create_author(author_pobject.last_name, first_name=author_pobject.first_name)
         put_value(document, author_property, author_object)
 
 
 
 #make_author_objects()
-#parse_authors("Justin Farrell")
+print(parse_authors("Jennifer Washburn"))
+print(parse_authors("Jennifer Washburn; Noam Chomsky"))
 
 
 
