@@ -5451,6 +5451,18 @@ In March 2022, the defendant submitted a defense, denying responsibility for the
                                                                                                          <https://www.michaeldebellis.com/climate_obstruction/url> <https://www.asanet.org/footnotes-article/structure-and-culture-climate-change-denial/> .
 
 
+###  https://www.michaeldebellis.com/climate_obstruction/The_climate_lockdown_conspiracy_fact-check_possibility
+<https://www.michaeldebellis.com/climate_obstruction/The_climate_lockdown_conspiracy_fact-check_possibility> rdf:type owl:NamedIndividual ,
+                                                                                                                      <https://www.michaeldebellis.com/climate_obstruction/Journal_Article> ;
+                                                                                                             dcterms:abstract "The climate lockdown conspiracies claim that a clandestine group of elites are planning to use climate change as a justification to enact widespread lockdowns and curtail freedoms. This conspiracy draws on a wide range of unconnected real-world events and suggests that their possibility of happening again is all the proof required. The focus on possibility instead of reality demonstrates the deep-seated philosophical differences between conspiracy theories and the fact-checking processes that counter them" ;
+                                                                                                             <https://www.michaeldebellis.com/climate_obstruction/author_string> "Michael P. Murphy" ;
+                                                                                                             dcterms:contributor <https://orcid.org/0000-0002-8824-9577> ;
+                                                                                                             dcterms:created "2025-02-07T17:01:17Z"^^xsd:dateTime ;
+                                                                                                             rdfs:isDefinedBy <https://misinforeview.hks.harvard.edu/article/the-climate-lockdown-conspiracy-you-cant-fact-check-possibility/> ;
+                                                                                                             rdfs:label "The climate lockdown conspiracy: You can’t fact-check possibility" ;
+                                                                                                             <https://www.michaeldebellis.com/climate_obstruction/url> <https://misinforeview.hks.harvard.edu/article/the-climate-lockdown-conspiracy-you-cant-fact-check-possibility/> .
+
+
 ###  https://www.michaeldebellis.com/climate_obstruction/The_growth_of_climate_change_misinformation_in_US_philanthropy
 <https://www.michaeldebellis.com/climate_obstruction/The_growth_of_climate_change_misinformation_in_US_philanthropy> rdf:type owl:NamedIndividual ,
                                                                                                                               <https://www.michaeldebellis.com/climate_obstruction/Journal_Article> ;
@@ -12040,18 +12052,6 @@ The ASA told Lufthansa to ensure that the basis of future environmental claims w
                                                                                            <https://www.michaeldebellis.com/climate_obstruction/year> "2019" ;
                                                                                            skos:prefLabel "Federal Environmental Agency (IBAMA) v. Siderúrgica São Luiz Ltd. and Martins" ;
                                                                                            <https://www.michaeldebellis.com/climate_obstruction/url> "https://climatecasechart.com/non-us-case/federal-environmental-agency-ibama-v-siderurgica-sao-luiz-ltda-and-martins/" .
-
-
-###  https://www.michaeldebellis.com/climate_obstruction/The_climate_lockdown_conspiracy_You_can’t_fact-check_possibility
-<https://www.michaeldebellis.com/climate_obstruction/The_climate_lockdown_conspiracy_You_can’t_fact-check_possibility> rdf:type owl:NamedIndividual ,
-                                                                                                                                <https://www.michaeldebellis.com/climate_obstruction/Journal_Article> ;
-                                                                                                                       dcterms:abstract "The climate lockdown conspiracies claim that a clandestine group of elites are planning to use climate change as a justification to enact widespread lockdowns and curtail freedoms. This conspiracy draws on a wide range of unconnected real-world events and suggests that their possibility of happening again is all the proof required. The focus on possibility instead of reality demonstrates the deep-seated philosophical differences between conspiracy theories and the fact-checking processes that counter them" ;
-                                                                                                                       <https://www.michaeldebellis.com/climate_obstruction/author_string> "Michael P. Murphy" ;
-                                                                                                                       dcterms:contributor <https://orcid.org/0000-0002-8824-9577> ;
-                                                                                                                       dcterms:created "2025-02-07T17:01:17Z"^^xsd:dateTime ;
-                                                                                                                       rdfs:isDefinedBy <https://misinforeview.hks.harvard.edu/article/the-climate-lockdown-conspiracy-you-cant-fact-check-possibility/> ;
-                                                                                                                       rdfs:label "The climate lockdown conspiracy: You can’t fact-check possibility" ;
-                                                                                                                       <https://www.michaeldebellis.com/climate_obstruction/url> <https://misinforeview.hks.harvard.edu/article/the-climate-lockdown-conspiracy-you-cant-fact-check-possibility/> .
 
 
 ###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

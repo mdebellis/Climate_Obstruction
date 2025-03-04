@@ -6,7 +6,7 @@ last_name_prop = find_property(make_ontology_iri("last_name"))
 first_name_prop = find_property(make_ontology_iri("first_name"))
 middle_name_prop = find_property(make_ontology_iri("middle_name"))
 person_class = find_class(make_gist_iri("Person"))
-document_class = find_class(make_ontology_iri("Document"))
+document_class = find_class(make_ontology_iri("Journal_Article"))
 author_string_property = find_property(make_ontology_iri("author_string"))
 author_property = find_property(make_ontology_iri("has_author"))
 
@@ -97,9 +97,10 @@ def find_or_create_author(author_pobject, document):
 
 
 
-make_author_objects()
+#make_author_objects()
 #print(parse_authors("Jennifer Washburn"))
 #print(parse_authors("Jennifer Washburn; Noam Chomsky"))
+print(find_instances_of_class(document_class))
 
 
 

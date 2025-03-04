@@ -37,10 +37,17 @@ OPTIONAL{?individual co:tbox ?tbox}
 BIND(EXISTS{?individual rdf:type co:Document} AS ?doc)
 FILTER(!bound(?tbox) && !?doc)}
 
-
+SELECT *
+WHERE {?doc rdf:type co:Journal_Article;
+            co:author_string ?as}
+			
 SELECT *
 WHERE {?doc rdf:type co:Document;
             co:url ?url.}
+			
+SELECT *
+WHERE {?doc rdf:type co:Document;
+            co:author_string ?as.}
 			
 			
 SELECT * 
