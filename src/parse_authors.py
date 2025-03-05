@@ -28,8 +28,8 @@ document_class = find_class(make_ontology_iri("Journal_Article"))
 author_string_property = find_property(make_ontology_iri("author_string"))
 author_property = find_property(make_ontology_iri("has_author"))
 # List of words commonly found in organization names, to be used to check for organization authors
-org_keywords = {"institute", "corporation", "university", "company", "associates", "group", "org.", ".com", "llc",
-                "foundation", "agency", "department", "press", "thoughtworks", "enterprise"}
+org_keywords = {"institute", "corporation", "university", "company", "associates", "group", ".org", ".com", "llc",
+                ".net","foundation", "agency", "department", "press", "thoughtworks", "enterprise"}
 test_document1 = find_object_from_label("The climate lockdown conspiracy: You can’t fact-check possibility")
 
 # Test if a string is likely a name of an organization rather than a person
