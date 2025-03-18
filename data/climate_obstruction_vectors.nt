@@ -1,5 +1,4 @@
 _:bC7B1957Cx1 <http://franz.com/vdb/gen/embedding-length> "1536"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:bC7B1957Cx1 <http://franz.com/vdb/gen/api-key> "****************************************************" .
 _:bC7B1957Cx1 <http://franz.com/vdb/gen/model> "text-embedding-ada-002" .
 _:bC7B1957Cx1 <http://franz.com/vdb/gen/embedder> "openai" .
 _:bC7B1957Cx1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://franz.com/vdb/gen/VectorDB> .
