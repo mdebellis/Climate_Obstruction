@@ -1,6 +1,5 @@
 _:bC7B1957Cx1 <http://franz.com/vdb/gen/embedding-length> "1536"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:bC7B1957Cx1 <http://franz.com/vdb/gen/model> "text-embedding-ada-002" .
-_:bC7B1957Cx1 <http://franz.com/vdb/gen/embedder> "openai" .
+
 _:bC7B1957Cx1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://franz.com/vdb/gen/VectorDB> .
 <http://franz.com/vdb/id/51> <http://franz.com/vdb/prop/id> <https://www.michaeldebellis.com/climate_obstruction/8e18dcb1-b07c-4290-a7c5-bb1ea0686ee5> .
 <http://franz.com/vdb/id/51> <http://franz.com/vdb/prop/pred> <https://www.michaeldebellis.com/climate_obstruction/summary> .
