@@ -5,6 +5,8 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX gist: <https://w3id.org/semanticarts/ns/ontology/gist/>
 PREFIX co:  <https://www.michaeldebellis.com/climate_obstruction/>
 
+INSERT DATA {
+
 #Find all A-Box subject triples
 SELECT *
 WHERE {?individual rdf:type owl:NamedIndividual.
