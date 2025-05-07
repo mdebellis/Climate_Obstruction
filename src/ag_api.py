@@ -52,7 +52,11 @@ def find_instances_of_class(class_object):
 
 
 # Finds a property (annotation, object, or datatype) from the IRI name
+# Need some special tests up front for things like rdfs:label that aren't
+# OWL properties
 def find_property(prop_str):
+    if prop_str == "label":
+        return rdfs_label_property
     prop = conn.createURI(prop_str)
     for _ in conn.getStatements(prop, RDF.TYPE, owl_datatype_property):
         return prop
