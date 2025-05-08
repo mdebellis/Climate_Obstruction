@@ -20,9 +20,14 @@ ad_description_prop = conn.createURI("https://www.michaeldebellis.com/climate_ob
 assessment_prop = conn.createURI("https://www.michaeldebellis.com/climate_obstruction/assessment")
 background_prop = conn.createURI("https://www.michaeldebellis.com/climate_obstruction/background")
 response_prop = conn.createURI("https://www.michaeldebellis.com/climate_obstruction/response")
+contained_text_prop = conn.createURI("https://w3id.org/semanticarts/ns/ontology/gist/containedText")
+
 has_topic_prop = conn.createURI("https://www.michaeldebellis.com/climate_obstruction/has_Topic")
 is_topic_of_prop = conn.createURI("https://www.michaeldebellis.com/climate_obstruction/is_topic_of")
+skos_alt_label_property = conn.createURI("http://www.w3.org/2004/02/skos/core#altLabel")
 
+agent_class = conn.createURI("https://www.michaeldebellis.com/climate_obstruction/Agent")
+geo_region_class = conn.createURI("https://w3id.org/semanticarts/ns/ontology/gist/GeoRegion")
 exxon = conn.createURI("https://www.michaeldebellis.com/climate_obstruction/ExxonMobil")
 
 conn.createFreeTextIndex("co_fti", predicates=[case_categories_prop,
@@ -31,13 +36,15 @@ conn.createFreeTextIndex("co_fti", predicates=[case_categories_prop,
                                                text_prop, description_prop,id_text_prop,
                                                jurisdictions_prop, principle_laws_prop, action_prop,
                                                ad_description_prop,assessment_prop, background_prop,
-                                               response_prop], stopWords=all_stop_words)
+                                               response_prop, contained_text_prop], stopWords=all_stop_words)
 
 def make_links_for_topic(topic):
     label = get_value(topic, rdfs_label_property)
     pref_label = get_value(topic, skos_pref_label_property)
+    alt_label = get_value(topic, skos_alt_label_property)
     if label: make_fti_matches(topic, label)
     if pref_label: make_fti_matches(topic, pref_label)
+    if alt_label: make_fti_matches(topic, alt_label)
 
 def make_fti_matches(iri_to_match, label):
     matches = conn.evalFreeTextSearch(label, index="co_fti")
@@ -52,7 +59,15 @@ def make_topic_links(topic, document):
         put_value(document, has_topic_prop, topic)
         print(f'Topic links made for:  {topic} and {document} ')
 
-make_links_for_topic(exxon)
+def make_topic_links_for_all_topics():
+    agents = find_instances_of_class(agent_class)
+    geo_regions = find_instances_of_class(geo_region_class)
+    topics = geo_regions | agents
+    for topic in topics:
+        make_links_for_topic(topic)
+
+#make_links_for_topic(exxon)
+make_topic_links_for_all_topics()
 
 
 
