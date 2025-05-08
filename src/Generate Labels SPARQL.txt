@@ -21,14 +21,16 @@ WHERE {?c rdfs:subClassOf owl:Thing.
 	OPTIONAL{?c rdfs:label ?elbl.}
 	FILTER(?c != owl:Thing && ?c != owl:Nothing && !BOUND(?elbl) && ?lblname != "")}		
 
-#Create labels for all Individuals		
+#Create labels for all Individuals	
+#Need to check for pref labels	
 CONSTRUCT {?i rdfs:label ?lblname.}
 WHERE {?i a owl:Thing.
         BIND(STRAFTER(STR(?i), 'climate_obstruction/') as ?name)
 	BIND(REPLACE(?name,"_", " " ) as ?namewbs)
 	BIND (IF (STRSTARTS(?namewbs," "),SUBSTR(?namewbs,1),?namewbs) AS ?lblname)
 	OPTIONAL{?i rdfs:label ?elbl.}
-	FILTER(!BOUND(?elbl) && ?lblname != "")}			
+	OPTIONAL{?i skos:prefLabel ?plbl.}
+	FILTER(!BOUND(?plbl) && !BOUND(?elbl) && ?lblname != "")}			
 
 
 #Create labels for all Object Properties
@@ -37,7 +39,8 @@ WHERE {?p a owl:ObjectProperty.
         BIND(STRAFTER(STR(?p), 'climate_obstruction/') as ?name)
 	BIND(REPLACE(?name,"_", " " ) as ?lblname)
 	OPTIONAL{?p rdfs:label ?elbl.}
-	FILTER(?p != owl:topObjectProperty &&!BOUND(?elbl) && ?lblname != "")}	
+	OPTIONAL{?p skos:prefLabel ?plbl.}
+	FILTER(!BOUND(?plbl) &&	?p != owl:topObjectProperty &&!BOUND(?elbl) && ?lblname != "")}	
 
 
 #Create labels for all Data Properties
@@ -46,7 +49,8 @@ WHERE {?p a owl:DatatypeProperty.
         BIND(STRAFTER(STR(?p), 'climate_obstruction/') as ?name)
 	BIND(REPLACE(?name,"_", " " ) as ?lblname)		
 	OPTIONAL{?p rdfs:label ?elbl.}
-	FILTER(?p != owl:topDataProperty && !BOUND(?elbl) && ?lblname != "")}
+	OPTIONAL{?p skos:prefLabel ?plbl.}
+	FILTER(!BOUND(?plbl) && ?p != owl:topDataProperty && !BOUND(?elbl) && ?lblname != "")}
 
 #Create labels for all Annotation Properties
 CONSTRUCT {?p rdfs:label ?lblname.}
@@ -54,7 +58,8 @@ WHERE {?p a owl:AnnotationProperty.
         BIND(STRAFTER(STR(?p), 'climate_obstruction/') as ?name)
 	BIND(REPLACE(?name,"_", " " ) as ?lblname)		
 	OPTIONAL{?p rdfs:label ?elbl.}
-	FILTER(?p != owl:topDataProperty && !BOUND(?elbl) && ?lblname != "")}	
+	OPTIONAL{?p skos:prefLabel ?plbl.}
+	FILTER(!BOUND(?plbl) && ?p != owl:topDataProperty && !BOUND(?elbl) && ?lblname != "")}	
 
 
 				 
