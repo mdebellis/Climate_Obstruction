@@ -3,7 +3,7 @@ PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX gist: <https://w3id.org/semanticarts/ns/ontology/gist/>
-PREFIX co:  <https://www.michaeldebellis.com/climate_obstruction/>
+PREFIX :  <https://www.michaeldebellis.com/climate_obstruction/>
 
 # When you use User Defined IRIs, Protege doesn't fill in a value for the label. 
 # Sometimes I'll add the label but often I won't because it is easy to generate them with SPARQL
@@ -34,10 +34,11 @@ WHERE {?i a owl:Thing.
 
 
 #Create labels for all Object Properties
+# Added LCASE Making property labels all lower case now, display better that way
 CONSTRUCT {?p rdfs:label ?lblname.}
 WHERE {?p a owl:ObjectProperty.
-        BIND(STRAFTER(STR(?p), 'climate_obstruction/') as ?name)
-	BIND(REPLACE(?name,"_", " " ) as ?lblname)
+    BIND(STRAFTER(STR(?p), 'climate_obstruction/') as ?name)
+	BIND(LCASE(REPLACE(?name,"_", " " )) as ?lblname)
 	OPTIONAL{?p rdfs:label ?elbl.}
 	OPTIONAL{?p skos:prefLabel ?plbl.}
 	FILTER(!BOUND(?plbl) &&	?p != owl:topObjectProperty &&!BOUND(?elbl) && ?lblname != "")}	
@@ -46,8 +47,8 @@ WHERE {?p a owl:ObjectProperty.
 #Create labels for all Data Properties
 CONSTRUCT {?p rdfs:label ?lblname.}
 WHERE {?p a owl:DatatypeProperty.
-        BIND(STRAFTER(STR(?p), 'climate_obstruction/') as ?name)
-	BIND(REPLACE(?name,"_", " " ) as ?lblname)		
+    BIND(STRAFTER(STR(?p), 'climate_obstruction/') as ?name)
+	BIND(LCASE(REPLACE(?name,"_", " " )) as ?lblname)		
 	OPTIONAL{?p rdfs:label ?elbl.}
 	OPTIONAL{?p skos:prefLabel ?plbl.}
 	FILTER(!BOUND(?plbl) && ?p != owl:topDataProperty && !BOUND(?elbl) && ?lblname != "")}
@@ -55,8 +56,8 @@ WHERE {?p a owl:DatatypeProperty.
 #Create labels for all Annotation Properties
 CONSTRUCT {?p rdfs:label ?lblname.}
 WHERE {?p a owl:AnnotationProperty.
-        BIND(STRAFTER(STR(?p), 'climate_obstruction/') as ?name)
-	BIND(REPLACE(?name,"_", " " ) as ?lblname)		
+    BIND(STRAFTER(STR(?p), 'climate_obstruction/') as ?name)
+	BIND(LCASE(REPLACE(?name,"_", " " )) as ?lblname)		
 	OPTIONAL{?p rdfs:label ?elbl.}
 	OPTIONAL{?p skos:prefLabel ?plbl.}
 	FILTER(!BOUND(?plbl) && ?p != owl:topDataProperty && !BOUND(?elbl) && ?lblname != "")}	
