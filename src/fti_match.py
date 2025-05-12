@@ -25,6 +25,7 @@ contained_text_prop = conn.createURI("https://w3id.org/semanticarts/ns/ontology/
 has_topic_prop = conn.createURI("https://www.michaeldebellis.com/climate_obstruction/has_Topic")
 is_topic_of_prop = conn.createURI("https://www.michaeldebellis.com/climate_obstruction/is_topic_of")
 skos_alt_label_property = conn.createURI("http://www.w3.org/2004/02/skos/core#altLabel")
+skos_definition_property = conn.createURI("http://www.w3.org/2004/02/skos/core#definition")
 
 agent_class = conn.createURI("https://www.michaeldebellis.com/climate_obstruction/Agent")
 geo_region_class = conn.createURI("https://w3id.org/semanticarts/ns/ontology/gist/GeoRegion")
@@ -36,7 +37,7 @@ conn.createFreeTextIndex("co_fti", predicates=[case_categories_prop,
                                                text_prop, description_prop,id_text_prop,
                                                jurisdictions_prop, principle_laws_prop, action_prop,
                                                ad_description_prop,assessment_prop, background_prop,
-                                               response_prop, contained_text_prop], stopWords=all_stop_words)
+                                               response_prop, contained_text_prop, skos_definition_property], stopWords=all_stop_words)
 
 def make_links_for_topic(topic):
     label = get_value(topic, rdfs_label_property)
