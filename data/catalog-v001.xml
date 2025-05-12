@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="https://www.michaeldebellis.com/climate_obstruction" uri="climate_obstruction%20_ag_cap_rss_2-18-25.ttl"/>
+    <uri id="Imports Wizard Entry" name="https://www.michaeldebellis.com/climate_obstruction" uri="climate_obstruction_data.ttl"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base=""/>
+</catalog>
