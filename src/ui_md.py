@@ -2,6 +2,7 @@ import streamlit as st
 import pyperclip
 from franz.openrdf.query.query import QueryLanguage
 from ag_api import *
+from keys import oaik #Open AI Key stored in file ignored by GitHub
 
 
 
@@ -24,7 +25,7 @@ def build_query(user_question):
     if user_question == "":
         return ""
     else:
-        query_string1 = "PREFIX franzOption_openaiApiKey: <franz:***********************************> "
+        query_string1 = "PREFIX franzOption_openaiApiKey: " + oaik
         query_string1 = query_string1 + "PREFIX : <https://www.michaeldebellis.com/climate_obstruction/> "
         query_string1 = query_string1 + "PREFIX llm: <http://franz.com/ns/allegrograph/8.0.0/llm/> "
         query_string1 = query_string1 + "SELECT  * WHERE {bind(\"" + user_question
