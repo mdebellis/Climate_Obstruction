@@ -62,3 +62,5 @@ st.page_link("http://localhost:10035", label="View answer graph in Gruff", icon=
 #print(do_query("Does AB restorative in Class II cavities without adhesive system, result in an acceptable failure frequency after a one-year period?"))
 
 # streamlit run C:\Users\mdebe\Documents\GitHub\Climate_Obstruction\src\ui_md.py
+
+print(build_query("What is the airspeed of an African swallow?"))

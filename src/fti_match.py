@@ -21,11 +21,12 @@ assessment_prop = conn.createURI("https://www.michaeldebellis.com/climate_obstru
 background_prop = conn.createURI("https://www.michaeldebellis.com/climate_obstruction/background")
 response_prop = conn.createURI("https://www.michaeldebellis.com/climate_obstruction/response")
 contained_text_prop = conn.createURI("https://w3id.org/semanticarts/ns/ontology/gist/containedText")
+skos_definition_property = conn.createURI("http://www.w3.org/2004/02/skos/core#definition")
 
 has_topic_prop = conn.createURI("https://www.michaeldebellis.com/climate_obstruction/has_Topic")
 is_topic_of_prop = conn.createURI("https://www.michaeldebellis.com/climate_obstruction/is_topic_of")
 skos_alt_label_property = conn.createURI("http://www.w3.org/2004/02/skos/core#altLabel")
-skos_definition_property = conn.createURI("http://www.w3.org/2004/02/skos/core#definition")
+
 
 agent_class = conn.createURI("https://www.michaeldebellis.com/climate_obstruction/Agent")
 geo_region_class = conn.createURI("https://w3id.org/semanticarts/ns/ontology/gist/GeoRegion")
