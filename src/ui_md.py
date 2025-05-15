@@ -3,10 +3,9 @@ import pyperclip
 from franz.openrdf.query.query import QueryLanguage
 from ag_api import *
 from keys import oaik #Open AI Key stored in file ignored by GitHub
+import re
 
 
-
-# Using pyperclip to copy the generated query to copy/paste stack. A hack until (someday!) will get Gruff link working
 def do_query(user_question):
     if user_question == "":
         return ""
@@ -15,12 +14,22 @@ def do_query(user_question):
         pyperclip.copy(query_string)
         tuple_query = conn.prepareTupleQuery(QueryLanguage.SPARQL, query_string)
         result = tuple_query.evaluate()
+        all_responses = []
+        content_text = ""
         with result:
-            for binding_set in result:
-                response = binding_set.getValue("response")
-                st.session_state.content = binding_set.getValue("content")
-                print(binding_set.getValue("content"))
-                return response
+            for i, binding_set in enumerate(result, start=1):
+                response = str(binding_set.getValue("response"))
+                content = str(binding_set.getValue("content"))
+
+                # 🔽 Remove "(citation-id:<...>)" chunks from the response
+                cleaned_response = re.sub(r"\(citation-id:<.*?>\)", "", response)
+
+                all_responses.append(f"**Result {i}:**\n{cleaned_response.strip()}\n")
+                content_text += f"\n---\nDocument {i}:\n{content.strip()}\n"
+
+        st.session_state.content = content_text.strip()
+        return "\n".join(all_responses)
+
 
 def build_query(user_question):
     if user_question == "":
@@ -56,7 +65,7 @@ with col1:
              kwargs=None, placeholder="Answer will be displayed here." + str(question), disabled=False,
              label_visibility="visible")
 with col2:
-    st.text_area("Supporting Documents:",height=445, placeholder="Supporting Documents will be displayed here.", value= "")    #  value= st.session_state.content)
+    st.text_area("Supporting Documents:",height=445, placeholder="Supporting Documents will be displayed here.", value = st.session_state.get("content", ""))
 
 st.page_link("http://localhost:10035", label="View answer graph in Gruff", icon=None, help=None, disabled=False, use_container_width=None)
 
