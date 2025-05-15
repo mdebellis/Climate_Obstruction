@@ -20,13 +20,10 @@ def do_query(user_question):
             for i, binding_set in enumerate(result, start=1):
                 response = str(binding_set.getValue("response"))
                 content = str(binding_set.getValue("content"))
-
-                # 🔽 Remove "(citation-id:<...>)" chunks from the response
+                #Remove "(citation-id:<...>)" chunks from the response
                 cleaned_response = re.sub(r"\(citation-id:<.*?>\)", "", response)
-
                 all_responses.append(f"**Result {i}:**\n{cleaned_response.strip()}\n")
                 content_text += f"\n---\nDocument {i}:\n{content.strip()}\n"
-
         st.session_state.content = content_text.strip()
         return "\n".join(all_responses)
 
