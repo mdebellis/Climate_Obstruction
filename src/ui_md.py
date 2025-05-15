@@ -19,6 +19,7 @@ def do_query(user_question):
             for binding_set in result:
                 response = binding_set.getValue("response")
                 st.session_state.content = binding_set.getValue("content")
+                print(binding_set.getValue("content"))
                 return response
 
 def build_query(user_question):
@@ -64,4 +65,4 @@ st.page_link("http://localhost:10035", label="View answer graph in Gruff", icon=
 
 # streamlit run C:\Users\mdebe\Documents\GitHub\Climate_Obstruction\src\ui_md.py
 
-print(build_query("Who are major supporters of climate obstruction"))
+# print(build_query("Who are major supporters of climate obstruction"))
