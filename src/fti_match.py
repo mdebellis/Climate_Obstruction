@@ -30,7 +30,9 @@ skos_alt_label_property = conn.createURI("http://www.w3.org/2004/02/skos/core#al
 
 agent_class = conn.createURI("https://www.michaeldebellis.com/climate_obstruction/Agent")
 geo_region_class = conn.createURI("https://w3id.org/semanticarts/ns/ontology/gist/GeoRegion")
+has_jurisdiction_prop = conn.createURI("https://www.michaeldebellis.com/climate_obstruction/has_jurisdiction")
 exxon = conn.createURI("https://www.michaeldebellis.com/climate_obstruction/ExxonMobil")
+
 
 conn.createFreeTextIndex("co_fti", predicates=[case_categories_prop,
                                                at_issue_prop, summary_prop,
@@ -39,6 +41,8 @@ conn.createFreeTextIndex("co_fti", predicates=[case_categories_prop,
                                                jurisdictions_prop, principle_laws_prop, action_prop,
                                                ad_description_prop,assessment_prop, background_prop,
                                                response_prop, contained_text_prop, skos_definition_property], stopWords=all_stop_words)
+
+conn.createFreeTextIndex("jurisdictions", predicates=[jurisdictions_prop], stopWords=all_stop_words)
 
 def make_links_for_topic(topic):
     label = get_value(topic, rdfs_label_property)
@@ -61,7 +65,27 @@ def make_topic_links(topic, document):
         put_value(document, has_topic_prop, topic)
         print(f'Topic links made for:  {topic} and {document} ')
 
+def make_jurisdiction_links():
+    places = find_instances_of_class(geo_region_class)
+    for place in places:
+        label = get_value(place, rdfs_label_property)
+        pref_label = get_value(place, skos_pref_label_property)
+        alt_label = get_value(place, skos_alt_label_property)
+        if label: make_jurisdiction_link(place, label)
+        if pref_label: make_jurisdiction_link(place, pref_label)
+        if alt_label: make_jurisdiction_link(place, alt_label)
+
+def make_jurisdiction_link(iri_to_match, label):
+    print(f'Looking for jurisdictions for: {label} ')
+    matches = conn.evalFreeTextSearch(label, index="jurisdictions")
+    for match in matches:
+        iri_match_string = match[0]
+        iri_match = conn.createURI(iri_match_string)
+        put_value(iri_match, has_jurisdiction_prop, iri_to_match)
+        print(f'Jurisdiction links made for:  {iri_match} and {label} ' )
+
 def make_topic_links_for_all_topics():
+    make_jurisdiction_links()
     agents = find_instances_of_class(agent_class)
     geo_regions = find_instances_of_class(geo_region_class)
     topics = geo_regions | agents
@@ -69,7 +93,8 @@ def make_topic_links_for_all_topics():
         make_links_for_topic(topic)
 
 #make_links_for_topic(exxon)
-make_topic_links_for_all_topics()
+#make_topic_links_for_all_topics()
+make_jurisdiction_links()
 
 
 
