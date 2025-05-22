@@ -40,7 +40,8 @@ def build_query(user_question):
         query_string2 = "\" as ?query) "
         query_string2 = query_string2 + "(?response ?score ?vec ?content) llm:askMyDocuments (?query \"climate_obstruction\" 4 0.7). "
         query_string2 = query_string2 + (" ?doc ?prop ?content. FILTER(isIRI(?doc)) " +
-                                         "OPTIONAL { ?doc :has_Topic ?topic} OPTIONAL {?doc :has_direct_part ?sub_part} " +
+                                         "OPTIONAL { ?doc :has_author ?author} OPTIONAL {?doc :has_direct_part ?sub_part} " +
+                                         "OPTIONAL { ?doc :has_Topic ?topic} " +
                                          "OPTIONAL {?super_part  :has_direct_part ?doc}}")
         query_string = query_string1 + query_string2
         return query_string
