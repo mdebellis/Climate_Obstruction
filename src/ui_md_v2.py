@@ -84,6 +84,6 @@ st.page_link("http://localhost:10035", label="View answer graph in Gruff", icon=
 #st.write("This is what the first text box entered " + str(dentistInput))
 #st.write("This is what the second box wrote " + str(sparqlQuery))
 
-# streamlit run C:\Users\mdebe\Documents\GitHub\Climate_Obstruction\src\ui_md.py
+# streamlit run C:\Users\mdebe\Documents\GitHub\Climate_Obstruction\src\ui_md_v2.py
 
 # print(build_query("Who are major supporters of climate obstruction"))
