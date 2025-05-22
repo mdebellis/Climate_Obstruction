@@ -66,7 +66,7 @@ with col1:
         min_value = 0.0,
         max_value = 1.0,
         value = 0.7,
-        step = 0.1
+        step = 0.05
     )
     question = st.text_area("Enter question here:", value="", height=None, max_chars=None,
              key=None, help=None, on_change=None, args=None,
