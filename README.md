@@ -1,5 +1,5 @@
 # Climate_Obstruction
-A repository for a system to model concepts about Climate Obstructionism and organize relevant documents. Uses AllegroGraph Community version, the Gist Upper Model ontology from Semantic Arts, and the Python client for AllegroGraph. Also, see project Wiki. Currently just has standards for ontology IRIs: https://github.com/mdebellis/Climate_Obstruction/wiki 
+A repository for a system to model concepts about Climate Obstructionism and organize relevant documents. Uses AllegroGraph Community version, the Gist Upper Model ontology from Semantic Arts, and the Python client for AllegroGraph. Also, see project Wiki. Currently just has additional examples of Climate Portal use cases: https://github.com/mdebellis/Climate_Obstruction/wiki 
 ## License
 This project is licensed under the Apache 2.0 License. See the [LICENSE](https://github.com/mdebellis/Environmental_Obstruction/blob/main/LICENSE) file for details.
 
