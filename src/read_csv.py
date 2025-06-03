@@ -4,11 +4,11 @@ import unicodedata
 import re
 from src.ag_api import *
 
-csv_path = "apdb.csv"
+csv_path = "ci7.csv"
 # file_class is the IRI for the class that the properties in the csv file apply to. I.e.,
 # when parsing the file, the system will search for an instance of that class and if one is
 # not found, then it will be created.
-file_class_str = "https://www.michaeldebellis.com/climate_obstruction/Trade_Association"
+file_class_str = "https://www.michaeldebellis.com/climate_obstruction/Report"
 file_class = conn.createURI(file_class_str)
 
 # Remove weird characters resulting from scraping
