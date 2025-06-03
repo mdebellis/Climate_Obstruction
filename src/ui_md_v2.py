@@ -41,7 +41,7 @@ def build_query(user_question):
         query_string1 = query_string1 + "SELECT  * WHERE {bind(\"" + user_question
         query_string2 = "\" as ?query) "
         query_string2 += f"(?response ?score ?vec ?content) llm:askMyDocuments (?query \"climate_obstruction\" {num_results} {threshold}). "
-        query_string2 = query_string2 + " ?doc ?prop ?content. FILTER(isIRI(?doc)) OPTIONAL { ?doc :has_Topic ?topic} OPTIONAL {?super_part  :has_direct_part ?doc}}"
+        query_string2 = query_string2 + " ?doc ?prop ?content. FILTER(isIRI(?doc)) OPTIONAL { ?doc :has_Topic ?topic} OPTIONAL {?doc  :has_direct_part ?super_part} OPTIONAL {?super_part1  :has_direct_part ?doc}}"
         query_string = query_string1 + query_string2
         return query_string
 

@@ -93,8 +93,8 @@ def make_topic_links_for_all_topics():
         make_links_for_topic(topic)
 
 #make_links_for_topic(exxon)
-#make_topic_links_for_all_topics()
-make_jurisdiction_links()
+make_topic_links_for_all_topics()
+#make_jurisdiction_links()
 
 
 

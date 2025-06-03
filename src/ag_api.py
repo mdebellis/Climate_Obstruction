@@ -15,6 +15,7 @@ owl_annotation_property = conn.createURI("http://www.w3.org/2002/07/owl#Annotati
 owl_object_property = conn.createURI("http://www.w3.org/2002/07/owl#ObjectProperty")
 owl_class = conn.createURI("http://www.w3.org/2002/07/owl#Class")
 rdfs_label_property = conn.createURI("http://www.w3.org/2000/01/rdf-schema#label")
+rdfs_is_defined_by_property = conn.createURI("http://www.w3.org/2000/01/rdf-schema#isDefinedBy")
 skos_pref_label_property = conn.createURI("http://www.w3.org/2004/02/skos/core#prefLabel")
 ontology_string = "https://www.michaeldebellis.com/climate_obstruction/"
 gist_string = "https://w3id.org/semanticarts/ns/ontology/gist/"
@@ -58,6 +59,12 @@ def find_property(prop_str):
     if prop_str == "label":
         return rdfs_label_property
     prop = conn.createURI(prop_str)
+    if prop == rdfs_label_property:
+        return prop
+    if prop == skos_pref_label_property:
+        return prop
+    if prop == rdfs_is_defined_by_property:
+        return prop
     for _ in conn.getStatements(prop, RDF.TYPE, owl_datatype_property):
         return prop
     for _ in conn.getStatements(prop, RDF.TYPE, owl_annotation_property):
