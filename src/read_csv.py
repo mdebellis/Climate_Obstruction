@@ -11,6 +11,7 @@ csv_path = "apdb.csv"
 file_class_str = "https://www.michaeldebellis.com/climate_obstruction/Trade_Association"
 file_class = conn.createURI(file_class_str)
 
+# Remove weird characters resulting from scraping
 def fix_encoding(text):
     if not isinstance(text, str):
         return text  # If not a string, return it as-is
@@ -25,6 +26,7 @@ def fix_encoding(text):
             # If both fail, return the original text
             return text
 
+# Remove weird characters resulting from scraping
 def normalize_text(text):
     if not isinstance(text, str):
         return text
