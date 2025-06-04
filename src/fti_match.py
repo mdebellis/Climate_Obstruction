@@ -22,6 +22,14 @@ background_prop = conn.createURI("https://www.michaeldebellis.com/climate_obstru
 response_prop = conn.createURI("https://www.michaeldebellis.com/climate_obstruction/response")
 contained_text_prop = conn.createURI("https://w3id.org/semanticarts/ns/ontology/gist/containedText")
 skos_definition_property = conn.createURI("http://www.w3.org/2004/02/skos/core#definition")
+stance_prop = conn.createURI("https://www.michaeldebellis.com/climate_obstruction/stance")
+works_with_prop = conn.createURI("https://www.michaeldebellis.com/climate_obstruction/works_with")
+funding_prop = conn.createURI("https://www.michaeldebellis.com/climate_obstruction/funding")
+leadership_prop = conn.createURI("https://www.michaeldebellis.com/climate_obstruction/leadership")
+lobbying_prop = conn.createURI("https://www.michaeldebellis.com/climate_obstruction/lobbying")
+members_prop = conn.createURI("https://www.michaeldebellis.com/climate_obstruction/members")
+customer_prop = conn.createURI("https://www.michaeldebellis.com/climate_obstruction/customer")
+employee_prop = conn.createURI("https://www.michaeldebellis.com/climate_obstruction/employee")
 
 has_topic_prop = conn.createURI("https://www.michaeldebellis.com/climate_obstruction/has_Topic")
 is_topic_of_prop = conn.createURI("https://www.michaeldebellis.com/climate_obstruction/is_topic_of")
@@ -40,7 +48,8 @@ conn.createFreeTextIndex("co_fti", predicates=[case_categories_prop,
                                                text_prop, description_prop,id_text_prop,
                                                jurisdictions_prop, principle_laws_prop, action_prop,
                                                ad_description_prop,assessment_prop, background_prop,
-                                               response_prop, contained_text_prop, skos_definition_property], stopWords=all_stop_words)
+                                               response_prop, contained_text_prop, skos_definition_property, stance_prop,works_with_prop,
+                                               funding_prop,leadership_prop, lobbying_prop,members_prop, customer_prop, employee_prop], stopWords=all_stop_words)
 
 conn.createFreeTextIndex("jurisdictions", predicates=[jurisdictions_prop], stopWords=all_stop_words)
 
