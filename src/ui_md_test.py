@@ -87,3 +87,6 @@ with col2:
     st.text_area("Supporting Documents:",height=445, placeholder="Supporting Documents will be displayed here.", value = st.session_state.get("content", ""))
 
 st.page_link("http://localhost:10035", label="View answer graph in Gruff", icon=None, help=None, disabled=False, use_container_width=None)
+
+
+# streamlit run C:\Users\mdebe\Documents\GitHub\Climate_Obstruction\src\ui_md_test.py

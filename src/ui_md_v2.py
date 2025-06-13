@@ -6,13 +6,17 @@ from keys import oaik #Open AI Key stored in file ignored by GitHub
 import re
 st.set_page_config(layout="wide")
 
+def clean_question(text):
+    # Replace newlines and tabs with spaces, and strip extra whitespace
+    return text.replace('\n', ' ').replace('\r', ' ').replace('\t', ' ').strip()
 
 
 def do_query(user_question):
     if user_question == "":
         return ""
     else:
-        query_string = build_query(str(user_question))
+        user_question = clean_question(str(user_question))
+        query_string = build_query(user_question)
         pyperclip.copy(query_string)
         tuple_query = conn.prepareTupleQuery(QueryLanguage.SPARQL, query_string)
         result = tuple_query.evaluate()
@@ -65,7 +69,7 @@ with col1:
         "Relevance Threshold",
         min_value = 0.0,
         max_value = 1.0,
-        value = 0.7,
+        value = 0.5,
         step = 0.05
     )
     question = st.text_area("Enter question here:", value="", height=None, max_chars=None,
@@ -85,5 +89,5 @@ st.page_link("http://localhost:10035", label="View answer graph in Gruff", icon=
 #st.write("This is what the second box wrote " + str(sparqlQuery))
 
 # streamlit run C:\Users\mdebe\Documents\GitHub\Climate_Obstruction\src\ui_md_v2.py
-
+# streamlit run C:\Users\mdebe\Documents\GitHub\Climate_Obstruction\src\ui_md_test.py
 # print(build_query("Who are major supporters of climate obstruction"))
