@@ -25,7 +25,7 @@ WHERE {?c rdfs:subClassOf owl:Thing.
 #Need to check for pref labels	
 CONSTRUCT {?i rdfs:label ?lblname.}
 WHERE {?i a owl:Thing.
-        BIND(STRAFTER(STR(?i), 'climate_obstruction/') as ?name)
+    BIND(STRAFTER(STR(?i), 'climate_obstruction/') as ?name)
 	BIND(REPLACE(?name,"_", " " ) as ?namewbs)
 	BIND (IF (STRSTARTS(?namewbs," "),SUBSTR(?namewbs,1),?namewbs) AS ?lblname)
 	OPTIONAL{?i rdfs:label ?elbl.}
@@ -61,6 +61,15 @@ WHERE {?p a owl:AnnotationProperty.
 	OPTIONAL{?p rdfs:label ?elbl.}
 	OPTIONAL{?p skos:prefLabel ?plbl.}
 	FILTER(!BOUND(?plbl) && ?p != owl:topDataProperty && !BOUND(?elbl) && ?lblname != "")}	
+	
+#Generate labels for donations
+CONSTRUCT {?donation rdfs:label ?donationLabel.}
+WHERE {?donation a :Koch_Brothers_Donation;
+    gist:numericValue ?nvalue.
+    BIND(STRAFTER(STR(?donation), 'climate_obstruction/') as ?name)
+	BIND(REPLACE(?name,"_", " " ) as ?namewbs)
+	BIND(CONCAT(?namewbs, " $", STR(?nvalue)) AS ?donationLabel)}
+	
 
 
 				 
