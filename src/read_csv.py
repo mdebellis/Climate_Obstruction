@@ -112,12 +112,17 @@ def read_csv(path):
                         nextval = conn.createURI(nextval)
                     else:
                         # If we get here, it's a data property. If a datatype is defined, convert the value accordingly, otherwise the default is treat as a string
-                        datatype = get_expected_datatype(property_iri)
-                        if datatype:
-                            print(f'coercing {nextval} to datatype {datatype}')
-                            nextval = conn.createLiteral(nextval, datatype=datatype)
+                        if "^^xsd" in nextval:
+                            # Assume it's already a properly typed literal, add as-is
+                            pass  # nextval stays unchanged
                         else:
-                            nextval = clean_text(nextval)
+                            datatype = get_expected_datatype(property_iri)
+                            if datatype:
+                                print(f'coercing {nextval} to datatype {datatype}')
+                                nextval = conn.createLiteral(nextval, datatype=datatype)
+                            # If we get here it's a string and we want to remove crud that makes it hard to read
+                            else:
+                                nextval = clean_text(nextval)
                     conn.add(new_iri, property_iri, nextval)
                     i += 1
                 line_count += 1
