@@ -1,5 +1,6 @@
 from franz.openrdf.connect import ag_connect
 from franz.openrdf.vocabulary import RDF
+import os
 
 # Utilities to make and query AllegroGraph objects
 # Note that functions to retrieve values need to be sent a complete IRI
@@ -19,6 +20,13 @@ rdfs_is_defined_by_property = conn.createURI("http://www.w3.org/2000/01/rdf-sche
 skos_pref_label_property = conn.createURI("http://www.w3.org/2004/02/skos/core#prefLabel")
 ontology_string = "https://www.michaeldebellis.com/climate_obstruction/"
 gist_string = "https://w3id.org/semanticarts/ns/ontology/gist/"
+
+# Function to check in case any http rather than https sneak into ontologies
+def find_http_iris(file_path):
+    with open(file_path, 'r', encoding='utf-8') as f:
+        for i, line in enumerate(f, 1):
+            if 'http://www.michaeldebellis.com/climate_obstruction/' in line:
+                print(f"[Line {i}]: {line.strip()}")
 
 # Given the last part of an IRI will return the full IRI string
 # E.g., given "Green_Washing" returns "https://www.michaeldebellis.com/climate_obstruction/Green_Washing"
@@ -199,5 +207,6 @@ print(get_values(find_instance_from_iri("USA"),find_property("contains")))
 # List should not include Alaska
 print(find_object_from_label("Adam Kellerman"))
 # <http://www.semanticweb.org/ontologies/2022/1/CfHA_Ontology/AdamKellerman>
+# find_http_iris("path/to/your_ontology.owl")
 """
 
