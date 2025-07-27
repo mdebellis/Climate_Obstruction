@@ -1,0 +1,7 @@
+before(?t1li, ?t2li) ^ hasBeginning(?tInterval2, ?t1fi) ^ hasBeginning(?tInterval1, ?t1fi) ^ hasEnd(?tInterval2, ?t2li) ^ hasEnd(?tInterval1, ?t1li) -> intervalStarts(?tInterval1, ?tInterval2)
+inXSDDateTimeStamp(?ti1, ?dt1) ^ inXSDDateTimeStamp(?ti2, ?dt2) ^ swrlb:greaterThan(?dt2, ?dt1) -> before(?ti1, ?ti2)
+hasBeginning(?tInterval2, ?t1fi) ^ hasBeginning(?tInterval1, ?t1fi) ^ hasEnd(?tInterval2, ?t1li) ^ hasEnd(?tInterval1, ?t1li) -> intervalEquals(?tInterval2, ?tInterval1)
+before(?t2fi, ?t1li) ^ before(?t1fi, ?t2fi) ^ hasBeginning(?tInterval2, ?t2fi) ^ before(?t1li, ?t2li) ^ hasBeginning(?tInterval1, ?t1fi) ^ hasEnd(?tInterval2, ?t2li) ^ hasEnd(?tInterval1, ?t1li) -> intervalOverlaps(?tInterval1, ?tInterval
+hasBeginning(?tInterval2, ?t2fi) ^ hasEnd(?tInterval1, ?t1li) ^ before(?t1li, ?t2fi) -> before(?tInterval1, ?tInterval2)
+hasBeginning(?tInterval2, ?t2fi) ^ hasEnd(?tInterval1, ?t2fi) -> intervalMeets(?tInterval1, ?tInterval2)
+hasBeginning(?tInterval1, ?t1fi) ^ hasBeginning(?tInterval2, ?t2fi) ^ hasEnd(?tInterval2, ?t2li) ^ hasEnd(?tInterval1, ?t1li) ^ before(?t1fi, ?t2fi) ^ before(?t2li, ?t1li) -> intervalContains(?tInterval1, ?tInterval2)

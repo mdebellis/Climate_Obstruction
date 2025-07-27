@@ -1,0 +1,81 @@
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+# 1. before between time instants
+INSERT {
+  ?ti1 time:before ?ti2 .
+}
+WHERE {
+  ?ti1 time:inXSDDateTime ?dt1 .
+  ?ti2 time:inXSDDateTime ?dt2 .
+  FILTER(xsd:dateTime(?dt1) < xsd:dateTime(?dt2))
+};
+
+# 2. intervalEquals
+INSERT {
+  ?tInterval1 time:intervalEquals ?tInterval2 .
+  ?tInterval2 time:intervalEquals ?tInterval1 .
+}
+WHERE {
+  ?tInterval1 time:hasBeginning ?b .
+  ?tInterval1 time:hasEnd ?e .
+  ?tInterval2 time:hasBeginning ?b .
+  ?tInterval2 time:hasEnd ?e .
+  FILTER(?tInterval1 != ?tInterval2)
+};
+
+# 3. intervalContains
+INSERT {
+  ?tInterval1 time:intervalContains ?tInterval2 .
+}
+WHERE {
+  ?tInterval1 time:hasBeginning ?b1 .
+  ?tInterval1 time:hasEnd ?e1 .
+  ?tInterval2 time:hasBeginning ?b2 .
+  ?tInterval2 time:hasEnd ?e2 .
+  ?b1 time:inXSDDateTime ?dtb1 .
+  ?b2 time:inXSDDateTime ?dtb2 .
+  ?e1 time:inXSDDateTime ?dte1 .
+  ?e2 time:inXSDDateTime ?dte2 .
+  FILTER(xsd:dateTime(?dtb1) < xsd:dateTime(?dtb2)) .
+  FILTER(xsd:dateTime(?dte2) < xsd:dateTime(?dte1)) .
+};
+
+# 4. intervalMeets
+INSERT {
+  ?tInterval1 time:intervalMeets ?tInterval2 .
+}
+WHERE {
+  ?tInterval1 time:hasEnd ?ti .
+  ?tInterval2 time:hasBeginning ?ti .
+};
+
+# 5. before between intervals
+INSERT {
+  ?tInterval1 time:before ?tInterval2 .
+}
+WHERE {
+  ?tInterval1 time:hasEnd ?end1 .
+  ?tInterval2 time:hasBeginning ?start2 .
+  ?end1 time:inXSDDateTime ?dt1 .
+  ?start2 time:inXSDDateTime ?dt2 .
+  FILTER(xsd:dateTime(?dt1) < xsd:dateTime(?dt2))
+};
+
+# 6. intervalOverlaps (simplified logic)
+INSERT {
+  ?tInterval1 time:intervalOverlaps ?tInterval2 .
+}
+WHERE {
+  ?tInterval1 time:hasBeginning ?b1 .
+  ?tInterval1 time:hasEnd ?e1 .
+  ?tInterval2 time:hasBeginning ?b2 .
+  ?tInterval2 time:hasEnd ?e2 .
+  ?b1 time:inXSDDateTime ?dtb1 .
+  ?e1 time:inXSDDateTime ?dte1 .
+  ?b2 time:inXSDDateTime ?dtb2 .
+  ?e2 time:inXSDDateTime ?dte2 .
+  FILTER(xsd:dateTime(?dtb1) < xsd:dateTime(?dte2)) .
+  FILTER(xsd:dateTime(?dtb2) < xsd:dateTime(?dte1)) .
+  FILTER(?tInterval1 != ?tInterval2)
+};
