@@ -8,7 +8,7 @@ import os
 # However functions to create objects and set values assume all new objects go in
 # the main ontology so only need to pass them the last part of the IRI and they complete the
 # iri in the function using make_ontology_iri
-conn = ag_connect('climate_obstruction', host='localhost', port=10035, user='mdebellis', password='df1559')
+conn = ag_connect('climate_obstruction_new', host='localhost', port=10035, user='mdebellis', password='df1559')
 
 owl_named_individual = conn.createURI("http://www.w3.org/2002/07/owl#NamedIndividual")
 owl_datatype_property = conn.createURI("http://www.w3.org/2002/07/owl#DatatypeProperty")
