@@ -42,7 +42,7 @@ def build_query(user_question):
         query_string1 = query_string1 + "PREFIX : <https://www.michaeldebellis.com/climate_obstruction/> "
         query_string1 = query_string1 + "PREFIX llm: <http://franz.com/ns/allegrograph/8.0.0/llm/> "
         query_string1 = query_string1 + "PREFIX vdbp: <http://franz.com/vdb/prop/> "
-        query_string1 = query_string1 + "SELECT  * WHERE {bind(\"" + user_question
+        query_string1 = query_string1 + "SELECT DISTINCT * WHERE {bind(\"" + user_question
         query_string2 = "\" as ?query) "
         query_string2 += f"(?response ?score ?vec ?content) llm:askMyDocuments (?query \"climate_obstruction\" {num_results} {threshold}). "
         query_string2 = query_string2 + " ?doc ?prop ?content. FILTER(isIRI(?doc)) OPTIONAL { ?doc :has_Topic ?topic} OPTIONAL {?doc  :has_direct_part ?super_part} OPTIONAL {?doc  :has_author ?author}}"
@@ -59,7 +59,7 @@ col1, col2 = st.columns(2)
 
 with col1:
     num_results = st.number_input(
-        "Number of Results to Show",
+        "Number of Corpus Documents to Use",
         min_value=1,
         max_value=20,
         value=5,
